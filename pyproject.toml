@@ -1,0 +1,41 @@
+[project]
+name = "innovation-momentum"
+version = "0.1.0"
+description = "Spectral momentum experiments for AI/ML research-field evolution."
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.0"
+]
+
+[project.scripts]
+innovation-fetch-phrase-panel = "fetch_openalex_counts:main"
+innovation-fetch-agentic-terms = "fetch_agentic_precursor_counts:main"
+innovation-fetch-ai-topics = "fetch_openalex_ai_topics:main"
+innovation-build-agentic = "analyze_agentic_and_visuals:main"
+innovation-build-report = "analyze_topic_dynamics:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = [
+  "analyze_agentic_and_visuals",
+  "analyze_topic_dynamics",
+  "fetch_agentic_precursor_counts",
+  "fetch_openalex_ai_topics",
+  "fetch_openalex_counts",
+  "openalex",
+  "paths",
+  "spectral"
+]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100

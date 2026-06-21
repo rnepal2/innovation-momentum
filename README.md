@@ -7,8 +7,7 @@ A small research-code repo for testing whether graph-spectral movement in OpenAl
 ## Quick Start
 
 ```bash
-uv sync
-uv run pytest
+uv run --with pytest pytest
 ```
 
 ## Rebuild

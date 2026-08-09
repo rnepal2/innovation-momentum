@@ -71,7 +71,7 @@
     <p class="kicker">OpenAlex field dynamics</p>
     <h1>Innovation Momentum: Spectral Dynamics in AI Research</h1>
     <p class="dek">A retrospective test of whether graph Fourier features add useful information to ordinary publication growth.</p>
-    <p class="abstract">The revised analysis treats topic shares as a composition, uses complete 2023-2025 data for the main outcome, and keeps the graph fixed at the 2022 cutoff. The spectral composite reaches a Spearman correlation of 0.52; the CLR growth baseline reaches 0.48. Their paired bootstrap difference is +0.04, with a 95% interval of -0.14 to +0.23. Rolling cutoffs continue to favor the growth baseline.</p>
+    <p class="abstract">This study treats topic shares as a composition, uses complete 2023-2025 data for the primary outcome, and fixes the graph at the 2022 cutoff. The spectral composite reaches a Spearman correlation of 0.52; the CLR growth baseline reaches 0.48. Their paired bootstrap difference is +0.04, with a 95% interval of -0.14 to +0.23. Rolling cutoffs favor the growth baseline.</p>
     <div class="meta"><span>OpenAlex snapshot: 2026-06-19</span><span>Snapshot taxonomy: 77 AI topics</span><span>Main holdout: 74 topics</span><span>Partial 2026 data used as sensitivity only</span></div>
   </div>
 </header>
@@ -79,26 +79,26 @@
 <main class="page">
   <section id="result">
     <h2>Main Result</h2>
-    <p>The 2022 holdout contains a positive association. Uncertainty around the incremental gain remains wide, and the rolling record is unfavorable to the spectral composite. The evidence supports graph spectra as a descriptive view of field motion. Predictive value beyond recent growth remains unresolved.</p>
+    <p>The 2022 holdout shows a positive association. Uncertainty around the incremental gain is wide, and the rolling record favors the growth baseline. The evidence supports graph spectra as a descriptive view of field motion. Predictive value beyond recent growth remains unresolved.</p>
     <div class="result-grid">
       <div class="result"><strong>0.52</strong><span>spectral composite correlation with the persistent 2023-2025 shift</span></div>
       <div class="result"><strong>0.48</strong><span>unstandardized CLR growth baseline on the same topics</span></div>
       <div class="result"><strong>1/18</strong><span>rolling cutoffs where the spectral composite beats the baseline</span></div>
     </div>
-    <p>The composite captures 3 of the ten largest persistent shifts. Random ranking reaches at least that many hits with probability 0.13. This top-ten result provides little separation on its own.</p>
+    <p>The composite captures 3 of the ten largest persistent shifts. Under random ranking, the probability of at least that many hits is 0.13. The top-ten result provides little separation on its own.</p>
   </section>
 
   <section id="design">
     <h2>Research Design</h2>
-    <p><a href="https://help.openalex.org/hc/en-us/articles/24736129405719-Topics">OpenAlex assigns</a> one primary topic to each work and may assign several secondary topics. The primary-topic counts sum to the AI-subfield denominator in every year of this snapshot. That closure makes ordinary share changes dependent across topics. The analysis now adds 0.5 to each count and applies a centered log-ratio transform within each year.</p>
+    <p><a href="https://help.openalex.org/hc/en-us/articles/24736129405719-Topics">OpenAlex assigns</a> one primary topic to each work and may assign several secondary topics. The primary-topic counts sum to the AI-subfield denominator in every year of this snapshot. That closure makes ordinary share changes dependent across topics. A pseudocount of 0.5 is added before applying a centered log-ratio transform within each year.</p>
     <div class="method-grid">
-      <div class="method"><h3>Outcome</h3><p>Mean topic CLR in 2023-2025 minus mean CLR in 2020-2022. This measures a sustained relative shift and avoids the incomplete 2026 endpoint.</p></div>
-      <div class="method"><h3>Eligibility</h3><p>At least 250 primary-topic works at the cutoff. The 2022 holdout retains 74 of 77 topics. Threshold sensitivity appears below.</p></div>
-      <div class="method"><h3>Graph</h3><p>A positive-correlation k-nearest-neighbor graph with k=7, estimated through the cutoff. Topic descriptions are excluded from the main graph.</p></div>
-      <div class="method"><h3>Locked score</h3><p>The earlier project weights remain fixed: 50% local spectral momentum, 30% midband momentum, and 20% acceleration. The revised outcome was not used to tune them.</p></div>
+      <div class="method"><h3>Outcome</h3><p>The primary outcome is mean topic CLR in 2023-2025 minus mean CLR in 2020-2022. It measures a sustained relative shift and excludes the incomplete 2026 endpoint.</p></div>
+      <div class="method"><h3>Eligibility</h3><p>Topics require at least 250 primary-topic works at the cutoff. The 2022 holdout retains 74 of 77 topics. Threshold sensitivity is reported below.</p></div>
+      <div class="method"><h3>Graph</h3><p>The main specification uses a positive-correlation k-nearest-neighbor graph with k=7, estimated through the cutoff. Topic descriptions are excluded from this graph.</p></div>
+      <div class="method"><h3>Pre-specified score</h3><p>The spectral composite uses weights set before evaluation against the persistent-shift outcome: 50% local spectral momentum, 30% midband momentum, and 20% acceleration.</p></div>
     </div>
     <p class="note">This is a current-taxonomy retrospective holdout. The June 2026 OpenAlex topic universe and historical assignments were downloaded together. Rolling cutoffs restrict count histories, while taxonomy construction and later OpenAlex revisions remain outside the time split.</p>
-    <p>The wider any-topic panel also needs a compositional denominator. Its CLR transform is equivalent to normalizing each topic count by total topic assignments for that year. Assignments per AI work rise from 1.35 in 1990 to 1.53 in 2022 and 1.61 in June 2026.</p>
+    <p>The any-topic panel also uses a compositional denominator. Its CLR transform is equivalent to normalizing each topic count by total topic assignments for that year. Assignments per AI work rise from 1.35 in 1990 to 1.53 in 2022 and 1.61 in June 2026.</p>
     <div class="table-wrap"><table><thead><tr><th>Feature</th><th>Primary-topic rho</th><th>Any-topic rho</th></tr></thead><tbody><tr><td>Fixed spectral composite</td><td>0.52</td><td>0.55</td></tr>
 <tr><td>Midband spectral momentum</td><td>0.51</td><td>0.53</td></tr>
 <tr><td>Standardized 3-year momentum</td><td>0.48</td><td>0.51</td></tr>
@@ -1041,7 +1041,7 @@ Spearman difference: 0.039</title></circle>
 
   <section id="agentic">
     <h2>Agentic Vocabulary Has Older Precursors</h2>
-    <p>The phrase panel remains a companion description. It sums OpenAlex title-and-abstract query hits within capability families. The build drops 1 exact duplicate time series before family aggregation. Other queries can still match the same work, so family values are query-hit indices rather than paper counts.</p>
+    <p>The phrase panel provides a companion description. It sums OpenAlex title-and-abstract query hits within capability families. One exact duplicate time series is removed before family aggregation. Other queries can still match the same work, so family values are query-hit indices rather than paper counts.</p>
     <figure><h3>Agentic-AI phrase-family histories</h3><div class="chart-shell"><div class="inline-svg" role="img" aria-label="Agentic AI query-hit family histories"><svg xmlns="http://www.w3.org/2000/svg" width="1180" height="680" viewBox="0 0 1180 680">
 <rect x="0" y="0" width="1180" height="680" fill="#ffffff"/>
 <text x="92" y="34" font-family="Arial" font-size="25" font-weight="700" fill="#1f2933">Agentic-AI Query Hits Include Older Capability Terms</text>
@@ -1143,8 +1143,8 @@ Spearman difference: 0.039</title></circle>
 <text x="731" y="130" font-family="Arial" font-size="11" fill="#1f2933">High frequency</text>
 <text x="18" y="205.0" transform="rotate(-90 18 205.0)" text-anchor="middle" font-family="Arial" font-size="12" fill="#1f2933">Energy share</text>
 </svg></div></div><figcaption>Figure 7. Annual energy shares use the 2022 correlation graph for all years. Later values describe movement in that fixed basis.</figcaption></figure>
-    <p>A stronger next study would freeze historical OpenAlex vintages, construct paper-level citation and embedding graphs, define outcomes before scoring, and evaluate models on non-overlapping forward blocks. Independent data would provide a cleaner test after model selection.</p>
-    <p>This version makes a narrower claim. The spectral representation is informative, and one 2022 holdout is favorable. The rolling evidence and paired uncertainty do not show dependable incremental prediction.</p>
+    <p>Further evaluation should freeze historical OpenAlex vintages, construct paper-level citation and embedding graphs, define outcomes before scoring, and evaluate models on non-overlapping forward blocks. Independent data would provide a cleaner test after model selection.</p>
+    <p>The evidence supports the spectral representation as a descriptive tool for field dynamics. One 2022 holdout is favorable. The rolling results and paired uncertainty leave incremental predictive value unresolved.</p>
   </section>
 </main>
 <footer><div class="page"><p>Rebuild with <code>uv run innovation-build-report</code>. The frozen aggregate inputs, SHA-256 manifest, and evidence tables are committed with the article. Source: <a href="https://api.openalex.org/works">OpenAlex Works API</a> and <a href="https://api.openalex.org/topics">OpenAlex Topics API</a>.</p></div></footer>

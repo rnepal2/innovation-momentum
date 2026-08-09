@@ -46,6 +46,10 @@ def test_article_avoids_prohibited_writing_patterns():
         r"\bin (?:conclusion|summary)\b",
         r"\bultimately\b",
         r"at the end of the day",
+        r"\bthis version\b",
+        r"\brevised analysis\b",
+        r"\bearlier project\b",
+        r"\bthe analysis now\b",
         r"—",
     ]
     for pattern in patterns:

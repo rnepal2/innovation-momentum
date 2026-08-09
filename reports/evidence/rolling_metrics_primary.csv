@@ -1,0 +1,127 @@
+feature,feature_label,spearman,top10_hits,average_precision,n_topics,cutoff_year,eval_end_year,scope,scope_label
+baseline_growth_3y,CLR growth baseline,0.689891956782713,6,0.6604845602426247,50,2005,2008,primary,Primary topic
+raw_momentum_3y,Standardized 3-year momentum,0.5694597839135654,5,0.4774550117813875,50,2005,2008,primary,Primary topic
+spectral_midband_momentum,Midband spectral momentum,0.5355582232893157,4,0.45997052289815443,50,2005,2008,primary,Primary topic
+spectral_local_momentum,Local spectral momentum,0.3802641056422568,4,0.44023035530001475,50,2005,2008,primary,Primary topic
+spectral_emergence_score,Fixed spectral composite,0.3641296518607443,4,0.39519284636931695,50,2005,2008,primary,Primary topic
+cutoff_log_count,Topic size at cutoff,-0.4404801920768307,0,0.13146593132353568,50,2005,2008,primary,Primary topic
+raw_acceleration_1y,1-year acceleration,-0.4642016806722689,0,0.1351661716899817,50,2005,2008,primary,Primary topic
+baseline_growth_3y,CLR growth baseline,0.7384956885511824,6,0.7352938727938729,52,2006,2009,primary,Primary topic
+raw_momentum_3y,Standardized 3-year momentum,0.7139929992316228,6,0.6465509928667824,52,2006,2009,primary,Primary topic
+spectral_midband_momentum,Midband spectral momentum,0.7060531033893964,6,0.6408241758241758,52,2006,2009,primary,Primary topic
+spectral_emergence_score,Fixed spectral composite,0.6593528558012465,7,0.6827198036405198,52,2006,2009,primary,Primary topic
+spectral_local_momentum,Local spectral momentum,0.5206181166225561,6,0.5719155844155843,52,2006,2009,primary,Primary topic
+raw_acceleration_1y,1-year acceleration,0.5096900879364809,4,0.5248992673992674,52,2006,2009,primary,Primary topic
+cutoff_log_count,Topic size at cutoff,-0.5592077179202596,0,0.1285497631637139,52,2006,2009,primary,Primary topic
+baseline_growth_3y,CLR growth baseline,0.5771284271284273,5,0.5078210678210678,55,2007,2010,primary,Primary topic
+raw_momentum_3y,Standardized 3-year momentum,0.516883116883117,6,0.5603022875816994,55,2007,2010,primary,Primary topic
+spectral_midband_momentum,Midband spectral momentum,0.47453102453102464,5,0.5229699248120301,55,2007,2010,primary,Primary topic
+spectral_emergence_score,Fixed spectral composite,0.32647907647907654,5,0.4591305126701843,55,2007,2010,primary,Primary topic
+spectral_local_momentum,Local spectral momentum,0.31500721500721507,5,0.4691528678360976,55,2007,2010,primary,Primary topic
+raw_acceleration_1y,1-year acceleration,-0.22518037518037523,1,0.17024380677565712,55,2007,2010,primary,Primary topic
+cutoff_log_count,Topic size at cutoff,-0.6052669552669554,0,0.1201223957393607,55,2007,2010,primary,Primary topic
+baseline_growth_3y,CLR growth baseline,0.8167464114832537,7,0.8442307692307693,56,2008,2011,primary,Primary topic
+raw_momentum_3y,Standardized 3-year momentum,0.7408065618591935,7,0.7469642857142856,56,2008,2011,primary,Primary topic
+spectral_midband_momentum,Midband spectral momentum,0.7309637730690364,7,0.7367550505050505,56,2008,2011,primary,Primary topic
+spectral_emergence_score,Fixed spectral composite,0.684894053315106,7,0.6783072483072484,56,2008,2011,primary,Primary topic
+spectral_local_momentum,Local spectral momentum,0.6244019138755982,6,0.6242448249424994,56,2008,2011,primary,Primary topic
+raw_acceleration_1y,1-year acceleration,0.209501025290499,2,0.25853346653346654,56,2008,2011,primary,Primary topic
+cutoff_log_count,Topic size at cutoff,-0.640123034859877,0,0.11867885352390442,56,2008,2011,primary,Primary topic
+baseline_growth_3y,CLR growth baseline,0.8951375382050571,7,0.7983333333333332,60,2009,2012,primary,Primary topic
+raw_momentum_3y,Standardized 3-year momentum,0.8111697693803837,8,0.6330298786181138,60,2009,2012,primary,Primary topic
+spectral_midband_momentum,Midband spectral momentum,0.7958877465962769,7,0.616005661005661,60,2009,2012,primary,Primary topic
+spectral_emergence_score,Fixed spectral composite,0.6567379827729927,4,0.4083077706607118,60,2009,2012,primary,Primary topic
+spectral_local_momentum,Local spectral momentum,0.6453459294248404,5,0.4616883116883116,60,2009,2012,primary,Primary topic
+raw_acceleration_1y,1-year acceleration,-0.04440122256182274,2,0.17407269488079935,60,2009,2012,primary,Primary topic
+cutoff_log_count,Topic size at cutoff,-0.7319255348707976,0,0.10733353134683996,60,2009,2012,primary,Primary topic
+baseline_growth_3y,CLR growth baseline,0.805155529953917,7,0.8474537037037038,63,2010,2013,primary,Primary topic
+raw_momentum_3y,Standardized 3-year momentum,0.7290706605222734,8,0.8435173160173159,63,2010,2013,primary,Primary topic
+spectral_midband_momentum,Midband spectral momentum,0.6961885560675883,8,0.8670337995337996,63,2010,2013,primary,Primary topic
+spectral_emergence_score,Fixed spectral composite,0.5993663594470047,7,0.7884920634920635,63,2010,2013,primary,Primary topic
+spectral_local_momentum,Local spectral momentum,0.5055203533026114,6,0.6964285714285714,63,2010,2013,primary,Primary topic
+raw_acceleration_1y,1-year acceleration,0.23598310291858676,5,0.4812942638717585,63,2010,2013,primary,Primary topic
+cutoff_log_count,Topic size at cutoff,-0.6650905469294568,0,0.1074905352439058,63,2010,2013,primary,Primary topic
+baseline_growth_3y,CLR growth baseline,0.7342490842490842,7,0.7884053265575004,64,2011,2014,primary,Primary topic
+raw_momentum_3y,Standardized 3-year momentum,0.6703754578754578,7,0.75305900621118,64,2011,2014,primary,Primary topic
+spectral_midband_momentum,Midband spectral momentum,0.6211538461538461,6,0.659908293460925,64,2011,2014,primary,Primary topic
+spectral_emergence_score,Fixed spectral composite,0.37101648351648353,2,0.3875237892726525,64,2011,2014,primary,Primary topic
+spectral_local_momentum,Local spectral momentum,0.32614468864468865,3,0.39895295363879674,64,2011,2014,primary,Primary topic
+raw_acceleration_1y,1-year acceleration,-0.26071428571428573,1,0.10379468959218048,64,2011,2014,primary,Primary topic
+cutoff_log_count,Topic size at cutoff,-0.5466866608263483,0,0.10855093062627989,64,2011,2014,primary,Primary topic
+baseline_growth_3y,CLR growth baseline,0.8196847928191213,7,0.8410027472527473,66,2012,2015,primary,Primary topic
+raw_momentum_3y,Standardized 3-year momentum,0.7554326270744183,7,0.8158458646616541,66,2012,2015,primary,Primary topic
+spectral_midband_momentum,Midband spectral momentum,0.7208224611209687,7,0.8130735492577597,66,2012,2015,primary,Primary topic
+spectral_emergence_score,Fixed spectral composite,0.547896879240163,7,0.7121717171717171,66,2012,2015,primary,Primary topic
+spectral_local_momentum,Local spectral momentum,0.4813485022440247,6,0.6622694897694897,66,2012,2015,primary,Primary topic
+raw_acceleration_1y,1-year acceleration,0.25356434610165957,3,0.41421315640880857,66,2012,2015,primary,Primary topic
+cutoff_log_count,Topic size at cutoff,-0.43705706146897355,0,0.10485728450828835,66,2012,2015,primary,Primary topic
+baseline_growth_3y,CLR growth baseline,0.8406846884458826,7,0.831566091954023,66,2013,2016,primary,Primary topic
+raw_momentum_3y,Standardized 3-year momentum,0.7530529172320218,6,0.6534539519620164,66,2013,2016,primary,Primary topic
+spectral_midband_momentum,Midband spectral momentum,0.7240371568729779,6,0.617373877163982,66,2013,2016,primary,Primary topic
+spectral_emergence_score,Fixed spectral composite,0.5309884145705042,5,0.4799945600435197,66,2013,2016,primary,Primary topic
+spectral_local_momentum,Local spectral momentum,0.445485857426156,4,0.44886711651278804,66,2013,2016,primary,Primary topic
+raw_acceleration_1y,1-year acceleration,-0.11270222314998436,1,0.14203299883098036,66,2013,2016,primary,Primary topic
+cutoff_log_count,Topic size at cutoff,-0.39090273358494526,0,0.1097194713327164,66,2013,2016,primary,Primary topic
+baseline_growth_3y,CLR growth baseline,0.801106356330237,7,0.7967905623787976,66,2014,2017,primary,Primary topic
+raw_momentum_3y,Standardized 3-year momentum,0.7507149566851061,5,0.6725124875124877,66,2014,2017,primary,Primary topic
+spectral_midband_momentum,Midband spectral momentum,0.726917858261142,5,0.6765601065601066,66,2014,2017,primary,Primary topic
+spectral_emergence_score,Fixed spectral composite,0.5554535017221586,5,0.5527165286404416,66,2014,2017,primary,Primary topic
+spectral_local_momentum,Local spectral momentum,0.4453188602442335,5,0.48826090069525935,66,2014,2017,primary,Primary topic
+raw_acceleration_1y,1-year acceleration,0.12067633858678635,1,0.24737019688258083,66,2014,2017,primary,Primary topic
+cutoff_log_count,Topic size at cutoff,-0.28865764178215436,1,0.11632017531627463,66,2014,2017,primary,Primary topic
+baseline_growth_3y,CLR growth baseline,0.8318597004019,7,0.7323483684774008,69,2015,2018,primary,Primary topic
+raw_momentum_3y,Standardized 3-year momentum,0.7938253562294484,7,0.7586507936507936,69,2015,2018,primary,Primary topic
+spectral_midband_momentum,Midband spectral momentum,0.7671903544026307,7,0.7561428160565347,69,2015,2018,primary,Primary topic
+spectral_emergence_score,Fixed spectral composite,0.6915966386554623,7,0.7378256384628199,69,2015,2018,primary,Primary topic
+spectral_local_momentum,Local spectral momentum,0.5388381439532336,5,0.6370161545771302,69,2015,2018,primary,Primary topic
+raw_acceleration_1y,1-year acceleration,0.25703324808184147,5,0.36096468890586536,69,2015,2018,primary,Primary topic
+cutoff_log_count,Topic size at cutoff,-0.3526521068114487,1,0.11702608341235313,69,2015,2018,primary,Primary topic
+baseline_growth_3y,CLR growth baseline,0.8052607884751434,7,0.8345833333333333,72,2016,2019,primary,Primary topic
+raw_momentum_3y,Standardized 3-year momentum,0.7733937873818253,6,0.49317085692085694,72,2016,2019,primary,Primary topic
+spectral_midband_momentum,Midband spectral momentum,0.7598880956974727,6,0.4781476418318523,72,2016,2019,primary,Primary topic
+spectral_emergence_score,Fixed spectral composite,0.6548974210560166,6,0.5122871572871573,72,2016,2019,primary,Primary topic
+spectral_local_momentum,Local spectral momentum,0.6073059360730595,5,0.4862558094079833,72,2016,2019,primary,Primary topic
+raw_acceleration_1y,1-year acceleration,0.06338028169014086,3,0.3232231137022261,72,2016,2019,primary,Primary topic
+cutoff_log_count,Topic size at cutoff,-0.3493661117074733,1,0.09574854832752404,72,2016,2019,primary,Primary topic
+baseline_growth_3y,CLR growth baseline,0.7840207330618287,7,0.7708800186741362,74,2017,2020,primary,Primary topic
+raw_momentum_3y,Standardized 3-year momentum,0.7565049981488337,7,0.6510606060606061,74,2017,2020,primary,Primary topic
+spectral_midband_momentum,Midband spectral momentum,0.7304109589041095,7,0.6868360805860806,74,2017,2020,primary,Primary topic
+spectral_emergence_score,Fixed spectral composite,0.6774824139207699,6,0.6564285714285714,74,2017,2020,primary,Primary topic
+spectral_local_momentum,Local spectral momentum,0.5088041466123656,5,0.6343939393939394,74,2017,2020,primary,Primary topic
+raw_acceleration_1y,1-year acceleration,0.18723435764531648,2,0.2710861182137777,74,2017,2020,primary,Primary topic
+cutoff_log_count,Topic size at cutoff,-0.35815148576684014,1,0.09556442179928393,74,2017,2020,primary,Primary topic
+baseline_growth_3y,CLR growth baseline,0.805257312106627,7,0.825622968580715,74,2018,2021,primary,Primary topic
+raw_momentum_3y,Standardized 3-year momentum,0.7899740836727137,6,0.706781045751634,74,2018,2021,primary,Primary topic
+spectral_midband_momentum,Midband spectral momentum,0.739829692706405,6,0.7307333842627961,74,2018,2021,primary,Primary topic
+spectral_emergence_score,Fixed spectral composite,0.510699740836727,6,0.7031485671191553,74,2018,2021,primary,Primary topic
+spectral_local_momentum,Local spectral momentum,0.4078341355053683,7,0.7100088417329797,74,2018,2021,primary,Primary topic
+raw_acceleration_1y,1-year acceleration,0.2711144020733061,3,0.38990952106317406,74,2018,2021,primary,Primary topic
+cutoff_log_count,Topic size at cutoff,-0.17279782005330738,1,0.12643476758937072,74,2018,2021,primary,Primary topic
+baseline_growth_3y,CLR growth baseline,0.8969270640503516,7,0.844493006993007,74,2019,2022,primary,Primary topic
+raw_momentum_3y,Standardized 3-year momentum,0.8166901147723064,5,0.6275361963980889,74,2019,2022,primary,Primary topic
+spectral_midband_momentum,Midband spectral momentum,0.768530174009626,6,0.6172985347985348,74,2019,2022,primary,Primary topic
+spectral_emergence_score,Fixed spectral composite,0.6233987412069603,6,0.5110225885225885,74,2019,2022,primary,Primary topic
+spectral_local_momentum,Local spectral momentum,0.4784450203628285,5,0.5018883404177522,74,2019,2022,primary,Primary topic
+raw_acceleration_1y,1-year acceleration,0.08596815994076266,1,0.15458937902372566,74,2019,2022,primary,Primary topic
+cutoff_log_count,Topic size at cutoff,0.03579415031469825,0,0.11000835974582057,74,2019,2022,primary,Primary topic
+baseline_growth_3y,CLR growth baseline,0.8378947368421051,9,0.9426315789473685,75,2020,2023,primary,Primary topic
+raw_momentum_3y,Standardized 3-year momentum,0.751578947368421,5,0.5357127667653983,75,2020,2023,primary,Primary topic
+spectral_midband_momentum,Midband spectral momentum,0.7194310099573257,5,0.5359249084249085,75,2020,2023,primary,Primary topic
+spectral_emergence_score,Fixed spectral composite,0.5280512091038406,4,0.4448736201019482,75,2020,2023,primary,Primary topic
+spectral_local_momentum,Local spectral momentum,0.4189189189189188,4,0.3978676685633207,75,2020,2023,primary,Primary topic
+cutoff_log_count,Topic size at cutoff,0.15926144567576134,0,0.14183166860233332,75,2020,2023,primary,Primary topic
+raw_acceleration_1y,1-year acceleration,-0.11559032716927453,2,0.19962008566049577,75,2020,2023,primary,Primary topic
+baseline_growth_3y,CLR growth baseline,0.693662840923115,5,0.5426532239690134,73,2021,2024,primary,Primary topic
+raw_momentum_3y,Standardized 3-year momentum,0.653646797482414,5,0.4464523050049366,73,2021,2024,primary,Primary topic
+spectral_midband_momentum,Midband spectral momentum,0.638066148340121,5,0.5199681598594642,73,2021,2024,primary,Primary topic
+spectral_emergence_score,Fixed spectral composite,0.5012032580525733,4,0.45817699209003554,73,2021,2024,primary,Primary topic
+spectral_local_momentum,Local spectral momentum,0.34934592126372954,4,0.45981003068260123,73,2021,2024,primary,Primary topic
+cutoff_log_count,Topic size at cutoff,0.25271504381093424,3,0.25535370614344666,73,2021,2024,primary,Primary topic
+raw_acceleration_1y,1-year acceleration,0.08685054917931632,1,0.16056938897722137,73,2021,2024,primary,Primary topic
+spectral_emergence_score,Fixed spectral composite,0.5173343206219918,3,0.4984286546786546,74,2022,2025,primary,Primary topic
+spectral_midband_momentum,Midband spectral momentum,0.5135727508330248,5,0.5061904761904761,74,2022,2025,primary,Primary topic
+raw_momentum_3y,Standardized 3-year momentum,0.48004442798963337,6,0.5723793363499247,74,2022,2025,primary,Primary topic
+baseline_growth_3y,CLR growth baseline,0.47506849315068483,4,0.3800668775668775,74,2022,2025,primary,Primary topic
+spectral_local_momentum,Local spectral momentum,0.38174009626064415,3,0.4533109872790724,74,2022,2025,primary,Primary topic
+raw_acceleration_1y,1-year acceleration,0.18273232136245832,2,0.25260771345228467,74,2022,2025,primary,Primary topic
+cutoff_log_count,Topic size at cutoff,0.16049227310009018,4,0.29814912825746115,74,2022,2025,primary,Primary topic

@@ -1,0 +1,34 @@
+{
+  "snapshot": "OpenAlex aggregate export used by the published analysis",
+  "fetched_at": "2026-06-19T23:47:35+00:00",
+  "analysis_cutoff_year": 2022,
+  "complete_evaluation_end_year": 2025,
+  "partial_panel_end": "June 2026",
+  "files": [
+    {
+      "path": "data/raw/openalex_ai_topics_raw.json",
+      "bytes": 1290590,
+      "sha256": "76089800c41c9a1d5ca046323a0deaf22abd062836a36470476b105b346480e9"
+    },
+    {
+      "path": "data/raw/openalex_agentic_precursor_counts_raw.json",
+      "bytes": 81744,
+      "sha256": "dfca6d0eeac460fc303abae7d6a3c053a7c39eca01849a9d5837b0d07f0c6397"
+    },
+    {
+      "path": "data/processed/openalex_ai_topics.csv",
+      "bytes": 74596,
+      "sha256": "269d9ec4a26280b8aeb788b9c5dcfd2976aa2846ba1ea331643f830dda24d0d1"
+    },
+    {
+      "path": "data/processed/openalex_ai_topic_year_counts.csv",
+      "bytes": 581313,
+      "sha256": "2779ac159f509df6e7600f1567b32bc7ea84eaebbb3c2a3692e192a358d6ab7f"
+    },
+    {
+      "path": "data/processed/openalex_agentic_precursor_counts.csv",
+      "bytes": 158763,
+      "sha256": "9482000a8177ddc7b84b247334db0afcda04fdd0b65818ccde2deaf54492dccc"
+    }
+  ]
+}

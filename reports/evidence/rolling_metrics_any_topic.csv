@@ -1,0 +1,127 @@
+feature,feature_label,spearman,top10_hits,average_precision,n_topics,cutoff_year,eval_end_year,scope,scope_label
+baseline_growth_3y,CLR growth baseline,0.726930963773069,7,0.8263354037267081,56,2005,2008,any_topic,Any topic assignment
+raw_momentum_3y,Standardized 3-year momentum,0.6840738209159263,6,0.5704636591478697,56,2005,2008,any_topic,Any topic assignment
+spectral_midband_momentum,Midband spectral momentum,0.6490088858509911,6,0.4850668337510443,56,2005,2008,any_topic,Any topic assignment
+spectral_local_momentum,Local spectral momentum,0.522693096377307,2,0.3669381568723674,56,2005,2008,any_topic,Any topic assignment
+spectral_emergence_score,Fixed spectral composite,0.49856459330143543,3,0.35717271858576205,56,2005,2008,any_topic,Any topic assignment
+raw_acceleration_1y,1-year acceleration,-0.3931647300068353,0,0.12455317655936582,56,2005,2008,any_topic,Any topic assignment
+cutoff_log_count,Topic size at cutoff,-0.48038277511961724,0,0.11379569255111152,56,2005,2008,any_topic,Any topic assignment
+raw_momentum_3y,Standardized 3-year momentum,0.7282875511396845,5,0.5658976470389514,59,2006,2009,any_topic,Any topic assignment
+baseline_growth_3y,CLR growth baseline,0.7278784336645238,6,0.7747527706734868,59,2006,2009,any_topic,Any topic assignment
+spectral_midband_momentum,Midband spectral momentum,0.7189362945645822,5,0.5900961538461538,59,2006,2009,any_topic,Any topic assignment
+spectral_emergence_score,Fixed spectral composite,0.6898305084745764,6,0.5535536758563073,59,2006,2009,any_topic,Any topic assignment
+spectral_local_momentum,Local spectral momentum,0.5606078316773817,5,0.5025320512820513,59,2006,2009,any_topic,Any topic assignment
+raw_acceleration_1y,1-year acceleration,0.5038573933372298,2,0.32232743780186934,59,2006,2009,any_topic,Any topic assignment
+cutoff_log_count,Topic size at cutoff,-0.5994739918176506,0,0.10578354039377821,59,2006,2009,any_topic,Any topic assignment
+baseline_growth_3y,CLR growth baseline,0.6413084535770945,5,0.5052440993375278,62,2007,2010,any_topic,Any topic assignment
+raw_momentum_3y,Standardized 3-year momentum,0.5959809624537282,5,0.4233140114099866,62,2007,2010,any_topic,Any topic assignment
+spectral_midband_momentum,Midband spectral momentum,0.578655788068797,5,0.4175760251399637,62,2007,2010,any_topic,Any topic assignment
+spectral_emergence_score,Fixed spectral composite,0.4003172924378635,3,0.3428433307251041,62,2007,2010,any_topic,Any topic assignment
+spectral_local_momentum,Local spectral momentum,0.40001510916370775,3,0.3445233061512131,62,2007,2010,any_topic,Any topic assignment
+raw_acceleration_1y,1-year acceleration,-0.18843645337563902,1,0.17001422401592708,62,2007,2010,any_topic,Any topic assignment
+cutoff_log_count,Topic size at cutoff,-0.5900883886076906,0,0.10778358006125308,62,2007,2010,any_topic,Any topic assignment
+baseline_growth_3y,CLR growth baseline,0.8125960061443932,7,0.9003588516746411,62,2008,2011,any_topic,Any topic assignment
+raw_momentum_3y,Standardized 3-year momentum,0.7695852534562212,8,0.8459848484848485,62,2008,2011,any_topic,Any topic assignment
+spectral_midband_momentum,Midband spectral momentum,0.768426884238624,7,0.8148304473304473,62,2008,2011,any_topic,Any topic assignment
+spectral_emergence_score,Fixed spectral composite,0.7084938681977286,7,0.7894676595334489,62,2008,2011,any_topic,Any topic assignment
+spectral_local_momentum,Local spectral momentum,0.6619576439777393,6,0.682878787878788,62,2008,2011,any_topic,Any topic assignment
+raw_acceleration_1y,1-year acceleration,-0.0285311374682078,3,0.29672974203045765,62,2008,2011,any_topic,Any topic assignment
+cutoff_log_count,Topic size at cutoff,-0.6843695701442926,0,0.11236939679799467,62,2008,2011,any_topic,Any topic assignment
+baseline_growth_3y,CLR growth baseline,0.858918970814132,6,0.6802435064935064,63,2009,2012,any_topic,Any topic assignment
+raw_momentum_3y,Standardized 3-year momentum,0.7832661290322581,7,0.5566737429237428,63,2009,2012,any_topic,Any topic assignment
+spectral_midband_momentum,Midband spectral momentum,0.7789458525345622,6,0.5615470150764268,63,2009,2012,any_topic,Any topic assignment
+spectral_emergence_score,Fixed spectral composite,0.6885560675883257,5,0.45618493348756495,63,2009,2012,any_topic,Any topic assignment
+spectral_local_momentum,Local spectral momentum,0.6604262672811061,6,0.47510101010101013,63,2009,2012,any_topic,Any topic assignment
+raw_acceleration_1y,1-year acceleration,0.061011904761904774,1,0.1493045503619868,63,2009,2012,any_topic,Any topic assignment
+cutoff_log_count,Topic size at cutoff,-0.7039650537634409,0,0.10497096483783301,63,2009,2012,any_topic,Any topic assignment
+baseline_growth_3y,CLR growth baseline,0.7932692307692307,6,0.7908931419457735,64,2010,2013,any_topic,Any topic assignment
+raw_momentum_3y,Standardized 3-year momentum,0.7445970695970695,7,0.7713909774436091,64,2010,2013,any_topic,Any topic assignment
+spectral_midband_momentum,Midband spectral momentum,0.7071886446886446,6,0.7197599729546991,64,2010,2013,any_topic,Any topic assignment
+spectral_emergence_score,Fixed spectral composite,0.5946886446886446,5,0.6402958265139116,64,2010,2013,any_topic,Any topic assignment
+spectral_local_momentum,Local spectral momentum,0.46771978021978017,5,0.5784578189446343,64,2010,2013,any_topic,Any topic assignment
+raw_acceleration_1y,1-year acceleration,0.0656135531135531,5,0.4578137153227897,64,2010,2013,any_topic,Any topic assignment
+cutoff_log_count,Topic size at cutoff,-0.6699329198852725,0,0.10394645611396736,64,2010,2013,any_topic,Any topic assignment
+baseline_growth_3y,CLR growth baseline,0.7651184636259264,8,0.8443115942028985,66,2011,2014,any_topic,Any topic assignment
+raw_momentum_3y,Standardized 3-year momentum,0.7151863062310825,8,0.8230555555555554,66,2011,2014,any_topic,Any topic assignment
+spectral_midband_momentum,Midband spectral momentum,0.6698883206345895,8,0.7484371184371184,66,2011,2014,any_topic,Any topic assignment
+spectral_emergence_score,Fixed spectral composite,0.49124308527293603,3,0.4702894327894328,66,2011,2014,any_topic,Any topic assignment
+spectral_local_momentum,Local spectral momentum,0.44143617576453403,4,0.4812591488208186,66,2011,2014,any_topic,Any topic assignment
+raw_acceleration_1y,1-year acceleration,-0.18238179730717047,2,0.14907920036952294,66,2011,2014,any_topic,Any topic assignment
+cutoff_log_count,Topic size at cutoff,-0.5381596527558673,0,0.10233867193993348,66,2011,2014,any_topic,Any topic assignment
+baseline_growth_3y,CLR growth baseline,0.8295606367141274,8,0.8082467532467532,68,2012,2015,any_topic,Any topic assignment
+raw_momentum_3y,Standardized 3-year momentum,0.793335114707791,5,0.5787032330414683,68,2012,2015,any_topic,Any topic assignment
+spectral_midband_momentum,Midband spectral momentum,0.7484826506851929,5,0.5271645021645022,68,2012,2015,any_topic,Any topic assignment
+spectral_emergence_score,Fixed spectral composite,0.606481658205138,4,0.39548273319871574,68,2012,2015,any_topic,Any topic assignment
+spectral_local_momentum,Local spectral momentum,0.5754475703324807,4,0.38472706075920055,68,2012,2015,any_topic,Any topic assignment
+raw_acceleration_1y,1-year acceleration,0.23697369927854334,1,0.2057467145868474,68,2012,2015,any_topic,Any topic assignment
+cutoff_log_count,Topic size at cutoff,-0.40107645913654233,0,0.10384269773594842,68,2012,2015,any_topic,Any topic assignment
+baseline_growth_3y,CLR growth baseline,0.8497419298399091,9,0.9488235294117647,70,2013,2016,any_topic,Any topic assignment
+raw_momentum_3y,Standardized 3-year momentum,0.7851806491120638,7,0.7973304473304472,70,2013,2016,any_topic,Any topic assignment
+spectral_midband_momentum,Midband spectral momentum,0.7589712186160441,7,0.7957142857142856,70,2013,2016,any_topic,Any topic assignment
+spectral_emergence_score,Fixed spectral composite,0.6157116612719796,6,0.7594079794079793,70,2013,2016,any_topic,Any topic assignment
+spectral_local_momentum,Local spectral momentum,0.5459014959321143,6,0.6727196922318874,70,2013,2016,any_topic,Any topic assignment
+raw_acceleration_1y,1-year acceleration,-0.07875076546233925,1,0.1645046283450428,70,2013,2016,any_topic,Any topic assignment
+cutoff_log_count,Topic size at cutoff,-0.384480797830461,0,0.09299057408972763,70,2013,2016,any_topic,Any topic assignment
+baseline_growth_3y,CLR growth baseline,0.8390938984289369,9,0.9558119658119659,69,2014,2017,any_topic,Any topic assignment
+raw_momentum_3y,Standardized 3-year momentum,0.7980270369017173,7,0.731419413919414,69,2014,2017,any_topic,Any topic assignment
+spectral_midband_momentum,Midband spectral momentum,0.7633540372670808,6,0.6939411027568921,69,2014,2017,any_topic,Any topic assignment
+spectral_emergence_score,Fixed spectral composite,0.6399342345633906,5,0.5690112906132081,69,2014,2017,any_topic,Any topic assignment
+spectral_local_momentum,Local spectral momentum,0.5518450858604312,5,0.5130435938330675,69,2014,2017,any_topic,Any topic assignment
+raw_acceleration_1y,1-year acceleration,0.1134819145049324,0,0.1312326818026476,69,2014,2017,any_topic,Any topic assignment
+cutoff_log_count,Topic size at cutoff,-0.3483741322616003,0,0.09727193731155162,69,2014,2017,any_topic,Any topic assignment
+baseline_growth_3y,CLR growth baseline,0.8186700109331791,8,0.8232936507936508,72,2015,2018,any_topic,Any topic assignment
+raw_momentum_3y,Standardized 3-year momentum,0.7680879799344009,6,0.5999864718614718,72,2015,2018,any_topic,Any topic assignment
+spectral_midband_momentum,Midband spectral momentum,0.7608527879606407,6,0.4973511904761905,72,2015,2018,any_topic,Any topic assignment
+spectral_emergence_score,Fixed spectral composite,0.6826484018264841,5,0.4331128078511604,72,2015,2018,any_topic,Any topic assignment
+spectral_local_momentum,Local spectral momentum,0.5866615216412632,4,0.36820336142270105,72,2015,2018,any_topic,Any topic assignment
+raw_acceleration_1y,1-year acceleration,0.16074988745256932,3,0.31843756678518,72,2015,2018,any_topic,Any topic assignment
+cutoff_log_count,Topic size at cutoff,-0.3668301310868885,1,0.09800685884608477,72,2015,2018,any_topic,Any topic assignment
+baseline_growth_3y,CLR growth baseline,0.8114587189929656,7,0.8371110606404724,73,2016,2019,any_topic,Any topic assignment
+raw_momentum_3y,Standardized 3-year momentum,0.7748364803159324,6,0.5324094224094224,73,2016,2019,any_topic,Any topic assignment
+spectral_midband_momentum,Midband spectral momentum,0.7700543008762188,5,0.52025507172566,73,2016,2019,any_topic,Any topic assignment
+spectral_emergence_score,Fixed spectral composite,0.6777428113044554,4,0.48263958263958273,73,2016,2019,any_topic,Any topic assignment
+spectral_local_momentum,Local spectral momentum,0.6181661113167963,5,0.4712144554791614,73,2016,2019,any_topic,Any topic assignment
+raw_acceleration_1y,1-year acceleration,0.10434407009749477,1,0.28613032573246977,73,2016,2019,any_topic,Any topic assignment
+cutoff_log_count,Topic size at cutoff,-0.36486486486486497,0,0.08855536348625084,73,2016,2019,any_topic,Any topic assignment
+baseline_growth_3y,CLR growth baseline,0.7890855238800442,7,0.7957222222222222,74,2017,2020,any_topic,Any topic assignment
+raw_momentum_3y,Standardized 3-year momentum,0.7790151795631245,7,0.6844471811713191,74,2017,2020,any_topic,Any topic assignment
+spectral_midband_momentum,Midband spectral momentum,0.7479155868196962,8,0.6982240252422808,74,2017,2020,any_topic,Any topic assignment
+spectral_emergence_score,Fixed spectral composite,0.7105368382080709,7,0.6759782608695654,74,2017,2020,any_topic,Any topic assignment
+spectral_local_momentum,Local spectral momentum,0.54040725657164,4,0.6019344063644267,74,2017,2020,any_topic,Any topic assignment
+raw_acceleration_1y,1-year acceleration,0.1766901147723065,2,0.27217160032949506,74,2017,2020,any_topic,Any topic assignment
+cutoff_log_count,Topic size at cutoff,-0.3422584228063679,0,0.08426875692254701,74,2017,2020,any_topic,Any topic assignment
+baseline_growth_3y,CLR growth baseline,0.8284487226952979,7,0.8307511737089204,74,2018,2021,any_topic,Any topic assignment
+raw_momentum_3y,Standardized 3-year momentum,0.82693817104776,5,0.6321598336304218,74,2018,2021,any_topic,Any topic assignment
+spectral_midband_momentum,Midband spectral momentum,0.7918104405775638,5,0.6417180404136925,74,2018,2021,any_topic,Any topic assignment
+spectral_emergence_score,Fixed spectral composite,0.5558385783043316,5,0.47252516453735954,74,2018,2021,any_topic,Any topic assignment
+spectral_local_momentum,Local spectral momentum,0.4495668271010736,5,0.4661645870469401,74,2018,2021,any_topic,Any topic assignment
+raw_acceleration_1y,1-year acceleration,0.31589781562384295,2,0.25909244097287576,74,2018,2021,any_topic,Any topic assignment
+cutoff_log_count,Topic size at cutoff,-0.138156238430211,0,0.08870474251742419,74,2018,2021,any_topic,Any topic assignment
+baseline_growth_3y,CLR growth baseline,0.9212143650499813,9,0.9588235294117646,74,2019,2022,any_topic,Any topic assignment
+raw_momentum_3y,Standardized 3-year momentum,0.8331580895964457,7,0.6724080086580086,74,2019,2022,any_topic,Any topic assignment
+spectral_midband_momentum,Midband spectral momentum,0.7705442428730098,6,0.6025690026347921,74,2019,2022,any_topic,Any topic assignment
+spectral_emergence_score,Fixed spectral composite,0.6335283228433911,4,0.49493157346098526,74,2019,2022,any_topic,Any topic assignment
+spectral_local_momentum,Local spectral momentum,0.49846723435764523,4,0.44853003205944386,74,2019,2022,any_topic,Any topic assignment
+cutoff_log_count,Topic size at cutoff,0.05537208441318029,0,0.10372041027940371,74,2019,2022,any_topic,Any topic assignment
+raw_acceleration_1y,1-year acceleration,0.020629396519807473,1,0.14842528189193996,74,2019,2022,any_topic,Any topic assignment
+baseline_growth_3y,CLR growth baseline,0.8669701280227595,9,0.9426315789473685,75,2020,2023,any_topic,Any topic assignment
+raw_momentum_3y,Standardized 3-year momentum,0.7790611664295874,5,0.5363811678517562,75,2020,2023,any_topic,Any topic assignment
+spectral_midband_momentum,Midband spectral momentum,0.7408250355618776,5,0.5380205415499533,75,2020,2023,any_topic,Any topic assignment
+spectral_emergence_score,Fixed spectral composite,0.5389758179231864,4,0.4181285381285381,75,2020,2023,any_topic,Any topic assignment
+spectral_local_momentum,Local spectral momentum,0.41843527738264574,4,0.44037274179670155,75,2020,2023,any_topic,Any topic assignment
+cutoff_log_count,Topic size at cutoff,0.19718349928876241,1,0.11750316531255853,75,2020,2023,any_topic,Any topic assignment
+raw_acceleration_1y,1-year acceleration,-0.0739402560455192,2,0.1970943948806077,75,2020,2023,any_topic,Any topic assignment
+baseline_growth_3y,CLR growth baseline,0.7844057756386522,5,0.7224900048352061,74,2021,2024,any_topic,Any topic assignment
+raw_momentum_3y,Standardized 3-year momentum,0.739740836727138,5,0.4894476183095109,74,2021,2024,any_topic,Any topic assignment
+spectral_midband_momentum,Midband spectral momentum,0.7058274713069232,5,0.515339801524012,74,2021,2024,any_topic,Any topic assignment
+spectral_emergence_score,Fixed spectral composite,0.5234061458718992,3,0.3910530303030303,74,2021,2024,any_topic,Any topic assignment
+spectral_local_momentum,Local spectral momentum,0.40884116993706027,4,0.3712581087065453,74,2021,2024,any_topic,Any topic assignment
+cutoff_log_count,Topic size at cutoff,0.2652202887819326,1,0.14238138405791578,74,2021,2024,any_topic,Any topic assignment
+raw_acceleration_1y,1-year acceleration,-0.017312106627175118,1,0.12174118792429485,74,2021,2024,any_topic,Any topic assignment
+spectral_emergence_score,Fixed spectral composite,0.5498719772403983,5,0.5505904504851873,75,2022,2025,any_topic,Any topic assignment
+spectral_midband_momentum,Midband spectral momentum,0.5326031294452347,4,0.41340496540496535,75,2022,2025,any_topic,Any topic assignment
+raw_momentum_3y,Standardized 3-year momentum,0.5082503556187766,3,0.40158611499948893,75,2022,2025,any_topic,Any topic assignment
+baseline_growth_3y,CLR growth baseline,0.5077951635846373,3,0.2517031517381461,75,2022,2025,any_topic,Any topic assignment
+spectral_local_momentum,Local spectral momentum,0.42859174964438124,3,0.3672702909671635,75,2022,2025,any_topic,Any topic assignment
+raw_acceleration_1y,1-year acceleration,0.20568990042674254,4,0.457050121884218,75,2022,2025,any_topic,Any topic assignment
+cutoff_log_count,Topic size at cutoff,0.12497866287339972,0,0.11230293540325238,75,2022,2025,any_topic,Any topic assignment

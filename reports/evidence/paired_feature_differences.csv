@@ -1,0 +1,4 @@
+left_feature,right_feature,left_label,right_label,observed_delta,bootstrap_low,bootstrap_high
+spectral_emergence_score,baseline_growth_3y,Fixed spectral composite,CLR growth baseline,0.04226582747130697,-0.13735254039877995,0.23305445065953279
+spectral_emergence_score,raw_momentum_3y,Fixed spectral composite,Standardized 3-year momentum,0.037289892632358435,-0.1165850941826024,0.19835368577216328
+spectral_midband_momentum,raw_momentum_3y,Midband spectral momentum,Standardized 3-year momentum,0.03352832284339141,-0.033201702916989845,0.11336644668390283

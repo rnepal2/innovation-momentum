@@ -13,7 +13,7 @@ innovation-fetch-phrase-panel = "fetch_openalex_counts:main"
 innovation-fetch-agentic-terms = "fetch_agentic_precursor_counts:main"
 innovation-fetch-ai-topics = "fetch_openalex_ai_topics:main"
 innovation-build-agentic = "analyze_agentic_and_visuals:main"
-innovation-build-report = "analyze_topic_dynamics:main"
+innovation-build-report = "rigorous_topic_dynamics:main"
 
 [build-system]
 requires = ["setuptools>=68"]
@@ -28,6 +28,7 @@ py-modules = [
   "fetch_openalex_counts",
   "openalex",
   "paths",
+  "rigorous_topic_dynamics",
   "spectral"
 ]
 

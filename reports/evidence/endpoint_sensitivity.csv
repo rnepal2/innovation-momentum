@@ -1,0 +1,26 @@
+endpoint,complete_data,feature,feature_label,spearman,n_topics
+2023,True,spectral_emergence_score,Fixed spectral composite,0.23376527212143644,74
+2023,True,spectral_midband_momentum,Midband spectral momentum,0.36376156978896695,74
+2023,True,raw_momentum_3y,Standardized 3-year momentum,0.40747871158830057,74
+2023,True,baseline_growth_3y,CLR growth baseline,0.4121880784894483,74
+2023,True,raw_acceleration_1y,1-year acceleration,-0.03816364309514994,74
+2024,True,spectral_emergence_score,Fixed spectral composite,0.18282117734172526,74
+2024,True,spectral_midband_momentum,Midband spectral momentum,0.025931136616068117,74
+2024,True,raw_momentum_3y,Standardized 3-year momentum,-0.03579415031469825,74
+2024,True,baseline_growth_3y,CLR growth baseline,-0.09026286560533134,74
+2024,True,raw_acceleration_1y,1-year acceleration,0.4639022584228063,74
+2025,True,spectral_emergence_score,Fixed spectral composite,0.21164013328396886,74
+2025,True,spectral_midband_momentum,Midband spectral momentum,0.19114402073306178,74
+2025,True,raw_momentum_3y,Standardized 3-year momentum,0.18211032950758976,74
+2025,True,baseline_growth_3y,CLR growth baseline,0.17429100333209918,74
+2025,True,raw_acceleration_1y,1-year acceleration,0.22952980377637908,74
+Jun 2026,False,spectral_emergence_score,Fixed spectral composite,0.12082932247315806,74
+Jun 2026,False,spectral_midband_momentum,Midband spectral momentum,0.20192521288411694,74
+Jun 2026,False,raw_momentum_3y,Standardized 3-year momentum,0.23998519067012214,74
+Jun 2026,False,baseline_growth_3y,CLR growth baseline,0.26516105146242125,74
+Jun 2026,False,raw_acceleration_1y,1-year acceleration,-0.2280784894483524,74
+2023-2025 mean,True,spectral_emergence_score,Fixed spectral composite,0.5173343206219918,74
+2023-2025 mean,True,spectral_midband_momentum,Midband spectral momentum,0.5135727508330248,74
+2023-2025 mean,True,raw_momentum_3y,Standardized 3-year momentum,0.48004442798963337,74
+2023-2025 mean,True,baseline_growth_3y,CLR growth baseline,0.47506849315068483,74
+2023-2025 mean,True,raw_acceleration_1y,1-year acceleration,0.18273232136245832,74

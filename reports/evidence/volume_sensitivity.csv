@@ -1,0 +1,16 @@
+minimum_2022_count,feature,feature_label,spearman,n_topics
+0,spectral_emergence_score,Fixed spectral composite,0.5021294494978705,77
+0,raw_momentum_3y,Standardized 3-year momentum,0.4688995215311005,77
+0,baseline_growth_3y,CLR growth baseline,0.4606183290393816,77
+100,spectral_emergence_score,Fixed spectral composite,0.5195163584637269,75
+100,raw_momentum_3y,Standardized 3-year momentum,0.4833285917496444,75
+100,baseline_growth_3y,CLR growth baseline,0.4775533428165007,75
+250,spectral_emergence_score,Fixed spectral composite,0.5173343206219918,74
+250,raw_momentum_3y,Standardized 3-year momentum,0.48004442798963337,74
+250,baseline_growth_3y,CLR growth baseline,0.47506849315068483,74
+500,spectral_emergence_score,Fixed spectral composite,0.48279678068410464,71
+500,raw_momentum_3y,Standardized 3-year momentum,0.5030516431924882,71
+500,baseline_growth_3y,CLR growth baseline,0.49164989939637826,71
+1000,spectral_emergence_score,Fixed spectral composite,0.5347040844679078,60
+1000,raw_momentum_3y,Standardized 3-year momentum,0.6444567935537651,60
+1000,baseline_growth_3y,CLR growth baseline,0.6687413170325092,60

@@ -10,7 +10,7 @@
     "evaluation_cutoff_year": 2022,
     "evaluation_end_year": 2026,
     "query_filter": "title_and_abstract.search",
-    "query_note": "Quoted title_and_abstract.search values are used as near phrase matches. Counts are phrase proxies, not deduplicated topic membership."
+    "query_note": "Quoted title_and_abstract.search values are near-match proxies. Family indices remove exact duplicate annual series; other cross-query work overlap remains unknown."
   },
   "terms": [
     {"id": "software_agent", "label": "Software agent", "query": "software agent", "family": "classic_agents"},

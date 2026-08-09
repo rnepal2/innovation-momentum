@@ -5,6 +5,12 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 
+SPECTRAL_SCORE_WEIGHTS = {
+    "local_momentum": 0.50,
+    "midband_momentum": 0.30,
+    "acceleration": 0.20,
+}
+
 
 def zscore(values: np.ndarray, eps: float = 1e-9) -> np.ndarray:
     values = np.asarray(values, dtype=float)
@@ -125,9 +131,9 @@ def spectral_node_scores(
     midband_momentum = eigvecs @ (alpha_dx * mid_weight)
 
     score = (
-        0.50 * zscore(local_momentum)
-        + 0.30 * zscore(midband_momentum)
-        + 0.20 * zscore(accel)
+        SPECTRAL_SCORE_WEIGHTS["local_momentum"] * zscore(local_momentum)
+        + SPECTRAL_SCORE_WEIGHTS["midband_momentum"] * zscore(midband_momentum)
+        + SPECTRAL_SCORE_WEIGHTS["acceleration"] * zscore(accel)
     )
     scores = pd.DataFrame(
         {

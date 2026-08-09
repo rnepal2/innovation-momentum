@@ -7,10 +7,23 @@ __pycache__/
 *.py[cod]
 
 artifacts/
-data/
+data/*
+!data/README.md
+!data/manifest.json
+!data/raw/
+data/raw/*
+!data/raw/openalex_ai_topics_raw.json
+!data/raw/openalex_agentic_precursor_counts_raw.json
+!data/processed/
+data/processed/*
+!data/processed/openalex_ai_topics.csv
+!data/processed/openalex_ai_topic_year_counts.csv
+!data/processed/openalex_agentic_precursor_counts.csv
 
 reports/*
 !reports/
 !reports/index.html
+!reports/evidence/
+!reports/evidence/**
 
 .DS_Store

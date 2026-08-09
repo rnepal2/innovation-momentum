@@ -14,8 +14,9 @@ uv run --with pytest pytest
 
 ```bash
 uv run innovation-build-report
-uv run innovation-build-agentic
 ```
+
+This rebuilds the article, agentic companion figure, and evidence tables from the committed data snapshot.
 
 ## Refresh Data
 

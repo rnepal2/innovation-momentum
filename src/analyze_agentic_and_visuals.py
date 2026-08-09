@@ -96,6 +96,17 @@ def summarize_agentic_terms(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFram
     wide_share = df.pivot(index="year", columns="term_id", values="share_per_million_ai")
     wide_count = df.pivot(index="year", columns="term_id", values="count")
     meta = df[["term_id", "label", "family", "query"]].drop_duplicates().set_index("term_id")
+    duplicate_of: dict[str, str | None] = {}
+    first_by_series: dict[tuple[int, ...], str] = {}
+    retained_terms: list[str] = []
+    for term_id in wide_count.columns:
+        signature = tuple(wide_count[term_id].fillna(0).astype(int).to_list())
+        original = first_by_series.get(signature)
+        duplicate_of[term_id] = original
+        if original is None:
+            first_by_series[signature] = term_id
+            retained_terms.append(term_id)
+
     rows = []
     for term_id in wide_share.columns:
         s = wide_share[term_id]
@@ -112,6 +123,8 @@ def summarize_agentic_terms(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFram
                 "label": meta.loc[term_id, "label"],
                 "family": meta.loc[term_id, "family"],
                 "query": meta.loc[term_id, "query"],
+                "duplicate_of": duplicate_of[term_id],
+                "included_in_family_index": duplicate_of[term_id] is None,
                 "count_2022": int(wide_count.loc[YEAR_CUTOFF, term_id]),
                 "count_2026": int(wide_count.loc[YEAR_END, term_id]),
                 "share_per_million_2022": float(s.loc[YEAR_CUTOFF]),
@@ -125,7 +138,7 @@ def summarize_agentic_terms(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFram
     term_summary = pd.DataFrame(rows).sort_values("future_multiple_2026_vs_2022", ascending=False)
 
     family_year = (
-        df[df["year"].between(YEAR_START, YEAR_END)]
+        df[df["year"].between(YEAR_START, YEAR_END) & df["term_id"].isin(retained_terms)]
         .groupby(["year", "family"], as_index=False)["share_per_million_ai"]
         .sum()
     )
@@ -164,8 +177,8 @@ def draw_precursor_river(family_year: pd.DataFrame, family_summary: pd.DataFrame
     lines = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
         f'<rect x="0" y="0" width="{width}" height="{height}" fill="#ffffff"/>',
-        f'<text x="{left}" y="34" font-family="Arial" font-size="25" font-weight="700" fill="{COLORS["ink"]}">Agentic AI Was A Renaming Wave Over An Older Capability Stack</text>',
-        f'<text x="{left}" y="58" font-family="Arial" font-size="13" fill="{COLORS["subtle"]}">AI-subfield phrase counts per million works; y-axis uses log scale so old and new vocabularies can be read together.</text>',
+        f'<text x="{left}" y="34" font-family="Arial" font-size="25" font-weight="700" fill="{COLORS["ink"]}">Agentic-AI Query Hits Include Older Capability Terms</text>',
+        f'<text x="{left}" y="58" font-family="Arial" font-size="13" fill="{COLORS["subtle"]}">Summed query-hit intensity per million AI works; exact duplicate series are removed and the y-axis uses a log scale.</text>',
         f'<line x1="{sx(YEAR_CUTOFF):.1f}" x2="{sx(YEAR_CUTOFF):.1f}" y1="{top}" y2="{top + plot_h}" stroke="#111827" stroke-width="1.2" stroke-dasharray="5 5" opacity="0.5"/>',
         f'<text x="{sx(YEAR_CUTOFF) + 6:.1f}" y="{top + 16}" font-family="Arial" font-size="12" fill="#111827">2022 cutoff</text>',
     ]
@@ -352,6 +365,9 @@ def main() -> None:
     term_summary.to_csv(tables_dir / "agentic_term_summary.csv", index=False)
     family_summary.to_csv(tables_dir / "agentic_family_summary.csv", index=False)
     family_year.to_csv(tables_dir / "agentic_family_year.csv", index=False)
+    term_summary[["term_id", "label", "query", "duplicate_of", "included_in_family_index"]].to_csv(
+        tables_dir / "agentic_duplicate_audit.csv", index=False
+    )
 
     draw_precursor_river(family_year, family_summary, figures_dir / "agentic_precursor_river.svg")
     draw_agentic_bridge(term_summary, family_summary, figures_dir / "agentic_naming_bridge.svg")

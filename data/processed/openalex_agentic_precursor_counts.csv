@@ -1,0 +1,1111 @@
+year,term_id,label,family,query,count,total_ai_subfield_count,share_per_million_ai,source,fetched_at
+1990,software_agent,Software agent,classic_agents,software agent,0,21158,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1991,software_agent,Software agent,classic_agents,software agent,1,22349,44.7447313078885,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1992,software_agent,Software agent,classic_agents,software agent,4,23653,169.11174058258993,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1993,software_agent,Software agent,classic_agents,software agent,3,25158,119.24636298592893,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1994,software_agent,Software agent,classic_agents,software agent,24,26794,895.7229230424722,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1995,software_agent,Software agent,classic_agents,software agent,21,26904,780.5530776092775,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1996,software_agent,Software agent,classic_agents,software agent,41,29153,1406.3732720474736,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1997,software_agent,Software agent,classic_agents,software agent,87,29914,2908.33723340242,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1998,software_agent,Software agent,classic_agents,software agent,96,31714,3027.0542977864666,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1999,software_agent,Software agent,classic_agents,software agent,111,33874,3276.8495010922834,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2000,software_agent,Software agent,classic_agents,software agent,108,41526,2600.780234070221,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2001,software_agent,Software agent,classic_agents,software agent,146,44494,3281.3413044455433,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2002,software_agent,Software agent,classic_agents,software agent,220,73657,2986.817274665001,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2003,software_agent,Software agent,classic_agents,software agent,205,67152,3052.7757922325472,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2004,software_agent,Software agent,classic_agents,software agent,191,70798,2697.816322494986,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2005,software_agent,Software agent,classic_agents,software agent,215,82525,2605.271129960618,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2006,software_agent,Software agent,classic_agents,software agent,248,89867,2759.633680883973,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2007,software_agent,Software agent,classic_agents,software agent,200,94006,2127.5237750781866,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2008,software_agent,Software agent,classic_agents,software agent,196,97942,2001.1843744256805,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2009,software_agent,Software agent,classic_agents,software agent,199,104307,1907.8297717315234,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2010,software_agent,Software agent,classic_agents,software agent,140,110977,1261.5226578480226,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2011,software_agent,Software agent,classic_agents,software agent,231,113866,2028.7004022271792,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2012,software_agent,Software agent,classic_agents,software agent,163,117204,1390.7375174908707,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2013,software_agent,Software agent,classic_agents,software agent,130,119586,1087.0837723479335,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2014,software_agent,Software agent,classic_agents,software agent,121,123421,980.38421338346,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2015,software_agent,Software agent,classic_agents,software agent,85,123176,690.0694940572839,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2016,software_agent,Software agent,classic_agents,software agent,85,133294,637.6881179948084,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2017,software_agent,Software agent,classic_agents,software agent,85,135902,625.4506924107077,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2018,software_agent,Software agent,classic_agents,software agent,73,151644,481.3906254121495,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2019,software_agent,Software agent,classic_agents,software agent,57,170860,333.6064614304109,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2020,software_agent,Software agent,classic_agents,software agent,64,187411,341.495429830693,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2021,software_agent,Software agent,classic_agents,software agent,55,188238,292.18329986506444,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2022,software_agent,Software agent,classic_agents,software agent,45,182071,247.15632912435262,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2023,software_agent,Software agent,classic_agents,software agent,72,213117,337.84259350497615,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2024,software_agent,Software agent,classic_agents,software agent,31,233538,132.7407102912588,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2025,software_agent,Software agent,classic_agents,software agent,29,286910,101.07699278519395,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2026,software_agent,Software agent,classic_agents,software agent,56,206613,271.0381244161791,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1990,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,17,21158,803.478589658758,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1991,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,30,22349,1342.341939236655,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1992,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,26,23653,1099.2263137868347,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1993,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,31,25158,1232.2124175212655,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1994,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,31,26794,1156.9754422631934,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1995,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,60,26904,2230.151650312221,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1996,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,95,29153,3258.6697766953657,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1997,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,108,29914,3610.34966905128,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1998,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,125,31714,3941.4769502427953,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1999,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,133,33874,3926.3151679754387,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2000,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,141,41526,3395.4630833694555,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2001,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,175,44494,3933.11457724637,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2002,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,275,73657,3733.521593331252,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2003,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,276,67152,4110.078627591137,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2004,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,229,70798,3234.5546484363963,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2005,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,255,82525,3089.9727355346863,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2006,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,259,89867,2882.036787697375,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2007,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,248,94006,2638.129481096951,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2008,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,256,97942,2613.791835984562,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2009,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,236,104307,2262.551890093666,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2010,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,237,110977,2135.5776422141525,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2011,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,295,113866,2590.7645829308135,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2012,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,193,117204,1646.701477765264,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2013,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,206,119586,1722.6096700282642,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2014,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,141,123421,1142.4311908022137,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2015,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,154,123176,1250.2435539390792,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2016,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,159,133294,1192.8518913079358,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2017,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,145,135902,1066.945298818266,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2018,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,212,151644,1398.0111313339137,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2019,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,211,170860,1234.9291817862577,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2020,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,208,187411,1109.860146949752,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2021,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,243,188238,1290.9189430401937,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2022,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,195,182071,1071.010759538861,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2023,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,240,213117,1126.1419783499205,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2024,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,284,233538,1216.0761846037904,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2025,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,461,286910,1606.7756439301522,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2026,intelligent_agent,Intelligent agent,classic_agents,intelligent agent,286,206613,1384.2304211254857,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1990,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,14,21158,661.6882503072123,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1991,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,26,22349,1163.363014005101,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1992,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,17,23653,718.7248974760073,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1993,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,31,25158,1232.2124175212655,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1994,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,32,26794,1194.2972307232963,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1995,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,60,26904,2230.151650312221,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1996,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,68,29153,2332.5215243714197,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1997,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,84,29914,2808.0497425954404,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1998,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,83,31714,2617.1406949612156,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1999,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,86,33874,2538.820334179607,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2000,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,86,41526,2070.991667870732,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2001,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,100,44494,2247.494044140783,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2002,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,184,73657,2498.0653569925466,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2003,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,127,67152,1891.2318322611388,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2004,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,145,70798,2048.08045425012,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2005,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,171,82525,2072.0993638291425,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2006,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,143,89867,1591.2403885742265,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2007,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,123,94006,1308.4271216730847,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2008,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,131,97942,1337.5262910702254,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2009,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,125,104307,1198.3855350072383,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2010,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,127,110977,1144.3812681907064,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2011,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,162,113866,1422.7249574060738,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2012,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,130,117204,1109.1771611890379,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2013,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,120,119586,1003.461943705785,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2014,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,107,123421,866.9513291903322,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2015,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,121,123176,982.3342209521336,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2016,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,115,133294,862.7545125812115,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2017,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,96,135902,706.3913702520935,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2018,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,160,151644,1055.1027406293688,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2019,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,165,170860,965.7029146669788,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2020,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,151,187411,805.7157797567912,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2021,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,177,188238,940.2989832021165,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2022,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,143,182071,785.4078903284982,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2023,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,189,213117,886.8368079505624,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2024,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,288,233538,1233.2040181897594,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2025,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,544,286910,1896.064968108466,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2026,autonomous_agent,Autonomous agent,classic_agents,autonomous agent,1139,206613,5512.721851964784,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1990,multi_agent_system,Multi-agent system,classic_agents,multi agent system,1,21158,47.263446450515175,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1991,multi_agent_system,Multi-agent system,classic_agents,multi agent system,6,22349,268.468387847331,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1992,multi_agent_system,Multi-agent system,classic_agents,multi agent system,18,23653,761.0028326216548,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1993,multi_agent_system,Multi-agent system,classic_agents,multi agent system,22,25158,874.4733285634788,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1994,multi_agent_system,Multi-agent system,classic_agents,multi agent system,28,26794,1045.0100768828843,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1995,multi_agent_system,Multi-agent system,classic_agents,multi agent system,54,26904,2007.136485280999,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1996,multi_agent_system,Multi-agent system,classic_agents,multi agent system,82,29153,2812.7465440949472,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1997,multi_agent_system,Multi-agent system,classic_agents,multi agent system,113,29914,3777.4954870629135,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1998,multi_agent_system,Multi-agent system,classic_agents,multi agent system,154,31714,4855.8996026991235,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1999,multi_agent_system,Multi-agent system,classic_agents,multi agent system,186,33874,5490.9370018303125,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2000,multi_agent_system,Multi-agent system,classic_agents,multi agent system,214,41526,5153.397871213216,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2001,multi_agent_system,Multi-agent system,classic_agents,multi agent system,263,44494,5910.90933609026,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2002,multi_agent_system,Multi-agent system,classic_agents,multi agent system,531,73657,7209.090785668707,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2003,multi_agent_system,Multi-agent system,classic_agents,multi agent system,504,67152,7505.360972122945,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2004,multi_agent_system,Multi-agent system,classic_agents,multi agent system,598,70798,8446.566287183254,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2005,multi_agent_system,Multi-agent system,classic_agents,multi agent system,628,82525,7609.815207512875,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2006,multi_agent_system,Multi-agent system,classic_agents,multi agent system,740,89867,8234.3908219925,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2007,multi_agent_system,Multi-agent system,classic_agents,multi agent system,621,94006,6605.9613216177695,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2008,multi_agent_system,Multi-agent system,classic_agents,multi agent system,708,97942,7228.7680463948045,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2009,multi_agent_system,Multi-agent system,classic_agents,multi agent system,694,104307,6653.436490360187,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2010,multi_agent_system,Multi-agent system,classic_agents,multi agent system,626,110977,5640.808455806158,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2011,multi_agent_system,Multi-agent system,classic_agents,multi agent system,650,113866,5708.464335271284,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2012,multi_agent_system,Multi-agent system,classic_agents,multi agent system,572,117204,4880.379509231767,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2013,multi_agent_system,Multi-agent system,classic_agents,multi agent system,510,119586,4264.713260749586,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2014,multi_agent_system,Multi-agent system,classic_agents,multi agent system,479,123421,3881.025109179151,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2015,multi_agent_system,Multi-agent system,classic_agents,multi agent system,423,123176,3434.1105410144833,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2016,multi_agent_system,Multi-agent system,classic_agents,multi agent system,378,133294,2835.8365717886777,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2017,multi_agent_system,Multi-agent system,classic_agents,multi agent system,353,135902,2597.4599343644686,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2018,multi_agent_system,Multi-agent system,classic_agents,multi agent system,317,151644,2090.422304871937,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2019,multi_agent_system,Multi-agent system,classic_agents,multi agent system,354,170860,2071.8717078309724,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2020,multi_agent_system,Multi-agent system,classic_agents,multi agent system,343,187411,1830.20206924887,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2021,multi_agent_system,Multi-agent system,classic_agents,multi agent system,346,188238,1838.0985773329508,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2022,multi_agent_system,Multi-agent system,classic_agents,multi agent system,311,182071,1708.124852392748,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2023,multi_agent_system,Multi-agent system,classic_agents,multi agent system,424,213117,1989.5174950848595,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2024,multi_agent_system,Multi-agent system,classic_agents,multi agent system,584,233538,2500.6637035514564,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2025,multi_agent_system,Multi-agent system,classic_agents,multi agent system,1372,286910,4781.9873828029695,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2026,multi_agent_system,Multi-agent system,classic_agents,multi agent system,1728,206613,8363.462124842095,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1990,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,0,21158,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1991,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,0,22349,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1992,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,0,23653,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1993,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,1,25158,39.74878766197631,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1994,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,1,26794,37.32178846010301,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1995,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,0,26904,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1996,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,2,29153,68.60357424621823,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1997,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,4,29914,133.71665440930667,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1998,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,2,31714,63.063631203884725,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1999,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,3,33874,88.56350002952117,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2000,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,4,41526,96.32519385445264,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2001,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,8,44494,179.79952353126262,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2002,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,8,73657,108.6115372605455,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2003,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,5,67152,74.45794615201333,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2004,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,13,70798,183.6210062431142,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2005,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,16,82525,193.8806422296274,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2006,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,14,89867,155.78577230796623,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2007,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,7,94006,74.46333212773652,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2008,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,31,97942,316.51385513875556,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2009,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,23,104307,220.50293844133182,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2010,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,24,110977,216.261027059661,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2011,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,18,113866,158.0805508228971,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2012,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,17,117204,145.04624415548957,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2013,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,19,119586,158.88147442008264,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2014,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,13,123421,105.3305353221899,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2015,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,11,123176,89.3031109956485,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2016,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,17,133294,127.53762359896169,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2017,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,27,135902,198.67257288340127,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2018,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,55,151644,362.6915670913455,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2019,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,149,170860,872.0589956689687,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2020,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,220,187411,1173.890540043007,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2021,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,360,188238,1912.4725082076945,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2022,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,363,182071,1993.727721603111,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2023,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,529,213117,2482.2046106129496,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2024,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,456,233538,1952.5730288004522,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2025,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,761,286910,2652.3997072252623,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2026,multi_agent_reinforcement_learning,Multi-agent RL,classic_agents,multi agent reinforcement learning,712,206613,3446.0561532914194,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1990,embodied_agent,Embodied agent,classic_agents,embodied agent,0,21158,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1991,embodied_agent,Embodied agent,classic_agents,embodied agent,0,22349,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1992,embodied_agent,Embodied agent,classic_agents,embodied agent,0,23653,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1993,embodied_agent,Embodied agent,classic_agents,embodied agent,1,25158,39.74878766197631,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1994,embodied_agent,Embodied agent,classic_agents,embodied agent,1,26794,37.32178846010301,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1995,embodied_agent,Embodied agent,classic_agents,embodied agent,1,26904,37.16919417187035,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1996,embodied_agent,Embodied agent,classic_agents,embodied agent,0,29153,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1997,embodied_agent,Embodied agent,classic_agents,embodied agent,2,29914,66.85832720465334,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1998,embodied_agent,Embodied agent,classic_agents,embodied agent,1,31714,31.531815601942363,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1999,embodied_agent,Embodied agent,classic_agents,embodied agent,7,33874,206.64816673554938,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2000,embodied_agent,Embodied agent,classic_agents,embodied agent,3,41526,72.24389539083947,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2001,embodied_agent,Embodied agent,classic_agents,embodied agent,9,44494,202.27446397267045,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2002,embodied_agent,Embodied agent,classic_agents,embodied agent,5,73657,67.88221078784095,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2003,embodied_agent,Embodied agent,classic_agents,embodied agent,9,67152,134.024303073624,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2004,embodied_agent,Embodied agent,classic_agents,embodied agent,8,70798,112.99754230345489,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2005,embodied_agent,Embodied agent,classic_agents,embodied agent,10,82525,121.17540139351712,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2006,embodied_agent,Embodied agent,classic_agents,embodied agent,10,89867,111.27555164854729,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2007,embodied_agent,Embodied agent,classic_agents,embodied agent,12,94006,127.65142650469119,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2008,embodied_agent,Embodied agent,classic_agents,embodied agent,18,97942,183.78223846766454,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2009,embodied_agent,Embodied agent,classic_agents,embodied agent,14,104307,134.2191799208107,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2010,embodied_agent,Embodied agent,classic_agents,embodied agent,11,110977,99.11963740234464,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2011,embodied_agent,Embodied agent,classic_agents,embodied agent,14,113866,122.95153952891997,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2012,embodied_agent,Embodied agent,classic_agents,embodied agent,12,117204,102.38558410975735,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2013,embodied_agent,Embodied agent,classic_agents,embodied agent,15,119586,125.43274296322312,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2014,embodied_agent,Embodied agent,classic_agents,embodied agent,9,123421,72.92113983843917,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2015,embodied_agent,Embodied agent,classic_agents,embodied agent,7,123176,56.82925245177632,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2016,embodied_agent,Embodied agent,classic_agents,embodied agent,11,133294,82.52434468168109,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2017,embodied_agent,Embodied agent,classic_agents,embodied agent,17,135902,125.09013848214154,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2018,embodied_agent,Embodied agent,classic_agents,embodied agent,10,151644,65.94392128933555,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2019,embodied_agent,Embodied agent,classic_agents,embodied agent,11,170860,64.38019431113193,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2020,embodied_agent,Embodied agent,classic_agents,embodied agent,16,187411,85.37385745767325,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2021,embodied_agent,Embodied agent,classic_agents,embodied agent,26,188238,138.12301448166681,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2022,embodied_agent,Embodied agent,classic_agents,embodied agent,35,182071,192.232700430052,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2023,embodied_agent,Embodied agent,classic_agents,embodied agent,43,213117,201.76710445436075,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2024,embodied_agent,Embodied agent,classic_agents,embodied agent,115,233538,492.42521559660526,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2025,embodied_agent,Embodied agent,classic_agents,embodied agent,122,286910,425.2204524066781,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2026,embodied_agent,Embodied agent,classic_agents,embodied agent,114,206613,551.7561818472217,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1990,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,0,21158,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1991,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,0,22349,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1992,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,0,23653,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1993,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,0,25158,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1994,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,1,26794,37.32178846010301,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1995,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,0,26904,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1996,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,1,29153,34.301787123109115,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1997,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,3,29914,100.28749080698002,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1998,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,5,31714,157.6590780097118,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1999,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,5,33874,147.60583338253528,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2000,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,15,41526,361.2194769541974,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2001,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,15,44494,337.12410662111745,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2002,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,28,73657,380.1403804119093,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2003,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,34,67152,506.31403383369076,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2004,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,39,70798,550.8630187293427,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2005,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,45,82525,545.2893062708271,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2006,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,37,89867,411.719541099625,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2007,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,63,94006,670.1699891496287,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2008,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,74,97942,755.5492025892876,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2009,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,59,104307,565.6379725234165,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2010,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,65,110977,585.7069482865819,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2011,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,93,113866,816.7495125849682,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2012,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,75,117204,639.9099006859834,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2013,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,76,119586,635.5258976803306,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2014,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,73,123421,591.471467578451,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2015,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,62,123176,503.3448074300189,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2016,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,71,133294,532.657133854487,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2017,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,108,135902,794.6902915336051,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2018,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,200,151644,1318.878425786711,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2019,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,246,170860,1439.7752545944047,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2020,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,348,187411,1856.881399704393,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2021,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,354,188238,1880.597966404233,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2022,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,346,182071,1900.3575528228,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2023,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,483,213117,2266.360731429215,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2024,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,448,233538,1918.3173616285144,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2025,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,724,286910,2523.439406085532,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2026,conversational_agent,Conversational agent,dialogue_assistants,conversational agent,609,206613,2947.539603025947,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1990,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,20,21158,945.2689290103034,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1991,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,17,22349,760.6604322341044,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1992,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,23,23653,972.3925083498922,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1993,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,37,25158,1470.7051434931236,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1994,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,31,26794,1156.9754422631934,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1995,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,33,26904,1226.5834076717217,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1996,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,40,29153,1372.0714849243645,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1997,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,91,29914,3042.053887811727,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1998,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,79,31714,2491.0134325534464,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1999,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,83,33874,2450.2568341500855,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2000,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,157,41526,3780.7638587872657,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2001,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,113,44494,2539.668269879085,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2002,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,213,73657,2891.782179562024,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2003,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,185,67152,2754.9440076244937,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2004,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,221,70798,3121.5571061329415,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2005,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,202,82525,2447.743108149046,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2006,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,234,89867,2603.847908576007,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2007,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,208,94006,2212.624726081314,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2008,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,192,97942,1960.3438769884217,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2009,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,203,104307,1946.1781088517548,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2010,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,233,110977,2099.5341377042087,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2011,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,217,113866,1905.7488626982592,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2012,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,203,117204,1732.0227978567286,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2013,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,148,119586,1237.6030639038015,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2014,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,189,123421,1531.3439366072225,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2015,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,174,123176,1412.6128466584398,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2016,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,226,133294,1695.5001725509026,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2017,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,197,135902,1449.5739577048166,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2018,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,351,151644,2314.6316372556776,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2019,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,443,170860,2592.7660072574035,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2020,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,530,187411,2828.009028285426,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2021,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,602,188238,3198.079027613978,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2022,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,608,182071,3339.356624613475,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2023,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,674,213117,3162.5820558660266,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2024,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,567,233538,2427.8704108110887,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2025,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,545,286910,1899.550381652783,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2026,dialogue_system,Dialogue system,dialogue_assistants,dialogue system,391,206613,1892.4269044058215,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1990,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,0,21158,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1991,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,0,22349,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1992,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,0,23653,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1993,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,0,25158,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1994,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,0,26794,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1995,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,0,26904,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1996,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,0,29153,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1997,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,0,29914,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1998,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,0,31714,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1999,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,0,33874,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2000,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,3,41526,72.24389539083947,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2001,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,2,44494,44.949880882815656,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2002,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,1,73657,13.576442157568188,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2003,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,2,67152,29.78317846080534,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2004,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,3,70798,42.37407836379559,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2005,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,2,82525,24.235080278703425,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2006,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,4,89867,44.51022065941892,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2007,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,3,94006,31.912856626172797,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2008,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,1,97942,10.210124359314696,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2009,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,2,104307,19.174168560115813,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2010,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,3,110977,27.032628382457624,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2011,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,5,113866,43.91126411747141,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2012,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,3,117204,25.596396027439337,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2013,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,7,119586,58.535280049504124,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2014,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,7,123421,56.716442096563796,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2015,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,8,123176,64.94771708774437,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2016,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,18,133294,135.0398367518418,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2017,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,28,135902,206.03081632352726,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2018,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,67,151644,441.82427263854817,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2019,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,110,170860,643.8019431113192,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2020,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,147,187411,784.3723153923729,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2021,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,174,188238,924.3617123003858,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2022,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,200,182071,1098.4725738860116,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2023,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,255,213117,1196.5258519967906,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2024,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,351,233538,1502.9673971687691,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2025,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,523,286910,1822.8712836778084,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2026,virtual_assistant,Virtual assistant,dialogue_assistants,virtual assistant,290,206613,1403.590287155213,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1990,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,0,21158,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1991,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,1,22349,44.7447313078885,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1992,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,2,23653,84.55587029129497,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1993,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,1,25158,39.74878766197631,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1994,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,4,26794,149.28715384041203,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1995,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,2,26904,74.3383883437407,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1996,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,9,29153,308.71608410798206,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1997,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,3,29914,100.28749080698002,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1998,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,7,31714,220.72270921359652,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1999,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,5,33874,147.60583338253528,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2000,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,6,41526,144.48779078167894,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2001,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,4,44494,89.89976176563131,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2002,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,14,73657,190.07019020595465,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2003,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,14,67152,208.48224922563736,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2004,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,13,70798,183.6210062431142,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2005,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,15,82525,181.76310209027568,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2006,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,14,89867,155.78577230796623,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2007,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,18,94006,191.47713975703678,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2008,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,7,97942,71.47087051520288,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2009,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,7,104307,67.10958996040534,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2010,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,16,110977,144.174018039774,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2011,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,9,113866,79.04027541144855,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2012,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,19,117204,162.11050817378248,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2013,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,22,119586,183.96802301272723,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2014,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,18,123421,145.84227967687835,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2015,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,23,123176,186.72468662726507,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2016,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,41,133294,307.59073926808406,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2017,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,57,135902,419.41987608718046,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2018,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,114,151644,751.7607026984252,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2019,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,83,170860,485.7778298021772,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2020,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,120,187411,640.3039309325493,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2021,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,95,188238,504.68024522147493,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2022,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,95,182071,521.7744725958555,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2023,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,93,213117,436.38001661059417,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2024,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,85,233538,363.9664637018387,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2025,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,88,286910,306.71639189989895,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2026,personal_assistant,Personal assistant,dialogue_assistants,personal assistant,68,206613,329.11772250536023,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1990,question_answering,Question answering,retrieval_reasoning,question answering,20,21158,945.2689290103034,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1991,question_answering,Question answering,retrieval_reasoning,question answering,11,22349,492.1920443867735,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1992,question_answering,Question answering,retrieval_reasoning,question answering,16,23653,676.4469623303597,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1993,question_answering,Question answering,retrieval_reasoning,question answering,11,25158,437.2366642817394,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1994,question_answering,Question answering,retrieval_reasoning,question answering,12,26794,447.8614615212361,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1995,question_answering,Question answering,retrieval_reasoning,question answering,11,26904,408.8611358905739,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1996,question_answering,Question answering,retrieval_reasoning,question answering,12,29153,411.62144547730935,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1997,question_answering,Question answering,retrieval_reasoning,question answering,11,29914,367.7207996255934,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1998,question_answering,Question answering,retrieval_reasoning,question answering,15,31714,472.9772340291354,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1999,question_answering,Question answering,retrieval_reasoning,question answering,32,33874,944.6773336482258,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2000,question_answering,Question answering,retrieval_reasoning,question answering,63,41526,1517.121803207629,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2001,question_answering,Question answering,retrieval_reasoning,question answering,99,44494,2225.019103699375,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2002,question_answering,Question answering,retrieval_reasoning,question answering,145,73657,1968.5841128473871,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2003,question_answering,Question answering,retrieval_reasoning,question answering,214,67152,3186.800095306171,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2004,question_answering,Question answering,retrieval_reasoning,question answering,292,70798,4124.410294076104,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2005,question_answering,Question answering,retrieval_reasoning,question answering,340,82525,4119.963647379582,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2006,question_answering,Question answering,retrieval_reasoning,question answering,432,89867,4807.103831217243,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2007,question_answering,Question answering,retrieval_reasoning,question answering,386,94006,4106.1208859009,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2008,question_answering,Question answering,retrieval_reasoning,question answering,399,97942,4073.8396193665644,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2009,question_answering,Question answering,retrieval_reasoning,question answering,338,104307,3240.4344866595725,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2010,question_answering,Question answering,retrieval_reasoning,question answering,336,110977,3027.654378835254,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2011,question_answering,Question answering,retrieval_reasoning,question answering,326,113866,2863.0144204591365,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2012,question_answering,Question answering,retrieval_reasoning,question answering,371,117204,3165.420975393331,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2013,question_answering,Question answering,retrieval_reasoning,question answering,316,119586,2642.4497850919,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2014,question_answering,Question answering,retrieval_reasoning,question answering,375,123421,3038.380826601632,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2015,question_answering,Question answering,retrieval_reasoning,question answering,368,123176,2987.594986036241,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2016,question_answering,Question answering,retrieval_reasoning,question answering,570,133294,4276.261497141657,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2017,question_answering,Question answering,retrieval_reasoning,question answering,728,135902,5356.801224411708,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2018,question_answering,Question answering,retrieval_reasoning,question answering,1000,151644,6594.392128933555,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2019,question_answering,Question answering,retrieval_reasoning,question answering,1285,170860,7520.777244527684,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2020,question_answering,Question answering,retrieval_reasoning,question answering,1530,187411,8163.875119390004,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2021,question_answering,Question answering,retrieval_reasoning,question answering,1832,188238,9732.3600973236,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2022,question_answering,Question answering,retrieval_reasoning,question answering,1888,182071,10369.58109748395,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2023,question_answering,Question answering,retrieval_reasoning,question answering,2503,213117,11744.722382541046,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2024,question_answering,Question answering,retrieval_reasoning,question answering,3153,233538,13501.01482413997,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2025,question_answering,Question answering,retrieval_reasoning,question answering,4167,286910,14523.718239169077,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2026,question_answering,Question answering,retrieval_reasoning,question answering,2882,206613,13948.783474418356,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1990,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,80,21158,3781.0757160412136,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1991,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,104,22349,4653.452056020404,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1992,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,114,23653,4819.684606603813,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1993,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,119,25158,4730.10573177518,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1994,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,185,26794,6904.530865119056,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1995,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,141,26904,5240.85637823372,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1996,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,180,29153,6174.321682159641,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1997,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,233,29914,7788.995119342114,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1998,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,320,31714,10090.180992621556,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1999,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,349,33874,10302.887170100963,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2000,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,416,41526,10017.820160863073,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2001,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,417,44494,9372.050164067065,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2002,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,650,73657,8824.687402419322,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2003,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,613,67152,9128.544198236836,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2004,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,659,70798,9308.172547247097,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2005,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,780,82525,9451.681308694335,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2006,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,877,89867,9758.8658795776,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2007,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,911,94006,9690.87079548114,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2008,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,1027,97942,10485.797717016192,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2009,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,988,104307,9472.039268697212,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2010,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,1059,110977,9542.517819007542,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2011,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,1097,113866,9634.131347373228,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2012,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,1044,117204,8907.54581754889,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2013,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,1009,119586,8437.442509992808,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2014,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,957,123421,7753.947869487365,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2015,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,929,123176,7542.053646814315,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2016,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,1052,133294,7892.328236829865,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2017,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,994,135902,7314.0939794852175,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2018,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,1194,151644,7873.704201946664,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2019,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,1094,170860,6402.902961488938,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2020,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,1159,187411,6184.268799590205,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2021,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,1179,188238,6263.3474643802,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2022,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,1024,182071,5624.179578296379,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2023,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,1201,213117,5635.402149992727,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2024,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,1476,233538,6320.170593222516,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2025,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,1734,286910,6043.7070858457355,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2026,information_retrieval,Information retrieval,retrieval_reasoning,information retrieval,894,206613,4326.930057644001,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1990,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,0,21158,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1991,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,0,22349,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1992,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,0,23653,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1993,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,0,25158,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1994,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,0,26794,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1995,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,0,26904,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1996,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,0,29153,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1997,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,0,29914,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1998,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,0,31714,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1999,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,0,33874,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2000,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,0,41526,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2001,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,0,44494,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2002,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,0,73657,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2003,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,0,67152,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2004,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,0,70798,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2005,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,0,82525,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2006,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,0,89867,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2007,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,0,94006,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2008,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,0,97942,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2009,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,0,104307,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2010,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,0,110977,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2011,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,0,113866,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2012,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,1,117204,8.532132009146444,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2013,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,0,119586,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2014,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,0,123421,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2015,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,0,123176,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2016,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,0,133294,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2017,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,0,135902,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2018,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,0,151644,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2019,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,0,170860,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2020,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,3,187411,16.007598273313732,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2021,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,11,188238,58.43665997301289,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2022,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,13,182071,71.40071730259075,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2023,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,106,213117,497.3793737712149,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2024,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,1455,233538,6230.24946689618,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2025,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,3801,286910,13248.056881949042,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2026,retrieval_augmented_generation,Retrieval-augmented generation,retrieval_reasoning,retrieval augmented generation,3454,206613,16717.24431666933,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1990,automated_planning,Automated planning,planning_reasoning,automated planning,2,21158,94.52689290103035,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1991,automated_planning,Automated planning,planning_reasoning,automated planning,2,22349,89.489462615777,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1992,automated_planning,Automated planning,planning_reasoning,automated planning,0,23653,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1993,automated_planning,Automated planning,planning_reasoning,automated planning,7,25158,278.2415136338342,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1994,automated_planning,Automated planning,planning_reasoning,automated planning,2,26794,74.64357692020602,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1995,automated_planning,Automated planning,planning_reasoning,automated planning,2,26904,74.3383883437407,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1996,automated_planning,Automated planning,planning_reasoning,automated planning,5,29153,171.50893561554557,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1997,automated_planning,Automated planning,planning_reasoning,automated planning,0,29914,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1998,automated_planning,Automated planning,planning_reasoning,automated planning,7,31714,220.72270921359652,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1999,automated_planning,Automated planning,planning_reasoning,automated planning,3,33874,88.56350002952117,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2000,automated_planning,Automated planning,planning_reasoning,automated planning,5,41526,120.40649231806579,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2001,automated_planning,Automated planning,planning_reasoning,automated planning,5,44494,112.37470220703916,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2002,automated_planning,Automated planning,planning_reasoning,automated planning,9,73657,122.1879794181137,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2003,automated_planning,Automated planning,planning_reasoning,automated planning,12,67152,178.69907076483202,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2004,automated_planning,Automated planning,planning_reasoning,automated planning,7,70798,98.87284951552304,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2005,automated_planning,Automated planning,planning_reasoning,automated planning,23,82525,278.70342320508934,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2006,automated_planning,Automated planning,planning_reasoning,automated planning,9,89867,100.14799648369258,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2007,automated_planning,Automated planning,planning_reasoning,automated planning,22,94006,234.02761525860052,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2008,automated_planning,Automated planning,planning_reasoning,automated planning,21,97942,214.41261154560863,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2009,automated_planning,Automated planning,planning_reasoning,automated planning,26,104307,249.26419128150556,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2010,automated_planning,Automated planning,planning_reasoning,automated planning,33,110977,297.3589122070339,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2011,automated_planning,Automated planning,planning_reasoning,automated planning,42,113866,368.8546185867599,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2012,automated_planning,Automated planning,planning_reasoning,automated planning,41,117204,349.81741237500427,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2013,automated_planning,Automated planning,planning_reasoning,automated planning,51,119586,426.4713260749586,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2014,automated_planning,Automated planning,planning_reasoning,automated planning,39,123421,315.99160596656975,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2015,automated_planning,Automated planning,planning_reasoning,automated planning,49,123176,397.80476716243425,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2016,automated_planning,Automated planning,planning_reasoning,automated planning,58,133294,435.1283628670458,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2017,automated_planning,Automated planning,planning_reasoning,automated planning,47,135902,345.83744168592074,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2018,automated_planning,Automated planning,planning_reasoning,automated planning,50,151644,329.71960644667774,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2019,automated_planning,Automated planning,planning_reasoning,automated planning,40,170860,234.10979749502516,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2020,automated_planning,Automated planning,planning_reasoning,automated planning,55,187411,293.47263501075173,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2021,automated_planning,Automated planning,planning_reasoning,automated planning,60,188238,318.74541803461574,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2022,automated_planning,Automated planning,planning_reasoning,automated planning,50,182071,274.6181434715029,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2023,automated_planning,Automated planning,planning_reasoning,automated planning,42,213117,197.0748462112361,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2024,automated_planning,Automated planning,planning_reasoning,automated planning,55,233538,235.5077118070721,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2025,automated_planning,Automated planning,planning_reasoning,automated planning,77,286910,268.3768429124116,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2026,automated_planning,Automated planning,planning_reasoning,automated planning,57,206613,275.87809092361084,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1990,task_planning,Task planning,planning_reasoning,task planning,4,21158,189.0537858020607,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1991,task_planning,Task planning,planning_reasoning,task planning,11,22349,492.1920443867735,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1992,task_planning,Task planning,planning_reasoning,task planning,9,23653,380.5014163108274,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1993,task_planning,Task planning,planning_reasoning,task planning,7,25158,278.2415136338342,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1994,task_planning,Task planning,planning_reasoning,task planning,9,26794,335.89609614092706,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1995,task_planning,Task planning,planning_reasoning,task planning,2,26904,74.3383883437407,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1996,task_planning,Task planning,planning_reasoning,task planning,5,29153,171.50893561554557,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1997,task_planning,Task planning,planning_reasoning,task planning,11,29914,367.7207996255934,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1998,task_planning,Task planning,planning_reasoning,task planning,7,31714,220.72270921359652,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1999,task_planning,Task planning,planning_reasoning,task planning,4,33874,118.08466670602823,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2000,task_planning,Task planning,planning_reasoning,task planning,8,41526,192.65038770890527,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2001,task_planning,Task planning,planning_reasoning,task planning,2,44494,44.949880882815656,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2002,task_planning,Task planning,planning_reasoning,task planning,24,73657,325.8346117816365,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2003,task_planning,Task planning,planning_reasoning,task planning,9,67152,134.024303073624,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2004,task_planning,Task planning,planning_reasoning,task planning,10,70798,141.24692787931863,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2005,task_planning,Task planning,planning_reasoning,task planning,11,82525,133.29294153286884,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2006,task_planning,Task planning,planning_reasoning,task planning,4,89867,44.51022065941892,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2007,task_planning,Task planning,planning_reasoning,task planning,11,94006,117.01380762930026,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2008,task_planning,Task planning,planning_reasoning,task planning,9,97942,91.89111923383227,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2009,task_planning,Task planning,planning_reasoning,task planning,10,104307,95.87084280057906,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2010,task_planning,Task planning,planning_reasoning,task planning,27,110977,243.29365544211862,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2011,task_planning,Task planning,planning_reasoning,task planning,13,113866,114.16928670542568,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2012,task_planning,Task planning,planning_reasoning,task planning,14,117204,119.44984812805023,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2013,task_planning,Task planning,planning_reasoning,task planning,23,119586,192.33020587694213,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2014,task_planning,Task planning,planning_reasoning,task planning,23,123421,186.35402403156675,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2015,task_planning,Task planning,planning_reasoning,task planning,20,123176,162.3692927193609,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2016,task_planning,Task planning,planning_reasoning,task planning,24,133294,180.0531156691224,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2017,task_planning,Task planning,planning_reasoning,task planning,26,135902,191.3143294432753,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2018,task_planning,Task planning,planning_reasoning,task planning,25,151644,164.85980322333887,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2019,task_planning,Task planning,planning_reasoning,task planning,33,170860,193.14058293339576,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2020,task_planning,Task planning,planning_reasoning,task planning,31,187411,165.4118488242419,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2021,task_planning,Task planning,planning_reasoning,task planning,45,188238,239.05906352596182,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2022,task_planning,Task planning,planning_reasoning,task planning,55,182071,302.0799578186532,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2023,task_planning,Task planning,planning_reasoning,task planning,95,213117,445.7645330968435,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2024,task_planning,Task planning,planning_reasoning,task planning,148,233538,633.7298426808485,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2025,task_planning,Task planning,planning_reasoning,task planning,187,286910,651.7723327872852,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2026,task_planning,Task planning,planning_reasoning,task planning,105,206613,508.1964832803357,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1990,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,39,21158,1843.2744115700916,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1991,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,27,22349,1208.1077453129894,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1992,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,39,23653,1648.839470680252,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1993,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,30,25158,1192.4636298592893,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1994,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,33,26794,1231.6190191833991,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1995,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,26,26904,966.3990484686292,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1996,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,36,29153,1234.8643364319282,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1997,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,27,29914,902.58741726282,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1998,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,23,31714,725.2317588446742,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1999,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,36,33874,1062.762000354254,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2000,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,48,41526,1155.9023262534315,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2001,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,51,44494,1146.2219625117993,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2002,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,51,73657,692.3985500359776,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2003,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,48,67152,714.7962830593281,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2004,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,37,70798,522.6136331534789,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2005,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,68,82525,823.9927294759163,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2006,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,64,89867,712.1635305507027,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2007,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,64,94006,680.8076080250197,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2008,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,63,97942,643.2378346368258,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2009,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,63,104307,603.9863096436482,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2010,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,91,110977,819.9897276012147,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2011,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,79,113866,693.7979730560482,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2012,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,56,117204,477.79939251220094,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2013,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,81,119586,677.3368120014048,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2014,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,81,123421,656.2902585459525,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2015,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,64,123176,519.5817367019549,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2016,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,73,133294,547.6615601602473,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2017,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,56,135902,412.0616326470545,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2018,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,89,151644,586.9008994750865,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2019,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,87,170860,509.18880955167975,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2020,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,82,187411,437.5410194705754,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2021,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,68,188238,361.24480710589785,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2022,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,67,182071,367.98831225181385,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2023,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,81,213117,380.0729176930982,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2024,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,82,233538,351.120588512362,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2025,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,161,286910,561.1515806350424,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2026,automated_reasoning,Automated reasoning,planning_reasoning,automated reasoning,95,206613,459.79681820601803,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1990,action_selection,Action selection,planning_reasoning,action selection,0,21158,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1991,action_selection,Action selection,planning_reasoning,action selection,2,22349,89.489462615777,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1992,action_selection,Action selection,planning_reasoning,action selection,2,23653,84.55587029129497,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1993,action_selection,Action selection,planning_reasoning,action selection,7,25158,278.2415136338342,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1994,action_selection,Action selection,planning_reasoning,action selection,17,26794,634.4704038217511,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1995,action_selection,Action selection,planning_reasoning,action selection,7,26904,260.18435920309247,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1996,action_selection,Action selection,planning_reasoning,action selection,13,29153,445.9232326004185,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1997,action_selection,Action selection,planning_reasoning,action selection,6,29914,200.57498161396003,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1998,action_selection,Action selection,planning_reasoning,action selection,12,31714,378.3817872233083,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1999,action_selection,Action selection,planning_reasoning,action selection,19,33874,560.9021668536341,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2000,action_selection,Action selection,planning_reasoning,action selection,17,41526,409.38207388142365,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2001,action_selection,Action selection,planning_reasoning,action selection,26,44494,584.3484514766036,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2002,action_selection,Action selection,planning_reasoning,action selection,43,73657,583.7870127754321,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2003,action_selection,Action selection,planning_reasoning,action selection,33,67152,491.42244460328806,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2004,action_selection,Action selection,planning_reasoning,action selection,35,70798,494.3642475776152,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2005,action_selection,Action selection,planning_reasoning,action selection,53,82525,642.2296273856407,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2006,action_selection,Action selection,planning_reasoning,action selection,60,89867,667.6533098912838,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2007,action_selection,Action selection,planning_reasoning,action selection,66,94006,702.0828457758015,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2008,action_selection,Action selection,planning_reasoning,action selection,46,97942,469.6657205284761,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2009,action_selection,Action selection,planning_reasoning,action selection,41,104307,393.07045548237414,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2010,action_selection,Action selection,planning_reasoning,action selection,45,110977,405.4894257368644,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2011,action_selection,Action selection,planning_reasoning,action selection,44,113866,386.41912423374845,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2012,action_selection,Action selection,planning_reasoning,action selection,57,117204,486.33152452134743,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2013,action_selection,Action selection,planning_reasoning,action selection,37,119586,309.4007659759504,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2014,action_selection,Action selection,planning_reasoning,action selection,39,123421,315.99160596656975,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2015,action_selection,Action selection,planning_reasoning,action selection,39,123176,316.6201208027538,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2016,action_selection,Action selection,planning_reasoning,action selection,52,133294,390.11508394976516,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2017,action_selection,Action selection,planning_reasoning,action selection,47,135902,345.83744168592074,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2018,action_selection,Action selection,planning_reasoning,action selection,62,151644,408.8523119938804,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2019,action_selection,Action selection,planning_reasoning,action selection,61,170860,357.0174411799134,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2020,action_selection,Action selection,planning_reasoning,action selection,67,187411,357.5030281040067,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2021,action_selection,Action selection,planning_reasoning,action selection,71,188238,377.1820780076286,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2022,action_selection,Action selection,planning_reasoning,action selection,77,182071,422.91194094611444,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2023,action_selection,Action selection,planning_reasoning,action selection,85,213117,398.84195066559687,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2024,action_selection,Action selection,planning_reasoning,action selection,79,233538,338.27471332288536,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2025,action_selection,Action selection,planning_reasoning,action selection,139,286910,484.4724826600676,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2026,action_selection,Action selection,planning_reasoning,action selection,194,206613,938.953502441763,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1990,program_synthesis,Program synthesis,tool_code_use,program synthesis,12,21158,567.1613574061821,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1991,program_synthesis,Program synthesis,tool_code_use,program synthesis,20,22349,894.89462615777,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1992,program_synthesis,Program synthesis,tool_code_use,program synthesis,14,23653,591.8910920390648,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1993,program_synthesis,Program synthesis,tool_code_use,program synthesis,19,25158,755.2269655775499,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1994,program_synthesis,Program synthesis,tool_code_use,program synthesis,26,26794,970.3664999626782,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1995,program_synthesis,Program synthesis,tool_code_use,program synthesis,15,26904,557.5379125780553,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1996,program_synthesis,Program synthesis,tool_code_use,program synthesis,15,29153,514.5268068466366,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1997,program_synthesis,Program synthesis,tool_code_use,program synthesis,15,29914,501.43745403490004,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1998,program_synthesis,Program synthesis,tool_code_use,program synthesis,19,31714,599.1044964369048,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1999,program_synthesis,Program synthesis,tool_code_use,program synthesis,12,33874,354.25400011808466,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2000,program_synthesis,Program synthesis,tool_code_use,program synthesis,15,41526,361.2194769541974,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2001,program_synthesis,Program synthesis,tool_code_use,program synthesis,8,44494,179.79952353126262,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2002,program_synthesis,Program synthesis,tool_code_use,program synthesis,27,73657,366.56393825434105,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2003,program_synthesis,Program synthesis,tool_code_use,program synthesis,29,67152,431.8560876816774,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2004,program_synthesis,Program synthesis,tool_code_use,program synthesis,13,70798,183.6210062431142,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2005,program_synthesis,Program synthesis,tool_code_use,program synthesis,13,82525,157.52802181157224,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2006,program_synthesis,Program synthesis,tool_code_use,program synthesis,8,89867,89.02044131883784,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2007,program_synthesis,Program synthesis,tool_code_use,program synthesis,11,94006,117.01380762930026,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2008,program_synthesis,Program synthesis,tool_code_use,program synthesis,15,97942,153.15186538972043,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2009,program_synthesis,Program synthesis,tool_code_use,program synthesis,14,104307,134.2191799208107,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2010,program_synthesis,Program synthesis,tool_code_use,program synthesis,20,110977,180.2175225497175,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2011,program_synthesis,Program synthesis,tool_code_use,program synthesis,11,113866,96.60478105843711,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2012,program_synthesis,Program synthesis,tool_code_use,program synthesis,4,117204,34.12852803658578,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2013,program_synthesis,Program synthesis,tool_code_use,program synthesis,8,119586,66.897462913719,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2014,program_synthesis,Program synthesis,tool_code_use,program synthesis,15,123421,121.53523306406528,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2015,program_synthesis,Program synthesis,tool_code_use,program synthesis,24,123176,194.8431512632331,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2016,program_synthesis,Program synthesis,tool_code_use,program synthesis,25,133294,187.55532882200248,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2017,program_synthesis,Program synthesis,tool_code_use,program synthesis,40,135902,294.32973760503893,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2018,program_synthesis,Program synthesis,tool_code_use,program synthesis,34,151644,224.20933238374087,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2019,program_synthesis,Program synthesis,tool_code_use,program synthesis,39,170860,228.25705255764956,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2020,program_synthesis,Program synthesis,tool_code_use,program synthesis,52,187411,277.465036737438,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2021,program_synthesis,Program synthesis,tool_code_use,program synthesis,74,188238,393.1193489093595,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2022,program_synthesis,Program synthesis,tool_code_use,program synthesis,74,182071,406.4348523378242,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2023,program_synthesis,Program synthesis,tool_code_use,program synthesis,76,213117,356.61162647747483,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2024,program_synthesis,Program synthesis,tool_code_use,program synthesis,94,233538,402.50408927026865,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2025,program_synthesis,Program synthesis,tool_code_use,program synthesis,92,286910,320.65804607716706,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2026,program_synthesis,Program synthesis,tool_code_use,program synthesis,86,206613,416.2371196391321,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1990,code_generation,Code generation,tool_code_use,code generation,13,21158,614.4248038566973,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1991,code_generation,Code generation,tool_code_use,code generation,22,22349,984.384088773547,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1992,code_generation,Code generation,tool_code_use,code generation,22,23653,930.1145732042447,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1993,code_generation,Code generation,tool_code_use,code generation,10,25158,397.4878766197631,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1994,code_generation,Code generation,tool_code_use,code generation,9,26794,335.89609614092706,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1995,code_generation,Code generation,tool_code_use,code generation,11,26904,408.8611358905739,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1996,code_generation,Code generation,tool_code_use,code generation,25,29153,857.5446780777279,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1997,code_generation,Code generation,tool_code_use,code generation,24,29914,802.2999264558401,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1998,code_generation,Code generation,tool_code_use,code generation,19,31714,599.1044964369048,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1999,code_generation,Code generation,tool_code_use,code generation,23,33874,678.9868335596623,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2000,code_generation,Code generation,tool_code_use,code generation,22,41526,529.7885661994894,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2001,code_generation,Code generation,tool_code_use,code generation,12,44494,269.69928529689395,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2002,code_generation,Code generation,tool_code_use,code generation,51,73657,692.3985500359776,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2003,code_generation,Code generation,tool_code_use,code generation,50,67152,744.5794615201333,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2004,code_generation,Code generation,tool_code_use,code generation,52,70798,734.4840249724568,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2005,code_generation,Code generation,tool_code_use,code generation,60,82525,727.0524083611027,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2006,code_generation,Code generation,tool_code_use,code generation,62,89867,689.9084202209932,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2007,code_generation,Code generation,tool_code_use,code generation,61,94006,648.8947513988469,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2008,code_generation,Code generation,tool_code_use,code generation,63,97942,643.2378346368258,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2009,code_generation,Code generation,tool_code_use,code generation,80,104307,766.9667424046324,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2010,code_generation,Code generation,tool_code_use,code generation,76,110977,684.8265856889266,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2011,code_generation,Code generation,tool_code_use,code generation,96,113866,843.0962710554512,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2012,code_generation,Code generation,tool_code_use,code generation,68,117204,580.1849766219583,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2013,code_generation,Code generation,tool_code_use,code generation,68,119586,568.6284347666115,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2014,code_generation,Code generation,tool_code_use,code generation,79,123421,640.0855608040771,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2015,code_generation,Code generation,tool_code_use,code generation,56,123176,454.63401961421056,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2016,code_generation,Code generation,tool_code_use,code generation,64,133294,480.1416417843264,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2017,code_generation,Code generation,tool_code_use,code generation,71,135902,522.4352842489441,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2018,code_generation,Code generation,tool_code_use,code generation,69,151644,455.0130568964153,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2019,code_generation,Code generation,tool_code_use,code generation,74,170860,433.1031253657966,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2020,code_generation,Code generation,tool_code_use,code generation,61,187411,325.48783155737925,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2021,code_generation,Code generation,tool_code_use,code generation,87,188238,462.1808561501929,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2022,code_generation,Code generation,tool_code_use,code generation,87,182071,477.835569640415,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2023,code_generation,Code generation,tool_code_use,code generation,234,213117,1097.9884288911724,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2024,code_generation,Code generation,tool_code_use,code generation,526,233538,2252.310116554908,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2025,code_generation,Code generation,tool_code_use,code generation,1015,286910,3537.694747481789,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2026,code_generation,Code generation,tool_code_use,code generation,1007,206613,4873.846272983791,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1990,tool_use,Tool use,tool_code_use,tool use,10,21158,472.6344645051517,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1991,tool_use,Tool use,tool_code_use,tool use,17,22349,760.6604322341044,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1992,tool_use,Tool use,tool_code_use,tool use,18,23653,761.0028326216548,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1993,tool_use,Tool use,tool_code_use,tool use,14,25158,556.4830272676684,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1994,tool_use,Tool use,tool_code_use,tool use,14,26794,522.5050384414421,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1995,tool_use,Tool use,tool_code_use,tool use,14,26904,520.3687184061849,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1996,tool_use,Tool use,tool_code_use,tool use,18,29153,617.4321682159641,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1997,tool_use,Tool use,tool_code_use,tool use,28,29914,936.0165808651468,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1998,tool_use,Tool use,tool_code_use,tool use,26,31714,819.8272056505014,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1999,tool_use,Tool use,tool_code_use,tool use,19,33874,560.9021668536341,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2000,tool_use,Tool use,tool_code_use,tool use,20,41526,481.62596927226315,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2001,tool_use,Tool use,tool_code_use,tool use,26,44494,584.3484514766036,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2002,tool_use,Tool use,tool_code_use,tool use,71,73657,963.9273931873414,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2003,tool_use,Tool use,tool_code_use,tool use,67,67152,997.7364784369788,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2004,tool_use,Tool use,tool_code_use,tool use,47,70798,663.8605610327975,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2005,tool_use,Tool use,tool_code_use,tool use,61,82525,739.1699485004544,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2006,tool_use,Tool use,tool_code_use,tool use,104,89867,1157.265737144892,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2007,tool_use,Tool use,tool_code_use,tool use,77,94006,819.0966534051017,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2008,tool_use,Tool use,tool_code_use,tool use,87,97942,888.2808192603786,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2009,tool_use,Tool use,tool_code_use,tool use,101,104307,968.2955122858485,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2010,tool_use,Tool use,tool_code_use,tool use,131,110977,1180.4247727006498,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2011,tool_use,Tool use,tool_code_use,tool use,100,113866,878.2252823494283,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2012,tool_use,Tool use,tool_code_use,tool use,149,117204,1271.2876693628205,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2013,tool_use,Tool use,tool_code_use,tool use,150,119586,1254.3274296322313,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2014,tool_use,Tool use,tool_code_use,tool use,124,123421,1004.6912599962728,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2015,tool_use,Tool use,tool_code_use,tool use,141,123176,1144.7035136714944,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2016,tool_use,Tool use,tool_code_use,tool use,159,133294,1192.8518913079358,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2017,tool_use,Tool use,tool_code_use,tool use,189,135902,1390.708010183809,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2018,tool_use,Tool use,tool_code_use,tool use,221,151644,1457.3606604943157,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2019,tool_use,Tool use,tool_code_use,tool use,213,170860,1246.6346716610092,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2020,tool_use,Tool use,tool_code_use,tool use,269,187411,1435.3479785071315,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2021,tool_use,Tool use,tool_code_use,tool use,244,188238,1296.231366674104,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2022,tool_use,Tool use,tool_code_use,tool use,251,182071,1378.5830802269445,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2023,tool_use,Tool use,tool_code_use,tool use,335,213117,1571.906511446764,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2024,tool_use,Tool use,tool_code_use,tool use,430,233538,1841.2421104916546,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2025,tool_use,Tool use,tool_code_use,tool use,672,286910,2342.1979017810463,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2026,tool_use,Tool use,tool_code_use,tool use,1151,206613,5570.801450053966,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1990,tool_calling,Tool calling,tool_code_use,tool calling,0,21158,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1991,tool_calling,Tool calling,tool_code_use,tool calling,0,22349,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1992,tool_calling,Tool calling,tool_code_use,tool calling,0,23653,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1993,tool_calling,Tool calling,tool_code_use,tool calling,0,25158,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1994,tool_calling,Tool calling,tool_code_use,tool calling,0,26794,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1995,tool_calling,Tool calling,tool_code_use,tool calling,0,26904,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1996,tool_calling,Tool calling,tool_code_use,tool calling,0,29153,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1997,tool_calling,Tool calling,tool_code_use,tool calling,1,29914,33.42916360232667,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1998,tool_calling,Tool calling,tool_code_use,tool calling,0,31714,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1999,tool_calling,Tool calling,tool_code_use,tool calling,0,33874,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2000,tool_calling,Tool calling,tool_code_use,tool calling,0,41526,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2001,tool_calling,Tool calling,tool_code_use,tool calling,0,44494,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2002,tool_calling,Tool calling,tool_code_use,tool calling,0,73657,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2003,tool_calling,Tool calling,tool_code_use,tool calling,0,67152,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2004,tool_calling,Tool calling,tool_code_use,tool calling,0,70798,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2005,tool_calling,Tool calling,tool_code_use,tool calling,0,82525,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2006,tool_calling,Tool calling,tool_code_use,tool calling,0,89867,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2007,tool_calling,Tool calling,tool_code_use,tool calling,0,94006,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2008,tool_calling,Tool calling,tool_code_use,tool calling,0,97942,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2009,tool_calling,Tool calling,tool_code_use,tool calling,0,104307,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2010,tool_calling,Tool calling,tool_code_use,tool calling,0,110977,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2011,tool_calling,Tool calling,tool_code_use,tool calling,0,113866,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2012,tool_calling,Tool calling,tool_code_use,tool calling,0,117204,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2013,tool_calling,Tool calling,tool_code_use,tool calling,0,119586,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2014,tool_calling,Tool calling,tool_code_use,tool calling,0,123421,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2015,tool_calling,Tool calling,tool_code_use,tool calling,0,123176,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2016,tool_calling,Tool calling,tool_code_use,tool calling,0,133294,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2017,tool_calling,Tool calling,tool_code_use,tool calling,0,135902,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2018,tool_calling,Tool calling,tool_code_use,tool calling,0,151644,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2019,tool_calling,Tool calling,tool_code_use,tool calling,0,170860,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2020,tool_calling,Tool calling,tool_code_use,tool calling,0,187411,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2021,tool_calling,Tool calling,tool_code_use,tool calling,0,188238,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2022,tool_calling,Tool calling,tool_code_use,tool calling,0,182071,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2023,tool_calling,Tool calling,tool_code_use,tool calling,2,213117,9.384516486249336,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2024,tool_calling,Tool calling,tool_code_use,tool calling,12,233538,51.38350075790664,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2025,tool_calling,Tool calling,tool_code_use,tool calling,112,286910,390.3663169635077,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2026,tool_calling,Tool calling,tool_code_use,tool calling,228,206613,1103.5123636944434,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1990,function_calling,Function calling,tool_code_use,function calling,0,21158,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1991,function_calling,Function calling,tool_code_use,function calling,0,22349,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1992,function_calling,Function calling,tool_code_use,function calling,0,23653,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1993,function_calling,Function calling,tool_code_use,function calling,0,25158,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1994,function_calling,Function calling,tool_code_use,function calling,0,26794,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1995,function_calling,Function calling,tool_code_use,function calling,1,26904,37.16919417187035,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1996,function_calling,Function calling,tool_code_use,function calling,1,29153,34.301787123109115,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1997,function_calling,Function calling,tool_code_use,function calling,0,29914,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1998,function_calling,Function calling,tool_code_use,function calling,0,31714,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1999,function_calling,Function calling,tool_code_use,function calling,0,33874,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2000,function_calling,Function calling,tool_code_use,function calling,0,41526,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2001,function_calling,Function calling,tool_code_use,function calling,0,44494,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2002,function_calling,Function calling,tool_code_use,function calling,0,73657,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2003,function_calling,Function calling,tool_code_use,function calling,2,67152,29.78317846080534,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2004,function_calling,Function calling,tool_code_use,function calling,1,70798,14.124692787931862,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2005,function_calling,Function calling,tool_code_use,function calling,1,82525,12.117540139351712,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2006,function_calling,Function calling,tool_code_use,function calling,2,89867,22.25511032970946,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2007,function_calling,Function calling,tool_code_use,function calling,1,94006,10.637618875390933,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2008,function_calling,Function calling,tool_code_use,function calling,0,97942,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2009,function_calling,Function calling,tool_code_use,function calling,2,104307,19.174168560115813,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2010,function_calling,Function calling,tool_code_use,function calling,1,110977,9.010876127485876,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2011,function_calling,Function calling,tool_code_use,function calling,1,113866,8.782252823494282,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2012,function_calling,Function calling,tool_code_use,function calling,1,117204,8.532132009146444,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2013,function_calling,Function calling,tool_code_use,function calling,0,119586,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2014,function_calling,Function calling,tool_code_use,function calling,0,123421,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2015,function_calling,Function calling,tool_code_use,function calling,0,123176,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2016,function_calling,Function calling,tool_code_use,function calling,0,133294,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2017,function_calling,Function calling,tool_code_use,function calling,1,135902,7.358243440125974,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2018,function_calling,Function calling,tool_code_use,function calling,1,151644,6.594392128933555,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2019,function_calling,Function calling,tool_code_use,function calling,1,170860,5.852744937375629,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2020,function_calling,Function calling,tool_code_use,function calling,3,187411,16.007598273313732,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2021,function_calling,Function calling,tool_code_use,function calling,1,188238,5.312423633910263,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2022,function_calling,Function calling,tool_code_use,function calling,1,182071,5.492362869430058,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2023,function_calling,Function calling,tool_code_use,function calling,8,213117,37.53806594499734,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2024,function_calling,Function calling,tool_code_use,function calling,34,233538,145.58658548073547,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2025,function_calling,Function calling,tool_code_use,function calling,90,286910,313.68721898853295,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2026,function_calling,Function calling,tool_code_use,function calling,114,206613,551.7561818472217,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1990,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,0,21158,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1991,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,0,22349,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1992,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,0,23653,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1993,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,1,25158,39.74878766197631,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1994,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,0,26794,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1995,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,0,26904,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1996,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,2,29153,68.60357424621823,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1997,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,0,29914,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1998,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,1,31714,31.531815601942363,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1999,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,0,33874,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2000,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,0,41526,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2001,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,0,44494,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2002,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,0,73657,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2003,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,1,67152,14.89158923040267,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2004,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,0,70798,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2005,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,0,82525,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2006,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,0,89867,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2007,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,0,94006,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2008,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,0,97942,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2009,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,0,104307,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2010,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,0,110977,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2011,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,0,113866,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2012,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,0,117204,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2013,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,0,119586,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2014,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,0,123421,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2015,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,0,123176,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2016,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,0,133294,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2017,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,0,135902,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2018,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,1,151644,6.594392128933555,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2019,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,0,170860,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2020,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,0,187411,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2021,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,1,188238,5.312423633910263,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2022,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,51,182071,280.1105063409329,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2023,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,472,213117,2214.745890754844,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2024,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,942,233538,4033.6048094956705,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2025,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,2051,286910,7148.583179394234,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2026,chain_of_thought,Chain of thought,llm_agentic_terms,chain of thought,1970,206613,9534.734019640584,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1990,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,21158,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1991,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,22349,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1992,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,23653,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1993,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,25158,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1994,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,26794,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1995,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,26904,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1996,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,29153,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1997,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,29914,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1998,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,31714,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1999,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,33874,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2000,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,41526,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2001,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,44494,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2002,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,73657,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2003,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,67152,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2004,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,70798,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2005,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,82525,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2006,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,89867,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2007,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,94006,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2008,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,97942,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2009,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,104307,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2010,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,110977,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2011,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,113866,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2012,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,117204,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2013,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,119586,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2014,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,123421,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2015,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,123176,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2016,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,133294,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2017,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,135902,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2018,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,151644,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2019,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,170860,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2020,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,187411,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2021,llm_agent,LLM agent,llm_agentic_terms,LLM agent,0,188238,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2022,llm_agent,LLM agent,llm_agentic_terms,LLM agent,1,182071,5.492362869430058,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2023,llm_agent,LLM agent,llm_agentic_terms,LLM agent,50,213117,234.61291215623342,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2024,llm_agent,LLM agent,llm_agentic_terms,LLM agent,294,233538,1258.8957685687126,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2025,llm_agent,LLM agent,llm_agentic_terms,LLM agent,890,286910,3102.0180544421596,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2026,llm_agent,LLM agent,llm_agentic_terms,LLM agent,2077,206613,10052.610435935783,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1990,language_agent,Language agent,llm_agentic_terms,language agent,0,21158,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1991,language_agent,Language agent,llm_agentic_terms,language agent,0,22349,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1992,language_agent,Language agent,llm_agentic_terms,language agent,0,23653,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1993,language_agent,Language agent,llm_agentic_terms,language agent,0,25158,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1994,language_agent,Language agent,llm_agentic_terms,language agent,0,26794,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1995,language_agent,Language agent,llm_agentic_terms,language agent,1,26904,37.16919417187035,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1996,language_agent,Language agent,llm_agentic_terms,language agent,2,29153,68.60357424621823,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1997,language_agent,Language agent,llm_agentic_terms,language agent,0,29914,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1998,language_agent,Language agent,llm_agentic_terms,language agent,0,31714,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1999,language_agent,Language agent,llm_agentic_terms,language agent,1,33874,29.521166676507058,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2000,language_agent,Language agent,llm_agentic_terms,language agent,2,41526,48.16259692722632,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2001,language_agent,Language agent,llm_agentic_terms,language agent,2,44494,44.949880882815656,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2002,language_agent,Language agent,llm_agentic_terms,language agent,3,73657,40.729326472704564,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2003,language_agent,Language agent,llm_agentic_terms,language agent,2,67152,29.78317846080534,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2004,language_agent,Language agent,llm_agentic_terms,language agent,1,70798,14.124692787931862,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2005,language_agent,Language agent,llm_agentic_terms,language agent,5,82525,60.58770069675856,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2006,language_agent,Language agent,llm_agentic_terms,language agent,1,89867,11.12755516485473,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2007,language_agent,Language agent,llm_agentic_terms,language agent,2,94006,21.275237750781866,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2008,language_agent,Language agent,llm_agentic_terms,language agent,4,97942,40.84049743725878,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2009,language_agent,Language agent,llm_agentic_terms,language agent,2,104307,19.174168560115813,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2010,language_agent,Language agent,llm_agentic_terms,language agent,2,110977,18.02175225497175,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2011,language_agent,Language agent,llm_agentic_terms,language agent,1,113866,8.782252823494282,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2012,language_agent,Language agent,llm_agentic_terms,language agent,3,117204,25.596396027439337,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2013,language_agent,Language agent,llm_agentic_terms,language agent,0,119586,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2014,language_agent,Language agent,llm_agentic_terms,language agent,5,123421,40.511744354688425,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2015,language_agent,Language agent,llm_agentic_terms,language agent,1,123176,8.118464635968046,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2016,language_agent,Language agent,llm_agentic_terms,language agent,2,133294,15.0044263057602,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2017,language_agent,Language agent,llm_agentic_terms,language agent,2,135902,14.716486880251948,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2018,language_agent,Language agent,llm_agentic_terms,language agent,3,151644,19.783176386800662,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2019,language_agent,Language agent,llm_agentic_terms,language agent,3,170860,17.558234812126887,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2020,language_agent,Language agent,llm_agentic_terms,language agent,2,187411,10.671732182209157,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2021,language_agent,Language agent,llm_agentic_terms,language agent,2,188238,10.624847267820526,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2022,language_agent,Language agent,llm_agentic_terms,language agent,4,182071,21.96945147772023,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2023,language_agent,Language agent,llm_agentic_terms,language agent,33,213117,154.84452202311405,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2024,language_agent,Language agent,llm_agentic_terms,language agent,81,233538,346.83863011586976,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2025,language_agent,Language agent,llm_agentic_terms,language agent,89,286910,310.20180544421595,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2026,language_agent,Language agent,llm_agentic_terms,language agent,100,206613,483.9966507431768,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1990,ai_agent,AI agent,llm_agentic_terms,AI agent,1,21158,47.263446450515175,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1991,ai_agent,AI agent,llm_agentic_terms,AI agent,0,22349,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1992,ai_agent,AI agent,llm_agentic_terms,AI agent,0,23653,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1993,ai_agent,AI agent,llm_agentic_terms,AI agent,1,25158,39.74878766197631,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1994,ai_agent,AI agent,llm_agentic_terms,AI agent,0,26794,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1995,ai_agent,AI agent,llm_agentic_terms,AI agent,2,26904,74.3383883437407,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1996,ai_agent,AI agent,llm_agentic_terms,AI agent,1,29153,34.301787123109115,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1997,ai_agent,AI agent,llm_agentic_terms,AI agent,3,29914,100.28749080698002,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1998,ai_agent,AI agent,llm_agentic_terms,AI agent,3,31714,94.59544680582708,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1999,ai_agent,AI agent,llm_agentic_terms,AI agent,0,33874,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2000,ai_agent,AI agent,llm_agentic_terms,AI agent,0,41526,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2001,ai_agent,AI agent,llm_agentic_terms,AI agent,0,44494,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2002,ai_agent,AI agent,llm_agentic_terms,AI agent,3,73657,40.729326472704564,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2003,ai_agent,AI agent,llm_agentic_terms,AI agent,3,67152,44.674767691208004,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2004,ai_agent,AI agent,llm_agentic_terms,AI agent,7,70798,98.87284951552304,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2005,ai_agent,AI agent,llm_agentic_terms,AI agent,4,82525,48.47016055740685,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2006,ai_agent,AI agent,llm_agentic_terms,AI agent,5,89867,55.637775824273646,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2007,ai_agent,AI agent,llm_agentic_terms,AI agent,6,94006,63.825713252345594,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2008,ai_agent,AI agent,llm_agentic_terms,AI agent,4,97942,40.84049743725878,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2009,ai_agent,AI agent,llm_agentic_terms,AI agent,7,104307,67.10958996040534,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2010,ai_agent,AI agent,llm_agentic_terms,AI agent,22,110977,198.23927480468927,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2011,ai_agent,AI agent,llm_agentic_terms,AI agent,9,113866,79.04027541144855,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2012,ai_agent,AI agent,llm_agentic_terms,AI agent,10,117204,85.32132009146446,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2013,ai_agent,AI agent,llm_agentic_terms,AI agent,10,119586,83.62182864214874,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2014,ai_agent,AI agent,llm_agentic_terms,AI agent,20,123421,162.0469774187537,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2015,ai_agent,AI agent,llm_agentic_terms,AI agent,16,123176,129.89543417548873,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2016,ai_agent,AI agent,llm_agentic_terms,AI agent,25,133294,187.55532882200248,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2017,ai_agent,AI agent,llm_agentic_terms,AI agent,34,135902,250.18027696428308,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2018,ai_agent,AI agent,llm_agentic_terms,AI agent,67,151644,441.82427263854817,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2019,ai_agent,AI agent,llm_agentic_terms,AI agent,88,170860,515.0415544890554,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2020,ai_agent,AI agent,llm_agentic_terms,AI agent,76,187411,405.5258229239479,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2021,ai_agent,AI agent,llm_agentic_terms,AI agent,120,188238,637.4908360692315,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2022,ai_agent,AI agent,llm_agentic_terms,AI agent,116,182071,637.1140928538866,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2023,ai_agent,AI agent,llm_agentic_terms,AI agent,229,213117,1074.527137675549,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2024,ai_agent,AI agent,llm_agentic_terms,AI agent,396,233538,1695.655525010919,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2025,ai_agent,AI agent,llm_agentic_terms,AI agent,1365,286910,4757.58948799275,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2026,ai_agent,AI agent,llm_agentic_terms,AI agent,2486,206613,12032.156737475376,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1990,ai_agents,AI agents,llm_agentic_terms,AI agents,1,21158,47.263446450515175,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1991,ai_agents,AI agents,llm_agentic_terms,AI agents,0,22349,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1992,ai_agents,AI agents,llm_agentic_terms,AI agents,0,23653,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1993,ai_agents,AI agents,llm_agentic_terms,AI agents,1,25158,39.74878766197631,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1994,ai_agents,AI agents,llm_agentic_terms,AI agents,0,26794,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1995,ai_agents,AI agents,llm_agentic_terms,AI agents,2,26904,74.3383883437407,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1996,ai_agents,AI agents,llm_agentic_terms,AI agents,1,29153,34.301787123109115,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1997,ai_agents,AI agents,llm_agentic_terms,AI agents,3,29914,100.28749080698002,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1998,ai_agents,AI agents,llm_agentic_terms,AI agents,3,31714,94.59544680582708,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1999,ai_agents,AI agents,llm_agentic_terms,AI agents,0,33874,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2000,ai_agents,AI agents,llm_agentic_terms,AI agents,0,41526,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2001,ai_agents,AI agents,llm_agentic_terms,AI agents,0,44494,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2002,ai_agents,AI agents,llm_agentic_terms,AI agents,3,73657,40.729326472704564,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2003,ai_agents,AI agents,llm_agentic_terms,AI agents,3,67152,44.674767691208004,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2004,ai_agents,AI agents,llm_agentic_terms,AI agents,7,70798,98.87284951552304,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2005,ai_agents,AI agents,llm_agentic_terms,AI agents,4,82525,48.47016055740685,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2006,ai_agents,AI agents,llm_agentic_terms,AI agents,5,89867,55.637775824273646,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2007,ai_agents,AI agents,llm_agentic_terms,AI agents,6,94006,63.825713252345594,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2008,ai_agents,AI agents,llm_agentic_terms,AI agents,4,97942,40.84049743725878,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2009,ai_agents,AI agents,llm_agentic_terms,AI agents,7,104307,67.10958996040534,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2010,ai_agents,AI agents,llm_agentic_terms,AI agents,22,110977,198.23927480468927,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2011,ai_agents,AI agents,llm_agentic_terms,AI agents,9,113866,79.04027541144855,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2012,ai_agents,AI agents,llm_agentic_terms,AI agents,10,117204,85.32132009146446,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2013,ai_agents,AI agents,llm_agentic_terms,AI agents,10,119586,83.62182864214874,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2014,ai_agents,AI agents,llm_agentic_terms,AI agents,20,123421,162.0469774187537,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2015,ai_agents,AI agents,llm_agentic_terms,AI agents,16,123176,129.89543417548873,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2016,ai_agents,AI agents,llm_agentic_terms,AI agents,25,133294,187.55532882200248,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2017,ai_agents,AI agents,llm_agentic_terms,AI agents,34,135902,250.18027696428308,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2018,ai_agents,AI agents,llm_agentic_terms,AI agents,67,151644,441.82427263854817,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2019,ai_agents,AI agents,llm_agentic_terms,AI agents,88,170860,515.0415544890554,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2020,ai_agents,AI agents,llm_agentic_terms,AI agents,76,187411,405.5258229239479,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2021,ai_agents,AI agents,llm_agentic_terms,AI agents,120,188238,637.4908360692315,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2022,ai_agents,AI agents,llm_agentic_terms,AI agents,116,182071,637.1140928538866,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2023,ai_agents,AI agents,llm_agentic_terms,AI agents,229,213117,1074.527137675549,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2024,ai_agents,AI agents,llm_agentic_terms,AI agents,396,233538,1695.655525010919,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2025,ai_agents,AI agents,llm_agentic_terms,AI agents,1365,286910,4757.58948799275,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2026,ai_agents,AI agents,llm_agentic_terms,AI agents,2486,206613,12032.156737475376,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1990,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,0,21158,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1991,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,0,22349,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1992,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,0,23653,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1993,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,0,25158,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1994,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,0,26794,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1995,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,0,26904,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1996,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,0,29153,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1997,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,0,29914,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1998,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,0,31714,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1999,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,0,33874,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2000,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,0,41526,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2001,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,0,44494,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2002,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,0,73657,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2003,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,0,67152,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2004,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,1,70798,14.124692787931862,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2005,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,2,82525,24.235080278703425,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2006,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,1,89867,11.12755516485473,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2007,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,1,94006,10.637618875390933,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2008,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,1,97942,10.210124359314696,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2009,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,0,104307,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2010,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,0,110977,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2011,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,2,113866,17.564505646988565,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2012,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,0,117204,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2013,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,0,119586,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2014,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,2,123421,16.204697741875368,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2015,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,2,123176,16.23692927193609,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2016,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,5,133294,37.5110657644005,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2017,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,8,135902,58.86594752100779,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2018,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,0,151644,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2019,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,5,170860,29.263724686878145,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2020,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,4,187411,21.343464364418313,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2021,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,4,188238,21.24969453564105,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2022,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,3,182071,16.47708860829017,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2023,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,10,213117,46.92258243124669,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2024,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,33,233538,141.30462708424326,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2025,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,688,286910,2397.9645184901187,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2026,agentic_ai,Agentic AI,llm_agentic_terms,agentic AI,1696,206613,8208.58319660428,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1990,agentic_system,Agentic system,llm_agentic_terms,agentic system,2,21158,94.52689290103035,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1991,agentic_system,Agentic system,llm_agentic_terms,agentic system,6,22349,268.468387847331,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1992,agentic_system,Agentic system,llm_agentic_terms,agentic system,23,23653,972.3925083498922,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1993,agentic_system,Agentic system,llm_agentic_terms,agentic system,25,25158,993.7196915494077,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1994,agentic_system,Agentic system,llm_agentic_terms,agentic system,37,26794,1380.9061730238113,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1995,agentic_system,Agentic system,llm_agentic_terms,agentic system,66,26904,2453.1668153434434,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1996,agentic_system,Agentic system,llm_agentic_terms,agentic system,90,29153,3087.1608410798203,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1997,agentic_system,Agentic system,llm_agentic_terms,agentic system,145,29914,4847.228722337367,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1998,agentic_system,Agentic system,llm_agentic_terms,agentic system,185,31714,5833.385886359337,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1999,agentic_system,Agentic system,llm_agentic_terms,agentic system,227,33874,6701.304835567102,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2000,agentic_system,Agentic system,llm_agentic_terms,agentic system,256,41526,6164.812406684969,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2001,agentic_system,Agentic system,llm_agentic_terms,agentic system,327,44494,7349.3055243403605,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2002,agentic_system,Agentic system,llm_agentic_terms,agentic system,641,73657,8702.499423001207,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2003,agentic_system,Agentic system,llm_agentic_terms,agentic system,621,67152,9247.676912080056,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2004,agentic_system,Agentic system,llm_agentic_terms,agentic system,712,70798,10056.781265007485,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2005,agentic_system,Agentic system,llm_agentic_terms,agentic system,718,82525,8700.393820054529,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2006,agentic_system,Agentic system,llm_agentic_terms,agentic system,872,89867,9703.228103753325,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2007,agentic_system,Agentic system,llm_agentic_terms,agentic system,715,94006,7605.897495904516,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2008,agentic_system,Agentic system,llm_agentic_terms,agentic system,793,97942,8096.628616936554,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2009,agentic_system,Agentic system,llm_agentic_terms,agentic system,777,104307,7449.164485604993,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2010,agentic_system,Agentic system,llm_agentic_terms,agentic system,691,110977,6226.51540409274,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2011,agentic_system,Agentic system,llm_agentic_terms,agentic system,747,113866,6560.34285915023,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2012,agentic_system,Agentic system,llm_agentic_terms,agentic system,629,117204,5366.711033753115,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2013,agentic_system,Agentic system,llm_agentic_terms,agentic system,572,119586,4783.168598330908,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2014,agentic_system,Agentic system,llm_agentic_terms,agentic system,527,123421,4269.9378549841595,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2015,agentic_system,Agentic system,llm_agentic_terms,agentic system,461,123176,3742.612197181269,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2016,agentic_system,Agentic system,llm_agentic_terms,agentic system,415,133294,3113.418458445241,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2017,agentic_system,Agentic system,llm_agentic_terms,agentic system,389,135902,2862.3566982090038,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2018,agentic_system,Agentic system,llm_agentic_terms,agentic system,349,151644,2301.442852997811,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2019,agentic_system,Agentic system,llm_agentic_terms,agentic system,389,170860,2276.71778063912,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2020,agentic_system,Agentic system,llm_agentic_terms,agentic system,382,187411,2038.3008468019486,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2021,agentic_system,Agentic system,llm_agentic_terms,agentic system,377,188238,2002.7837099841688,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2022,agentic_system,Agentic system,llm_agentic_terms,agentic system,340,182071,1867.4033756062197,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2023,agentic_system,Agentic system,llm_agentic_terms,agentic system,461,213117,2163.1310500804725,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2024,agentic_system,Agentic system,llm_agentic_terms,agentic system,665,233538,2847.502333667326,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2025,agentic_system,Agentic system,llm_agentic_terms,agentic system,1795,286910,6256.317312049075,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2026,agentic_system,Agentic system,llm_agentic_terms,agentic system,2964,206613,14345.660728027762,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1990,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,0,21158,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1991,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,0,22349,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1992,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,0,23653,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1993,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,0,25158,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1994,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,0,26794,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1995,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,0,26904,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1996,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,0,29153,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1997,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,0,29914,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1998,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,0,31714,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+1999,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,0,33874,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2000,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,0,41526,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2001,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,0,44494,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2002,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,0,73657,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2003,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,0,67152,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2004,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,0,70798,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2005,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,0,82525,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2006,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,0,89867,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2007,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,0,94006,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2008,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,0,97942,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2009,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,0,104307,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2010,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,0,110977,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2011,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,1,113866,8.782252823494282,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2012,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,0,117204,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2013,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,0,119586,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2014,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,0,123421,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2015,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,0,123176,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2016,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,0,133294,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2017,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,0,135902,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2018,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,1,151644,6.594392128933555,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2019,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,1,170860,5.852744937375629,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2020,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,0,187411,0.0,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2021,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,1,188238,5.312423633910263,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2022,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,1,182071,5.492362869430058,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2023,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,4,213117,18.76903297249867,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2024,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,18,233538,77.07525113685996,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2025,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,66,286910,230.0372939249242,OpenAlex Works API,2026-06-16T04:06:47+00:00
+2026,autonomous_ai_agent,Autonomous AI agent,llm_agentic_terms,autonomous AI agent,302,206613,1461.6698852443942,OpenAlex Works API,2026-06-16T04:06:47+00:00

@@ -1,0 +1,8 @@
+feature,feature_label,spearman,top10_hits,average_precision,n_topics,cutoff_year,eval_end_year,scope,scope_label
+spectral_emergence_score,Fixed spectral composite,0.5498719772403983,5,0.5505904504851873,75,2022,2025,any_topic,Any topic assignment
+spectral_midband_momentum,Midband spectral momentum,0.5326031294452347,4,0.41340496540496535,75,2022,2025,any_topic,Any topic assignment
+raw_momentum_3y,Standardized 3-year momentum,0.5082503556187766,3,0.40158611499948893,75,2022,2025,any_topic,Any topic assignment
+baseline_growth_3y,CLR growth baseline,0.5077951635846373,3,0.2517031517381461,75,2022,2025,any_topic,Any topic assignment
+spectral_local_momentum,Local spectral momentum,0.42859174964438124,3,0.3672702909671635,75,2022,2025,any_topic,Any topic assignment
+raw_acceleration_1y,1-year acceleration,0.20568990042674254,4,0.457050121884218,75,2022,2025,any_topic,Any topic assignment
+cutoff_log_count,Topic size at cutoff,0.12497866287339972,0,0.11230293540325238,75,2022,2025,any_topic,Any topic assignment

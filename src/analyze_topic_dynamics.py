@@ -2666,7 +2666,7 @@ def write_article(
     write_text(REPORTS_DIR / "index.html", html_text)
 
 
-def main() -> None:
+def legacy_main() -> None:
     topics_path = ROOT / "data" / "processed" / "openalex_ai_topics.csv"
     counts_path = ROOT / "data" / "processed" / "openalex_ai_topic_year_counts.csv"
     if not topics_path.exists() or not counts_path.exists():
@@ -2755,6 +2755,13 @@ def main() -> None:
     print(f"Wrote {processed_dir / 'topic_scores.csv'}")
     print(f"Wrote {REPORT_BUILD_DIR / 'topic_findings.md'}")
     print(f"Wrote {REPORTS_DIR / 'index.html'}")
+
+
+def main() -> None:
+    """Run the current composition-aware report build."""
+    from rigorous_topic_dynamics import main as build_current_report
+
+    build_current_report()
 
 
 if __name__ == "__main__":

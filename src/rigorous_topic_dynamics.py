@@ -1186,7 +1186,6 @@ def write_article(
     a {{ color:#235f96; text-decoration-thickness:1px; text-underline-offset:3px; }}
     .page {{ width:min(1120px, calc(100% - 40px)); margin:0 auto; }}
     header {{ padding:64px 0 30px; border-bottom:1px solid var(--line); }}
-    .kicker {{ margin:0 0 10px; color:var(--rust); font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }}
     h1 {{ max-width:900px; margin:0; font-family:Georgia, "Times New Roman", serif; font-size:clamp(38px, 6vw, 72px); font-weight:500; line-height:1.03; letter-spacing:0; }}
     .dek {{ max-width:820px; margin:22px 0 0; color:#475467; font-family:Georgia, "Times New Roman", serif; font-size:20px; line-height:1.48; }}
     .meta {{ display:flex; flex-wrap:wrap; gap:8px 18px; margin-top:24px; color:var(--muted); font-size:12.5px; }}
@@ -1242,7 +1241,6 @@ def write_article(
 <body>
 <header>
   <div class="page">
-    <p class="kicker">OpenAlex field dynamics</p>
     <h1>Innovation Momentum: Spectral Dynamics in AI Research</h1>
     <p class="dek">A retrospective test of whether graph Fourier features add useful information to ordinary publication growth.</p>
     <p class="abstract">This study treats topic shares as a composition, uses complete 2023-2025 data for the primary outcome, and fixes the graph at the 2022 cutoff. The spectral composite reaches a Spearman correlation of {spectral.spearman:.2f}; the CLR growth baseline reaches {baseline.spearman:.2f}. Their paired bootstrap difference is {spectral_delta.observed_delta:+.2f}, with a 95% interval of {spectral_delta.bootstrap_low:+.2f} to {spectral_delta.bootstrap_high:+.2f}. Rolling cutoffs favor the growth baseline.</p>

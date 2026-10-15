@@ -1,0 +1,88 @@
+{
+  "review_date": "2026-10-14",
+  "data_fetched_at": "2026-06-19T23:47:35+00:00",
+  "status": "exploratory diagnostic; no new untouched holdout",
+  "filter_measure": "squared Frobenius projection onto span(identity), divided by operator norm squared",
+  "filter_diagnostics": {
+    "local": {
+      "best_scalar_identity_coefficient": 0.45893980974756354,
+      "scalar_identity_fraction_squared_frobenius_norm": 0.9382103595958783,
+      "weight_quantiles_0_05_50_95_100": [
+        1.7944442870387994e-16,
+        0.13021453350408596,
+        0.499462677837675,
+        0.544704034432509,
+        0.5508701721117177
+      ]
+    },
+    "midband": {
+      "best_scalar_identity_coefficient": 0.9618270241703002,
+      "scalar_identity_fraction_squared_frobenius_norm": 0.9916401067119954,
+      "weight_quantiles_0_05_50_95_100": [
+        0.6065306602635069,
+        0.6967010732369842,
+        0.9941225976941633,
+        0.9999570535267142,
+        0.9999976952400229
+      ]
+    }
+  },
+  "target_decomposition": {
+    "n_topics": 74,
+    "known_component_vs_persistent_shift_rho": 0.5036208811551277,
+    "known_component_vs_future_only_rho": 0.08442798963346906,
+    "maximum_target_decomposition_error": 1.1102230246251565e-16
+  },
+  "holdout_comparison": [
+    {
+      "cutoff_year": 2022,
+      "feature": "spectral_emergence_score",
+      "n_topics": 74,
+      "persistent_shift_rho": 0.5173343206219918,
+      "future_only_rho": 0.23592743428359864
+    },
+    {
+      "cutoff_year": 2022,
+      "feature": "spectral_midband_momentum",
+      "n_topics": 74,
+      "persistent_shift_rho": 0.5135727508330248,
+      "future_only_rho": 0.1554535357275083
+    },
+    {
+      "cutoff_year": 2022,
+      "feature": "raw_momentum_3y",
+      "n_topics": 74,
+      "persistent_shift_rho": 0.48004442798963337,
+      "future_only_rho": 0.11650499814883374
+    },
+    {
+      "cutoff_year": 2022,
+      "feature": "baseline_growth_3y",
+      "n_topics": 74,
+      "persistent_shift_rho": 0.47506849315068483,
+      "future_only_rho": 0.08949278045168454
+    }
+  ],
+  "rolling_mean_comparison": [
+    {
+      "feature": "baseline_growth_3y",
+      "persistent_shift_rho": 0.7693462301644796,
+      "future_only_rho": 0.5980256372345789
+    },
+    {
+      "feature": "raw_momentum_3y",
+      "persistent_shift_rho": 0.712589853539042,
+      "future_only_rho": 0.5507541477674649
+    },
+    {
+      "feature": "spectral_emergence_score",
+      "persistent_shift_rho": 0.5556099445655457,
+      "future_only_rho": 0.39924303315938436
+    },
+    {
+      "feature": "spectral_midband_momentum",
+      "persistent_shift_rho": 0.6871684963445716,
+      "future_only_rho": 0.5237836803538419
+    }
+  ]
+}

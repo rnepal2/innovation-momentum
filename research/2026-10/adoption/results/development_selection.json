@@ -1,0 +1,166 @@
+{
+  "selected": {
+    "temporal": {
+      "spec": [
+        "logistic",
+        0.2
+      ],
+      "validation_ap": null,
+      "scores": [],
+      "reason": "frozen low-power fallback"
+    },
+    "static": {
+      "spec": [
+        "logistic",
+        0.2
+      ],
+      "validation_ap": null,
+      "scores": [],
+      "reason": "frozen low-power fallback"
+    },
+    "exposure": {
+      "spec": [
+        "logistic",
+        0.2
+      ],
+      "validation_ap": null,
+      "scores": [],
+      "reason": "frozen low-power fallback"
+    },
+    "breadth": {
+      "spec": [
+        "logistic",
+        0.2
+      ],
+      "validation_ap": null,
+      "scores": [],
+      "reason": "frozen low-power fallback"
+    },
+    "undirected": {
+      "spec": [
+        "logistic",
+        0.2
+      ],
+      "validation_ap": null,
+      "scores": [],
+      "reason": "frozen low-power fallback"
+    },
+    "directed": {
+      "spec": [
+        "logistic",
+        0.2
+      ],
+      "validation_ap": null,
+      "scores": [],
+      "reason": "frozen low-power fallback"
+    },
+    "reverse": {
+      "spec": [
+        "logistic",
+        0.2
+      ],
+      "validation_ap": null,
+      "scores": [],
+      "reason": "frozen low-power fallback"
+    },
+    "null_0": {
+      "spec": [
+        "logistic",
+        0.2
+      ],
+      "validation_ap": null,
+      "scores": [],
+      "reason": "frozen low-power fallback"
+    },
+    "null_1": {
+      "spec": [
+        "logistic",
+        0.2
+      ],
+      "validation_ap": null,
+      "scores": [],
+      "reason": "frozen low-power fallback"
+    },
+    "null_2": {
+      "spec": [
+        "logistic",
+        0.2
+      ],
+      "validation_ap": null,
+      "scores": [],
+      "reason": "frozen low-power fallback"
+    },
+    "null_3": {
+      "spec": [
+        "logistic",
+        0.2
+      ],
+      "validation_ap": null,
+      "scores": [],
+      "reason": "frozen low-power fallback"
+    },
+    "null_4": {
+      "spec": [
+        "logistic",
+        0.2
+      ],
+      "validation_ap": null,
+      "scores": [],
+      "reason": "frozen low-power fallback"
+    },
+    "null_5": {
+      "spec": [
+        "logistic",
+        0.2
+      ],
+      "validation_ap": null,
+      "scores": [],
+      "reason": "frozen low-power fallback"
+    },
+    "null_6": {
+      "spec": [
+        "logistic",
+        0.2
+      ],
+      "validation_ap": null,
+      "scores": [],
+      "reason": "frozen low-power fallback"
+    },
+    "null_7": {
+      "spec": [
+        "logistic",
+        0.2
+      ],
+      "validation_ap": null,
+      "scores": [],
+      "reason": "frozen low-power fallback"
+    },
+    "null_8": {
+      "spec": [
+        "logistic",
+        0.2
+      ],
+      "validation_ap": null,
+      "scores": [],
+      "reason": "frozen low-power fallback"
+    },
+    "null_9": {
+      "spec": [
+        "logistic",
+        0.2
+      ],
+      "validation_ap": null,
+      "scores": [],
+      "reason": "frozen low-power fallback"
+    }
+  },
+  "primary_training_events": 6,
+  "primary_validation_events": 11,
+  "sufficient_development_events": false,
+  "rows": [
+    67,
+    91
+  ],
+  "ontology_sha256": "081074a278ba492df9d509f33ab4bee667e904c23e0a2b17ce5e839c83e6a15e",
+  "frozen_at": "2026-10-15T03:51:46.956576+00:00"
+}

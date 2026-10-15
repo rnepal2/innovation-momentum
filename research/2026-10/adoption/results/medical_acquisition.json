@@ -1,0 +1,13 @@
+{
+  "source": "OpenAlex Works API",
+  "filter": "primary_topic.id:T10052|T12422,from_publication_date:2010-01-01,to_publication_date:2026-10-14,has_abstract:true,language:en",
+  "select": "id,doi,title,publication_date,primary_topic,authorships,abstract_inverted_index,referenced_works,locations",
+  "assembled_at": "2026-10-15T03:48:14.196563+00:00",
+  "records": 89619,
+  "pages": 449,
+  "network_pages": 449,
+  "reported_network_cost_usd": 0.04490000000000026,
+  "path": "data/adoption_2026/medical.jsonl.gz",
+  "sha256": "3e4461ed5f7e141baced3f8997a254ae0f26491084220d3e571a161d796f6d57",
+  "historical_status": "current metadata reconstruction; first-version audit separate"
+}

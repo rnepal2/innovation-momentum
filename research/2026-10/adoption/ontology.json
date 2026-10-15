@@ -1,6 +1,7 @@
 {
-  "version": 1,
+  "version": 2,
   "curator": "AI research assistant; independent expert review pending",
+  "role_policy": "Require a title mention or an assertion/evaluation sentence. Exclude explicitly comparative-only mentions and review/survey titles. Rules were revised using development text before medical outcomes. Recall and independent expert validation remain unmeasured.",
   "methods": {
     "support_vector_machine": {"aliases": ["support vector machine", "support vector machines", "support vector classification", "support vector regression"], "references": ["https://doi.org/10.1007/BF00994018"]},
     "random_forest": {"aliases": ["random forest", "random forests"], "references": ["https://doi.org/10.1023/A:1010933404324"]},

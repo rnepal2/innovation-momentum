@@ -1,0 +1,17 @@
+{
+  "domain": "robotics",
+  "records": 66090,
+  "raw_records": 68697,
+  "exclusions": {
+    "short_abstract": 1383,
+    "duplicate": 1224
+  },
+  "missing_authors": 1334,
+  "missing_references": 19675,
+  "method_papers": 26687,
+  "app_papers": 12722,
+  "joint_papers": 3302,
+  "arxiv_links": 0,
+  "raw_sha256": "b9f3cf7fa19c2748358c634a32bd3bbeeb2af539db3881b4a196f473a4a9e00c",
+  "ontology_sha256": "081074a278ba492df9d509f33ab4bee667e904c23e0a2b17ce5e839c83e6a15e"
+}

@@ -12,7 +12,9 @@ dependencies = [
 research = [
   "scipy>=1.14",
   "scikit-learn>=1.6",
-  "matplotlib>=3.9"
+  "matplotlib>=3.9",
+  "networkx>=3.4",
+  "pypdf>=5.0"
 ]
 
 [project.scripts]

@@ -1,0 +1,13 @@
+{
+  "reviewer": "AI research assistant",
+  "scope": "Title and abstract only; future-event labels were not inspected",
+  "independent_expert_review": false,
+  "initial": {"papers": 20, "pairs": 25, "supported_pairs": 17, "sample": "development_review_initial.json"},
+  "role_rule_first_check": {"papers": 20, "pairs": 24, "supported_pairs": 18, "sample": "development_review_role1.json"},
+  "final_disjoint_check": {"papers": 20, "pairs": 24, "supported_pairs": 22, "sample": "development_review.json"},
+  "final_unsupported_or_uncertain": [
+    {"id": "W2782927743", "method": "transfer_learning", "application": "grasping", "reason": "Multi-topic thesis; grasp control is a separate contribution and the abstract does not establish that transfer learning was applied to grasping."},
+    {"id": "W2782927743", "method": "transfer_learning", "application": "human_robot_interaction", "reason": "The abstract describes interaction and transfer learning in separate contributions; their pairing is unverified."}
+  ],
+  "limitations": "Small positive-only samples measure conditional precision under one agent's reading. Recall, inter-rater agreement and medical-domain precision remain unmeasured. Broad method families and within-document task coupling remain imperfect. No label is a verification of independent laboratories or scientific usefulness."
+}

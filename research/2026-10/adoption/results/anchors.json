@@ -1,0 +1,157 @@
+{
+  "methods": {
+    "support_vector_machine": [
+      {
+        "id": "https://openalex.org/W4239510810",
+        "doi": "https://doi.org/10.1007/bf00994018",
+        "title": "Support-Vector Networks",
+        "publication_date": "1995-09-01"
+      }
+    ],
+    "random_forest": [
+      {
+        "id": "https://openalex.org/W2911964244",
+        "doi": "https://doi.org/10.1023/a:1010933404324",
+        "title": "Random Forests",
+        "publication_date": "2001-10-01"
+      }
+    ],
+    "gaussian_process": [],
+    "conditional_random_field": [],
+    "sparse_representation": [
+      {
+        "id": "https://openalex.org/W2129812935",
+        "doi": "https://doi.org/10.1109/tpami.2008.79",
+        "title": "Robust Face Recognition via Sparse Representation",
+        "publication_date": "2009-01-14"
+      }
+    ],
+    "dictionary_learning": [
+      {
+        "id": "https://openalex.org/W2160547390",
+        "doi": "https://doi.org/10.1109/tsp.2006.881199",
+        "title": "$rm K$-SVD: An Algorithm for Designing Overcomplete Dictionaries for Sparse Representation",
+        "publication_date": "2006-10-18"
+      }
+    ],
+    "transfer_learning": [
+      {
+        "id": "https://openalex.org/W2165698076",
+        "doi": "https://doi.org/10.1109/tkde.2009.191",
+        "title": "A Survey on Transfer Learning",
+        "publication_date": "2009-10-16"
+      }
+    ],
+    "domain_adaptation": [
+      {
+        "id": "https://openalex.org/W2758609995",
+        "doi": "https://doi.org/10.48550/arxiv.1505.07818",
+        "title": "Domain-Adversarial Training of Neural Networks",
+        "publication_date": "2015-05-28"
+      }
+    ],
+    "active_learning": [],
+    "semi_supervised_learning": [],
+    "self_supervised_learning": [
+      {
+        "id": "https://openalex.org/W3005680577",
+        "doi": "https://doi.org/10.48550/arxiv.2002.05709",
+        "title": "A Simple Framework for Contrastive Learning of Visual Representations",
+        "publication_date": "2020-02-13"
+      }
+    ],
+    "contrastive_learning": [
+      {
+        "id": "https://openalex.org/W3005680577",
+        "doi": "https://doi.org/10.48550/arxiv.2002.05709",
+        "title": "A Simple Framework for Contrastive Learning of Visual Representations",
+        "publication_date": "2020-02-13"
+      }
+    ],
+    "convolutional_network": [
+      {
+        "id": "https://openalex.org/W2112796928",
+        "doi": "https://doi.org/10.1109/5.726791",
+        "title": "Gradient-based learning applied to document recognition",
+        "publication_date": "1998-01-01"
+      }
+    ],
+    "recurrent_network": [],
+    "graph_neural_network": [
+      {
+        "id": "https://openalex.org/W2519887557",
+        "doi": "https://doi.org/10.48550/arxiv.1609.02907",
+        "title": "Semi-Supervised Classification with Graph Convolutional Networks",
+        "publication_date": "2016-09-09"
+      }
+    ],
+    "generative_adversarial_network": [
+      {
+        "id": "https://openalex.org/W4298289240",
+        "doi": "https://doi.org/10.48550/arxiv.1406.2661",
+        "title": "Generative Adversarial Networks",
+        "publication_date": "2014-06-10"
+      }
+    ],
+    "variational_autoencoder": [
+      {
+        "id": "https://openalex.org/W1959608418",
+        "doi": "https://doi.org/10.48550/arxiv.1312.6114",
+        "title": "Auto-Encoding Variational Bayes",
+        "publication_date": "2013-12-20"
+      }
+    ],
+    "diffusion_model": [
+      {
+        "id": "https://openalex.org/W3036167779",
+        "doi": "https://doi.org/10.48550/arxiv.2006.11239",
+        "title": "Denoising Diffusion Probabilistic Models",
+        "publication_date": "2020-06-19"
+      },
+      {
+        "id": "https://openalex.org/W2129069237",
+        "doi": "https://doi.org/10.48550/arxiv.1503.03585",
+        "title": "Deep Unsupervised Learning using Nonequilibrium Thermodynamics",
+        "publication_date": "2015-03-12"
+      }
+    ],
+    "vision_transformer": [
+      {
+        "id": "https://openalex.org/W3094502228",
+        "doi": "https://doi.org/10.48550/arxiv.2010.11929",
+        "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+        "publication_date": "2020-10-22"
+      }
+    ],
+    "reinforcement_learning": [
+      {
+        "id": "https://openalex.org/W2145339207",
+        "doi": "https://doi.org/10.1038/nature14236",
+        "title": "Human-level control through deep reinforcement learning",
+        "publication_date": "2015-02-24"
+      }
+    ],
+    "imitation_learning": [],
+    "meta_learning": [
+      {
+        "id": "https://openalex.org/W2604763608",
+        "doi": "https://doi.org/10.48550/arxiv.1703.03400",
+        "title": "Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks",
+        "publication_date": "2017-03-09"
+      }
+    ],
+    "few_shot_learning": [
+      {
+        "id": "https://openalex.org/W2601450892",
+        "doi": "https://doi.org/10.48550/arxiv.1703.05175",
+        "title": "Prototypical Networks for Few-shot Learning",
+        "publication_date": "2017-03-15"
+      }
+    ]
+  },
+  "unresolved": [
+    "https://doi.org/10.48550/arxiv.1011.0686"
+  ],
+  "reported_cost_usd": 0.0001,
+  "source": "OpenAlex exact DOI lookup"
+}

@@ -1,0 +1,15 @@
+{
+  "validated_model_cases": 180,
+  "validated_predictions": 34560,
+  "score_recalculation": "stdlib csv, statistics.fmean, and scalar arithmetic",
+  "checks": [
+    "seed separation",
+    "finite predictions",
+    "label consistency",
+    "MSE",
+    "MAE",
+    "paired loss differences",
+    "validation-only comparator selection"
+  ],
+  "predictions_sha256": "21361d693a3913303dd9df34000bf0e31f0932c056793872a970c27ddfb366d1"
+}

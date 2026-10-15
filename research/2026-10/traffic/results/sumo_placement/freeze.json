@@ -1,0 +1,32 @@
+{
+  "simulator": [
+    22,
+    "SUMO 1.28.0"
+  ],
+  "circumferences": [
+    480,
+    720
+  ],
+  "vehicles": 24,
+  "tau": [
+    0.6,
+    1.0,
+    1.8
+  ],
+  "accel": [
+    0.3,
+    0.8,
+    1.5
+  ],
+  "seeds": [
+    31,
+    47,
+    83
+  ],
+  "steps": [
+    0.2,
+    0.1
+  ],
+  "protocol_sha256": "a820719488711d077bd99362bd6cb851f3b4aededc749dd998a41988ea2059b1",
+  "source_sha256": "8a902f3e8e716458ab53e143b963adad5ac5474447df063024fe2348d2ca2398"
+}

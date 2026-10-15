@@ -1,0 +1,11 @@
+{
+  "responses": 64,
+  "simulator_runs": 128,
+  "collisions": 0,
+  "teleports": 0,
+  "labels_recomputed_from_raw": 64,
+  "zero_pre_pulse_response": true,
+  "step_difference_mean": 0.004473553546501044,
+  "step_difference_max": 0.012228319158673673,
+  "step_sign_disagreements": 0
+}

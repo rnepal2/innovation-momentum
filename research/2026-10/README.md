@@ -8,6 +8,8 @@ The [completed robotics campaign](campaign/findings.md) tests both hypotheses wi
 
 The [cross-community adoption follow-up](adoption/findings.md) tests citation/collaborator exposure, community breadth and directed citation paths on held-out medical-imaging periods. None meets the practical improvement gate. The [reproduction directory](adoption/README.md) includes the executed notebook, prospective ledger and measurement limitations.
 
+The [traffic study](traffic/findings.md), on `feature/traffic-spectral-amplification`, includes numerical controls, a public-data audit, SUMO pulse responses, and a phase-aware forecasting follow-up. It establishes no empirical GFT forecasting advantage. The [traffic directory](traffic/README.md) contains protocols, results, and reproduction commands.
+
 ## Recommendation
 
 Study whether independently measured scientific relationships help predict how unexpected research activity spreads between areas. Test the conditions under which graph spectral coordinates improve estimation over ordinary temporal models, PCA, and simple network features.
@@ -20,6 +22,7 @@ This gives the original Fourier intuition a measurable dynamical assumption. The
 
 ## Materials
 
+- [Traffic research plan](traffic-research-plan.md): hypotheses, planned experiments, validation gates, data candidates, references, and an expandable decision log for the traffic-wave study.
 - [Literature review](literature-review.md): primary sources, overlap with existing work, data availability, and limits of the search.
 - [Study design](study-design.md): hypotheses, mathematical models, outcomes, controls, evaluation, and stopping criteria.
 - [Diagnostic script](audit_current_design.py): reproduces two limitations of the existing experiment using the frozen inputs.

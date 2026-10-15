@@ -1,0 +1,9 @@
+{
+  "filter_expression": "speed_raw_df[(np.abs(speed_raw_df.t - t) <= smooth_t_window / 2) & (np.abs(speed_raw_df.x - x) <= smooth_x_window / 2)]",
+  "default_temporal_window_seconds": 36,
+  "default_future_support_seconds": 18.0,
+  "interpretation": "Symmetric filter admits future observations at its target timestamp",
+  "scope": "Inspected source implementation; demo generation parameters/lineage not verified",
+  "remedy": "Use raw causal inputs, regenerate with past-only support, or verify full availability delay",
+  "third_party_code_executed": false
+}

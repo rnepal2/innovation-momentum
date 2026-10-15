@@ -1,0 +1,10 @@
+{
+  "started_utc": "2026-10-15T20:56:44.928825+00:00",
+  "python": "3.14.4",
+  "numpy": "2.4.6",
+  "scipy": "1.18.1",
+  "sklearn": "1.9.1",
+  "git_head": "c4666aed5fb5bc8c7ed2828c3302a2deafde5f39",
+  "git_status": " M research/2026-10/README.md\n?? research/2026-10/traffic-amplification-review.md\n?? research/2026-10/traffic-novelty-review.md\n?? research/2026-10/traffic-research-plan.md\n?? research/2026-10/traffic/\n?? tests/test_traffic_amplification.py\n",
+  "scope": "Synthetic development controls, no empirical traffic inference"
+}

@@ -1,0 +1,1062 @@
+{
+  "path/aligned": {
+    "state": {
+      "alpha": 100.0,
+      "validation_mse": 0.002574153123608835,
+      "features": 15,
+      "family": "ridge"
+    },
+    "gft_power": {
+      "alpha": 100.0,
+      "validation_mse": 0.002398861982371201,
+      "features": 24,
+      "family": "ridge"
+    },
+    "gft_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.002364422698781873,
+      "features": 30,
+      "family": "ridge"
+    },
+    "dct_power": {
+      "alpha": 100.0,
+      "validation_mse": 0.0023988619823712017,
+      "features": 24,
+      "family": "ridge"
+    },
+    "dct_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.0023644226987818728,
+      "features": 30,
+      "family": "ridge"
+    },
+    "pca_power": {
+      "alpha": 100.0,
+      "validation_mse": 0.0025635242775283607,
+      "features": 24,
+      "family": "ridge"
+    },
+    "pca_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.0025608640895313493,
+      "features": 30,
+      "family": "ridge"
+    },
+    "random0_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.0026075990421656654,
+      "features": 30,
+      "family": "ridge"
+    },
+    "permuted0_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.002631078111470553,
+      "features": 30,
+      "family": "ridge"
+    },
+    "random1_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.002657811962565307,
+      "features": 30,
+      "family": "ridge"
+    },
+    "permuted1_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.0023878003587337227,
+      "features": 30,
+      "family": "ridge"
+    },
+    "random2_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.002566849560050361,
+      "features": 30,
+      "family": "ridge"
+    },
+    "permuted2_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.002595597320386944,
+      "features": 30,
+      "family": "ridge"
+    },
+    "cpsd_summary": {
+      "alpha": 100.0,
+      "validation_mse": 0.0025867249287208657,
+      "features": 19,
+      "family": "ridge"
+    },
+    "dmd": {
+      "rank": 24,
+      "validation_mse": 0.005154740595532554,
+      "family": "transition"
+    },
+    "hankel": {
+      "rank": 24,
+      "validation_mse": 0.0036535316205317226,
+      "family": "transition"
+    },
+    "gft_band_ar": {
+      "validation_mse": 0.005129837864310745,
+      "family": "transition",
+      "rates": 3
+    },
+    "dct_band_ar": {
+      "validation_mse": 0.005129837864310787,
+      "family": "transition",
+      "rates": 3
+    }
+  },
+  "path/hidden_basis": {
+    "state": {
+      "alpha": 0.1,
+      "validation_mse": 0.002463856652402115,
+      "features": 15,
+      "family": "ridge"
+    },
+    "gft_power": {
+      "alpha": 0.1,
+      "validation_mse": 0.0025463234060539995,
+      "features": 24,
+      "family": "ridge"
+    },
+    "gft_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.0026985043215808657,
+      "features": 30,
+      "family": "ridge"
+    },
+    "dct_power": {
+      "alpha": 0.1,
+      "validation_mse": 0.002546323406054008,
+      "features": 24,
+      "family": "ridge"
+    },
+    "dct_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.002698504321580874,
+      "features": 30,
+      "family": "ridge"
+    },
+    "pca_power": {
+      "alpha": 0.1,
+      "validation_mse": 0.0027868082202895015,
+      "features": 24,
+      "family": "ridge"
+    },
+    "pca_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.0028282456037796015,
+      "features": 30,
+      "family": "ridge"
+    },
+    "random0_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.003016226448101743,
+      "features": 30,
+      "family": "ridge"
+    },
+    "permuted0_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.002766041237197609,
+      "features": 30,
+      "family": "ridge"
+    },
+    "random1_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.0027839127344471324,
+      "features": 30,
+      "family": "ridge"
+    },
+    "permuted1_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.0023764009331957076,
+      "features": 30,
+      "family": "ridge"
+    },
+    "random2_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.002528759581827976,
+      "features": 30,
+      "family": "ridge"
+    },
+    "permuted2_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.002435050188779822,
+      "features": 30,
+      "family": "ridge"
+    },
+    "cpsd_summary": {
+      "alpha": 0.1,
+      "validation_mse": 0.0024705069467723987,
+      "features": 19,
+      "family": "ridge"
+    },
+    "dmd": {
+      "rank": 24,
+      "validation_mse": 0.0059706898776520035,
+      "family": "transition"
+    },
+    "hankel": {
+      "rank": 24,
+      "validation_mse": 0.0038749164687174645,
+      "family": "transition"
+    },
+    "gft_band_ar": {
+      "validation_mse": 0.01383827874056936,
+      "family": "transition",
+      "rates": 3
+    },
+    "dct_band_ar": {
+      "validation_mse": 0.01383827874056911,
+      "family": "transition",
+      "rates": 3
+    }
+  },
+  "path/independent": {
+    "state": {
+      "alpha": 100.0,
+      "validation_mse": 0.017009005611698495,
+      "features": 15,
+      "family": "ridge"
+    },
+    "gft_power": {
+      "alpha": 100.0,
+      "validation_mse": 0.016772854143945488,
+      "features": 24,
+      "family": "ridge"
+    },
+    "gft_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.0165706212308441,
+      "features": 30,
+      "family": "ridge"
+    },
+    "dct_power": {
+      "alpha": 100.0,
+      "validation_mse": 0.016772854143945484,
+      "features": 24,
+      "family": "ridge"
+    },
+    "dct_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.016570621230844056,
+      "features": 30,
+      "family": "ridge"
+    },
+    "pca_power": {
+      "alpha": 0.1,
+      "validation_mse": 0.01618552329539563,
+      "features": 24,
+      "family": "ridge"
+    },
+    "pca_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.0168749106319384,
+      "features": 30,
+      "family": "ridge"
+    },
+    "random0_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.015827620340370854,
+      "features": 30,
+      "family": "ridge"
+    },
+    "permuted0_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.017439192685201263,
+      "features": 30,
+      "family": "ridge"
+    },
+    "random1_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.017428732317299876,
+      "features": 30,
+      "family": "ridge"
+    },
+    "permuted1_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.017107164510789006,
+      "features": 30,
+      "family": "ridge"
+    },
+    "random2_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.016146944781307796,
+      "features": 30,
+      "family": "ridge"
+    },
+    "permuted2_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.01733708122763614,
+      "features": 30,
+      "family": "ridge"
+    },
+    "cpsd_summary": {
+      "alpha": 100.0,
+      "validation_mse": 0.01548395398854297,
+      "features": 19,
+      "family": "ridge"
+    },
+    "dmd": {
+      "rank": 24,
+      "validation_mse": 0.21378599856251332,
+      "family": "transition"
+    },
+    "hankel": {
+      "rank": 24,
+      "validation_mse": 0.11980217453104873,
+      "family": "transition"
+    },
+    "gft_band_ar": {
+      "validation_mse": 0.21519377578088192,
+      "family": "transition",
+      "rates": 3
+    },
+    "dct_band_ar": {
+      "validation_mse": 0.21519377578088308,
+      "family": "transition",
+      "rates": 3
+    }
+  },
+  "path/shared_forcing": {
+    "state": {
+      "alpha": 10.0,
+      "validation_mse": 0.20643966380965675,
+      "features": 15,
+      "family": "ridge"
+    },
+    "gft_power": {
+      "alpha": 10.0,
+      "validation_mse": 0.19991776128932512,
+      "features": 24,
+      "family": "ridge"
+    },
+    "gft_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.200787412860833,
+      "features": 30,
+      "family": "ridge"
+    },
+    "dct_power": {
+      "alpha": 10.0,
+      "validation_mse": 0.19991776128932506,
+      "features": 24,
+      "family": "ridge"
+    },
+    "dct_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.20078741286083304,
+      "features": 30,
+      "family": "ridge"
+    },
+    "pca_power": {
+      "alpha": 10.0,
+      "validation_mse": 0.19849633989250848,
+      "features": 24,
+      "family": "ridge"
+    },
+    "pca_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.20031772552563445,
+      "features": 30,
+      "family": "ridge"
+    },
+    "random0_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.20522728728077852,
+      "features": 30,
+      "family": "ridge"
+    },
+    "permuted0_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.19683875778315296,
+      "features": 30,
+      "family": "ridge"
+    },
+    "random1_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.2007675631573953,
+      "features": 30,
+      "family": "ridge"
+    },
+    "permuted1_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.19905450495610166,
+      "features": 30,
+      "family": "ridge"
+    },
+    "random2_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.20749474059472198,
+      "features": 30,
+      "family": "ridge"
+    },
+    "permuted2_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.19982271796932224,
+      "features": 30,
+      "family": "ridge"
+    },
+    "cpsd_summary": {
+      "alpha": 10.0,
+      "validation_mse": 0.2099928946892539,
+      "features": 19,
+      "family": "ridge"
+    },
+    "dmd": {
+      "rank": 24,
+      "validation_mse": 0.7803808956183907,
+      "family": "transition"
+    },
+    "hankel": {
+      "rank": 24,
+      "validation_mse": 0.7624917464851193,
+      "family": "transition"
+    },
+    "gft_band_ar": {
+      "validation_mse": 0.794292795754421,
+      "family": "transition",
+      "rates": 3
+    },
+    "dct_band_ar": {
+      "validation_mse": 0.7942927957544134,
+      "family": "transition",
+      "rates": 3
+    }
+  },
+  "path/directed": {
+    "state": {
+      "alpha": 0.1,
+      "validation_mse": 0.003445985800371592,
+      "features": 15,
+      "family": "ridge"
+    },
+    "gft_power": {
+      "alpha": 10.0,
+      "validation_mse": 0.0030521165267734297,
+      "features": 24,
+      "family": "ridge"
+    },
+    "gft_dynamics": {
+      "alpha": 10.0,
+      "validation_mse": 0.0030418876265250697,
+      "features": 30,
+      "family": "ridge"
+    },
+    "dct_power": {
+      "alpha": 10.0,
+      "validation_mse": 0.0030521165267734887,
+      "features": 24,
+      "family": "ridge"
+    },
+    "dct_dynamics": {
+      "alpha": 10.0,
+      "validation_mse": 0.003041887626525122,
+      "features": 30,
+      "family": "ridge"
+    },
+    "pca_power": {
+      "alpha": 10.0,
+      "validation_mse": 0.003072403035183522,
+      "features": 24,
+      "family": "ridge"
+    },
+    "pca_dynamics": {
+      "alpha": 10.0,
+      "validation_mse": 0.0031256894712199407,
+      "features": 30,
+      "family": "ridge"
+    },
+    "random0_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.0013953643263617766,
+      "features": 30,
+      "family": "ridge"
+    },
+    "permuted0_dynamics": {
+      "alpha": 10.0,
+      "validation_mse": 0.0015533896837763158,
+      "features": 30,
+      "family": "ridge"
+    },
+    "random1_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.002324889977917337,
+      "features": 30,
+      "family": "ridge"
+    },
+    "permuted1_dynamics": {
+      "alpha": 1.0,
+      "validation_mse": 0.0026025592371196954,
+      "features": 30,
+      "family": "ridge"
+    },
+    "random2_dynamics": {
+      "alpha": 1.0,
+      "validation_mse": 0.0027387990313889336,
+      "features": 30,
+      "family": "ridge"
+    },
+    "permuted2_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.0020893015808210666,
+      "features": 30,
+      "family": "ridge"
+    },
+    "cpsd_summary": {
+      "alpha": 10.0,
+      "validation_mse": 0.002658342082328275,
+      "features": 19,
+      "family": "ridge"
+    },
+    "dmd": {
+      "rank": 8,
+      "validation_mse": 1.6223586211392224e-05,
+      "family": "transition"
+    },
+    "hankel": {
+      "rank": 48,
+      "validation_mse": 1.9273876011416933e-05,
+      "family": "transition"
+    },
+    "gft_band_ar": {
+      "validation_mse": 0.017638810445523182,
+      "family": "transition",
+      "rates": 3
+    },
+    "dct_band_ar": {
+      "validation_mse": 0.017638810445522412,
+      "family": "transition",
+      "rates": 3
+    }
+  },
+  "branch/aligned": {
+    "state": {
+      "alpha": 10.0,
+      "validation_mse": 0.002064098324977529,
+      "features": 15,
+      "family": "ridge"
+    },
+    "gft_power": {
+      "alpha": 100.0,
+      "validation_mse": 0.0019471546627507694,
+      "features": 24,
+      "family": "ridge"
+    },
+    "gft_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.0020169687026452172,
+      "features": 30,
+      "family": "ridge"
+    },
+    "dct_power": {
+      "alpha": 100.0,
+      "validation_mse": 0.0019553588011285514,
+      "features": 24,
+      "family": "ridge"
+    },
+    "dct_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.001985221210196979,
+      "features": 30,
+      "family": "ridge"
+    },
+    "pca_power": {
+      "alpha": 100.0,
+      "validation_mse": 0.001981794412759646,
+      "features": 24,
+      "family": "ridge"
+    },
+    "pca_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.00192952149263892,
+      "features": 30,
+      "family": "ridge"
+    },
+    "random0_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.00221637576010685,
+      "features": 30,
+      "family": "ridge"
+    },
+    "permuted0_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.001842688779295384,
+      "features": 30,
+      "family": "ridge"
+    },
+    "random1_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.002245615842025223,
+      "features": 30,
+      "family": "ridge"
+    },
+    "permuted1_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.0021968570080872604,
+      "features": 30,
+      "family": "ridge"
+    },
+    "random2_dynamics": {
+      "alpha": 10.0,
+      "validation_mse": 0.002041168696689898,
+      "features": 30,
+      "family": "ridge"
+    },
+    "permuted2_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.0021722057762276303,
+      "features": 30,
+      "family": "ridge"
+    },
+    "cpsd_summary": {
+      "alpha": 1.0,
+      "validation_mse": 0.0018297418919807687,
+      "features": 19,
+      "family": "ridge"
+    },
+    "dmd": {
+      "rank": 24,
+      "validation_mse": 0.00318888339455114,
+      "family": "transition"
+    },
+    "hankel": {
+      "rank": 24,
+      "validation_mse": 0.002315866049060551,
+      "family": "transition"
+    },
+    "gft_band_ar": {
+      "validation_mse": 0.0032111135936203593,
+      "family": "transition",
+      "rates": 3
+    },
+    "dct_band_ar": {
+      "validation_mse": 0.005588570917963122,
+      "family": "transition",
+      "rates": 3
+    }
+  },
+  "branch/hidden_basis": {
+    "state": {
+      "alpha": 0.1,
+      "validation_mse": 0.0035822850920107095,
+      "features": 15,
+      "family": "ridge"
+    },
+    "gft_power": {
+      "alpha": 0.1,
+      "validation_mse": 0.0034833068458412185,
+      "features": 24,
+      "family": "ridge"
+    },
+    "gft_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.003570748658731561,
+      "features": 30,
+      "family": "ridge"
+    },
+    "dct_power": {
+      "alpha": 0.1,
+      "validation_mse": 0.0032594826924187887,
+      "features": 24,
+      "family": "ridge"
+    },
+    "dct_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.0037322451666381706,
+      "features": 30,
+      "family": "ridge"
+    },
+    "pca_power": {
+      "alpha": 0.1,
+      "validation_mse": 0.0034106277913085042,
+      "features": 24,
+      "family": "ridge"
+    },
+    "pca_dynamics": {
+      "alpha": 10.0,
+      "validation_mse": 0.003470577697500317,
+      "features": 30,
+      "family": "ridge"
+    },
+    "random0_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.003695686062742514,
+      "features": 30,
+      "family": "ridge"
+    },
+    "permuted0_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.0037208360403613804,
+      "features": 30,
+      "family": "ridge"
+    },
+    "random1_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.0036827728097155953,
+      "features": 30,
+      "family": "ridge"
+    },
+    "permuted1_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.003637883217528479,
+      "features": 30,
+      "family": "ridge"
+    },
+    "random2_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.003824033051395404,
+      "features": 30,
+      "family": "ridge"
+    },
+    "permuted2_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.0038334837113325683,
+      "features": 30,
+      "family": "ridge"
+    },
+    "cpsd_summary": {
+      "alpha": 0.1,
+      "validation_mse": 0.0035588001801186565,
+      "features": 19,
+      "family": "ridge"
+    },
+    "dmd": {
+      "rank": 24,
+      "validation_mse": 0.005998890403706036,
+      "family": "transition"
+    },
+    "hankel": {
+      "rank": 24,
+      "validation_mse": 0.00469020832525858,
+      "family": "transition"
+    },
+    "gft_band_ar": {
+      "validation_mse": 0.010512025874469422,
+      "family": "transition",
+      "rates": 3
+    },
+    "dct_band_ar": {
+      "validation_mse": 0.010683843818317112,
+      "family": "transition",
+      "rates": 3
+    }
+  },
+  "branch/independent": {
+    "state": {
+      "alpha": 0.1,
+      "validation_mse": 0.0194563370085233,
+      "features": 15,
+      "family": "ridge"
+    },
+    "gft_power": {
+      "alpha": 0.1,
+      "validation_mse": 0.018128140051839464,
+      "features": 24,
+      "family": "ridge"
+    },
+    "gft_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.01822339696076984,
+      "features": 30,
+      "family": "ridge"
+    },
+    "dct_power": {
+      "alpha": 0.1,
+      "validation_mse": 0.017913452953036618,
+      "features": 24,
+      "family": "ridge"
+    },
+    "dct_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.017843707109129747,
+      "features": 30,
+      "family": "ridge"
+    },
+    "pca_power": {
+      "alpha": 0.1,
+      "validation_mse": 0.01767802173999484,
+      "features": 24,
+      "family": "ridge"
+    },
+    "pca_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.01809239482217062,
+      "features": 30,
+      "family": "ridge"
+    },
+    "random0_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.01891577061663445,
+      "features": 30,
+      "family": "ridge"
+    },
+    "permuted0_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.018370409005171576,
+      "features": 30,
+      "family": "ridge"
+    },
+    "random1_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.019649787167547547,
+      "features": 30,
+      "family": "ridge"
+    },
+    "permuted1_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.018872800685045515,
+      "features": 30,
+      "family": "ridge"
+    },
+    "random2_dynamics": {
+      "alpha": 10.0,
+      "validation_mse": 0.019130457490449716,
+      "features": 30,
+      "family": "ridge"
+    },
+    "permuted2_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.017063095066127073,
+      "features": 30,
+      "family": "ridge"
+    },
+    "cpsd_summary": {
+      "alpha": 1.0,
+      "validation_mse": 0.01732242735193818,
+      "features": 19,
+      "family": "ridge"
+    },
+    "dmd": {
+      "rank": 24,
+      "validation_mse": 0.27482358060165085,
+      "family": "transition"
+    },
+    "hankel": {
+      "rank": 24,
+      "validation_mse": 0.1543583454140057,
+      "family": "transition"
+    },
+    "gft_band_ar": {
+      "validation_mse": 0.27703260220744746,
+      "family": "transition",
+      "rates": 3
+    },
+    "dct_band_ar": {
+      "validation_mse": 0.27708189231037145,
+      "family": "transition",
+      "rates": 3
+    }
+  },
+  "branch/shared_forcing": {
+    "state": {
+      "alpha": 100.0,
+      "validation_mse": 0.2031381909461063,
+      "features": 15,
+      "family": "ridge"
+    },
+    "gft_power": {
+      "alpha": 100.0,
+      "validation_mse": 0.21280253044225664,
+      "features": 24,
+      "family": "ridge"
+    },
+    "gft_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.2110886450127525,
+      "features": 30,
+      "family": "ridge"
+    },
+    "dct_power": {
+      "alpha": 100.0,
+      "validation_mse": 0.21242306331482852,
+      "features": 24,
+      "family": "ridge"
+    },
+    "dct_dynamics": {
+      "alpha": 1.0,
+      "validation_mse": 0.208186136251808,
+      "features": 30,
+      "family": "ridge"
+    },
+    "pca_power": {
+      "alpha": 100.0,
+      "validation_mse": 0.212497168105911,
+      "features": 24,
+      "family": "ridge"
+    },
+    "pca_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.208977245545092,
+      "features": 30,
+      "family": "ridge"
+    },
+    "random0_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.21231659421984697,
+      "features": 30,
+      "family": "ridge"
+    },
+    "permuted0_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.2079659774881022,
+      "features": 30,
+      "family": "ridge"
+    },
+    "random1_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.21359804439939953,
+      "features": 30,
+      "family": "ridge"
+    },
+    "permuted1_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.21149332382958808,
+      "features": 30,
+      "family": "ridge"
+    },
+    "random2_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.21127639046319366,
+      "features": 30,
+      "family": "ridge"
+    },
+    "permuted2_dynamics": {
+      "alpha": 100.0,
+      "validation_mse": 0.2113117298066527,
+      "features": 30,
+      "family": "ridge"
+    },
+    "cpsd_summary": {
+      "alpha": 100.0,
+      "validation_mse": 0.20777244869464637,
+      "features": 19,
+      "family": "ridge"
+    },
+    "dmd": {
+      "rank": 24,
+      "validation_mse": 0.7464237296478653,
+      "family": "transition"
+    },
+    "hankel": {
+      "rank": 24,
+      "validation_mse": 0.7342382655415914,
+      "family": "transition"
+    },
+    "gft_band_ar": {
+      "validation_mse": 0.7631023774441087,
+      "family": "transition",
+      "rates": 3
+    },
+    "dct_band_ar": {
+      "validation_mse": 0.7631035561679264,
+      "family": "transition",
+      "rates": 3
+    }
+  },
+  "branch/directed": {
+    "state": {
+      "alpha": 0.1,
+      "validation_mse": 0.002147442452675532,
+      "features": 15,
+      "family": "ridge"
+    },
+    "gft_power": {
+      "alpha": 0.1,
+      "validation_mse": 0.0018269082894865508,
+      "features": 24,
+      "family": "ridge"
+    },
+    "gft_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.0018372151967511053,
+      "features": 30,
+      "family": "ridge"
+    },
+    "dct_power": {
+      "alpha": 10.0,
+      "validation_mse": 0.0019418684927244906,
+      "features": 24,
+      "family": "ridge"
+    },
+    "dct_dynamics": {
+      "alpha": 10.0,
+      "validation_mse": 0.001998789369899606,
+      "features": 30,
+      "family": "ridge"
+    },
+    "pca_power": {
+      "alpha": 0.1,
+      "validation_mse": 0.0018817939423364796,
+      "features": 24,
+      "family": "ridge"
+    },
+    "pca_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.0019399624155207816,
+      "features": 30,
+      "family": "ridge"
+    },
+    "random0_dynamics": {
+      "alpha": 10.0,
+      "validation_mse": 0.0010405883796171952,
+      "features": 30,
+      "family": "ridge"
+    },
+    "permuted0_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.0010799288143137815,
+      "features": 30,
+      "family": "ridge"
+    },
+    "random1_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.001001813905089054,
+      "features": 30,
+      "family": "ridge"
+    },
+    "permuted1_dynamics": {
+      "alpha": 0.1,
+      "validation_mse": 0.001234685275029682,
+      "features": 30,
+      "family": "ridge"
+    },
+    "random2_dynamics": {
+      "alpha": 1.0,
+      "validation_mse": 0.0019089382888892647,
+      "features": 30,
+      "family": "ridge"
+    },
+    "permuted2_dynamics": {
+      "alpha": 1.0,
+      "validation_mse": 0.0017077079645914995,
+      "features": 30,
+      "family": "ridge"
+    },
+    "cpsd_summary": {
+      "alpha": 10.0,
+      "validation_mse": 0.00190073182947725,
+      "features": 19,
+      "family": "ridge"
+    },
+    "dmd": {
+      "rank": 24,
+      "validation_mse": 6.607816582722325e-06,
+      "family": "transition"
+    },
+    "hankel": {
+      "rank": 48,
+      "validation_mse": 6.64198299216808e-06,
+      "family": "transition"
+    },
+    "gft_band_ar": {
+      "validation_mse": 0.018965874898590408,
+      "family": "transition",
+      "rates": 3
+    },
+    "dct_band_ar": {
+      "validation_mse": 0.018760570336314508,
+      "family": "transition",
+      "rates": 3
+    }
+  }
+}

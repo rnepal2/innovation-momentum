@@ -1,0 +1,13 @@
+{
+  "initial": {
+    "scores.csv": true,
+    "predictions.csv": true,
+    "paired.csv": true,
+    "diagnostics.csv": true,
+    "selections.json": true
+  },
+  "phase": {
+    "scenarios.csv": true,
+    "comparisons.csv": true
+  }
+}

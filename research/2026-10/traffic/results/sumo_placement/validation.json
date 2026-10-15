@@ -1,0 +1,12 @@
+{
+  "responses": 108,
+  "simulator_runs": 216,
+  "collisions": 0,
+  "teleports": 0,
+  "labels_recomputed_from_raw": 108,
+  "zero_pre_pulse_response": true,
+  "step_difference_mean": 0.014719671917842528,
+  "step_difference_max": 0.039798524806545554,
+  "step_sign_disagreements": 3,
+  "max_gft_fourier_difference": 4.9182879990894435e-14
+}

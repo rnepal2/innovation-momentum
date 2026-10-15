@@ -1,0 +1,55 @@
+{
+  "rows": 1137588,
+  "virtual_trajectory_ids": 2857,
+  "schema": {
+    "time": "float64",
+    "space": "float64",
+    "speed": "float64",
+    "v_id": "int64"
+  },
+  "units": {
+    "time": "relative seconds",
+    "space": "mile marker",
+    "speed": "mph"
+  },
+  "finite_fraction": 0.9982920002672321,
+  "missing_by_column": {
+    "time": 0,
+    "space": 1943,
+    "speed": 1943,
+    "v_id": 0
+  },
+  "nonfinite_physical_rows": 1943,
+  "nonfinite_at_last_timestamp": 1943,
+  "duplicate_vehicle_time": 0,
+  "nonpositive_dt_in_source_order": 0,
+  "time_range_seconds": [
+    30.0,
+    14400.0
+  ],
+  "space_range_miles": [
+    58.686689932507605,
+    62.6
+  ],
+  "speed_quantiles_mph": {
+    "0": -0.1058868897924866,
+    "0.01": 0.7969222047141091,
+    "0.5": 32.319128890350115,
+    "0.99": 81.63218372209589,
+    "1": 98.070279642971
+  },
+  "positive_dt_quantiles_seconds": {
+    "0": 1.0,
+    "0.5": 1.0,
+    "1": 1.0
+  },
+  "kinematic_abs_error_mph": {
+    "0.5": 0.46368486737702996,
+    "0.95": 1.84550857310528,
+    "1": 9.79985365111736
+  },
+  "negative_speed_rows": 29,
+  "date_and_timezone": "No calendar date or timezone column; unverified from this file alone",
+  "independence": "Generated virtual IDs are not independently observed vehicles or days",
+  "forecast_eligibility": "Not established: processing availability and independent days unresolved"
+}

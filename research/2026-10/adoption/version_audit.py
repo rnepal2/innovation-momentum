@@ -37,7 +37,11 @@ def first_abstract(text):
         r"(?is)\babstract\s*[:.\-\u2014]?\s*(.*?)(?=\n\s*(?:1\s*\.?\s+|I\.\s+)?(?:introduction|background)|\n\s*(?:keywords|index terms)\b)",
         text,
     )
-    return match.group(1).strip() if match and len(match.group(1).split()) >= 30 else None
+    if not match or len(match.group(1).split()) < 30:
+        return None
+    abstract = match.group(1).replace("\u00ad", "")
+    abstract = re.sub(r"(?<=\w)-\s*\n\s*(?=\w)", "", abstract)
+    return re.sub(r"\s+", " ", abstract).strip()
 
 
 def main():

@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "metric_checks": 102,
+  "witness_checks": 15,
+  "feature_row_checks": 477,
+  "prospective_ledger_sha256": "be8536beade6a773d0717da2bf8d203b27443fbbe3ee553b00b5fca20f4c0f3b",
+  "prospective_date_and_source_checks": "passed",
+  "scope": "All primary saved model metrics recomputed; sampled date/author witnesses rechecked. Text meaning remains agent-reviewed; metadata vintage and author identity are not independently established."
+}

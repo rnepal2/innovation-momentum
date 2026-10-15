@@ -7,6 +7,9 @@ from adoption_data import HERE, ONTOLOGY, OUT, save
 
 
 def main():
+    if (OUT / "anchors.json").exists():
+        print("Frozen canonical references preserved.")
+        return
     spec = importlib.util.spec_from_file_location(
         "_anchor_api", HERE.parent / "campaign/fetch_corpus.py"
     )

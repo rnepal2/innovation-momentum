@@ -71,6 +71,18 @@ def metrics(y, p):
 
 
 def development():
+    frozen = OUT / "development_selection.json"
+    if frozen.exists():
+        settings = json.loads(frozen.read_text())
+        if (
+            settings["ontology_sha256"]
+            != hashlib.sha256((HERE / "ontology.json").read_bytes()).hexdigest()
+        ):
+            raise RuntimeError(
+                "Frozen development ontology differs; use a separate study directory"
+            )
+        print("Existing development settings preserved.")
+        return
     records = load("robotics")
     snaps = [snapshot(records, "robotics", f"{year}-12-31") for year in [2015, 2017]]
     train, valid = [s["rows"] for s in snaps]
@@ -232,6 +244,9 @@ def evaluate():
         print(f"Medical evaluation {current['cutoff']}: {len(test)} pairs complete", flush=True)
     pd.DataFrame(result).to_csv(OUT / "evaluation.csv", index=False)
     pd.DataFrame(predictions).to_csv(OUT / "predictions.csv", index=False)
+    if (OUT / "prospective_predictions.json").exists():
+        print("Existing prospective ledger preserved; a new freeze requires a separate study file.")
+        return
     # This ledger uses today's actually observed records, with an entirely later date window.
     prospective_cutoff = pd.Timestamp(datetime.now(timezone.utc).date())
     current = snapshot(records["medical"], "medical", prospective_cutoff, include_outcomes=False)

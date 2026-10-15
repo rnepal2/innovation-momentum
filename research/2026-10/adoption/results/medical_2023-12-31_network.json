@@ -1,0 +1,22 @@
+{
+  "domain": "medical",
+  "cutoff": "2023-12-31",
+  "past_papers": 62274,
+  "rows": 194,
+  "authors": 132733,
+  "edges": 671266,
+  "communities": 11926,
+  "excluded_large_authorship_papers": 14,
+  "largest_community_fraction": 0.03317939020439529,
+  "internal_citation_edges": 218184,
+  "intercommunity_citations": 179474,
+  "future_dated_references_removed": 2195,
+  "feature_groups": {
+    "base": 15,
+    "static": 4,
+    "exposure": 4,
+    "breadth": 3,
+    "undirected": 3,
+    "directed": 3
+  }
+}

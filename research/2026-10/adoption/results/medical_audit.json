@@ -1,0 +1,17 @@
+{
+  "domain": "medical",
+  "records": 86022,
+  "raw_records": 89619,
+  "exclusions": {
+    "short_abstract": 2423,
+    "duplicate": 1174
+  },
+  "missing_authors": 1754,
+  "missing_references": 21533,
+  "method_papers": 9329,
+  "app_papers": 47558,
+  "joint_papers": 5746,
+  "arxiv_links": 5667,
+  "raw_sha256": "3e4461ed5f7e141baced3f8997a254ae0f26491084220d3e571a161d796f6d57",
+  "ontology_sha256": "081074a278ba492df9d509f33ab4bee667e904c23e0a2b17ce5e839c83e6a15e"
+}

@@ -1,0 +1,359 @@
+{
+  "eligible_papers": 613,
+  "sample": 16,
+  "cases": [
+    {
+      "id": "W2797782447",
+      "arxiv_id": "1804.04988",
+      "openalex_date": "2018-04-13",
+      "version_url": "https://arxiv.org/pdf/1804.04988v1",
+      "versions": 1,
+      "first_version_date": "Fri, 13 Apr 2018 15:18:06 GMT",
+      "pdf_sha256": "50691d6e3fb8af0cdf860598c72a9d709139234548c3769451956c891010bda7",
+      "abstract_extracted": true,
+      "plain_alias_agreement": true,
+      "asserted_alias_agreement": false,
+      "current_methods": [
+        12
+      ],
+      "v1_methods": [
+        12
+      ],
+      "current_apps": [
+        0
+      ],
+      "v1_apps": [
+        0
+      ]
+    },
+    {
+      "id": "W2963076262",
+      "arxiv_id": "1706.00935",
+      "openalex_date": "2017-12-20",
+      "version_url": "https://arxiv.org/pdf/1706.00935v1",
+      "versions": 2,
+      "first_version_date": "Sat, 03 Jun 2017 11:58:18 GMT",
+      "pdf_sha256": "8b79969c760f99ee54774049c5342266188d3ad3e3ef2223a032d8fb111e77e8",
+      "abstract_extracted": true,
+      "plain_alias_agreement": true,
+      "asserted_alias_agreement": false,
+      "current_methods": [
+        12
+      ],
+      "v1_methods": [
+        12
+      ],
+      "current_apps": [
+        0
+      ],
+      "v1_apps": [
+        0
+      ]
+    },
+    {
+      "id": "W2890475866",
+      "arxiv_id": "1809.02226",
+      "openalex_date": "2020-06-01",
+      "version_url": "https://arxiv.org/pdf/1809.02226v1",
+      "versions": 3,
+      "first_version_date": "Thu, 06 Sep 2018 21:31:48 GMT",
+      "pdf_sha256": "feb7ab6ce83a91491b3203be9691be6049be3b92de978cc084b4f4d722b2d313",
+      "abstract_extracted": true,
+      "plain_alias_agreement": true,
+      "asserted_alias_agreement": false,
+      "current_methods": [
+        9
+      ],
+      "v1_methods": [
+        9
+      ],
+      "current_apps": [
+        0
+      ],
+      "v1_apps": [
+        0
+      ]
+    },
+    {
+      "id": "W3165471380",
+      "arxiv_id": "2211.09888",
+      "openalex_date": "2021-04-13",
+      "version_url": "https://arxiv.org/pdf/2211.09888v1",
+      "versions": 1,
+      "first_version_date": "Thu, 17 Nov 2022 20:52:36 GMT",
+      "pdf_sha256": "b02183038205828875bf8fb97a5b80ad3b2e505cf7378aa0dd1f1f78720be1fa",
+      "abstract_extracted": true,
+      "plain_alias_agreement": false,
+      "asserted_alias_agreement": false,
+      "current_methods": [
+        12
+      ],
+      "v1_methods": [],
+      "current_apps": [
+        0
+      ],
+      "v1_apps": [
+        0
+      ]
+    },
+    {
+      "id": "W4306706992",
+      "arxiv_id": "2210.07936",
+      "openalex_date": "2022-10-14",
+      "version_url": "https://arxiv.org/pdf/2210.07936v1",
+      "versions": 1,
+      "first_version_date": "Fri, 14 Oct 2022 16:34:05 GMT",
+      "pdf_sha256": "db0e03a6725714c23a5366dd934a788c8cc16609146e065d249e7a6e1e93cbc5",
+      "abstract_extracted": true,
+      "plain_alias_agreement": true,
+      "asserted_alias_agreement": false,
+      "current_methods": [
+        10
+      ],
+      "v1_methods": [
+        10
+      ],
+      "current_apps": [
+        0
+      ],
+      "v1_apps": [
+        0
+      ]
+    },
+    {
+      "id": "W2935296493",
+      "arxiv_id": "1705.07999",
+      "openalex_date": "2017-05-22",
+      "version_url": "https://arxiv.org/pdf/1705.07999v1",
+      "versions": 2,
+      "first_version_date": "Mon, 22 May 2017 20:55:47 GMT",
+      "pdf_sha256": "589a026eb7b7c4d697b1059d8ed01e346fc364d240a03559d6617c2c369ad0c1",
+      "abstract_extracted": true,
+      "plain_alias_agreement": true,
+      "asserted_alias_agreement": false,
+      "current_methods": [
+        12
+      ],
+      "v1_methods": [
+        12
+      ],
+      "current_apps": [
+        4
+      ],
+      "v1_apps": [
+        4
+      ]
+    },
+    {
+      "id": "W2962360156",
+      "arxiv_id": "1901.01449",
+      "openalex_date": "2019-04-01",
+      "version_url": "https://arxiv.org/pdf/1901.01449v1",
+      "versions": 1,
+      "first_version_date": "Sat, 05 Jan 2019 18:09:38 GMT",
+      "pdf_sha256": "bf5907de8af705c9ed116bec49d3a9d873e9ab86090f88939cc7613e33f28c1e",
+      "abstract_extracted": true,
+      "plain_alias_agreement": true,
+      "asserted_alias_agreement": false,
+      "current_methods": [
+        12
+      ],
+      "v1_methods": [
+        12
+      ],
+      "current_apps": [
+        9
+      ],
+      "v1_apps": [
+        9
+      ]
+    },
+    {
+      "id": "W2583914614",
+      "arxiv_id": "1612.01655",
+      "openalex_date": "2017-02-12",
+      "version_url": "https://arxiv.org/pdf/1612.01655v1",
+      "versions": 1,
+      "first_version_date": "Tue, 06 Dec 2016 03:56:07 GMT",
+      "pdf_sha256": "ac8f3f7075ded482924844dd3a749527105b683156f6c725c6e1786cc2a68694",
+      "abstract_extracted": true,
+      "plain_alias_agreement": true,
+      "asserted_alias_agreement": false,
+      "current_methods": [
+        13
+      ],
+      "v1_methods": [
+        13
+      ],
+      "current_apps": [
+        0
+      ],
+      "v1_apps": [
+        0
+      ]
+    },
+    {
+      "id": "W2890454867",
+      "arxiv_id": "1809.03783",
+      "openalex_date": "2018-09-11",
+      "version_url": "https://arxiv.org/pdf/1809.03783v1",
+      "versions": 3,
+      "first_version_date": "Tue, 11 Sep 2018 10:27:45 GMT",
+      "pdf_sha256": "d2014e0c30fb9614c64ce3c96ab49e7fd2210848b07d7949046b27f9c887fdd4",
+      "text_failure": "first-version abstract boundary unavailable"
+    },
+    {
+      "id": "W4298183756",
+      "arxiv_id": "2209.14566",
+      "openalex_date": "2022-09-29",
+      "version_url": "https://arxiv.org/pdf/2209.14566v1",
+      "versions": 2,
+      "first_version_date": "Thu, 29 Sep 2022 06:06:15 GMT",
+      "pdf_sha256": "e0581d541d35c9ebb46c8cc6079488ea4e9929664a34fc6121cccd39c724e0b4",
+      "abstract_extracted": true,
+      "plain_alias_agreement": false,
+      "asserted_alias_agreement": false,
+      "current_methods": [
+        17
+      ],
+      "v1_methods": [
+        17
+      ],
+      "current_apps": [
+        0
+      ],
+      "v1_apps": [
+        0,
+        6,
+        7
+      ]
+    },
+    {
+      "id": "W2903481008",
+      "arxiv_id": "1811.11323",
+      "openalex_date": "2018-11-28",
+      "version_url": "https://arxiv.org/pdf/1811.11323v1",
+      "versions": 2,
+      "first_version_date": "Wed, 28 Nov 2018 00:36:58 GMT",
+      "pdf_sha256": "4c61da74f58dc011ea65430ee764e88907770af7d84c5f019c3b46fdf0407aee",
+      "abstract_extracted": true,
+      "plain_alias_agreement": true,
+      "asserted_alias_agreement": false,
+      "current_methods": [
+        3
+      ],
+      "v1_methods": [
+        3
+      ],
+      "current_apps": [
+        0
+      ],
+      "v1_apps": [
+        0
+      ]
+    },
+    {
+      "id": "W3047138867",
+      "arxiv_id": "2008.02251",
+      "openalex_date": "2020-08-05",
+      "version_url": "https://arxiv.org/pdf/2008.02251v1",
+      "versions": 1,
+      "first_version_date": "Wed, 05 Aug 2020 17:30:14 GMT",
+      "pdf_sha256": "3d4d8f610518adeb41bb82a3f4bb69670bf4a19218467748769ff2d5c00fcfe6",
+      "text_failure": "first-version abstract boundary unavailable"
+    },
+    {
+      "id": "W3135563760",
+      "arxiv_id": "2103.04167",
+      "openalex_date": "2021-03-06",
+      "version_url": "https://arxiv.org/pdf/2103.04167v1",
+      "versions": 2,
+      "first_version_date": "Sat, 06 Mar 2021 18:17:03 GMT",
+      "pdf_sha256": "ccff4e25916259f22a15018210778ce7846e23d213510a698cb86e50d23c1f5e",
+      "abstract_extracted": true,
+      "plain_alias_agreement": false,
+      "asserted_alias_agreement": false,
+      "current_methods": [
+        10
+      ],
+      "v1_methods": [],
+      "current_apps": [
+        3
+      ],
+      "v1_apps": [
+        3
+      ]
+    },
+    {
+      "id": "W4306801098",
+      "arxiv_id": "2210.08652",
+      "openalex_date": "2022-10-16",
+      "version_url": "https://arxiv.org/pdf/2210.08652v1",
+      "versions": 1,
+      "first_version_date": "Sun, 16 Oct 2022 22:38:30 GMT",
+      "pdf_sha256": "23d4b72acbf3e7e229e9e8353a7902516dceff832d4a208bbd8fed43fdfad5bb",
+      "abstract_extracted": true,
+      "plain_alias_agreement": true,
+      "asserted_alias_agreement": false,
+      "current_methods": [
+        11
+      ],
+      "v1_methods": [
+        11
+      ],
+      "current_apps": [
+        0
+      ],
+      "v1_apps": [
+        0
+      ]
+    },
+    {
+      "id": "W4377004358",
+      "arxiv_id": "2202.09798",
+      "openalex_date": "2022-02-22",
+      "version_url": "https://arxiv.org/pdf/2202.09798v1",
+      "versions": 1,
+      "first_version_date": "Sun, 20 Feb 2022 11:45:58 GMT",
+      "pdf_sha256": "39398e5ae734c97535d82a2b97767c077da88da42ccfa3b7ba2d392de6f294a2",
+      "abstract_extracted": true,
+      "plain_alias_agreement": true,
+      "asserted_alias_agreement": false,
+      "current_methods": [
+        19
+      ],
+      "v1_methods": [
+        19
+      ],
+      "current_apps": [
+        0
+      ],
+      "v1_apps": [
+        0
+      ]
+    },
+    {
+      "id": "W2902127514",
+      "arxiv_id": "1811.11566",
+      "openalex_date": "2018-11-28",
+      "version_url": "https://arxiv.org/pdf/1811.11566v1",
+      "versions": 1,
+      "first_version_date": "Wed, 28 Nov 2018 13:57:36 GMT",
+      "pdf_sha256": "47b0596497f97551bc002c4bd778221e7de96c2a01da955726792b7fb63cecc7",
+      "abstract_extracted": true,
+      "plain_alias_agreement": false,
+      "asserted_alias_agreement": false,
+      "current_methods": [
+        12
+      ],
+      "v1_methods": [],
+      "current_apps": [
+        0
+      ],
+      "v1_apps": [
+        0
+      ]
+    }
+  ],
+  "interpretation": "Small deterministic metadata/text audit. Failures are missing evidence, and agreement does not establish historical author/reference metadata or full-corpus vintage safety."
+}

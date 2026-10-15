@@ -1,0 +1,642 @@
+[
+  {
+    "origin": 2019,
+    "method": "support_vector_machine",
+    "application": "survival_prediction",
+    "witness": [
+      {
+        "id": "W3011498027",
+        "title": "Survival prediction of liver cancer patients from CT images using deep learning and radiomic feature-based regression",
+        "date": "2020-03-16",
+        "authors": [
+          "A5047329390",
+          "A5035033921",
+          "A5061503888",
+          "A5100706226",
+          "A5100606266"
+        ]
+      },
+      {
+        "id": "W3112700369",
+        "title": "NIMG-22. INTEGRATION OF A RADIOMIC SIGNATURE, CLINICAL VARIABLES AND PLASMA CELL-FREE DNA IN ADULT PATIENTS WITH NEWLY DIAGNOSED GLIOBLASTOMA PREDICTS PATIENT SURVIVAL AND IMPROVES DISEASE STRATIFICATION",
+        "date": "2020-11-01",
+        "authors": [
+          "A5000168473",
+          "A5023567141",
+          "A5083616879",
+          "A5064222905",
+          "A5090417017",
+          "A5059407389",
+          "A5039718207",
+          "A5051074911",
+          "A5031446450",
+          "A5049050190",
+          "A5029750461",
+          "A5034999945",
+          "A5006742893"
+        ]
+      },
+      {
+        "id": "W3133483592",
+        "title": "A CT-Based Radiomics Approach to Predict Nivolumab Response in Advanced Non-Small-Cell Lung Cancer",
+        "date": "2021-02-24",
+        "authors": [
+          "A5100353156",
+          "A5010443535",
+          "A5013014678",
+          "A5100414555",
+          "A5101887128",
+          "A5100628038"
+        ]
+      }
+    ]
+  },
+  {
+    "origin": 2019,
+    "method": "support_vector_machine",
+    "application": "disease_diagnosis",
+    "witness": [
+      {
+        "id": "W3025929144",
+        "title": "Empirical Evaluation of Texture Features and Classifiers for Liver Disease Diagnosis",
+        "date": "2020-04-01",
+        "authors": [
+          "A5045524574",
+          "A5068883308"
+        ]
+      },
+      {
+        "id": "W3016078995",
+        "title": "Diagnostic classification of solitary pulmonary nodules using support vector machine model based on 2-[18F]fluoro-2-deoxy-D-glucose PET/computed tomography texture features",
+        "date": "2020-04-13",
+        "authors": [
+          "A5101888230",
+          "A5062728515",
+          "A5087860365",
+          "A5076480096",
+          "A5034299274"
+        ]
+      },
+      {
+        "id": "W3029373937",
+        "title": "External validation of radiomics\u2010based predictive models in low\u2010dose CT screening for early lung cancer diagnosis",
+        "date": "2020-06-03",
+        "authors": [
+          "A5012034512",
+          "A5009782102",
+          "A5067850637",
+          "A5083187460",
+          "A5069653985",
+          "A5005328001",
+          "A5021006684",
+          "A5020595951",
+          "A5000570208",
+          "A5039068861"
+        ]
+      }
+    ]
+  },
+  {
+    "origin": 2019,
+    "method": "random_forest",
+    "application": "classification",
+    "witness": [
+      {
+        "id": "W3042531520",
+        "title": "Research on Application of Improved Random Forest in Medical Ultrasound Image Classification",
+        "date": "2020-07-01",
+        "authors": [
+          "A5113924470",
+          "A5057522502"
+        ]
+      },
+      {
+        "id": "W3092442943",
+        "title": "BISON: Brain tissue segmentation pipeline using T 1 \u2010weighted magnetic resonance images and a random forest classifier",
+        "date": "2020-10-11",
+        "authors": [
+          "A5051732001",
+          "A5061155266"
+        ]
+      },
+      {
+        "id": "W3162357183",
+        "title": "Breast ultrasound tumour classification: A Machine Learning\u2014Radiomics based approach",
+        "date": "2021-05-11",
+        "authors": [
+          "A5062623079",
+          "A5010493101",
+          "A5006218020",
+          "A5076145971"
+        ]
+      }
+    ]
+  },
+  {
+    "origin": 2019,
+    "method": "random_forest",
+    "application": "survival_prediction",
+    "witness": [
+      {
+        "id": "W3026941861",
+        "title": "Deep Random Forests for Small Sample Size Prediction with Medical Imaging Data",
+        "date": "2020-04-01",
+        "authors": [
+          "A5029055548",
+          "A5011400986",
+          "A5074051310",
+          "A5045575465",
+          "A5041927500",
+          "A5075114390"
+        ]
+      },
+      {
+        "id": "W3097520211",
+        "title": "Integrative Models of Histopathological Image Features and Omics Data Predict Survival in Head and Neck Squamous Cell Carcinoma",
+        "date": "2020-10-29",
+        "authors": [
+          "A5049225588",
+          "A5011975620",
+          "A5066741135",
+          "A5112127033",
+          "A5022157306"
+        ]
+      },
+      {
+        "id": "W4206714488",
+        "title": "Glioblastoma Multiforme Patient Survival Prediction",
+        "date": "2021-01-26",
+        "authors": [
+          "A5071626652",
+          "A5112624602",
+          "A5019021656"
+        ]
+      }
+    ]
+  },
+  {
+    "origin": 2019,
+    "method": "transfer_learning",
+    "application": "classification",
+    "witness": [
+      {
+        "id": "W3040140780",
+        "title": "Deep convolutional neural networks for automatic segmentation of thoracic organs\u2010at\u2010risk in radiation oncology \u2013 use of non\u2010domain transfer learning",
+        "date": "2020-06-01",
+        "authors": [
+          "A5055736466",
+          "A5085788971",
+          "A5022393805",
+          "A5049144006",
+          "A5046150842",
+          "A5032174439",
+          "A5047100062"
+        ]
+      },
+      {
+        "id": "W3127619493",
+        "title": "Ultrasound Image-Based Diagnosis of Cirrhosis with an End-to-End Deep Learning model",
+        "date": "2020-12-16",
+        "authors": [
+          "A5022550580",
+          "A5036871539",
+          "A5100714899",
+          "A5045221457",
+          "A5110742806"
+        ]
+      },
+      {
+        "id": "W4213035857",
+        "title": "Transfer Learning on Interstitial Lung Disease Classification",
+        "date": "2021-11-01",
+        "authors": [
+          "A5044890447",
+          "A5103150515"
+        ]
+      }
+    ]
+  },
+  {
+    "origin": 2021,
+    "method": "support_vector_machine",
+    "application": "survival_prediction",
+    "witness": [
+      {
+        "id": "W3197181177",
+        "title": "Generative models improve radiomics performance in different tasks and different datasets: An experimental study",
+        "date": "2022-04-22",
+        "authors": [
+          "A5100636763",
+          "A5058533373",
+          "A5013513157",
+          "A5004688031"
+        ]
+      },
+      {
+        "id": "W4307122274",
+        "title": "Prognostic Value and Quantitative CT Analysis in RANKL Expression of Spinal GCTB in the Denosumab Era: A Machine Learning Approach",
+        "date": "2022-10-23",
+        "authors": [
+          "A5073876888",
+          "A5005274902",
+          "A5063613049",
+          "A5100409024",
+          "A5057954479",
+          "A5054290886",
+          "A5071377845",
+          "A5001443958"
+        ]
+      },
+      {
+        "id": "W4308320827",
+        "title": "A radiomics-based model can predict recurrence-free survival of hepatocellular carcinoma after curative ablation",
+        "date": "2022-11-06",
+        "authors": [
+          "A5034343630",
+          "A5018850495",
+          "A5100428738",
+          "A5101526980",
+          "A5088332398",
+          "A5038765418"
+        ]
+      }
+    ]
+  },
+  {
+    "origin": 2021,
+    "method": "random_forest",
+    "application": "lesion_detection",
+    "witness": [
+      {
+        "id": "W4313653616",
+        "title": "Automated detection and grading of prostate cancer in multiparametric MRI",
+        "date": "2022-01-01",
+        "authors": [
+          "A5009326039",
+          "A5057535574",
+          "A5104049004"
+        ]
+      },
+      {
+        "id": "W4280618793",
+        "title": "Soft optimization techniques for automatic liver cancer detection in abdominal liver images",
+        "date": "2022-05-19",
+        "authors": [
+          "A5079032112",
+          "A5101516380",
+          "A5029379672",
+          "A5079851926",
+          "A5048725433",
+          "A5073875556"
+        ]
+      },
+      {
+        "id": "W4282979670",
+        "title": "Abstract 6392: Predicting malignancy in indeterminate pulmonary nodules using quantitative CT imaging",
+        "date": "2022-06-15",
+        "authors": [
+          "A5084635815",
+          "A5005583226",
+          "A5048142039",
+          "A5064775862",
+          "A5012357319",
+          "A5068964857",
+          "A5002685368",
+          "A5068831723",
+          "A5085351836"
+        ]
+      }
+    ]
+  },
+  {
+    "origin": 2021,
+    "method": "random_forest",
+    "application": "survival_prediction",
+    "witness": [
+      {
+        "id": "W4307122274",
+        "title": "Prognostic Value and Quantitative CT Analysis in RANKL Expression of Spinal GCTB in the Denosumab Era: A Machine Learning Approach",
+        "date": "2022-10-23",
+        "authors": [
+          "A5073876888",
+          "A5005274902",
+          "A5063613049",
+          "A5100409024",
+          "A5057954479",
+          "A5054290886",
+          "A5071377845",
+          "A5001443958"
+        ]
+      },
+      {
+        "id": "W4312477330",
+        "title": "3D-IncNet: Head and Neck (H&N) Primary Tumors Segmentation and Survival Prediction",
+        "date": "2022-11-08",
+        "authors": [
+          "A5076737367",
+          "A5032985992",
+          "A5033585021",
+          "A5002758946",
+          "A5085593383",
+          "A5004665770",
+          "A5090363651"
+        ]
+      },
+      {
+        "id": "W4401100550",
+        "title": "OVERALL SURVIVAL PREDICTION OF NSCLC USING RADIOMICS AND MACHINE LEARNING METHODS",
+        "date": "2023-02-03",
+        "authors": [
+          "A5030932288",
+          "A5090692449",
+          "A5038976165",
+          "A5013451840"
+        ]
+      }
+    ]
+  },
+  {
+    "origin": 2021,
+    "method": "transfer_learning",
+    "application": "classification",
+    "witness": [
+      {
+        "id": "W4213021241",
+        "title": "Transfer learning for data\u2010efficient abdominal muscle segmentation with convolutional neural networks",
+        "date": "2022-02-16",
+        "authors": [
+          "A5022340633",
+          "A5081518328",
+          "A5009101796",
+          "A5089303857",
+          "A5049929595",
+          "A5100317500",
+          "A5010870209"
+        ]
+      },
+      {
+        "id": "W4282973966",
+        "title": "Abstract 1937: DIME-CT: Self-supervised learning for medical image analysis using patch-based embeddings",
+        "date": "2022-06-15",
+        "authors": [
+          "A5000635795",
+          "A5029733146",
+          "A5028156232",
+          "A5100438891",
+          "A5081257309"
+        ]
+      },
+      {
+        "id": "W4382049319",
+        "title": "Lightweight medical image segmentation network based on ghost convolution and attention mechanism",
+        "date": "2023-06-26",
+        "authors": [
+          "A5092265567",
+          "A5100664134",
+          "A5101743682",
+          "A5104194224"
+        ]
+      }
+    ]
+  },
+  {
+    "origin": 2021,
+    "method": "transfer_learning",
+    "application": "lesion_detection",
+    "witness": [
+      {
+        "id": "W4313126010",
+        "title": "The evaluation of psychological distress in patients with sellar processes",
+        "date": "2022-01-01",
+        "authors": [
+          "A5074753668",
+          "A5066498468",
+          "A5063190441",
+          "A5004358324",
+          "A5073320488",
+          "A5053295909"
+        ]
+      },
+      {
+        "id": "W4285387160",
+        "title": "A multimodal 2D Convolutional Neural Network for Multiple Sclerosis Lesion Detection",
+        "date": "2022-07-13",
+        "authors": [
+          "A5034826290",
+          "A5091029876",
+          "A5007615633"
+        ]
+      },
+      {
+        "id": "W4394911698",
+        "title": "Advancing Brain Lesion Classification in CT Images: A Transfer Learning Approach with Convolutional Neural Networks",
+        "date": "2023-12-21",
+        "authors": [
+          "A5020076783",
+          "A5095768866",
+          "A5095768867",
+          "A5104283063",
+          "A5079887750"
+        ]
+      }
+    ]
+  },
+  {
+    "origin": 2023,
+    "method": "random_forest",
+    "application": "disease_diagnosis",
+    "witness": [
+      {
+        "id": "W4394769784",
+        "title": "Use of Response Permutation to Measure an Imaging Dataset\u2019s Susceptibility to Overfitting by Selected Standard Analysis Pipelines",
+        "date": "2024-04-12",
+        "authors": [
+          "A5068108309",
+          "A5058543533",
+          "A5078939746",
+          "A5039985523",
+          "A5051277222",
+          "A5078241882",
+          "A5000336389"
+        ]
+      },
+      {
+        "id": "W4396667649",
+        "title": "Transfer Learning and Machine Learning With MRI Radiomics For Alzheimer's Disease Diagnosis",
+        "date": "2024-04-16",
+        "authors": [
+          "A5058642858"
+        ]
+      },
+      {
+        "id": "W4401964689",
+        "title": "Automated Lung Tissue Segmentation in CT Images using Multi-Wavelet Filter Banks and Random Forest Algorithm",
+        "date": "2024-05-15",
+        "authors": [
+          "A5033741873",
+          "A5064839883"
+        ]
+      }
+    ]
+  },
+  {
+    "origin": 2023,
+    "method": "transfer_learning",
+    "application": "classification",
+    "witness": [
+      {
+        "id": "W4396667649",
+        "title": "Transfer Learning and Machine Learning With MRI Radiomics For Alzheimer's Disease Diagnosis",
+        "date": "2024-04-16",
+        "authors": [
+          "A5058642858"
+        ]
+      },
+      {
+        "id": "W4402595192",
+        "title": "Advancements in Chronic Kidney Disease Diagnosis: Leveraging EfficientNetB3 for Accurate CT Image Classification",
+        "date": "2024-07-26",
+        "authors": [
+          "A5103060708",
+          "A5048865707",
+          "A5037383919",
+          "A5063472762",
+          "A5036534396"
+        ]
+      },
+      {
+        "id": "W4409945705",
+        "title": "Deep Learning Approach for Segmenting Nuchal Translucency Region in Fetal Ultrasound Images for Detecting Down Syndrome using GoogLeNet and AlexNet",
+        "date": "2025-04-13",
+        "authors": [
+          "A5024963190",
+          "A5056640063",
+          "A5103105305"
+        ]
+      }
+    ]
+  },
+  {
+    "origin": 2023,
+    "method": "transfer_learning",
+    "application": "disease_diagnosis",
+    "witness": [
+      {
+        "id": "W4396667649",
+        "title": "Transfer Learning and Machine Learning With MRI Radiomics For Alzheimer's Disease Diagnosis",
+        "date": "2024-04-16",
+        "authors": [
+          "A5058642858"
+        ]
+      },
+      {
+        "id": "W4396955715",
+        "title": "Transfer Learning with Multi-Sequence MRI for Segmentation of Autosomal Dominant Polycystic Kidney Disease Using U-Net",
+        "date": "2024-05-16",
+        "authors": [
+          "A5044481658",
+          "A5102665990",
+          "A5004333786"
+        ]
+      },
+      {
+        "id": "W4402595192",
+        "title": "Advancements in Chronic Kidney Disease Diagnosis: Leveraging EfficientNetB3 for Accurate CT Image Classification",
+        "date": "2024-07-26",
+        "authors": [
+          "A5103060708",
+          "A5048865707",
+          "A5037383919",
+          "A5063472762",
+          "A5036534396"
+        ]
+      }
+    ]
+  },
+  {
+    "origin": 2023,
+    "method": "contrastive_learning",
+    "application": "registration",
+    "witness": [
+      {
+        "id": "W4402727701",
+        "title": "Modality-Agnostic Structural Image Representation Learning for Deformable Multi-Modality Medical Image Registration",
+        "date": "2024-06-16",
+        "authors": [
+          "A5059960326",
+          "A5100451917",
+          "A5110749252",
+          "A5100431792",
+          "A5103140292",
+          "A5104074893",
+          "A5027768127",
+          "A5086173901",
+          "A5100568141",
+          "A5045227579",
+          "A5101732659"
+        ]
+      },
+      {
+        "id": "W4402980590",
+        "title": "Unsupervised Multi-Modal Medical Image Registration via query-selected attention and decoupled Contrastive Learning",
+        "date": "2024-07-15",
+        "authors": [
+          "A5102120646",
+          "A5100427255"
+        ]
+      },
+      {
+        "id": "W4405489116",
+        "title": "CBCRnet: A Contrastive Learning-based Multi-modal Image Registration Via Bidirectional Cross-modal Attention",
+        "date": "2024-07-15",
+        "authors": [
+          "A5058152203",
+          "A5103906980"
+        ]
+      }
+    ]
+  },
+  {
+    "origin": 2023,
+    "method": "recurrent_network",
+    "application": "disease_diagnosis",
+    "witness": [
+      {
+        "id": "W4392168791",
+        "title": "Feature Extraction Based on Local Histogram with Unequal Bins and a Recurrent Neural Network for the Diagnosis of Kidney Diseases from CT Images",
+        "date": "2024-02-25",
+        "authors": [
+          "A5030459094",
+          "A5007041593",
+          "A5045379032",
+          "A5056546246"
+        ]
+      },
+      {
+        "id": "W4408712515",
+        "title": "A Multimodal Deep Learning Approach for Advancing Liver Disease Diagnosis and Prognosis Prediction",
+        "date": "2024-11-23",
+        "authors": [
+          "A5101635791",
+          "A5001545886",
+          "A5036115882",
+          "A5055474675",
+          "A5101590079",
+          "A5100768744"
+        ]
+      },
+      {
+        "id": "W4406404711",
+        "title": "A Modified Bi-Directional Convolutional U-Net (BCDU-Net) Neural Network Approach for Lung CT Image Segmentation",
+        "date": "2025-01-15",
+        "authors": [
+          "A5062526669",
+          "A5095547425",
+          "A5002576714",
+          "A5087488222",
+          "A5084318013"
+        ]
+      }
+    ]
+  }
+]

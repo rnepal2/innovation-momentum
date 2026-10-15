@@ -199,8 +199,11 @@ def snapshot(records, domain, cutoff, nulls=10, include_outcomes=True):
         (np.ones(len(reference_rows)), (reference_rows, reference_cols)),
         shape=(len(past), len(ref_index)),
     )
-    mp, ap = normalize(m.T @ b), normalize(a.T @ b)
-    reference_similarity = (mp @ ap.T).toarray()
+    if b.shape[1]:
+        mp, ap = normalize(m.T @ b), normalize(a.T @ b)
+        reference_similarity = (mp @ ap.T).toarray()
+    else:
+        reference_similarity = np.zeros((nm, na))
     tfidf = TfidfVectorizer(
         max_features=2500, min_df=3, max_df=0.9, stop_words="english"
     ).fit_transform([p["abstract"] for p in past])

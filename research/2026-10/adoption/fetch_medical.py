@@ -21,6 +21,14 @@ def main():
     OUT.mkdir(exist_ok=True)
     pages = DATA / "pages"
     pages.mkdir(exist_ok=True)
+    target = DATA / "medical.jsonl.gz"
+    manifest_path = OUT / "medical_acquisition.json"
+    if target.exists() and manifest_path.exists():
+        manifest = json.loads(manifest_path.read_text())
+        if hashlib.sha256(target.read_bytes()).hexdigest() != manifest["sha256"]:
+            raise RuntimeError("Accepted corpus hash mismatch; investigate before acquisition")
+        print("Accepted medical corpus and acquisition manifest preserved.")
+        return
     spec = importlib.util.spec_from_file_location(
         "_adoption_openalex_client", HERE.parent / "campaign/fetch_corpus.py"
     )
@@ -30,7 +38,6 @@ def main():
     client.SELECT += ",locations"
     cursor, page, expected, cost, network = "*", 0, None, 0.0, 0
     partial = DATA / ".medical.partial.jsonl.gz"
-    target = DATA / "medical.jsonl.gz"
     seen = set()
     with gzip.open(partial, "wt") as stream:
         while cursor:

@@ -1,0 +1,22 @@
+{
+  "domain": "robotics",
+  "cutoff": "2019-12-31",
+  "past_papers": 21497,
+  "rows": 152,
+  "authors": 28709,
+  "edges": 76225,
+  "communities": 4217,
+  "excluded_large_authorship_papers": 0,
+  "largest_community_fraction": 0.032219861367515416,
+  "internal_citation_edges": 73526,
+  "intercommunity_citations": 55706,
+  "future_dated_references_removed": 2430,
+  "feature_groups": {
+    "base": 15,
+    "static": 4,
+    "exposure": 4,
+    "breadth": 3,
+    "undirected": 3,
+    "directed": 3
+  }
+}

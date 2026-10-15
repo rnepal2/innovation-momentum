@@ -2,9 +2,12 @@
 
 # ruff: noqa: E402
 import importlib.util
+import json
 import sys
+import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 if any(importlib.util.find_spec(name) is None for name in ["scipy", "sklearn", "networkx"]):
     raise unittest.SkipTest("Adoption tests require uv sync --extra research")
@@ -12,11 +15,15 @@ if any(importlib.util.find_spec(name) is None for name in ["scipy", "sklearn", "
 import numpy as np
 import pandas as pd
 from scipy import sparse
+from sklearn.metrics import average_precision_score
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "research/2026-10/adoption"))
+import adoption_features
 from adoption_data import METHODS, ONTOLOGY, asserted_concepts, extract
 from adoption_features import author_network, breadth, outcome, propagation, row_transition
 from experiment import features
+from summarize_adoption import weighted_ap
+from version_audit import first_abstract
 
 
 class AdoptionTests(unittest.TestCase):
@@ -131,6 +138,61 @@ class AdoptionTests(unittest.TestCase):
         self.assertEqual(
             features([row], "null_0").tolist()[0][:23], features([row], "exposure").tolist()[0]
         )
+
+    def test_identity_weighted_ap_handles_ties_and_empty_events(self):
+        y = np.array([0, 1, 1, 0, 1])
+        p = np.array([0.8, 0.8, 0.5, 0.2, 0.2])
+        w = np.array([1, 2, 0, 3, 1])
+        self.assertAlmostEqual(weighted_ap(y, p, w), average_precision_score(y, p, sample_weight=w))
+        self.assertTrue(np.isnan(weighted_ap(np.zeros(5), p, w)))
+
+    def test_pdf_abstract_transport_is_normalized(self):
+        body = "We propose a convolutional neural net-\nwork for image segmentation. "
+        body += "The method uses a carefully evaluated collection of medical images. " * 3
+        abstract = first_abstract("Abstract\n" + body + "\n1 Introduction\nOther text.")
+        self.assertIn("neural network", abstract)
+        self.assertNotIn("\n", abstract)
+        self.assertNotIn("Other text", abstract)
+        self.assertIsNone(first_abstract("Abstract\nA tiny fragment\n1 Introduction"))
+
+    def test_snapshot_features_invariant_to_future_records(self):
+        past = []
+        for i in range(41):
+            paper = self.paper(str(i), "2020-01-01", [f"a{i}"])
+            paper.update(
+                abstract="medical learning segmentation " + ("brain" if i % 2 else "image"),
+                methods=[0] if i <= 20 else [],
+                applications=[0] if i >= 20 else [],
+                references=["future_anchor"] if i == 25 else [],
+            )
+            past.append(paper)
+        future = [
+            self.paper("f1", "2021-02-01", ["new1"]),
+            self.paper("f2", "2021-08-01", ["new2"]),
+            self.paper("f3", "2022-01-01", ["new3"]),
+        ]
+        with tempfile.TemporaryDirectory() as temp:
+            folder = Path(temp)
+            (folder / "medical_prepared_meta.json").write_text("{}")
+            anchors = {method: [] for method in METHODS}
+            anchors[METHODS[0]] = [
+                dict(id="https://openalex.org/future_anchor", publication_date="2021-01-01")
+            ]
+            (folder / "anchors.json").write_text(json.dumps(dict(methods=anchors)))
+            with (
+                patch.object(adoption_features, "DATA", folder),
+                patch.object(adoption_features, "OUT", folder),
+            ):
+                first = adoption_features.snapshot(past, "medical", "2020-12-31")
+                (folder / "medical_2020-12-31_snapshot.json").unlink()
+                second = adoption_features.snapshot(past + future, "medical", "2020-12-31")
+        self.assertEqual(first["audit"], second["audit"])
+        self.assertEqual(second["audit"]["future_dated_references_removed"], 1)
+        for a, b in zip(first["rows"], second["rows"]):
+            for stage in ["temporal", "static", "exposure", "breadth", "directed", "null_0"]:
+                np.testing.assert_array_equal(features([a], stage), features([b], stage))
+        self.assertEqual(first["rows"][0]["label"]["event"], 0)
+        self.assertEqual(second["rows"][0]["label"]["event"], 1)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,41 @@
+[
+  {
+    "origin": 2019,
+    "eligible": 34,
+    "single_community_candidates": 7,
+    "multi_community_candidates": 27,
+    "nonzero_directed_path_candidates": 48,
+    "matches": 0,
+    "max_abs_standardized_difference": null,
+    "balance_gate_passed": false,
+    "high_rate": null,
+    "low_rate": null,
+    "conclusion": "Descriptive only; no causal identification. Few matches cannot establish a breadth effect."
+  },
+  {
+    "origin": 2021,
+    "eligible": 49,
+    "single_community_candidates": 10,
+    "multi_community_candidates": 39,
+    "nonzero_directed_path_candidates": 69,
+    "matches": 0,
+    "max_abs_standardized_difference": null,
+    "balance_gate_passed": false,
+    "high_rate": null,
+    "low_rate": null,
+    "conclusion": "Descriptive only; no causal identification. Few matches cannot establish a breadth effect."
+  },
+  {
+    "origin": 2023,
+    "eligible": 65,
+    "single_community_candidates": 12,
+    "multi_community_candidates": 53,
+    "nonzero_directed_path_candidates": 85,
+    "matches": 0,
+    "max_abs_standardized_difference": null,
+    "balance_gate_passed": false,
+    "high_rate": null,
+    "low_rate": null,
+    "conclusion": "Descriptive only; no causal identification. Few matches cannot establish a breadth effect."
+  }
+]

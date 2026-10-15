@@ -1,0 +1,50 @@
+[
+  {
+    "model": "popularity_context",
+    "spec": [
+      "logistic",
+      10.0
+    ],
+    "validation_ap": 0.36800949793835896
+  },
+  {
+    "model": "static_network",
+    "spec": [
+      "logistic",
+      10.0
+    ],
+    "validation_ap": 0.3790814272463442
+  },
+  {
+    "model": "local_dynamic",
+    "spec": [
+      "logistic",
+      10.0
+    ],
+    "validation_ap": 0.3677281825498788
+  },
+  {
+    "model": "static_spectral",
+    "spec": [
+      "logistic",
+      10.0
+    ],
+    "validation_ap": 0.36930194911821745
+  },
+  {
+    "model": "change_spectral",
+    "spec": [
+      "logistic",
+      10.0
+    ],
+    "validation_ap": 0.36005087891002635
+  },
+  {
+    "model": "full_spectral",
+    "spec": [
+      "logistic",
+      10.0
+    ],
+    "validation_ap": 0.361474926667216
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "python": "3.14.4",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "libraries": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2"
+  },
+  "script_sha256": {
+    "basis_diagnostic.py": "413596cce60be4e07ffc317eb045c248274e6f37d9ce44ad9622cc7793e2cf12",
+    "common.py": "4ced2d63eedab4cfe9702f09c602b4a6a8a89c5d5c77cb276d218668280640b0",
+    "fetch_arxiv.py": "d42b556a557dfcca955b29aee568a15d6b6fa10f5bfd4ad2b450d3aad15e0517",
+    "fetch_corpus.py": "4d4f9e90701257bd556f8dda1910a17fe275935ca8b08651312d0beee7509f01",
+    "h1.py": "70ddd8fe569233d7df28c6a5cc8bf842b919810554ff04d71b6040f549700786",
+    "h2.py": "881a675cc30945941244acc2ef4dbfb1548b3831ff160645d475c723267c963d",
+    "h2_ablation.py": "1db4105f1afc79988c892d9a2b4eeea18ef9aa800bac4f38d171f37b92b5d251",
+    "run_campaign.py": "59a9b0979a778beae7a97e31ab64bdaf4ba4d947b80a3a519832225073fb4bd5",
+    "sensitivity.py": "4a6f072abbd785c54f2de6fc6d845b4a1c85bdb114568cb3e8bfe93bca459247",
+    "summarize.py": "2bcab6d3d284c00c3c7b3ef4cd6a1c1199405bdc9c0ecb896c3a29df081d0521",
+    "synthetic.py": "1f8377a6f45357443d230bd3b713a54f1dde5a53937c037bbc51d8ad17e596a4",
+    "validate_results.py": "a4bae151a2910b0a6363ce438a53b2db7129a7ea92ebd9358a17c44db01b7fa5"
+  },
+  "last_action": "summary and validation",
+  "data_manifest": "acquisition_manifest.json",
+  "credential_policy": "OPENALEX_API_KEY environment only; not saved"
+}

@@ -1,0 +1,10 @@
+{
+  "orthogonal_ridge_invariance": true,
+  "seeds": 20,
+  "processes": 4,
+  "lengths": [
+    96,
+    240
+  ],
+  "nodes": 48
+}

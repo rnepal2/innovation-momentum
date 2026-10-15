@@ -1,0 +1,447 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "check": "frozen_input_sha256",
+      "manifest": "manifest.json"
+    },
+    {
+      "check": "frozen_input_sha256",
+      "manifest": "arxiv_manifest.json"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "openalex",
+      "vocabulary": "fixed",
+      "year": 2019,
+      "risk": "zero",
+      "model": "base"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "openalex",
+      "vocabulary": "fixed",
+      "year": 2019,
+      "risk": "zero",
+      "model": "spectral"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "openalex",
+      "vocabulary": "fixed",
+      "year": 2021,
+      "risk": "zero",
+      "model": "base"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "openalex",
+      "vocabulary": "fixed",
+      "year": 2021,
+      "risk": "zero",
+      "model": "spectral"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "openalex",
+      "vocabulary": "fixed",
+      "year": 2023,
+      "risk": "zero",
+      "model": "base"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "openalex",
+      "vocabulary": "fixed",
+      "year": 2023,
+      "risk": "zero",
+      "model": "spectral"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "openalex",
+      "vocabulary": "fixed",
+      "year": 2019,
+      "risk": "weak",
+      "model": "base"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "openalex",
+      "vocabulary": "fixed",
+      "year": 2019,
+      "risk": "weak",
+      "model": "spectral"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "openalex",
+      "vocabulary": "fixed",
+      "year": 2021,
+      "risk": "weak",
+      "model": "base"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "openalex",
+      "vocabulary": "fixed",
+      "year": 2021,
+      "risk": "weak",
+      "model": "spectral"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "openalex",
+      "vocabulary": "fixed",
+      "year": 2023,
+      "risk": "weak",
+      "model": "base"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "openalex",
+      "vocabulary": "fixed",
+      "year": 2023,
+      "risk": "weak",
+      "model": "spectral"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "openalex",
+      "vocabulary": "_rolling",
+      "year": 2019,
+      "risk": "zero",
+      "model": "base"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "openalex",
+      "vocabulary": "_rolling",
+      "year": 2019,
+      "risk": "zero",
+      "model": "spectral"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "openalex",
+      "vocabulary": "_rolling",
+      "year": 2021,
+      "risk": "zero",
+      "model": "base"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "openalex",
+      "vocabulary": "_rolling",
+      "year": 2021,
+      "risk": "zero",
+      "model": "spectral"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "openalex",
+      "vocabulary": "_rolling",
+      "year": 2023,
+      "risk": "zero",
+      "model": "base"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "openalex",
+      "vocabulary": "_rolling",
+      "year": 2023,
+      "risk": "zero",
+      "model": "spectral"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "openalex",
+      "vocabulary": "_rolling",
+      "year": 2019,
+      "risk": "weak",
+      "model": "base"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "openalex",
+      "vocabulary": "_rolling",
+      "year": 2019,
+      "risk": "weak",
+      "model": "spectral"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "openalex",
+      "vocabulary": "_rolling",
+      "year": 2021,
+      "risk": "weak",
+      "model": "base"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "openalex",
+      "vocabulary": "_rolling",
+      "year": 2021,
+      "risk": "weak",
+      "model": "spectral"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "openalex",
+      "vocabulary": "_rolling",
+      "year": 2023,
+      "risk": "weak",
+      "model": "base"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "openalex",
+      "vocabulary": "_rolling",
+      "year": 2023,
+      "risk": "weak",
+      "model": "spectral"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "arxiv",
+      "vocabulary": "fixed",
+      "year": 2019,
+      "risk": "zero",
+      "model": "base"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "arxiv",
+      "vocabulary": "fixed",
+      "year": 2019,
+      "risk": "zero",
+      "model": "spectral"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "arxiv",
+      "vocabulary": "fixed",
+      "year": 2021,
+      "risk": "zero",
+      "model": "base"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "arxiv",
+      "vocabulary": "fixed",
+      "year": 2021,
+      "risk": "zero",
+      "model": "spectral"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "arxiv",
+      "vocabulary": "fixed",
+      "year": 2023,
+      "risk": "zero",
+      "model": "base"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "arxiv",
+      "vocabulary": "fixed",
+      "year": 2023,
+      "risk": "zero",
+      "model": "spectral"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "arxiv",
+      "vocabulary": "fixed",
+      "year": 2019,
+      "risk": "weak",
+      "model": "base"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "arxiv",
+      "vocabulary": "fixed",
+      "year": 2019,
+      "risk": "weak",
+      "model": "spectral"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "arxiv",
+      "vocabulary": "fixed",
+      "year": 2021,
+      "risk": "weak",
+      "model": "base"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "arxiv",
+      "vocabulary": "fixed",
+      "year": 2021,
+      "risk": "weak",
+      "model": "spectral"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "arxiv",
+      "vocabulary": "fixed",
+      "year": 2023,
+      "risk": "weak",
+      "model": "base"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "arxiv",
+      "vocabulary": "fixed",
+      "year": 2023,
+      "risk": "weak",
+      "model": "spectral"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "arxiv",
+      "vocabulary": "_rolling",
+      "year": 2019,
+      "risk": "zero",
+      "model": "base"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "arxiv",
+      "vocabulary": "_rolling",
+      "year": 2019,
+      "risk": "zero",
+      "model": "spectral"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "arxiv",
+      "vocabulary": "_rolling",
+      "year": 2021,
+      "risk": "zero",
+      "model": "base"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "arxiv",
+      "vocabulary": "_rolling",
+      "year": 2021,
+      "risk": "zero",
+      "model": "spectral"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "arxiv",
+      "vocabulary": "_rolling",
+      "year": 2023,
+      "risk": "zero",
+      "model": "base"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "arxiv",
+      "vocabulary": "_rolling",
+      "year": 2023,
+      "risk": "zero",
+      "model": "spectral"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "arxiv",
+      "vocabulary": "_rolling",
+      "year": 2019,
+      "risk": "weak",
+      "model": "base"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "arxiv",
+      "vocabulary": "_rolling",
+      "year": 2019,
+      "risk": "weak",
+      "model": "spectral"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "arxiv",
+      "vocabulary": "_rolling",
+      "year": 2021,
+      "risk": "weak",
+      "model": "base"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "arxiv",
+      "vocabulary": "_rolling",
+      "year": 2021,
+      "risk": "weak",
+      "model": "spectral"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "arxiv",
+      "vocabulary": "_rolling",
+      "year": 2023,
+      "risk": "weak",
+      "model": "base"
+    },
+    {
+      "check": "metric_recomputation",
+      "source": "arxiv",
+      "vocabulary": "_rolling",
+      "year": 2023,
+      "risk": "weak",
+      "model": "spectral"
+    },
+    {
+      "check": "ablation_reproduces_primary",
+      "model": "local_dynamic",
+      "origin": 2019
+    },
+    {
+      "check": "ablation_reproduces_primary",
+      "model": "local_dynamic",
+      "origin": 2021
+    },
+    {
+      "check": "ablation_reproduces_primary",
+      "model": "local_dynamic",
+      "origin": 2023
+    },
+    {
+      "check": "ablation_reproduces_primary",
+      "model": "full_spectral",
+      "origin": 2019
+    },
+    {
+      "check": "ablation_reproduces_primary",
+      "model": "full_spectral",
+      "origin": 2021
+    },
+    {
+      "check": "ablation_reproduces_primary",
+      "model": "full_spectral",
+      "origin": 2023
+    },
+    {
+      "check": "forecast_table_integrity",
+      "source": "openalex",
+      "sensitivity": "",
+      "rows": 6860
+    },
+    {
+      "check": "forecast_table_integrity",
+      "source": "openalex",
+      "sensitivity": "_no_january1",
+      "rows": 2268
+    },
+    {
+      "check": "forecast_table_integrity",
+      "source": "arxiv",
+      "sensitivity": "",
+      "rows": 4264
+    }
+  ],
+  "raw_text_case_checks": 96,
+  "scope": "All saved baseline/spectral AP and Brier values; sampled ranked-pair counts and author witnesses; forecast row integrity. This does not validate metadata vintages or scientific meaning."
+}

@@ -1,0 +1,31 @@
+{
+  "openalex": {
+    "source": "OpenAlex Works API",
+    "filter": "primary_topic.id:T10462|T10653,from_publication_date:2010-01-01,to_publication_date:2025-12-31,has_abstract:true,language:en",
+    "select": "id,doi,title,publication_date,primary_topic,authorships,abstract_inverted_index,referenced_works",
+    "retrieved_at": "2026-10-15T03:00:16.558639+00:00",
+    "works": 68697,
+    "pages": 344,
+    "path": "data/research_2026/robotics_works.jsonl.gz",
+    "sha256": "b9f3cf7fa19c2748358c634a32bd3bbeeb2af539db3881b4a196f473a4a9e00c",
+    "bytes": 41670158,
+    "historical_status": "retrospective current-metadata reconstruction"
+  },
+  "arxiv": {
+    "source": "arXiv OAI-PMH",
+    "endpoint": "https://oaipmh.arxiv.org/oai",
+    "set": "cs:cs:RO",
+    "metadata_prefix": "arXiv",
+    "retrieved_at": "2026-10-15T02:56:52.717221+00:00",
+    "filter": "arXiv identifier first-submission month within 2010-2025, nondeleted metadata",
+    "papers": 47775,
+    "harvested_records": 60799,
+    "pages": 47,
+    "path": "data/research_2026/arxiv_robotics.jsonl.gz",
+    "sha256": "9c3f1a86813b3d39caaeff841af72157d667b31be63fd847af7860e12cafcfeb",
+    "author_identity": "normalized full name; unresolved homonyms and name variants",
+    "text_status": "latest abstract metadata; retrospective text reconstruction",
+    "references_available": false
+  },
+  "resampling": "H1 circular time blocks; H2 multinomial vertex weights, pair weight wi*wj. Sensitivity intervals conditional on the fitted rankings, not population coverage guarantees."
+}

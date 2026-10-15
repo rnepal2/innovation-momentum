@@ -8,6 +8,13 @@ dependencies = [
   "pandas>=2.0"
 ]
 
+[project.optional-dependencies]
+research = [
+  "scipy>=1.14",
+  "scikit-learn>=1.6",
+  "matplotlib>=3.9"
+]
+
 [project.scripts]
 innovation-fetch-phrase-panel = "fetch_openalex_counts:main"
 innovation-fetch-agentic-terms = "fetch_agentic_precursor_counts:main"

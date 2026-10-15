@@ -1,0 +1,33 @@
+{
+  "source": "arxiv",
+  "raw_sha256": "9c3f1a86813b3d39caaeff841af72157d667b31be63fd847af7860e12cafcfeb",
+  "retained": 47741,
+  "excluded": {
+    "short_abstract": 16,
+    "doi": 6,
+    "title_first_author": 12
+  },
+  "by_year": {
+    "2010": 70,
+    "2011": 119,
+    "2012": 158,
+    "2013": 205,
+    "2014": 273,
+    "2015": 368,
+    "2016": 780,
+    "2017": 1255,
+    "2018": 1840,
+    "2019": 2856,
+    "2020": 3964,
+    "2021": 4706,
+    "2022": 5199,
+    "2023": 6730,
+    "2024": 8659,
+    "2025": 10559
+  },
+  "missing_authors": 0,
+  "missing_references": 47741,
+  "january_1_fraction": 0.051255734065059386,
+  "date_resolution": "identifier month",
+  "vintage_warning": "Current metadata reconstruct historical text and identities; this is not a vintage archive."
+}

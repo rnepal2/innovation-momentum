@@ -2,6 +2,10 @@
 
 Research review date: 2026-10-14. Branch: `feature/research-directions-2026`.
 
+## Experiment Results
+
+The [completed robotics campaign](campaign/findings.md) tests both hypotheses with OpenAlex and arXiv records, simulations, graph nulls and chronological evaluation. H1 has no graph-specific forecasting support in this pilot. H2 has small fixed-vocabulary gains with mixed vocabulary/source sensitivities. The [experiment directory](campaign/README.md) contains reproduction commands, outputs and the decision ledger. The proposal below records the starting design.
+
 ## Recommendation
 
 Study whether independently measured scientific relationships help predict how unexpected research activity spreads between areas. Test the conditions under which graph spectral coordinates improve estimation over ordinary temporal models, PCA, and simple network features.

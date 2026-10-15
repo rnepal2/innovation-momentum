@@ -1,0 +1,2242 @@
+[
+  {
+    "source": "openalex",
+    "vocabulary": "fixed",
+    "year": 2019,
+    "risk": "weak",
+    "model": "base",
+    "concept_a": "reinforcement learning",
+    "concept_b": "robot collaboration",
+    "probability": 0.99806645072656,
+    "event": 1,
+    "future_papers": 16,
+    "witness": [
+      {
+        "id": "W3046125856",
+        "title": "Bidirectional Human-Robot Learning: Imitation and Skill Improvement",
+        "date": "2020-01-01",
+        "authors": [
+          "A5038736383"
+        ]
+      },
+      {
+        "id": "W3048371077",
+        "title": "Reinforcement Learning-Based Path Generation Using Sequential Pattern Reduction and Self-Directed Curriculum Learning",
+        "date": "2020-01-01",
+        "authors": [
+          "A5100400949",
+          "A5034140846"
+        ]
+      },
+      {
+        "id": "W3083678636",
+        "title": "Mastering the Working Sequence in Human-Robot Collaborative Assembly Based on Reinforcement Learning",
+        "date": "2020-01-01",
+        "authors": [
+          "A5086172319",
+          "A5068096252",
+          "A5001339425"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "fixed",
+    "year": 2019,
+    "risk": "weak",
+    "model": "base",
+    "concept_a": "reinforcement learning",
+    "concept_b": "grasp planning",
+    "probability": 0.9706819717197032,
+    "event": 0,
+    "future_papers": 1,
+    "witness": []
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "fixed",
+    "year": 2019,
+    "risk": "weak",
+    "model": "spectral",
+    "concept_a": "decision processes",
+    "concept_b": "process pomdp",
+    "probability": 0.997247119338424,
+    "event": 1,
+    "future_papers": 3,
+    "witness": [
+      {
+        "id": "W7220769399",
+        "title": "A Bootstrapped Neuro-Evolution Algorithm for Markovian Environments",
+        "date": "2021-01-01",
+        "authors": [
+          "A5157749957"
+        ]
+      },
+      {
+        "id": "W3211839315",
+        "title": "Q-Learning for MDPs with General Spaces: Convergence and Near Optimality via Quantization under Weak Continuity",
+        "date": "2021-11-12",
+        "authors": [
+          "A5101664274",
+          "A5029240602",
+          "A5005401257"
+        ]
+      },
+      {
+        "id": "W4286377825",
+        "title": "Dynamic programming with incomplete information to overcome navigational uncertainty in a nautical environment",
+        "date": "2021-12-29",
+        "authors": [
+          "A5038117165",
+          "A5051248929",
+          "A5033365772",
+          "A5064795613",
+          "A5068740847",
+          "A5029833367"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "fixed",
+    "year": 2019,
+    "risk": "weak",
+    "model": "spectral",
+    "concept_a": "machine learning",
+    "concept_b": "better performance",
+    "probability": 0.9705495826087136,
+    "event": 0,
+    "future_papers": 3,
+    "witness": []
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "fixed",
+    "year": 2019,
+    "risk": "zero",
+    "model": "base",
+    "concept_a": "processes mdps",
+    "concept_b": "process mdp",
+    "probability": 0.9150467126227046,
+    "event": 0,
+    "future_papers": 0,
+    "witness": []
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "fixed",
+    "year": 2019,
+    "risk": "zero",
+    "model": "base",
+    "concept_a": "processes mdps",
+    "concept_b": "process mdp",
+    "probability": 0.9150467126227046,
+    "event": 0,
+    "future_papers": 0,
+    "witness": []
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "fixed",
+    "year": 2019,
+    "risk": "zero",
+    "model": "spectral",
+    "concept_a": "learning rl",
+    "concept_b": "robot collaboration",
+    "probability": 0.9251940967329793,
+    "event": 1,
+    "future_papers": 4,
+    "witness": [
+      {
+        "id": "W3033407184",
+        "title": "Safety vs. Efficiency: AI-Based Risk Mitigation in Collaborative Robotics",
+        "date": "2020-04-01",
+        "authors": [
+          "A5051329426",
+          "A5002950608",
+          "A5103120148",
+          "A5016562532",
+          "A5067675907"
+        ]
+      },
+      {
+        "id": "W3090211586",
+        "title": "Towards Safe Human-Robot Collaboration Using Deep Reinforcement Learning",
+        "date": "2020-05-01",
+        "authors": [
+          "A5031175358",
+          "A5023442148",
+          "A5049948049",
+          "A5000203676",
+          "A5031354877"
+        ]
+      },
+      {
+        "id": "W3114637540",
+        "title": "Reinforcement Learning based Multi-Robot Classification via Scalable Communication Structure.",
+        "date": "2020-12-18",
+        "authors": [
+          "A5100737336",
+          "A5041650263",
+          "A5070679093",
+          "A5088876061",
+          "A5031516064"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "fixed",
+    "year": 2019,
+    "risk": "zero",
+    "model": "spectral",
+    "concept_a": "processes mdps",
+    "concept_b": "process mdp",
+    "probability": 0.9185077184404888,
+    "event": 0,
+    "future_papers": 0,
+    "witness": []
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "fixed",
+    "year": 2021,
+    "risk": "weak",
+    "model": "base",
+    "concept_a": "multi agent",
+    "concept_b": "manipulation tasks",
+    "probability": 0.903726065751942,
+    "event": 1,
+    "future_papers": 12,
+    "witness": [
+      {
+        "id": "W7133185604",
+        "title": "Towards Human-Level Bimanual Dexterous Manipulation with Reinforcement Learning",
+        "date": "2022-01-01",
+        "authors": [
+          "A5127825254",
+          "A5127813624",
+          "A5146911623",
+          "A5109601207",
+          "A5127784547",
+          "A5127850702",
+          "A5064779744",
+          "A5127847660",
+          "A5110609450",
+          "A5090073634"
+        ]
+      },
+      {
+        "id": "W4285178077",
+        "title": "Learning to Cooperate: A Hierarchical Cooperative Dual Robot Arm Approach for Underactuated Pick-and-Placing",
+        "date": "2022-06-03",
+        "authors": [
+          "A5037674861",
+          "A5027267173",
+          "A5058733585",
+          "A5067813287"
+        ]
+      },
+      {
+        "id": "W4320604637",
+        "title": "CLAS: Coordinating Multi-Robot Manipulation with Central Latent Action Spaces",
+        "date": "2022-11-28",
+        "authors": [
+          "A5065108843",
+          "A5035705687",
+          "A5022626150"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "fixed",
+    "year": 2021,
+    "risk": "weak",
+    "model": "base",
+    "concept_a": "learning rl",
+    "concept_b": "pose estimation",
+    "probability": 0.8697252149765149,
+    "event": 0,
+    "future_papers": 1,
+    "witness": []
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "fixed",
+    "year": 2021,
+    "risk": "weak",
+    "model": "spectral",
+    "concept_a": "rl algorithms",
+    "concept_b": "path planning",
+    "probability": 0.887917038963229,
+    "event": 1,
+    "future_papers": 10,
+    "witness": [
+      {
+        "id": "W4214868464",
+        "title": "Omnidirectional-Wheel Conveyor Path Planning and Sorting Using Reinforcement Learning Algorithms",
+        "date": "2022-01-01",
+        "authors": [
+          "A5025550971",
+          "A5023289703",
+          "A5081950400",
+          "A5090276836"
+        ]
+      },
+      {
+        "id": "W4293095176",
+        "title": "Towards Safe and Efficient Modular Path Planning using Twin Delayed DDPG",
+        "date": "2022-06-01",
+        "authors": [
+          "A5079623027",
+          "A5054211810",
+          "A5061392486"
+        ]
+      },
+      {
+        "id": "W4289830295",
+        "title": "Reinforcement learning with construction robots: A review of research areas, challenges and opportunities",
+        "date": "2022-07-15",
+        "authors": [
+          "A5076549760",
+          "A5025466195"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "fixed",
+    "year": 2021,
+    "risk": "weak",
+    "model": "spectral",
+    "concept_a": "learning rl",
+    "concept_b": "pose estimation",
+    "probability": 0.8713260635929246,
+    "event": 0,
+    "future_papers": 1,
+    "witness": []
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "fixed",
+    "year": 2021,
+    "risk": "zero",
+    "model": "base",
+    "concept_a": "mobile robots",
+    "concept_b": "rl algorithms",
+    "probability": 0.748140942112635,
+    "event": 1,
+    "future_papers": 5,
+    "witness": [
+      {
+        "id": "W4285102169",
+        "title": "Barrier Function-based Safe Reinforcement Learning for Formation Control of Mobile Robots",
+        "date": "2022-05-23",
+        "authors": [
+          "A5101668802",
+          "A5043548738",
+          "A5100721259",
+          "A5053112608",
+          "A5032618881"
+        ]
+      },
+      {
+        "id": "W4313484878",
+        "title": "Deterministic and Stochastic Analysis of Deep Reinforcement Learning for Low Dimensional Sensing-based Navigation of Mobile Robots",
+        "date": "2022-10-18",
+        "authors": [
+          "A5020504746",
+          "A5011219553",
+          "A5061075103",
+          "A5061106812",
+          "A5027433639",
+          "A5017613080",
+          "A5037041582"
+        ]
+      },
+      {
+        "id": "W4383561639",
+        "title": "Reinforcement learning with modified exploration strategy for mobile robot path planning",
+        "date": "2023-05-11",
+        "authors": [
+          "A5029487562",
+          "A5017835527",
+          "A5056759341"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "fixed",
+    "year": 2021,
+    "risk": "zero",
+    "model": "base",
+    "concept_a": "processes mdps",
+    "concept_b": "process mdp",
+    "probability": 0.722423115449909,
+    "event": 0,
+    "future_papers": 0,
+    "witness": []
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "fixed",
+    "year": 2021,
+    "risk": "zero",
+    "model": "spectral",
+    "concept_a": "processes mdps",
+    "concept_b": "process mdp",
+    "probability": 0.7499749608917129,
+    "event": 0,
+    "future_papers": 0,
+    "witness": []
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "fixed",
+    "year": 2021,
+    "risk": "zero",
+    "model": "spectral",
+    "concept_a": "processes mdps",
+    "concept_b": "process mdp",
+    "probability": 0.7499749608917129,
+    "event": 0,
+    "future_papers": 0,
+    "witness": []
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "fixed",
+    "year": 2023,
+    "risk": "weak",
+    "model": "base",
+    "concept_a": "learning rl",
+    "concept_b": "pose estimation",
+    "probability": 0.8503664284231829,
+    "event": 1,
+    "future_papers": 5,
+    "witness": [
+      {
+        "id": "W4400877917",
+        "title": "Reinforcement Learning Based Tactile Sensing for Active Point Cloud Acquisition, Recognition and Localization",
+        "date": "2024-04-01",
+        "authors": [
+          "A5061004603",
+          "A5103050304",
+          "A5030047023",
+          "A5004453915"
+        ]
+      },
+      {
+        "id": "W4401416141",
+        "title": "VO-Safe Reinforcement Learning for Drone Navigation",
+        "date": "2024-05-13",
+        "authors": [
+          "A5049338278",
+          "A5066950886",
+          "A5101895660",
+          "A5068175770"
+        ]
+      },
+      {
+        "id": "W4411027812",
+        "title": "Model-Based RL Decision-Making for UAVs Operating in GNSS-Denied, Degraded Visibility Conditions with Limited Sensor Capabilities",
+        "date": "2025-06-04",
+        "authors": [
+          "A5091946828",
+          "A5030411432",
+          "A5002208106",
+          "A5071075714"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "fixed",
+    "year": 2023,
+    "risk": "weak",
+    "model": "base",
+    "concept_a": "manipulation tasks",
+    "concept_b": "unmanned aerial",
+    "probability": 0.6423691684705882,
+    "event": 0,
+    "future_papers": 2,
+    "witness": []
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "fixed",
+    "year": 2023,
+    "risk": "weak",
+    "model": "spectral",
+    "concept_a": "learning rl",
+    "concept_b": "pose estimation",
+    "probability": 0.8572502949030526,
+    "event": 1,
+    "future_papers": 5,
+    "witness": [
+      {
+        "id": "W4400877917",
+        "title": "Reinforcement Learning Based Tactile Sensing for Active Point Cloud Acquisition, Recognition and Localization",
+        "date": "2024-04-01",
+        "authors": [
+          "A5061004603",
+          "A5103050304",
+          "A5030047023",
+          "A5004453915"
+        ]
+      },
+      {
+        "id": "W4401416141",
+        "title": "VO-Safe Reinforcement Learning for Drone Navigation",
+        "date": "2024-05-13",
+        "authors": [
+          "A5049338278",
+          "A5066950886",
+          "A5101895660",
+          "A5068175770"
+        ]
+      },
+      {
+        "id": "W4411027812",
+        "title": "Model-Based RL Decision-Making for UAVs Operating in GNSS-Denied, Degraded Visibility Conditions with Limited Sensor Capabilities",
+        "date": "2025-06-04",
+        "authors": [
+          "A5091946828",
+          "A5030411432",
+          "A5002208106",
+          "A5071075714"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "fixed",
+    "year": 2023,
+    "risk": "weak",
+    "model": "spectral",
+    "concept_a": "mobile robots",
+    "concept_b": "unmanned aerial",
+    "probability": 0.813003864285089,
+    "event": 0,
+    "future_papers": 1,
+    "witness": []
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "fixed",
+    "year": 2023,
+    "risk": "zero",
+    "model": "base",
+    "concept_a": "learning rl",
+    "concept_b": "object pose",
+    "probability": 0.477593484286546,
+    "event": 1,
+    "future_papers": 8,
+    "witness": [
+      {
+        "id": "W4391164396",
+        "title": "Pre-Grasp Approaching on Mobile Robots: A Pre-Active Layered Approach",
+        "date": "2024-01-24",
+        "authors": [
+          "A5019374519",
+          "A5032424779",
+          "A5025978995"
+        ]
+      },
+      {
+        "id": "W4404619936",
+        "title": "Reinforcement Learning-Based Sequential Control Policy for Multiple Peg-in-Hole Assembly",
+        "date": "2024-10-01",
+        "authors": [
+          "A5100406135",
+          "A5101850792",
+          "A5019906827",
+          "A5100326970"
+        ]
+      },
+      {
+        "id": "W4415064644",
+        "title": "Crossing the Human-Robot Embodiment Gap with Sim-to-Real RL using One Human Demonstration",
+        "date": "2025-04-17",
+        "authors": [
+          "A5113280392",
+          "A5073017034",
+          "A5048338914",
+          "A5021676288"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "fixed",
+    "year": 2023,
+    "risk": "zero",
+    "model": "base",
+    "concept_a": "robotic manipulation",
+    "concept_b": "unknown environments",
+    "probability": 0.3574174286671511,
+    "event": 0,
+    "future_papers": 0,
+    "witness": []
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "fixed",
+    "year": 2023,
+    "risk": "zero",
+    "model": "spectral",
+    "concept_a": "learning rl",
+    "concept_b": "object pose",
+    "probability": 0.56621072661914,
+    "event": 1,
+    "future_papers": 8,
+    "witness": [
+      {
+        "id": "W4391164396",
+        "title": "Pre-Grasp Approaching on Mobile Robots: A Pre-Active Layered Approach",
+        "date": "2024-01-24",
+        "authors": [
+          "A5019374519",
+          "A5032424779",
+          "A5025978995"
+        ]
+      },
+      {
+        "id": "W4404619936",
+        "title": "Reinforcement Learning-Based Sequential Control Policy for Multiple Peg-in-Hole Assembly",
+        "date": "2024-10-01",
+        "authors": [
+          "A5100406135",
+          "A5101850792",
+          "A5019906827",
+          "A5100326970"
+        ]
+      },
+      {
+        "id": "W4415064644",
+        "title": "Crossing the Human-Robot Embodiment Gap with Sim-to-Real RL using One Human Demonstration",
+        "date": "2025-04-17",
+        "authors": [
+          "A5113280392",
+          "A5073017034",
+          "A5048338914",
+          "A5021676288"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "fixed",
+    "year": 2023,
+    "risk": "zero",
+    "model": "spectral",
+    "concept_a": "processes pomdps",
+    "concept_b": "process pomdp",
+    "probability": 0.4778754885392756,
+    "event": 0,
+    "future_papers": 0,
+    "witness": []
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "_rolling",
+    "year": 2019,
+    "risk": "weak",
+    "model": "base",
+    "concept_a": "reinforcement learning",
+    "concept_b": "robot collaboration",
+    "probability": 0.9988023072772516,
+    "event": 1,
+    "future_papers": 16,
+    "witness": [
+      {
+        "id": "W3046125856",
+        "title": "Bidirectional Human-Robot Learning: Imitation and Skill Improvement",
+        "date": "2020-01-01",
+        "authors": [
+          "A5038736383"
+        ]
+      },
+      {
+        "id": "W3048371077",
+        "title": "Reinforcement Learning-Based Path Generation Using Sequential Pattern Reduction and Self-Directed Curriculum Learning",
+        "date": "2020-01-01",
+        "authors": [
+          "A5100400949",
+          "A5034140846"
+        ]
+      },
+      {
+        "id": "W3083678636",
+        "title": "Mastering the Working Sequence in Human-Robot Collaborative Assembly Based on Reinforcement Learning",
+        "date": "2020-01-01",
+        "authors": [
+          "A5086172319",
+          "A5068096252",
+          "A5001339425"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "_rolling",
+    "year": 2019,
+    "risk": "weak",
+    "model": "base",
+    "concept_a": "deterministic policy",
+    "concept_b": "atari games",
+    "probability": 0.990399271561058,
+    "event": 0,
+    "future_papers": 3,
+    "witness": []
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "_rolling",
+    "year": 2019,
+    "risk": "weak",
+    "model": "spectral",
+    "concept_a": "decision processes",
+    "concept_b": "process pomdp",
+    "probability": 0.998337893261784,
+    "event": 1,
+    "future_papers": 3,
+    "witness": [
+      {
+        "id": "W7220769399",
+        "title": "A Bootstrapped Neuro-Evolution Algorithm for Markovian Environments",
+        "date": "2021-01-01",
+        "authors": [
+          "A5157749957"
+        ]
+      },
+      {
+        "id": "W3211839315",
+        "title": "Q-Learning for MDPs with General Spaces: Convergence and Near Optimality via Quantization under Weak Continuity",
+        "date": "2021-11-12",
+        "authors": [
+          "A5101664274",
+          "A5029240602",
+          "A5005401257"
+        ]
+      },
+      {
+        "id": "W4286377825",
+        "title": "Dynamic programming with incomplete information to overcome navigational uncertainty in a nautical environment",
+        "date": "2021-12-29",
+        "authors": [
+          "A5038117165",
+          "A5051248929",
+          "A5033365772",
+          "A5064795613",
+          "A5068740847",
+          "A5029833367"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "_rolling",
+    "year": 2019,
+    "risk": "weak",
+    "model": "spectral",
+    "concept_a": "policy gradients",
+    "concept_b": "gradient ddpg",
+    "probability": 0.9903220983799844,
+    "event": 0,
+    "future_papers": 0,
+    "witness": []
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "_rolling",
+    "year": 2019,
+    "risk": "zero",
+    "model": "base",
+    "concept_a": "human robot",
+    "concept_b": "policy gradient",
+    "probability": 0.948274158289928,
+    "event": 1,
+    "future_papers": 4,
+    "witness": [
+      {
+        "id": "W3019235189",
+        "title": "Generalize Robot Learning From Demonstration to Variant Scenarios With Evolutionary Policy Gradient",
+        "date": "2020-04-21",
+        "authors": [
+          "A5056945088",
+          "A5100359512",
+          "A5100724297",
+          "A5037577175"
+        ]
+      },
+      {
+        "id": "W3149922422",
+        "title": "Off-Policy Reinforcement Learning for Robotics",
+        "date": "2021-01-01",
+        "authors": [
+          "A5051476305"
+        ]
+      },
+      {
+        "id": "W3210036045",
+        "title": "Human-Centered AI using Ethical Causality and Learning Representation for Multi-Agent Deep Reinforcement Learning",
+        "date": "2021-09-08",
+        "authors": [
+          "A5076583461"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "_rolling",
+    "year": 2019,
+    "risk": "zero",
+    "model": "base",
+    "concept_a": "deep reinforcement",
+    "concept_b": "robot collaboration",
+    "probability": 0.944682270821339,
+    "event": 0,
+    "future_papers": 3,
+    "witness": []
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "_rolling",
+    "year": 2019,
+    "risk": "zero",
+    "model": "spectral",
+    "concept_a": "sparse reward",
+    "concept_b": "proximal policy",
+    "probability": 0.9764661610340538,
+    "event": 1,
+    "future_papers": 4,
+    "witness": [
+      {
+        "id": "W3038892247",
+        "title": "Guided Exploration with Proximal Policy Optimization using a Single Demonstration",
+        "date": "2020-07-07",
+        "authors": [
+          "A5033313151",
+          "A5027026045"
+        ]
+      },
+      {
+        "id": "W3138076608",
+        "title": "Policy-based Deep Reinforcement Learning for Sparse Reward Environment",
+        "date": "2021-03-16",
+        "authors": [
+          "A5039433858"
+        ]
+      },
+      {
+        "id": "W3123634243",
+        "title": "Shortest-Path Constrained Reinforcement Learning for Sparse Reward Tasks",
+        "date": "2021-07-13",
+        "authors": [
+          "A5019504524",
+          "A5091113180",
+          "A5043029070",
+          "A5049195732",
+          "A5070690406",
+          "A5108652283"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "_rolling",
+    "year": 2019,
+    "risk": "zero",
+    "model": "spectral",
+    "concept_a": "learning drl",
+    "concept_b": "free reinforcement",
+    "probability": 0.9420112255211514,
+    "event": 0,
+    "future_papers": 0,
+    "witness": []
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "_rolling",
+    "year": 2021,
+    "risk": "weak",
+    "model": "base",
+    "concept_a": "deep deterministic",
+    "concept_b": "https github",
+    "probability": 0.9671977311152796,
+    "event": 0,
+    "future_papers": 1,
+    "witness": []
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "_rolling",
+    "year": 2021,
+    "risk": "weak",
+    "model": "base",
+    "concept_a": "deep deterministic",
+    "concept_b": "https github",
+    "probability": 0.9671977311152796,
+    "event": 0,
+    "future_papers": 1,
+    "witness": []
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "_rolling",
+    "year": 2021,
+    "risk": "weak",
+    "model": "spectral",
+    "concept_a": "deep deterministic",
+    "concept_b": "https github",
+    "probability": 0.9594954857082802,
+    "event": 0,
+    "future_papers": 1,
+    "witness": []
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "_rolling",
+    "year": 2021,
+    "risk": "weak",
+    "model": "spectral",
+    "concept_a": "deep deterministic",
+    "concept_b": "https github",
+    "probability": 0.9594954857082802,
+    "event": 0,
+    "future_papers": 1,
+    "witness": []
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "_rolling",
+    "year": 2021,
+    "risk": "zero",
+    "model": "base",
+    "concept_a": "soft actor",
+    "concept_b": "zero shot",
+    "probability": 0.9108823545453708,
+    "event": 1,
+    "future_papers": 3,
+    "witness": [
+      {
+        "id": "W4224884175",
+        "title": "Evolving Pareto-Optimal Actor-Critic Algorithms for Generalizability and Stability",
+        "date": "2022-04-08",
+        "authors": [
+          "A5038962641",
+          "A5007992087",
+          "A5113069812",
+          "A5031284816",
+          "A5049581744",
+          "A5002971435"
+        ]
+      },
+      {
+        "id": "W4323651330",
+        "title": "A Multiplicative Value Function for Safe and Efficient Reinforcement Learning",
+        "date": "2023-01-01",
+        "authors": [
+          "A5079281987",
+          "A5102818662",
+          "A5048742998",
+          "A5067487326",
+          "A5001254143"
+        ]
+      },
+      {
+        "id": "W4388579659",
+        "title": "Graph Soft Actor\u2013Critic Reinforcement Learning for Large-Scale Distributed Multirobot Coordination",
+        "date": "2023-11-10",
+        "authors": [
+          "A5077045940",
+          "A5030933117",
+          "A5040088510"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "_rolling",
+    "year": 2021,
+    "risk": "zero",
+    "model": "base",
+    "concept_a": "deep deterministic",
+    "concept_b": "zero shot",
+    "probability": 0.8643663193752715,
+    "event": 0,
+    "future_papers": 0,
+    "witness": []
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "_rolling",
+    "year": 2021,
+    "risk": "zero",
+    "model": "spectral",
+    "concept_a": "soft actor",
+    "concept_b": "zero shot",
+    "probability": 0.9113971103856596,
+    "event": 1,
+    "future_papers": 3,
+    "witness": [
+      {
+        "id": "W4224884175",
+        "title": "Evolving Pareto-Optimal Actor-Critic Algorithms for Generalizability and Stability",
+        "date": "2022-04-08",
+        "authors": [
+          "A5038962641",
+          "A5007992087",
+          "A5113069812",
+          "A5031284816",
+          "A5049581744",
+          "A5002971435"
+        ]
+      },
+      {
+        "id": "W4323651330",
+        "title": "A Multiplicative Value Function for Safe and Efficient Reinforcement Learning",
+        "date": "2023-01-01",
+        "authors": [
+          "A5079281987",
+          "A5102818662",
+          "A5048742998",
+          "A5067487326",
+          "A5001254143"
+        ]
+      },
+      {
+        "id": "W4388579659",
+        "title": "Graph Soft Actor\u2013Critic Reinforcement Learning for Large-Scale Distributed Multirobot Coordination",
+        "date": "2023-11-10",
+        "authors": [
+          "A5077045940",
+          "A5030933117",
+          "A5040088510"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "_rolling",
+    "year": 2021,
+    "risk": "zero",
+    "model": "spectral",
+    "concept_a": "processes mdps",
+    "concept_b": "process mdp",
+    "probability": 0.854352362635683,
+    "event": 0,
+    "future_papers": 0,
+    "witness": []
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "_rolling",
+    "year": 2023,
+    "risk": "weak",
+    "model": "base",
+    "concept_a": "https github",
+    "concept_b": "google com",
+    "probability": 0.9829129342878864,
+    "event": 1,
+    "future_papers": 3,
+    "witness": [
+      {
+        "id": "W4392182249",
+        "title": "Open Ad Hoc Teamwork with Cooperative Game Theory",
+        "date": "2024-02-23",
+        "authors": [
+          "A5100658372",
+          "A5101457256",
+          "A5102769668",
+          "A5100721259",
+          "A5018305257"
+        ]
+      },
+      {
+        "id": "W4393336285",
+        "title": "Human-compatible driving partners through data-regularized self-play reinforcement learning",
+        "date": "2024-03-28",
+        "authors": [
+          "A5035248329",
+          "A5015277482"
+        ]
+      },
+      {
+        "id": "W7119568380",
+        "title": "From traps to treasure: an agent environment for Spelunky 2's procedural depths",
+        "date": "2025-06-25",
+        "authors": [
+          "A5122395570"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "_rolling",
+    "year": 2023,
+    "risk": "weak",
+    "model": "base",
+    "concept_a": "https github",
+    "concept_b": "sites google",
+    "probability": 0.9769714135163216,
+    "event": 0,
+    "future_papers": 2,
+    "witness": []
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "_rolling",
+    "year": 2023,
+    "risk": "weak",
+    "model": "spectral",
+    "concept_a": "https github",
+    "concept_b": "google com",
+    "probability": 0.991482344479641,
+    "event": 1,
+    "future_papers": 3,
+    "witness": [
+      {
+        "id": "W4392182249",
+        "title": "Open Ad Hoc Teamwork with Cooperative Game Theory",
+        "date": "2024-02-23",
+        "authors": [
+          "A5100658372",
+          "A5101457256",
+          "A5102769668",
+          "A5100721259",
+          "A5018305257"
+        ]
+      },
+      {
+        "id": "W4393336285",
+        "title": "Human-compatible driving partners through data-regularized self-play reinforcement learning",
+        "date": "2024-03-28",
+        "authors": [
+          "A5035248329",
+          "A5015277482"
+        ]
+      },
+      {
+        "id": "W7119568380",
+        "title": "From traps to treasure: an agent environment for Spelunky 2's procedural depths",
+        "date": "2025-06-25",
+        "authors": [
+          "A5122395570"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "_rolling",
+    "year": 2023,
+    "risk": "weak",
+    "model": "spectral",
+    "concept_a": "https github",
+    "concept_b": "sites google",
+    "probability": 0.9887109063418366,
+    "event": 0,
+    "future_papers": 2,
+    "witness": []
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "_rolling",
+    "year": 2023,
+    "risk": "zero",
+    "model": "base",
+    "concept_a": "google com",
+    "concept_b": "github io",
+    "probability": 0.969587883896114,
+    "event": 0,
+    "future_papers": 0,
+    "witness": []
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "_rolling",
+    "year": 2023,
+    "risk": "zero",
+    "model": "base",
+    "concept_a": "google com",
+    "concept_b": "github io",
+    "probability": 0.969587883896114,
+    "event": 0,
+    "future_papers": 0,
+    "witness": []
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "_rolling",
+    "year": 2023,
+    "risk": "zero",
+    "model": "spectral",
+    "concept_a": "google com",
+    "concept_b": "github io",
+    "probability": 0.957058988543283,
+    "event": 0,
+    "future_papers": 0,
+    "witness": []
+  },
+  {
+    "source": "openalex",
+    "vocabulary": "_rolling",
+    "year": 2023,
+    "risk": "zero",
+    "model": "spectral",
+    "concept_a": "google com",
+    "concept_b": "github io",
+    "probability": 0.957058988543283,
+    "event": 0,
+    "future_papers": 0,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "fixed",
+    "year": 2019,
+    "risk": "weak",
+    "model": "base",
+    "concept_a": "multi robot",
+    "concept_b": "neural network",
+    "probability": 0.9640897769534242,
+    "event": 1,
+    "future_papers": 12,
+    "witness": [
+      {
+        "id": "2007.06343",
+        "title": "AirCapRL: Autonomous Aerial Human Motion Capture using Deep Reinforcement Learning",
+        "date": "2020-07-01",
+        "authors": [
+          "rahultallamraju",
+          "nitinsaini",
+          "eliabonetto",
+          "michaelpabst",
+          "yutangliu",
+          "michaeljblack",
+          "aamirahmad"
+        ]
+      },
+      {
+        "id": "2009.09149",
+        "title": "Co-Evolution of Multi-Robot Controllers and Task Cues for Off-World Open Pit Mining",
+        "date": "2020-09-01",
+        "authors": [
+          "jekanthangavelautham",
+          "yinanxu"
+        ]
+      },
+      {
+        "id": "2010.08595",
+        "title": "Flow-FL: Data-Driven Federated Learning for Spatio-Temporal Predictions in Multi-Robot Systems",
+        "date": "2020-10-01",
+        "authors": [
+          "nathaliemajcherczyk",
+          "nishansrishankar",
+          "carlopinciroli"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "fixed",
+    "year": 2019,
+    "risk": "weak",
+    "model": "base",
+    "concept_a": "mobile robot",
+    "concept_b": "machine learning",
+    "probability": 0.9380683090676284,
+    "event": 0,
+    "future_papers": 2,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "fixed",
+    "year": 2019,
+    "risk": "weak",
+    "model": "spectral",
+    "concept_a": "multi robot",
+    "concept_b": "neural network",
+    "probability": 0.9731020902408298,
+    "event": 1,
+    "future_papers": 12,
+    "witness": [
+      {
+        "id": "2007.06343",
+        "title": "AirCapRL: Autonomous Aerial Human Motion Capture using Deep Reinforcement Learning",
+        "date": "2020-07-01",
+        "authors": [
+          "rahultallamraju",
+          "nitinsaini",
+          "eliabonetto",
+          "michaelpabst",
+          "yutangliu",
+          "michaeljblack",
+          "aamirahmad"
+        ]
+      },
+      {
+        "id": "2009.09149",
+        "title": "Co-Evolution of Multi-Robot Controllers and Task Cues for Off-World Open Pit Mining",
+        "date": "2020-09-01",
+        "authors": [
+          "jekanthangavelautham",
+          "yinanxu"
+        ]
+      },
+      {
+        "id": "2010.08595",
+        "title": "Flow-FL: Data-Driven Federated Learning for Spatio-Temporal Predictions in Multi-Robot Systems",
+        "date": "2020-10-01",
+        "authors": [
+          "nathaliemajcherczyk",
+          "nishansrishankar",
+          "carlopinciroli"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "fixed",
+    "year": 2019,
+    "risk": "weak",
+    "model": "spectral",
+    "concept_a": "reinforcement learning",
+    "concept_b": "kalman filter",
+    "probability": 0.9580314422735792,
+    "event": 0,
+    "future_papers": 2,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "fixed",
+    "year": 2019,
+    "risk": "zero",
+    "model": "base",
+    "concept_a": "mobile robot",
+    "concept_b": "optimal control",
+    "probability": 0.7328052673026691,
+    "event": 1,
+    "future_papers": 4,
+    "witness": [
+      {
+        "id": "2003.09354",
+        "title": "Visual Navigation Among Humans with Optimal Control as a Supervisor",
+        "date": "2020-03-01",
+        "authors": [
+          "varuntolani",
+          "somilbansal",
+          "aleksandrafaust",
+          "clairetomlin"
+        ]
+      },
+      {
+        "id": "2003.14393",
+        "title": "TRON: A Fast Solver for Trajectory Optimization with Non-Smooth Cost Functions",
+        "date": "2020-03-01",
+        "authors": [
+          "anirudhvemula",
+          "jandrewbagnell"
+        ]
+      },
+      {
+        "id": "2103.05819",
+        "title": "Active Exploration and Mapping via Iterative Covariance Regulation over Continuous $SE(3)$ Trajectories",
+        "date": "2021-03-01",
+        "authors": [
+          "shumonkoga",
+          "arashasgharivaskasi",
+          "nikolayatanasov"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "fixed",
+    "year": 2019,
+    "risk": "zero",
+    "model": "base",
+    "concept_a": "mobile robot",
+    "concept_b": "high dimensional",
+    "probability": 0.5985135752027353,
+    "event": 0,
+    "future_papers": 3,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "fixed",
+    "year": 2019,
+    "risk": "zero",
+    "model": "spectral",
+    "concept_a": "mobile robot",
+    "concept_b": "optimal control",
+    "probability": 0.7078639349450079,
+    "event": 1,
+    "future_papers": 4,
+    "witness": [
+      {
+        "id": "2003.09354",
+        "title": "Visual Navigation Among Humans with Optimal Control as a Supervisor",
+        "date": "2020-03-01",
+        "authors": [
+          "varuntolani",
+          "somilbansal",
+          "aleksandrafaust",
+          "clairetomlin"
+        ]
+      },
+      {
+        "id": "2003.14393",
+        "title": "TRON: A Fast Solver for Trajectory Optimization with Non-Smooth Cost Functions",
+        "date": "2020-03-01",
+        "authors": [
+          "anirudhvemula",
+          "jandrewbagnell"
+        ]
+      },
+      {
+        "id": "2103.05819",
+        "title": "Active Exploration and Mapping via Iterative Covariance Regulation over Continuous $SE(3)$ Trajectories",
+        "date": "2021-03-01",
+        "authors": [
+          "shumonkoga",
+          "arashasgharivaskasi",
+          "nikolayatanasov"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "fixed",
+    "year": 2019,
+    "risk": "zero",
+    "model": "spectral",
+    "concept_a": "path planning",
+    "concept_b": "humanoid robot",
+    "probability": 0.5683866855393436,
+    "event": 0,
+    "future_papers": 1,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "fixed",
+    "year": 2021,
+    "risk": "weak",
+    "model": "base",
+    "concept_a": "mobile robot",
+    "concept_b": "multi agent",
+    "probability": 0.8215756921008243,
+    "event": 0,
+    "future_papers": 1,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "fixed",
+    "year": 2021,
+    "risk": "weak",
+    "model": "base",
+    "concept_a": "mobile robot",
+    "concept_b": "multi agent",
+    "probability": 0.8215756921008243,
+    "event": 0,
+    "future_papers": 1,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "fixed",
+    "year": 2021,
+    "risk": "weak",
+    "model": "spectral",
+    "concept_a": "mobile robot",
+    "concept_b": "multi agent",
+    "probability": 0.8549998709157207,
+    "event": 0,
+    "future_papers": 1,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "fixed",
+    "year": 2021,
+    "risk": "weak",
+    "model": "spectral",
+    "concept_a": "mobile robot",
+    "concept_b": "multi agent",
+    "probability": 0.8549998709157207,
+    "event": 0,
+    "future_papers": 1,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "fixed",
+    "year": 2021,
+    "risk": "zero",
+    "model": "base",
+    "concept_a": "state space",
+    "concept_b": "computer vision",
+    "probability": 0.3081001917677993,
+    "event": 0,
+    "future_papers": 1,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "fixed",
+    "year": 2021,
+    "risk": "zero",
+    "model": "base",
+    "concept_a": "state space",
+    "concept_b": "computer vision",
+    "probability": 0.3081001917677993,
+    "event": 0,
+    "future_papers": 1,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "fixed",
+    "year": 2021,
+    "risk": "zero",
+    "model": "spectral",
+    "concept_a": "path planning",
+    "concept_b": "control strategy",
+    "probability": 0.2456728683663406,
+    "event": 1,
+    "future_papers": 3,
+    "witness": [
+      {
+        "id": "2209.08663",
+        "title": "Multiple Waypoint Navigation in Unknown Indoor Environments",
+        "date": "2022-09-01",
+        "authors": [
+          "shivamsood",
+          "jaskaransinghsodhi",
+          "parvmaheshwari",
+          "karanuppal",
+          "debashishchakravarty"
+        ]
+      },
+      {
+        "id": "2211.13091",
+        "title": "Navigation with Tactile Sensor for Natural Human-Robot Interaction",
+        "date": "2022-11-01",
+        "authors": [
+          "zhenhaogan",
+          "yangweiyou",
+          "mengyee",
+          "chuah"
+        ]
+      },
+      {
+        "id": "2303.12180",
+        "title": "Hierarchical control strategy for planar bipedal walking robots based on reduced order model",
+        "date": "2023-03-01",
+        "authors": [
+          "minhnhatvu"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "fixed",
+    "year": 2021,
+    "risk": "zero",
+    "model": "spectral",
+    "concept_a": "state space",
+    "concept_b": "computer vision",
+    "probability": 0.2327361425959933,
+    "event": 0,
+    "future_papers": 1,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "fixed",
+    "year": 2023,
+    "risk": "weak",
+    "model": "base",
+    "concept_a": "mobile robot",
+    "concept_b": "multi agent",
+    "probability": 0.688212247387909,
+    "event": 1,
+    "future_papers": 7,
+    "witness": [
+      {
+        "id": "2406.01814",
+        "title": "ZAPP! Zonotope Agreement of Prediction and Planning for Continuous-Time Collision Avoidance with Discrete-Time Dynamics",
+        "date": "2024-06-01",
+        "authors": [
+          "lucapaparusso",
+          "shreyaskousik",
+          "edwardschmerling",
+          "francescobraghin",
+          "marcopavone"
+        ]
+      },
+      {
+        "id": "2410.06372",
+        "title": "Cooperative and Asynchronous Transformer-based Mission Planning for Heterogeneous Teams of Mobile Robots",
+        "date": "2024-10-01",
+        "authors": [
+          "miladfarjadnasab",
+          "shahinsirouspour"
+        ]
+      },
+      {
+        "id": "2410.12232",
+        "title": "Improving the Generalization of Unseen Crowd Behaviors for Reinforcement Learning based Local Motion Planners",
+        "date": "2024-10-01",
+        "authors": [
+          "wenzhengterenceng",
+          "jiandachen",
+          "sinnojialinpan",
+          "tianweizhang"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "fixed",
+    "year": 2023,
+    "risk": "weak",
+    "model": "base",
+    "concept_a": "path planning",
+    "concept_b": "humanoid robot",
+    "probability": 0.4135305637792261,
+    "event": 0,
+    "future_papers": 1,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "fixed",
+    "year": 2023,
+    "risk": "weak",
+    "model": "spectral",
+    "concept_a": "mobile robot",
+    "concept_b": "multi agent",
+    "probability": 0.742259545428261,
+    "event": 1,
+    "future_papers": 7,
+    "witness": [
+      {
+        "id": "2406.01814",
+        "title": "ZAPP! Zonotope Agreement of Prediction and Planning for Continuous-Time Collision Avoidance with Discrete-Time Dynamics",
+        "date": "2024-06-01",
+        "authors": [
+          "lucapaparusso",
+          "shreyaskousik",
+          "edwardschmerling",
+          "francescobraghin",
+          "marcopavone"
+        ]
+      },
+      {
+        "id": "2410.06372",
+        "title": "Cooperative and Asynchronous Transformer-based Mission Planning for Heterogeneous Teams of Mobile Robots",
+        "date": "2024-10-01",
+        "authors": [
+          "miladfarjadnasab",
+          "shahinsirouspour"
+        ]
+      },
+      {
+        "id": "2410.12232",
+        "title": "Improving the Generalization of Unseen Crowd Behaviors for Reinforcement Learning based Local Motion Planners",
+        "date": "2024-10-01",
+        "authors": [
+          "wenzhengterenceng",
+          "jiandachen",
+          "sinnojialinpan",
+          "tianweizhang"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "fixed",
+    "year": 2023,
+    "risk": "weak",
+    "model": "spectral",
+    "concept_a": "path planning",
+    "concept_b": "humanoid robot",
+    "probability": 0.3883097239057723,
+    "event": 0,
+    "future_papers": 1,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "fixed",
+    "year": 2023,
+    "risk": "zero",
+    "model": "base",
+    "concept_a": "decision process",
+    "concept_b": "computer vision",
+    "probability": 0.123243740494515,
+    "event": 0,
+    "future_papers": 1,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "fixed",
+    "year": 2023,
+    "risk": "zero",
+    "model": "base",
+    "concept_a": "decision process",
+    "concept_b": "computer vision",
+    "probability": 0.123243740494515,
+    "event": 0,
+    "future_papers": 1,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "fixed",
+    "year": 2023,
+    "risk": "zero",
+    "model": "spectral",
+    "concept_a": "non linear",
+    "concept_b": "artificial intelligence",
+    "probability": 0.1453917188784411,
+    "event": 0,
+    "future_papers": 0,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "fixed",
+    "year": 2023,
+    "risk": "zero",
+    "model": "spectral",
+    "concept_a": "non linear",
+    "concept_b": "artificial intelligence",
+    "probability": 0.1453917188784411,
+    "event": 0,
+    "future_papers": 0,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "_rolling",
+    "year": 2019,
+    "risk": "weak",
+    "model": "base",
+    "concept_a": "reinforcement learning",
+    "concept_b": "pose estimation",
+    "probability": 0.9958138525487168,
+    "event": 1,
+    "future_papers": 5,
+    "witness": [
+      {
+        "id": "2001.05443",
+        "title": "Robotic Grasp Manipulation Using Evolutionary Computing and Deep Reinforcement Learning",
+        "date": "2020-01-01",
+        "authors": [
+          "priyashukla",
+          "hiteshkumar",
+          "gcnandi"
+        ]
+      },
+      {
+        "id": "2003.14414",
+        "title": "Optical Non-Line-of-Sight Physics-based 3D Human Pose Estimation",
+        "date": "2020-03-01",
+        "authors": [
+          "marikoisogawa",
+          "yeyuan",
+          "matthewotoole",
+          "kriskitani"
+        ]
+      },
+      {
+        "id": "2008.03285",
+        "title": "Physics-Based Dexterous Manipulations with Estimated Hand Poses and Residual Reinforcement Learning",
+        "date": "2020-08-01",
+        "authors": [
+          "guillermogarciahernando",
+          "edwardjohns",
+          "taekyunkim"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "_rolling",
+    "year": 2019,
+    "risk": "weak",
+    "model": "base",
+    "concept_a": "neural network",
+    "concept_b": "networks cnns",
+    "probability": 0.9910114592585691,
+    "event": 0,
+    "future_papers": 2,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "_rolling",
+    "year": 2019,
+    "risk": "weak",
+    "model": "spectral",
+    "concept_a": "reinforcement learning",
+    "concept_b": "pose estimation",
+    "probability": 0.9975978947664664,
+    "event": 1,
+    "future_papers": 5,
+    "witness": [
+      {
+        "id": "2001.05443",
+        "title": "Robotic Grasp Manipulation Using Evolutionary Computing and Deep Reinforcement Learning",
+        "date": "2020-01-01",
+        "authors": [
+          "priyashukla",
+          "hiteshkumar",
+          "gcnandi"
+        ]
+      },
+      {
+        "id": "2003.14414",
+        "title": "Optical Non-Line-of-Sight Physics-based 3D Human Pose Estimation",
+        "date": "2020-03-01",
+        "authors": [
+          "marikoisogawa",
+          "yeyuan",
+          "matthewotoole",
+          "kriskitani"
+        ]
+      },
+      {
+        "id": "2008.03285",
+        "title": "Physics-Based Dexterous Manipulations with Estimated Hand Poses and Residual Reinforcement Learning",
+        "date": "2020-08-01",
+        "authors": [
+          "guillermogarciahernando",
+          "edwardjohns",
+          "taekyunkim"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "_rolling",
+    "year": 2019,
+    "risk": "weak",
+    "model": "spectral",
+    "concept_a": "aerial vehicles",
+    "concept_b": "vehicle uav",
+    "probability": 0.9971851173773107,
+    "event": 0,
+    "future_papers": 0,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "_rolling",
+    "year": 2019,
+    "risk": "zero",
+    "model": "base",
+    "concept_a": "vehicles uavs",
+    "concept_b": "vehicle uav",
+    "probability": 0.9761719948725058,
+    "event": 0,
+    "future_papers": 0,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "_rolling",
+    "year": 2019,
+    "risk": "zero",
+    "model": "base",
+    "concept_a": "vehicles uavs",
+    "concept_b": "vehicle uav",
+    "probability": 0.9761719948725058,
+    "event": 0,
+    "future_papers": 0,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "_rolling",
+    "year": 2019,
+    "risk": "zero",
+    "model": "spectral",
+    "concept_a": "vehicles uavs",
+    "concept_b": "vehicle uav",
+    "probability": 0.981619414453701,
+    "event": 0,
+    "future_papers": 0,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "_rolling",
+    "year": 2019,
+    "risk": "zero",
+    "model": "spectral",
+    "concept_a": "vehicles uavs",
+    "concept_b": "vehicle uav",
+    "probability": 0.981619414453701,
+    "event": 0,
+    "future_papers": 0,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "_rolling",
+    "year": 2021,
+    "risk": "weak",
+    "model": "base",
+    "concept_a": "aerial vehicle",
+    "concept_b": "vehicles uavs",
+    "probability": 0.9933766603742396,
+    "event": 1,
+    "future_papers": 4,
+    "witness": [
+      {
+        "id": "2206.15211",
+        "title": "Depth-CUPRL: Depth-Imaged Contrastive Unsupervised Prioritized Representations in Reinforcement Learning for Mapless Navigation of Unmanned Aerial Vehicles",
+        "date": "2022-06-01",
+        "authors": [
+          "juniorcostadejesus",
+          "victoraugustokich",
+          "alissonhenriquekolling",
+          "ricardobedingrando",
+          "rodrigodasilvaguerra",
+          "paulolillesjorgedrews"
+        ]
+      },
+      {
+        "id": "2210.15632",
+        "title": "Aerial Manipulation Using a Novel Unmanned Aerial Vehicle Cyber-Physical System",
+        "date": "2022-10-01",
+        "authors": [
+          "caiwuding",
+          "hongwupeng",
+          "lulu",
+          "caiwending"
+        ]
+      },
+      {
+        "id": "2310.00142",
+        "title": "Aerial Interaction with Tactile Sensing",
+        "date": "2023-10-01",
+        "authors": [
+          "xiaofengguo",
+          "guanqihe",
+          "mohammadrezamousaei",
+          "junyigeng",
+          "guanyashi",
+          "sebastianscherer"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "_rolling",
+    "year": 2021,
+    "risk": "weak",
+    "model": "base",
+    "concept_a": "aerial vehicles",
+    "concept_b": "vehicle uav",
+    "probability": 0.9926081511384026,
+    "event": 0,
+    "future_papers": 2,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "_rolling",
+    "year": 2021,
+    "risk": "weak",
+    "model": "spectral",
+    "concept_a": "aerial vehicle",
+    "concept_b": "vehicles uavs",
+    "probability": 0.9971178637015822,
+    "event": 1,
+    "future_papers": 4,
+    "witness": [
+      {
+        "id": "2206.15211",
+        "title": "Depth-CUPRL: Depth-Imaged Contrastive Unsupervised Prioritized Representations in Reinforcement Learning for Mapless Navigation of Unmanned Aerial Vehicles",
+        "date": "2022-06-01",
+        "authors": [
+          "juniorcostadejesus",
+          "victoraugustokich",
+          "alissonhenriquekolling",
+          "ricardobedingrando",
+          "rodrigodasilvaguerra",
+          "paulolillesjorgedrews"
+        ]
+      },
+      {
+        "id": "2210.15632",
+        "title": "Aerial Manipulation Using a Novel Unmanned Aerial Vehicle Cyber-Physical System",
+        "date": "2022-10-01",
+        "authors": [
+          "caiwuding",
+          "hongwupeng",
+          "lulu",
+          "caiwending"
+        ]
+      },
+      {
+        "id": "2310.00142",
+        "title": "Aerial Interaction with Tactile Sensing",
+        "date": "2023-10-01",
+        "authors": [
+          "xiaofengguo",
+          "guanqihe",
+          "mohammadrezamousaei",
+          "junyigeng",
+          "guanyashi",
+          "sebastianscherer"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "_rolling",
+    "year": 2021,
+    "risk": "weak",
+    "model": "spectral",
+    "concept_a": "aerial vehicles",
+    "concept_b": "vehicle uav",
+    "probability": 0.9968516997586708,
+    "event": 0,
+    "future_papers": 2,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "_rolling",
+    "year": 2021,
+    "risk": "zero",
+    "model": "base",
+    "concept_a": "vehicles uavs",
+    "concept_b": "vehicle uav",
+    "probability": 0.9953019891228246,
+    "event": 0,
+    "future_papers": 2,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "_rolling",
+    "year": 2021,
+    "risk": "zero",
+    "model": "base",
+    "concept_a": "vehicles uavs",
+    "concept_b": "vehicle uav",
+    "probability": 0.9953019891228246,
+    "event": 0,
+    "future_papers": 2,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "_rolling",
+    "year": 2021,
+    "risk": "zero",
+    "model": "spectral",
+    "concept_a": "vehicles uavs",
+    "concept_b": "vehicle uav",
+    "probability": 0.9966232935258182,
+    "event": 0,
+    "future_papers": 2,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "_rolling",
+    "year": 2021,
+    "risk": "zero",
+    "model": "spectral",
+    "concept_a": "vehicles uavs",
+    "concept_b": "vehicle uav",
+    "probability": 0.9966232935258182,
+    "event": 0,
+    "future_papers": 2,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "_rolling",
+    "year": 2023,
+    "risk": "weak",
+    "model": "base",
+    "concept_a": "https github",
+    "concept_b": "google com",
+    "probability": 0.9953281966860474,
+    "event": 1,
+    "future_papers": 5,
+    "witness": [
+      {
+        "id": "2403.19648",
+        "title": "Human-compatible driving partners through data-regularized self-play reinforcement learning",
+        "date": "2024-03-01",
+        "authors": [
+          "daphnecornelisse",
+          "eugenevinitsky"
+        ]
+      },
+      {
+        "id": "2503.22060",
+        "title": "Deep Depth Estimation from Thermal Image: Dataset, Benchmark, and Challenges",
+        "date": "2025-03-01",
+        "authors": [
+          "ukcheolshin",
+          "jinsunpark"
+        ]
+      },
+      {
+        "id": "2510.22126",
+        "title": "EasyUUV: An LLM-Enhanced Universal and Lightweight Sim-to-Real Reinforcement Learning Framework for UUV Attitude Control",
+        "date": "2025-10-01",
+        "authors": [
+          "guanwenxie",
+          "jingzehuaxu",
+          "jiweitang",
+          "yubohuang",
+          "zixiwang",
+          "shuaizhang",
+          "dongfangma",
+          "juntianqu",
+          "xiaofanli"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "_rolling",
+    "year": 2023,
+    "risk": "weak",
+    "model": "base",
+    "concept_a": "aerial vehicles",
+    "concept_b": "vehicle uav",
+    "probability": 0.9947023015899034,
+    "event": 0,
+    "future_papers": 1,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "_rolling",
+    "year": 2023,
+    "risk": "weak",
+    "model": "spectral",
+    "concept_a": "aerial vehicles",
+    "concept_b": "vehicle uav",
+    "probability": 0.999090184584,
+    "event": 0,
+    "future_papers": 1,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "_rolling",
+    "year": 2023,
+    "risk": "weak",
+    "model": "spectral",
+    "concept_a": "aerial vehicles",
+    "concept_b": "vehicle uav",
+    "probability": 0.999090184584,
+    "event": 0,
+    "future_papers": 1,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "_rolling",
+    "year": 2023,
+    "risk": "zero",
+    "model": "base",
+    "concept_a": "github io",
+    "concept_b": "google com",
+    "probability": 0.99986507896308,
+    "event": 0,
+    "future_papers": 1,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "_rolling",
+    "year": 2023,
+    "risk": "zero",
+    "model": "base",
+    "concept_a": "github io",
+    "concept_b": "google com",
+    "probability": 0.99986507896308,
+    "event": 0,
+    "future_papers": 1,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "_rolling",
+    "year": 2023,
+    "risk": "zero",
+    "model": "spectral",
+    "concept_a": "github io",
+    "concept_b": "google com",
+    "probability": 0.999830117439858,
+    "event": 0,
+    "future_papers": 1,
+    "witness": []
+  },
+  {
+    "source": "arxiv",
+    "vocabulary": "_rolling",
+    "year": 2023,
+    "risk": "zero",
+    "model": "spectral",
+    "concept_a": "github io",
+    "concept_b": "google com",
+    "probability": 0.999830117439858,
+    "event": 0,
+    "future_papers": 1,
+    "witness": []
+  }
+]

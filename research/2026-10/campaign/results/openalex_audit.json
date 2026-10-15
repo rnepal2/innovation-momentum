@@ -1,0 +1,33 @@
+{
+  "source": "openalex",
+  "raw_sha256": "b9f3cf7fa19c2748358c634a32bd3bbeeb2af539db3881b4a196f473a4a9e00c",
+  "retained": 66090,
+  "excluded": {
+    "short_abstract": 1362,
+    "doi": 116,
+    "title_first_author": 1129
+  },
+  "by_year": {
+    "2010": 1362,
+    "2011": 1452,
+    "2012": 1446,
+    "2013": 1516,
+    "2014": 1648,
+    "2015": 1656,
+    "2016": 1874,
+    "2017": 2453,
+    "2018": 3500,
+    "2019": 4590,
+    "2020": 5295,
+    "2021": 6324,
+    "2022": 6548,
+    "2023": 7764,
+    "2024": 9378,
+    "2025": 9284
+  },
+  "missing_authors": 1334,
+  "missing_references": 19675,
+  "january_1_fraction": 0.1467241640187623,
+  "date_resolution": "publication date",
+  "vintage_warning": "Current metadata reconstruct historical text and identities; this is not a vintage archive."
+}

@@ -1,0 +1,258 @@
+{
+  "t1.0_dt0.025_direct_gap_p0": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.025_direct_gap_p0.npz",
+    "sha256": "a8b83fc9769f123703c12bf3cbd21046268d655a6f96d4cdc7ed792fc55973b7"
+  },
+  "t1.0_dt0.025_direct_gap_p1": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.025_direct_gap_p1.npz",
+    "sha256": "debd61ddb2b2fd16bd965b39a1b5c22118a06cb6e5d2d9bd3722e9ad5e3d54b7"
+  },
+  "t1.0_dt0.025_direct_gap_p2": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.025_direct_gap_p2.npz",
+    "sha256": "a4f7d6a106e051fdd4df7d958419d4705fbb2b1c1e0983b5ff66b488866f5032"
+  },
+  "t1.0_dt0.025_direct_gap_p3": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.025_direct_gap_p3.npz",
+    "sha256": "cc026843ad89c691ca1750470b43478de384c9c9c3342e9bd88110de0ae6c2a8"
+  },
+  "t1.0_dt0.025_direct_speed_p0": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.025_direct_speed_p0.npz",
+    "sha256": "c29d9c9cd2047709768c4d4076360e397071ecd723780093be55283c15983e00"
+  },
+  "t1.0_dt0.025_direct_speed_p1": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.025_direct_speed_p1.npz",
+    "sha256": "71b1fa254663a03e71eb87a6f927efdaf26b7c5e8e58dca7f010987c2a916d21"
+  },
+  "t1.0_dt0.025_direct_speed_p2": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.025_direct_speed_p2.npz",
+    "sha256": "511b3aa56ceb125df259f586830ca5d77d92016a271f7c85fabce848683e1f89"
+  },
+  "t1.0_dt0.025_direct_speed_p3": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.025_direct_speed_p3.npz",
+    "sha256": "e7e37e3adbc0098b54464d741ab395a95154a76ef9d2acd145174a371d25eb27"
+  },
+  "t1.0_dt0.025_harmonic_02_p0": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.025_harmonic_02_p0.npz",
+    "sha256": "0be9c174e54612e0ff9a3622227758bd31d4d31d5e826c5155b8218a0aed2b82"
+  },
+  "t1.0_dt0.025_harmonic_02_p1": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.025_harmonic_02_p1.npz",
+    "sha256": "7903740e396a19200ba67b25e43d1bd9464b82dee6fd1e963834f3fe061c95ba"
+  },
+  "t1.0_dt0.025_harmonic_02_p2": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.025_harmonic_02_p2.npz",
+    "sha256": "b8df3b0239bdd0119fbd996ac52f0c02f1cf1100ac7f70943e645b5b673f4aa8"
+  },
+  "t1.0_dt0.025_harmonic_02_p3": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.025_harmonic_02_p3.npz",
+    "sha256": "9e7ca9b140b36330ff0d680a3a87b3ebfa82d28cc594965f224f5d966f9f9631"
+  },
+  "t1.0_dt0.025_harmonic_04_p0": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.025_harmonic_04_p0.npz",
+    "sha256": "37db680b4f5e35c978f0d5446e7e85c259c8159d955a92efaea96568451aac3a"
+  },
+  "t1.0_dt0.025_harmonic_04_p1": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.025_harmonic_04_p1.npz",
+    "sha256": "39db73f51ab00fbf1dd8962ec46793c2279e83f2e23e77d440a909be37c8546f"
+  },
+  "t1.0_dt0.025_harmonic_04_p2": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.025_harmonic_04_p2.npz",
+    "sha256": "14f1e26034377a8d003dbfdfcbe2ca44415645e2701f172d12cd56601bae12b1"
+  },
+  "t1.0_dt0.025_harmonic_04_p3": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.025_harmonic_04_p3.npz",
+    "sha256": "2c99c88afb98ffb67ff388f008e56ded592b98352593cf88556f502d2bc8c50a"
+  },
+  "t1.0_dt0.01_direct_gap_p0": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.01_direct_gap_p0.npz",
+    "sha256": "64a37ee3830ea40720407869c08a1255f289aaaa57c7776825858962ef04854f"
+  },
+  "t1.0_dt0.01_direct_gap_p1": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.01_direct_gap_p1.npz",
+    "sha256": "3222d6d3dbcb428cb6cb39552d21ee614159357fc063fee9eec1f5beb4b7f81e"
+  },
+  "t1.0_dt0.01_direct_gap_p2": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.01_direct_gap_p2.npz",
+    "sha256": "fdd05402939a6bb96cb2e1784562162b61faef9a553c5c9d9eeb13a8a98fb049"
+  },
+  "t1.0_dt0.01_direct_gap_p3": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.01_direct_gap_p3.npz",
+    "sha256": "5a7f76a215e85472fc3fb038a56e3cc3d667e929741f18e0f72236c0d8c2fce1"
+  },
+  "t1.0_dt0.01_direct_speed_p0": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.01_direct_speed_p0.npz",
+    "sha256": "119883915a635d9e436cb88bd0f3950402e6459fb1be107e9689c536474b6077"
+  },
+  "t1.0_dt0.01_direct_speed_p1": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.01_direct_speed_p1.npz",
+    "sha256": "ab57b8ac94c6e6a3d10ba5ea41c3d3b658d1daff8287da6060c2dfc03ead78b2"
+  },
+  "t1.0_dt0.01_direct_speed_p2": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.01_direct_speed_p2.npz",
+    "sha256": "13093f38ecad79781c219efaf2608b45fcb0b21bbdd0e12bc078996908f9fb1d"
+  },
+  "t1.0_dt0.01_direct_speed_p3": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.01_direct_speed_p3.npz",
+    "sha256": "e30a473092563f5acfc673d84a4acbf9277db35ebc3d5034adca43e71fcdcde9"
+  },
+  "t1.0_dt0.01_harmonic_02_p0": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.01_harmonic_02_p0.npz",
+    "sha256": "9f446cd28a9fd025afc0c90139c3ca02a7fa815714b33fb09110219bd4849ca2"
+  },
+  "t1.0_dt0.01_harmonic_02_p1": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.01_harmonic_02_p1.npz",
+    "sha256": "dbaf63b78671683c4b2b894d8f33bef9d394949f52b6483a9be5bd0ba710646c"
+  },
+  "t1.0_dt0.01_harmonic_02_p2": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.01_harmonic_02_p2.npz",
+    "sha256": "4def1db5e3c2fa26babacc54f81b3e61fdc167f919a02bc6c318cf666f0eaf61"
+  },
+  "t1.0_dt0.01_harmonic_02_p3": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.01_harmonic_02_p3.npz",
+    "sha256": "ea0cbce7fd20ecb03176705d7caaa7fb6b9f9e36a2bdf7d64bbfe75e2e66d27f"
+  },
+  "t1.0_dt0.01_harmonic_04_p0": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.01_harmonic_04_p0.npz",
+    "sha256": "700efe9eb2a6448e18ad3aab41a75f6ffe2ebfd7680e5fe0cffd6e9f717f8846"
+  },
+  "t1.0_dt0.01_harmonic_04_p1": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.01_harmonic_04_p1.npz",
+    "sha256": "1105f8ac4c237fd2dba1264efb33e75435908dd9c9c8f4c9c604356d51241b01"
+  },
+  "t1.0_dt0.01_harmonic_04_p2": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.01_harmonic_04_p2.npz",
+    "sha256": "f3634f159bbc8e66c6661c438fae898c0e7c23e47e7ba51207674179b4b3f77c"
+  },
+  "t1.0_dt0.01_harmonic_04_p3": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.0_dt0.01_harmonic_04_p3.npz",
+    "sha256": "a9e5861b1799781acbee1e46b019076a857740f334844dc5c071a5a3b795527f"
+  },
+  "t1.8_dt0.025_direct_gap_p0": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.025_direct_gap_p0.npz",
+    "sha256": "5bdbe81358a1cb9892ac01a7116ff824796069bf4edbc483d27a51d5302fbdf8"
+  },
+  "t1.8_dt0.025_direct_gap_p1": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.025_direct_gap_p1.npz",
+    "sha256": "dc65b9beabe54389e2fba141498d0a77a34a906fed28038a5e3f09c91786e55e"
+  },
+  "t1.8_dt0.025_direct_gap_p2": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.025_direct_gap_p2.npz",
+    "sha256": "d8f808fbd4ccf660d1751cc75416f7f5e213c1e5a966e4ee23b5cf91b930a415"
+  },
+  "t1.8_dt0.025_direct_gap_p3": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.025_direct_gap_p3.npz",
+    "sha256": "68e815c7d650da9351551faf5e506359599e180a56d6fec605d714289db96ac0"
+  },
+  "t1.8_dt0.025_direct_speed_p0": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.025_direct_speed_p0.npz",
+    "sha256": "d4ab6c40bbbd738e479ee1ed76ea5087b11be546c87d86dbd760ee9d5b415968"
+  },
+  "t1.8_dt0.025_direct_speed_p1": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.025_direct_speed_p1.npz",
+    "sha256": "b259c4a9571c5e8d1b9886533b6b0111fe78e17e78e7c61cf2bafae5865b0f00"
+  },
+  "t1.8_dt0.025_direct_speed_p2": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.025_direct_speed_p2.npz",
+    "sha256": "843f20822687a499f800b6b49b1524dc0514086292594cd2c191c736a1dab7b9"
+  },
+  "t1.8_dt0.025_direct_speed_p3": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.025_direct_speed_p3.npz",
+    "sha256": "7b58ecaaaabbcef42a0b829bc89d7dd822845c9ba649a3e5342f992ad37049d8"
+  },
+  "t1.8_dt0.025_harmonic_02_p0": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.025_harmonic_02_p0.npz",
+    "sha256": "43933d1fd408c1119089a4508a06bf223cf28b90f8e448b4cb6b95d177332f95"
+  },
+  "t1.8_dt0.025_harmonic_02_p1": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.025_harmonic_02_p1.npz",
+    "sha256": "61d13437509869d6a5f763be524ffff09e3bf69d2d3a6429e7d69c68b853049a"
+  },
+  "t1.8_dt0.025_harmonic_02_p2": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.025_harmonic_02_p2.npz",
+    "sha256": "c058673edf3c401187cd553fde89a73aa37d39973938bae0f4327ffcfa628c28"
+  },
+  "t1.8_dt0.025_harmonic_02_p3": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.025_harmonic_02_p3.npz",
+    "sha256": "1c9e0c7a97faad53492ac51aec6d4d6ea1dfbf98c12434f2aa326324b4195d4e"
+  },
+  "t1.8_dt0.025_harmonic_04_p0": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.025_harmonic_04_p0.npz",
+    "sha256": "9d48b1b68716834b2507296c0a4edfd519bffd52bbcb1d59b98c0732286786ca"
+  },
+  "t1.8_dt0.025_harmonic_04_p1": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.025_harmonic_04_p1.npz",
+    "sha256": "88c1c21b74857bcb9c6383752f89d216eedc8a64e8075acd6840605d0e863aee"
+  },
+  "t1.8_dt0.025_harmonic_04_p2": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.025_harmonic_04_p2.npz",
+    "sha256": "fdf4449ac3e1997454042f3b604ad35578aad8813fbe352033988a9dfd91b1d1"
+  },
+  "t1.8_dt0.025_harmonic_04_p3": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.025_harmonic_04_p3.npz",
+    "sha256": "0af399a530cff3ea88462bd494515152b7156e2903cbe63213e53647c012ce86"
+  },
+  "t1.8_dt0.01_direct_gap_p0": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.01_direct_gap_p0.npz",
+    "sha256": "b22a7dea42cff5555de55d23cc6b00d77af449e820762c7545e8e19a33c29528"
+  },
+  "t1.8_dt0.01_direct_gap_p1": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.01_direct_gap_p1.npz",
+    "sha256": "6853aacd949595dc97a6abda1097e1bb4eb8f7a60335c10bac1bfa02ddfe936a"
+  },
+  "t1.8_dt0.01_direct_gap_p2": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.01_direct_gap_p2.npz",
+    "sha256": "2608f78916f9d899389b70d9151c3245837128862cd64ab484556a651fc16e3e"
+  },
+  "t1.8_dt0.01_direct_gap_p3": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.01_direct_gap_p3.npz",
+    "sha256": "4e90bc4f6fbcded06140b6638291a8f90cd9e01b5698c8eb58f72e4c9efabce2"
+  },
+  "t1.8_dt0.01_direct_speed_p0": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.01_direct_speed_p0.npz",
+    "sha256": "6d9ec07061b0abf247730c959c610fc667f7c469aa916bd373960600333f64ed"
+  },
+  "t1.8_dt0.01_direct_speed_p1": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.01_direct_speed_p1.npz",
+    "sha256": "00fc6d2979120b77ec67ac0475f1dfae7be14801ea478a5974e93d56451b2c89"
+  },
+  "t1.8_dt0.01_direct_speed_p2": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.01_direct_speed_p2.npz",
+    "sha256": "55fc2b4b4b79bffc2dd7ed035cf9163ed30fe74fdcb8dc254487f593519a0782"
+  },
+  "t1.8_dt0.01_direct_speed_p3": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.01_direct_speed_p3.npz",
+    "sha256": "7424b33ce2f32993c517a682c3218b90682540e9b5da780638c8f2d1e78ed839"
+  },
+  "t1.8_dt0.01_harmonic_02_p0": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.01_harmonic_02_p0.npz",
+    "sha256": "44f309b0d7e40f5a1418b76ba114b2c5abda806e90be65889dd7dcfc8e66e3e2"
+  },
+  "t1.8_dt0.01_harmonic_02_p1": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.01_harmonic_02_p1.npz",
+    "sha256": "23b264d0a5d62cb78ed0fc32b52ff35f48b4b28d0f18f6dc9b0abac9774eac67"
+  },
+  "t1.8_dt0.01_harmonic_02_p2": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.01_harmonic_02_p2.npz",
+    "sha256": "54866a9be85da33aa82c6b8b12a2f6f54d8b07895c2fd5d6d464a93e1f6383ac"
+  },
+  "t1.8_dt0.01_harmonic_02_p3": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.01_harmonic_02_p3.npz",
+    "sha256": "419023944494403fd752dc6bba5c1de09b6e1894f1f6656a268b382f090af755"
+  },
+  "t1.8_dt0.01_harmonic_04_p0": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.01_harmonic_04_p0.npz",
+    "sha256": "d7ea7c015aa62453905ea8cd679f4315de93a8797725c089b0e0c2eeef71eac4"
+  },
+  "t1.8_dt0.01_harmonic_04_p1": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.01_harmonic_04_p1.npz",
+    "sha256": "9aaa0f280f991804afd1a66faed4972b8c3adc7ca0869f98bae246daace12edd"
+  },
+  "t1.8_dt0.01_harmonic_04_p2": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.01_harmonic_04_p2.npz",
+    "sha256": "163e68bf1c0e13f20201623eb32b62c1d544d7d832003dca86015fa9551404b2"
+  },
+  "t1.8_dt0.01_harmonic_04_p3": {
+    "path": "data/research_2026/traffic/uncertainty_physical/t1.8_dt0.01_harmonic_04_p3.npz",
+    "sha256": "072f36cf28265cb8010671674cb36dacba535e5db73c0894b998ce6b5cf5747a"
+  }
+}

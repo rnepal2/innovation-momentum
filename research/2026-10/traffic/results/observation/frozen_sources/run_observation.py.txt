@@ -1,0 +1,374 @@
+"""New autonomous/forced/alias controls and synthetic observation experiments."""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+from pathlib import Path
+
+import matplotlib
+
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from mechanism_core import equilibrium, mode_operator
+from mode_consistency import (
+    covariance,
+    history_design,
+    noise_draws,
+    observed_state,
+    real_operator,
+    recovery,
+    residual,
+    score,
+    threshold,
+    window_score,
+    window_threshold,
+)
+from provenance import archive_sources
+from run_mechanism import collect
+from sumo_pilot import circle_network
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[2]
+NOISE = [(0.0, 0.0), (0.01, 0.001), (0.05, 0.005), (0.2, 0.02)]
+
+
+def save_json(path, value):
+    Path(path).write_text(json.dumps(value, indent=2, allow_nan=False) + "\n")
+
+
+def masks():
+    return {
+        "all24": np.arange(24),
+        "uniform12": np.arange(0, 24, 2),
+        "uniform8": np.arange(0, 24, 3),
+        "irregular12": np.sort(np.random.default_rng(26016).choice(24, 12, replace=False)),
+    }
+
+
+def analyze(out, raw, window=False):
+    meta = pd.read_csv(out / "scenarios.csv")
+    manifest = json.loads((out / "manifest.json").read_text())
+    rows = []
+    calibration = {}
+    seed_base = 170000 if window else 70000
+    calibration_base = 180000 if window else 80000
+    diagnostics = []
+    for mask_name, indices in masks().items():
+        for aware in [False, True]:
+            c, identifiable, rank, condition = recovery(indices, aware)
+            diagnostics.append(
+                {
+                    "mask": mask_name,
+                    "aware": aware,
+                    "indices": indices.tolist(),
+                    "dictionary_rank": rank,
+                    "target_identifiable": identifiable,
+                    "condition": condition,
+                }
+            )
+    save_json(out / "sampling_diagnostics.json", diagnostics)
+    for counter, row in enumerate(meta.to_dict("records")):
+        with np.load(ROOT / manifest[row["id"]]["path"], allow_pickle=False) as arrays:
+            x = arrays["perturbed"] - arrays["control"]
+        v, gaps = equilibrium(row["actual_ring_length"], row["tau"])
+        physical = np.linalg.matrix_power(
+            mode_operator(3, gaps[0], v, 0.3, row["tau"], dt=row["dt"]), round(0.5 / row["dt"])
+        )
+        scales = np.diag([1 / gaps[0], 1 / v, 1 / gaps[0], 1 / v])
+        operator = scales @ real_operator(physical) @ np.linalg.inv(scales)
+        truth = np.fft.fft(x[:, 1], axis=1)[:, 3] / 24
+        true_power = float(2 * np.mean(abs(truth[100:301]) ** 2))
+        for mask_index, (mask_name, indices) in enumerate(masks().items()):
+            for aware in [False, True]:
+                c, identifiable, rank, condition = recovery(indices, aware)
+                observed = observed_state(x, indices, c)[::5][20:61]
+                history = observed @ scales.T
+                observed_power = float(2 * np.mean(observed[:, 1] ** 2 + observed[:, 3] ** 2))
+                for noise_index, (gap_sigma, speed_sigma) in enumerate(NOISE):
+                    info = {
+                        "id": row["id"],
+                        "tau": row["tau"],
+                        "dt": row["dt"],
+                        "excitation": row["excitation"],
+                        "phase": row["phase"],
+                        "mask": mask_name,
+                        "aware": aware,
+                        "noise_index": noise_index,
+                        "gap_sigma": gap_sigma,
+                        "speed_sigma": speed_sigma,
+                        "target_identifiable": identifiable,
+                        "dictionary_rank": rank,
+                        "condition": condition,
+                        "true_q3_power": true_power,
+                        "observed_q3_power_noisefree": observed_power,
+                        "intrinsic_q3_growth": float(
+                            np.linalg.eigvals(
+                                mode_operator(3, gaps[0], v, 0.3, row["tau"])
+                            ).real.max()
+                        ),
+                    }
+                    if not identifiable:
+                        rows.append(
+                            {**info, "status": "nonidentifiable", "rejection_fraction": np.nan}
+                        )
+                        continue
+                    if not speed_sigma:
+                        if observed_power <= 1e-14:
+                            rows.append(
+                                {
+                                    **info,
+                                    "status": "below_numerical_floor",
+                                    "rejection_fraction": np.nan,
+                                }
+                            )
+                            continue
+                        statistic = float(
+                            np.linalg.norm(residual(history, operator))
+                            / np.linalg.norm(history[1:])
+                        )
+                        rows.append(
+                            {
+                                **info,
+                                "method": "adjacent_innovation",
+                                "status": "eligible",
+                                "rejection_fraction": float(statistic > 0.01),
+                                "mean_statistic": statistic,
+                                "cutoff": 0.01,
+                            }
+                        )
+                        if window:
+                            design = history_design(operator)
+                            flat = history.ravel()
+                            fit = design @ np.linalg.lstsq(design, flat, rcond=None)[0]
+                            statistic = float(np.linalg.norm(flat - fit) / np.linalg.norm(flat))
+                            rows.append(
+                                {
+                                    **info,
+                                    "method": "whole_window",
+                                    "status": "eligible",
+                                    "rejection_fraction": float(statistic > 0.01),
+                                    "mean_statistic": statistic,
+                                    "cutoff": 0.01,
+                                }
+                            )
+                        continue
+                    native_cov = covariance(c, gap_sigma, speed_sigma)
+                    cov = scales @ native_cov @ scales.T
+                    key = (row["tau"], row["dt"], mask_name, aware, noise_index)
+                    if key not in calibration:
+                        calibration[key] = threshold(
+                            operator,
+                            cov,
+                            seed=calibration_base
+                            + noise_index * 100
+                            + mask_index * 10
+                            + int(aware),
+                        )
+                    cutoff, inverse = calibration[key]
+                    noises = noise_draws(
+                        cov,
+                        100,
+                        len(history),
+                        seed_base + counter * 100 + mask_index * 10 + int(aware),
+                    )
+                    statistics = score(history[None] + noises, operator, inverse)
+                    rows.append(
+                        {
+                            **info,
+                            "method": "adjacent_innovation",
+                            "status": "eligible",
+                            "rejection_fraction": float(np.mean(statistics > cutoff)),
+                            "mean_statistic": float(statistics.mean()),
+                            "cutoff": cutoff,
+                            "true_mode_to_noise_power": true_power
+                            / (2 * (native_cov[1, 1] + native_cov[3, 3])),
+                        }
+                    )
+                    if window:
+                        window_key = (*key, "whole_window")
+                        if window_key not in calibration:
+                            calibration[window_key] = window_threshold(
+                                operator,
+                                cov,
+                                seed=calibration_base
+                                + noise_index * 100
+                                + mask_index * 10
+                                + int(aware),
+                            )
+                        cutoff, whitening, basis = calibration[window_key]
+                        statistics = window_score(history[None] + noises, whitening, basis)
+                        rows.append(
+                            {
+                                **info,
+                                "method": "whole_window",
+                                "status": "eligible",
+                                "rejection_fraction": float(np.mean(statistics > cutoff)),
+                                "mean_statistic": float(statistics.mean()),
+                                "cutoff": cutoff,
+                                "true_mode_to_noise_power": true_power
+                                / (2 * (native_cov[1, 1] + native_cov[3, 3])),
+                            }
+                        )
+        if counter % 8 == 0:
+            print("Analyzed physical response", counter + 1, flush=True)
+    results = pd.DataFrame(rows)
+    results.to_csv(out / "diagnostics.csv", index=False)
+    summary = (
+        results[(results["dt"] == 0.01) & (results.status == "eligible")]
+        .groupby(["tau", "excitation", "mask", "aware", "noise_index", "method"])
+        .rejection_fraction.agg(["mean", "min", "max"])
+        .reset_index()
+    )
+    summary.to_csv(out / "rejection_summary.csv", index=False)
+    fig, axes = plt.subplots(1, 2, figsize=(11, 4), sharey=True, layout="constrained")
+    for ax, tau in zip(axes, [1.0, 1.8]):
+        for excitation, color in [
+            ("direct_gap_q3", "#777777"),
+            ("direct_speed_q3", "#346d95"),
+            ("harmonic_q1", "#a26b18"),
+        ]:
+            part = summary[
+                (summary.tau == tau)
+                & (summary.excitation == excitation)
+                & (summary["mask"] == "all24")
+                & summary.aware
+                & (summary.method == "adjacent_innovation")
+            ]
+            ax.plot(part.noise_index, part["mean"], "o-", color=color, label=excitation)
+        ax.axhline(0.05, color="#777777", ls=":", label="Nominal noise-null rejection")
+        ax.set(
+            xlabel="Synthetic noise scenario",
+            ylabel="Autonomous-consistency rejection fraction",
+            title=f"Headway {tau} s",
+            ylim=(-0.02, 1.02),
+        )
+        ax.set_xticks(range(4), ["zero", "low", "medium", "high"])
+    axes[0].legend(frameon=False, fontsize=8, loc="center right")
+    fig.savefig(out / "noise_detection.png", dpi=180)
+    plt.close(fig)
+    if window:
+        window_figure(summary, out)
+    print(summary[(summary["mask"] == "all24") & summary.aware].to_string(index=False))
+
+
+def window_figure(summary, out):
+    fig, axes = plt.subplots(1, 2, figsize=(11, 4.2), sharey=True, layout="constrained")
+    for ax, tau in zip(axes, [1.0, 1.8]):
+        for excitation, color in [
+            ("direct_speed_q3", "#346d95"),
+            ("direct_gap_q3", "#777777"),
+            ("harmonic_q1", "#a26b18"),
+        ]:
+            for method, style in [("adjacent_innovation", ":"), ("whole_window", "-")]:
+                part = summary[
+                    (summary.tau == tau)
+                    & (summary.excitation == excitation)
+                    & (summary["mask"] == "all24")
+                    & summary.aware
+                    & (summary.method == method)
+                ]
+                ax.plot(
+                    part.noise_index,
+                    part["mean"],
+                    marker="o",
+                    ls=style,
+                    color=color,
+                    label=excitation.replace("_", " ") + "; " + method.replace("_", " "),
+                )
+        ax.axhline(0.05, color="#777777", ls="--")
+        ax.set(title=f"Headway {tau} s", xlabel="Synthetic noise scenario", ylim=(-0.02, 1.02))
+        ax.set_xticks(range(4), ["zero", "low", "medium", "high"])
+    axes[0].set_ylabel("Autonomous-model rejection fraction")
+    fig.legend(
+        *axes[0].get_legend_handles_labels(),
+        loc="outside lower center",
+        ncol=2,
+        frameon=False,
+        fontsize=8,
+    )
+    fig.savefig(out / "whole_window_comparison.png", dpi=180)
+    plt.close(fig)
+
+
+def run(out, raw, window=False):
+    import libsumo
+
+    out.mkdir(parents=True, exist_ok=True)
+    if (out / "freeze.json").exists():
+        raise FileExistsError("Choose fresh output")
+    save_json(
+        out / "freeze.json",
+        {
+            "sources": archive_sources(out, HERE),
+            "simulator": libsumo.getVersion(),
+            "protocol": "window-consistency-followup.md" if window else "observation-protocol.md",
+            "phases": [
+                float(p + (np.pi / 8 if window else 0))
+                for p in [0, np.pi / 4, np.pi / 2, 3 * np.pi / 4]
+            ],
+            "noise": NOISE,
+            "evaluation_draws": 100,
+            "calibration_draws": 2000,
+            "evaluation_seed_base": 170000 if window else 70000,
+            "calibration_seed_base": 180000 if window else 80000,
+            "masks": {name: indices.tolist() for name, indices in masks().items()},
+        },
+    )
+    network, lengths = circle_network(480, raw / "network")
+    records, controls, manifest = [], [], {}
+    for tau in [1.0, 1.8]:
+        for dt in [0.025, 0.01]:
+            control, meta = collect(network, lengths, 0.3, dt, taus=tau)
+            controls.append({"tau": tau, "dt": dt, **meta})
+            designs = [
+                ("direct_gap_q3", 3, 0.02, "gap"),
+                ("direct_speed_q3", 3, 0.02, "speed"),
+                ("harmonic_q1", 1, 0.2, "speed"),
+            ]
+            if tau == 1.0:
+                designs.append(("alias_q11", 11, 0.2, "speed"))
+            for excitation, q, amplitude, kind in designs:
+                for phase_index, phase in enumerate([0, np.pi / 4, np.pi / 2, 3 * np.pi / 4]):
+                    if window:
+                        phase += np.pi / 8
+                    state, meta = collect(
+                        network, lengths, 0.3, dt, q, amplitude, kind, taus=tau, phase=phase
+                    )
+                    identity = f"t{tau}_dt{dt}_{excitation}_p{phase_index}"
+                    path = raw / (identity + ".npz")
+                    np.savez_compressed(path, control=control, perturbed=state)
+                    manifest[identity] = {
+                        "path": str(path.relative_to(ROOT)),
+                        "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+                    }
+                    records.append(
+                        {
+                            "id": identity,
+                            "tau": tau,
+                            "dt": dt,
+                            "excitation": excitation,
+                            "phase": float(phase),
+                            "q": q,
+                            "amplitude": amplitude,
+                            "kind": kind,
+                            **meta,
+                        }
+                    )
+            print("Collected", tau, dt, flush=True)
+    pd.DataFrame(records).to_csv(out / "scenarios.csv", index=False)
+    save_json(out / "control_checks.json", controls)
+    save_json(out / "manifest.json", manifest)
+    analyze(out, raw, window)
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--out", type=Path, default=HERE / "results/observation")
+    parser.add_argument("--raw", type=Path, default=ROOT / "data/research_2026/traffic/observation")
+    parser.add_argument("--window", action="store_true")
+    args = parser.parse_args()
+    run(args.out, args.raw.resolve(), args.window)

@@ -1,0 +1,12 @@
+{
+  "simulator_runs": 72,
+  "paired_responses": 54,
+  "collisions": 0,
+  "teleports": 0,
+  "default_reproduction_max_errors": {
+    "control": 0.0,
+    "pulse": 0.0
+  },
+  "realized_drop_min": 0.49965048628739694,
+  "realized_drop_max": 2.0002218233925806
+}

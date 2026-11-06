@@ -1,0 +1,6 @@
+{
+  "responses": 172,
+  "max_gft_fft_error": 1.8096635301390052e-14,
+  "max_mean_decomposition_error": 1.2434497875801753e-14,
+  "max_psd_integration_error": 5.551115123125783e-16
+}

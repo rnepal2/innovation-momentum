@@ -1,0 +1,36 @@
+{
+  "python": "3.14.4",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.18.1",
+    "pandas": "3.0.3",
+    "matplotlib": "3.11.2",
+    "eclipse-sumo": "1.28.0",
+    "libsumo": "1.28.0"
+  },
+  "studies": {
+    "spectral_forcing": {
+      "byte_identical_files": {
+        "scenarios.csv": "50ee53e86e0459fc2741178365dbe4acc16e07ee0b2b4d2ea435a30ff0cd7d93",
+        "simulations.csv": "207bdadf85846ddcf466f74d19f49087aec0b916bac69a3b5fecff43a674a2cb",
+        "window_power.csv": "2bbf2eea025146b77f6625e447d1fe3410087deec2ed0cf1d6d3364424b9a0cf",
+        "trajectories.csv": "e321ebda00598b6c6fbdd740edf6819847c01876f0240ba3fccab607fa316d00",
+        "scaling.csv": "a4f5fe4c4373e0d3c94562d0b657c52555418b6c2cf3cbc695c79f0d288d5b3b",
+        "step_comparison.csv": "0a0378bfabcc08cd33c8286dc065d5274e35798e7bfa7d5da906e62574ad178d"
+      },
+      "repeat_path": "data/research_2026/traffic/repeat_spectral_forcing"
+    },
+    "spectral_small_pulse": {
+      "byte_identical_files": {
+        "scenarios.csv": "34fc2042ea0b8707f98c99a03bbdaceadb94151caa87361121ef39f6613d0f9f",
+        "simulations.csv": "af4a281e119902bc7157bb0d5c47348f92a396f1d6c8da1266ba812afbe03624",
+        "window_power.csv": "6f44f0d6be92a58f135c11ba2671de74586b46dcae76c108c31c983ab5ccdc17",
+        "trajectories.csv": "9ce3a71abbc280f72f83cf856037ca066594d11af1b0b88f91d0e3cd80b43fcd",
+        "scaling.csv": "96cec0c1e1e10fcaec0bcbc29d87b6abfede8ce7c5156edc070a32095a3f3432",
+        "step_comparison.csv": "8c7956ea6ea1cf89b36deedffa28b3be1f9977e7de572f7846abe3f8627a7fe4"
+      },
+      "repeat_path": "data/research_2026/traffic/repeat_spectral_small"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+"""Conditional spatial recovery and calibrated known-operator consistency tests."""
+
+import numpy as np
+from scipy.linalg import null_space
+
+
+def dictionary(modes):
+    angles = 2 * np.pi * np.arange(24) / 24
+    columns = [np.ones(24)]
+    for q in modes:
+        columns.extend([np.cos(q * angles), np.sin(q * angles)])
+    return np.column_stack(columns)
+
+
+def recovery(indices, aware=True):
+    modes = [1, 2, 3, 11] if aware else [3]
+    design = dictionary(modes)[indices]
+    target = [1 + 2 * modes.index(3), 2 + 2 * modes.index(3)]
+    null = null_space(design)
+    identifiable = null.shape[1] == 0 or np.linalg.norm(null[target]) < 1e-9
+    inverse = np.linalg.pinv(design)
+    coefficient = np.stack([inverse[target[0]] / 2, -inverse[target[1]] / 2])
+    singular = np.linalg.svd(design, compute_uv=False)
+    positive = singular[singular > 1e-10]
+    return coefficient, bool(identifiable), len(positive), float(positive.max() / positive.min())
+
+
+def real_operator(complex_operator):
+    return np.block(
+        [
+            [complex_operator.real, -complex_operator.imag],
+            [complex_operator.imag, complex_operator.real],
+        ]
+    )
+
+
+def observed_state(response, indices, coefficient):
+    gap = response[:, 0, indices] @ coefficient.T
+    speed = response[:, 1, indices] @ coefficient.T
+    return np.column_stack([gap[:, 0], speed[:, 0], gap[:, 1], speed[:, 1]])
+
+
+def covariance(coefficient, gap_sigma, speed_sigma):
+    block = coefficient @ coefficient.T
+    result = np.zeros((4, 4))
+    result[np.ix_([0, 2], [0, 2])] = gap_sigma**2 * block
+    result[np.ix_([1, 3], [1, 3])] = speed_sigma**2 * block
+    return result
+
+
+def residual(history, operator):
+    return history[..., 1:, :] - history[..., :-1, :] @ operator.T
+
+
+def score(history, operator, inverse_covariance):
+    r = residual(history, operator)
+    return np.einsum("...ti,ij,...tj->...", r, inverse_covariance, r) / r.shape[-2]
+
+
+def noise_draws(cov, size, times, seed):
+    values, vectors = np.linalg.eigh(cov)
+    root = vectors @ np.diag(np.sqrt(np.maximum(values, 0)))
+    return np.random.default_rng(seed).normal(size=(size, times, 4)) @ root.T
+
+
+def threshold(operator, cov, times=41, draws=2000, seed=80000):
+    r_cov = cov + operator @ cov @ operator.T
+    inverse = np.linalg.pinv(r_cov)
+    noise = noise_draws(cov, draws, times, seed)
+    cutoff = float(np.quantile(score(noise, operator, inverse), 0.95))
+    return cutoff, inverse

@@ -1,0 +1,74 @@
+[
+  {
+    "accel": 0.3,
+    "dt": 0.05,
+    "collisions": 0,
+    "teleports": 0,
+    "leader_errors": 0,
+    "max_gap_conservation_error": 5.684341886080802e-14,
+    "equilibrium_speed": 12.750001899161798,
+    "actual_ring_length": 479.92,
+    "max_speed_departure": 0.0,
+    "max_gap_departure": 2.877698079828406e-13
+  },
+  {
+    "accel": 0.3,
+    "dt": 0.025,
+    "collisions": 0,
+    "teleports": 0,
+    "leader_errors": 0,
+    "max_gap_conservation_error": 5.684341886080802e-14,
+    "equilibrium_speed": 12.750001899161798,
+    "actual_ring_length": 479.92,
+    "max_speed_departure": 0.0,
+    "max_gap_departure": 2.3092638912203256e-13
+  },
+  {
+    "accel": 0.8,
+    "dt": 0.05,
+    "collisions": 0,
+    "teleports": 0,
+    "leader_errors": 0,
+    "max_gap_conservation_error": 5.684341886080802e-14,
+    "equilibrium_speed": 12.750001899161798,
+    "actual_ring_length": 479.92,
+    "max_speed_departure": 1.2434497875801753e-14,
+    "max_gap_departure": 2.3092638912203256e-13
+  },
+  {
+    "accel": 0.8,
+    "dt": 0.025,
+    "collisions": 0,
+    "teleports": 0,
+    "leader_errors": 0,
+    "max_gap_conservation_error": 5.684341886080802e-14,
+    "equilibrium_speed": 12.750001899161798,
+    "actual_ring_length": 479.92,
+    "max_speed_departure": 0.0,
+    "max_gap_departure": 2.3092638912203256e-13
+  },
+  {
+    "accel": 1.5,
+    "dt": 0.05,
+    "collisions": 0,
+    "teleports": 0,
+    "leader_errors": 0,
+    "max_gap_conservation_error": 5.684341886080802e-14,
+    "equilibrium_speed": 12.750001899161798,
+    "actual_ring_length": 479.92,
+    "max_speed_departure": 3.730349362740526e-14,
+    "max_gap_departure": 2.3092638912203256e-13
+  },
+  {
+    "accel": 1.5,
+    "dt": 0.025,
+    "collisions": 0,
+    "teleports": 0,
+    "leader_errors": 0,
+    "max_gap_conservation_error": 5.684341886080802e-14,
+    "equilibrium_speed": 12.750001899161798,
+    "actual_ring_length": 479.92,
+    "max_speed_departure": 1.9539925233402755e-14,
+    "max_gap_departure": 2.5934809855243657e-13
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "pattern": "homogeneous",
+    "dt": 0.05,
+    "collisions": 0,
+    "teleports": 0,
+    "leader_errors": 0,
+    "max_gap_conservation_error": 5.684341886080802e-14,
+    "equilibrium_speed": 12.750001899161798,
+    "actual_ring_length": 479.92,
+    "max_control_gap_departure": 2.3092638912203256e-13,
+    "max_control_speed_departure": 1.2434497875801753e-14
+  },
+  {
+    "pattern": "homogeneous",
+    "dt": 0.025,
+    "collisions": 0,
+    "teleports": 0,
+    "leader_errors": 0,
+    "max_gap_conservation_error": 5.684341886080802e-14,
+    "equilibrium_speed": 12.750001899161798,
+    "actual_ring_length": 479.92,
+    "max_control_gap_departure": 2.3092638912203256e-13,
+    "max_control_speed_departure": 0.0
+  },
+  {
+    "pattern": "alternating",
+    "dt": 0.05,
+    "collisions": 0,
+    "teleports": 0,
+    "leader_errors": 0,
+    "max_gap_conservation_error": 5.684341886080802e-14,
+    "equilibrium_speed": 12.7500018991618,
+    "actual_ring_length": 479.92,
+    "max_control_gap_departure": 3.019806626980426e-13,
+    "max_control_speed_departure": 1.5987211554602254e-14
+  },
+  {
+    "pattern": "alternating",
+    "dt": 0.025,
+    "collisions": 0,
+    "teleports": 0,
+    "leader_errors": 0,
+    "max_gap_conservation_error": 5.684341886080802e-14,
+    "equilibrium_speed": 12.7500018991618,
+    "actual_ring_length": 479.92,
+    "max_control_gap_departure": 2.6645352591003757e-13,
+    "max_control_speed_departure": 0.0
+  },
+  {
+    "pattern": "clustered",
+    "dt": 0.05,
+    "collisions": 0,
+    "teleports": 0,
+    "leader_errors": 0,
+    "max_gap_conservation_error": 5.684341886080802e-14,
+    "equilibrium_speed": 12.750001899161798,
+    "actual_ring_length": 479.92,
+    "max_control_gap_departure": 2.984279490192421e-13,
+    "max_control_speed_departure": 1.7763568394002505e-14
+  },
+  {
+    "pattern": "clustered",
+    "dt": 0.025,
+    "collisions": 0,
+    "teleports": 0,
+    "leader_errors": 0,
+    "max_gap_conservation_error": 5.684341886080802e-14,
+    "equilibrium_speed": 12.750001899161798,
+    "actual_ring_length": 479.92,
+    "max_control_gap_departure": 3.268496584496461e-13,
+    "max_control_speed_departure": 0.0
+  },
+  {
+    "pattern": "random",
+    "dt": 0.05,
+    "collisions": 0,
+    "teleports": 0,
+    "leader_errors": 0,
+    "max_gap_conservation_error": 5.684341886080802e-14,
+    "equilibrium_speed": 12.750001899161798,
+    "actual_ring_length": 479.92,
+    "max_control_gap_departure": 3.055333763768431e-13,
+    "max_control_speed_departure": 1.4210854715202004e-14
+  },
+  {
+    "pattern": "random",
+    "dt": 0.025,
+    "collisions": 0,
+    "teleports": 0,
+    "leader_errors": 0,
+    "max_gap_conservation_error": 5.684341886080802e-14,
+    "equilibrium_speed": 12.750001899161798,
+    "actual_ring_length": 479.92,
+    "max_control_gap_departure": 2.4158453015843406e-13,
+    "max_control_speed_departure": 0.0
+  }
+]

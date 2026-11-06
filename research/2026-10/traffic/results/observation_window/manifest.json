@@ -1,0 +1,226 @@
+{
+  "t1.0_dt0.025_direct_gap_q3_p0": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.025_direct_gap_q3_p0.npz",
+    "sha256": "6c011c12dc9b401480b9bac35c39336d8dff0568dda1bc59e1840de49f78f0b6"
+  },
+  "t1.0_dt0.025_direct_gap_q3_p1": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.025_direct_gap_q3_p1.npz",
+    "sha256": "14ce8aaaae16ede50bfad925bfe6e5548b98f5f127066c69c058e4f37ded3d34"
+  },
+  "t1.0_dt0.025_direct_gap_q3_p2": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.025_direct_gap_q3_p2.npz",
+    "sha256": "7b7fb711515fcdf0fb588dfc6f837b2ca6bbf8ce184ceeaf1d317ce18e6506dc"
+  },
+  "t1.0_dt0.025_direct_gap_q3_p3": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.025_direct_gap_q3_p3.npz",
+    "sha256": "bcb95100bbd48042c737c4816c9ce54eec55e4e3f8e3d1a8aad75b9ae2fe8e7d"
+  },
+  "t1.0_dt0.025_direct_speed_q3_p0": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.025_direct_speed_q3_p0.npz",
+    "sha256": "fffbb1d4e5b4b2b784ca26ed71ea58023d3fe5e89a1e9fb944f060d6a746836a"
+  },
+  "t1.0_dt0.025_direct_speed_q3_p1": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.025_direct_speed_q3_p1.npz",
+    "sha256": "f5aef5a7cc897dc1b4c032d5ffdf4463e66ef7d1ec54eb5abbf991c6488cc417"
+  },
+  "t1.0_dt0.025_direct_speed_q3_p2": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.025_direct_speed_q3_p2.npz",
+    "sha256": "43c685fb6a2492495698d2ccaf64c3052c6744b8d80c93b93f257d24bbf9e156"
+  },
+  "t1.0_dt0.025_direct_speed_q3_p3": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.025_direct_speed_q3_p3.npz",
+    "sha256": "c4c3a19695de576180bc008965e9c74dda68fb33660a44d50110118802699e0c"
+  },
+  "t1.0_dt0.025_harmonic_q1_p0": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.025_harmonic_q1_p0.npz",
+    "sha256": "8551cf456e26ffb7682e562a02b5455d287952bf5a1dd54984f69dc3de495fce"
+  },
+  "t1.0_dt0.025_harmonic_q1_p1": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.025_harmonic_q1_p1.npz",
+    "sha256": "7ae5b8c5e8c7c0e120be50354b9e035605fee946e65af38d0a26a8d181469905"
+  },
+  "t1.0_dt0.025_harmonic_q1_p2": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.025_harmonic_q1_p2.npz",
+    "sha256": "4e64e1c76911b9377c8eb686c68b1a501f7f56a1b055249fb0692af7e66e64a2"
+  },
+  "t1.0_dt0.025_harmonic_q1_p3": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.025_harmonic_q1_p3.npz",
+    "sha256": "ac945814c10361f9afa10ef0ad30bcdc1314614f02c316d193e446315e42d1cb"
+  },
+  "t1.0_dt0.025_alias_q11_p0": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.025_alias_q11_p0.npz",
+    "sha256": "d65c55d7760030759d123f89e81708b96ff3686b1b70e928188a83ad28730433"
+  },
+  "t1.0_dt0.025_alias_q11_p1": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.025_alias_q11_p1.npz",
+    "sha256": "15ac684cb7a32fd0f0410dcb0cbfeec8ebd17d47a0fed010c6c740491ddc7dbf"
+  },
+  "t1.0_dt0.025_alias_q11_p2": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.025_alias_q11_p2.npz",
+    "sha256": "c820accb9a6ef184083a11de1b4f083d5f959d0d109217e497e24aa5509caba1"
+  },
+  "t1.0_dt0.025_alias_q11_p3": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.025_alias_q11_p3.npz",
+    "sha256": "cdb5a6f1a9e7a953f4fcc82d6787effa2e6dab03e901e5080e4335263a72de12"
+  },
+  "t1.0_dt0.01_direct_gap_q3_p0": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.01_direct_gap_q3_p0.npz",
+    "sha256": "01449091e7c5fb9635e7bd16a66f28bba6854df796ba8a15920c9a08b8a09bff"
+  },
+  "t1.0_dt0.01_direct_gap_q3_p1": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.01_direct_gap_q3_p1.npz",
+    "sha256": "8c698487137ce8db78e55f78480753b9ca9710db14b62661fcb70800bdb8831d"
+  },
+  "t1.0_dt0.01_direct_gap_q3_p2": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.01_direct_gap_q3_p2.npz",
+    "sha256": "f4b7d4a3212fd20f380ef7b5c4d14432b46d09f10a5f19d19999f12bd8db2250"
+  },
+  "t1.0_dt0.01_direct_gap_q3_p3": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.01_direct_gap_q3_p3.npz",
+    "sha256": "42750c7a3cbace250e0493d36da4de03705f456663949ebb01a67ae45886e195"
+  },
+  "t1.0_dt0.01_direct_speed_q3_p0": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.01_direct_speed_q3_p0.npz",
+    "sha256": "1c80d54181fe8a6d1cc80ea1916bbdbb93a4619ef4ddfae9491ce40637e2eda7"
+  },
+  "t1.0_dt0.01_direct_speed_q3_p1": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.01_direct_speed_q3_p1.npz",
+    "sha256": "c97fa7f64f1502a20f8bdaf231448b55360e2e70413876ed82264ed7c59049dc"
+  },
+  "t1.0_dt0.01_direct_speed_q3_p2": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.01_direct_speed_q3_p2.npz",
+    "sha256": "85d454f474b0a2d5c269169250890c84da28275a276b87fe00cf8c7132397a0b"
+  },
+  "t1.0_dt0.01_direct_speed_q3_p3": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.01_direct_speed_q3_p3.npz",
+    "sha256": "11c419df7e9c85339a2b103fe840e3f301b627df96bf93824f2e44074009e76c"
+  },
+  "t1.0_dt0.01_harmonic_q1_p0": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.01_harmonic_q1_p0.npz",
+    "sha256": "86a69f590ced1b70fdb13d7e6c8c814aaa9d750cd97bee7e96837e72e71d9431"
+  },
+  "t1.0_dt0.01_harmonic_q1_p1": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.01_harmonic_q1_p1.npz",
+    "sha256": "9f4727d97691722b9f4d3a76de6626c92209b38094fd3293ad6267e0f3e0feb3"
+  },
+  "t1.0_dt0.01_harmonic_q1_p2": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.01_harmonic_q1_p2.npz",
+    "sha256": "619ad3942dbc5cdfa75df05413c8d48444512d804d1107afc3732c0c02f14576"
+  },
+  "t1.0_dt0.01_harmonic_q1_p3": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.01_harmonic_q1_p3.npz",
+    "sha256": "23f2117d3003fe5ca66b1e8a128a1ccc23ccd53786b6f2a7601608ed0695fe35"
+  },
+  "t1.0_dt0.01_alias_q11_p0": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.01_alias_q11_p0.npz",
+    "sha256": "386cf383fa7f4db897a470b671411cf1aff7c02e6376d1dc5245ed56a5809008"
+  },
+  "t1.0_dt0.01_alias_q11_p1": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.01_alias_q11_p1.npz",
+    "sha256": "004d2e2193686222f278a596310b436511da3e43bc01bccd7fec9139568fac38"
+  },
+  "t1.0_dt0.01_alias_q11_p2": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.01_alias_q11_p2.npz",
+    "sha256": "03d58ec5550dc7f4437a65607bbf6e19343ebd119091b1be309013c12eb7e097"
+  },
+  "t1.0_dt0.01_alias_q11_p3": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.0_dt0.01_alias_q11_p3.npz",
+    "sha256": "2ede90f56a62322d0af16adabee8b8997e1fe4b09d3d576e95511907e78dba19"
+  },
+  "t1.8_dt0.025_direct_gap_q3_p0": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.8_dt0.025_direct_gap_q3_p0.npz",
+    "sha256": "b870d658f8f1b970abdecdb0a67c479cefefa2f6cd9ee84441d9df252538aac5"
+  },
+  "t1.8_dt0.025_direct_gap_q3_p1": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.8_dt0.025_direct_gap_q3_p1.npz",
+    "sha256": "8af3a1f48cda6166ddfebfbf77709afac814d2e7efe1cfe9470a65e5db95bad8"
+  },
+  "t1.8_dt0.025_direct_gap_q3_p2": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.8_dt0.025_direct_gap_q3_p2.npz",
+    "sha256": "7b326dc7cc78bdce7f211727afeeee5e4f82ea78034c1bfc541cc8c90e05b26d"
+  },
+  "t1.8_dt0.025_direct_gap_q3_p3": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.8_dt0.025_direct_gap_q3_p3.npz",
+    "sha256": "325be3d62fa841ea9b176194e79388f35a2ec8d382aa2e8fb77a28d67ba60c54"
+  },
+  "t1.8_dt0.025_direct_speed_q3_p0": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.8_dt0.025_direct_speed_q3_p0.npz",
+    "sha256": "5f0b3d185c5f833858e6576f1faecee5908ec391f39bdf9fd37d96cd88053f06"
+  },
+  "t1.8_dt0.025_direct_speed_q3_p1": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.8_dt0.025_direct_speed_q3_p1.npz",
+    "sha256": "3ec2dc2003723de42cabde4753aa7c7e8b400b04b9fbfc72e6c043c374339cde"
+  },
+  "t1.8_dt0.025_direct_speed_q3_p2": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.8_dt0.025_direct_speed_q3_p2.npz",
+    "sha256": "cf1d233798ba9ead569a9fce789c1956522b9e7696252695c2d481dd13f9bf6f"
+  },
+  "t1.8_dt0.025_direct_speed_q3_p3": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.8_dt0.025_direct_speed_q3_p3.npz",
+    "sha256": "1008134ee432a4a6756ac8c42576ced7fd68cdd7f957bdb813aa51c9b94a6397"
+  },
+  "t1.8_dt0.025_harmonic_q1_p0": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.8_dt0.025_harmonic_q1_p0.npz",
+    "sha256": "29344379ea1adac1a62047d75ab4f7efcbff92adaecd3a63640d80477976c983"
+  },
+  "t1.8_dt0.025_harmonic_q1_p1": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.8_dt0.025_harmonic_q1_p1.npz",
+    "sha256": "0fca56820e3110b34578d44a7d9c138e87679133c52a8d25aa364f9970edae80"
+  },
+  "t1.8_dt0.025_harmonic_q1_p2": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.8_dt0.025_harmonic_q1_p2.npz",
+    "sha256": "fe10d1b5a5fddd1d9d9d88dd6da5b14fef71f6f8f6fdef05e2f3a0176f54e1fe"
+  },
+  "t1.8_dt0.025_harmonic_q1_p3": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.8_dt0.025_harmonic_q1_p3.npz",
+    "sha256": "3286e4a92a6bda41a006504b961438eb2f1de7eec82a76ed9ec85a0f63ca08bf"
+  },
+  "t1.8_dt0.01_direct_gap_q3_p0": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.8_dt0.01_direct_gap_q3_p0.npz",
+    "sha256": "f6ddb554600a89f28a188710e3830464f4b2f7a39926146c8e3a1831e8b1ba1e"
+  },
+  "t1.8_dt0.01_direct_gap_q3_p1": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.8_dt0.01_direct_gap_q3_p1.npz",
+    "sha256": "1693f97e767fa442ad63fbf9eccfa1bc20cfaf8bca78e2d530d8d72cd4b46214"
+  },
+  "t1.8_dt0.01_direct_gap_q3_p2": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.8_dt0.01_direct_gap_q3_p2.npz",
+    "sha256": "df2584072380241afe75aa6c5d9ccc85fba6ee2bd0d6bf4f7f6e2da31aa8d64c"
+  },
+  "t1.8_dt0.01_direct_gap_q3_p3": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.8_dt0.01_direct_gap_q3_p3.npz",
+    "sha256": "dcb1a3bf953400f3414d4a2195d248aff4b71eec579ff382f13572e853d4c28a"
+  },
+  "t1.8_dt0.01_direct_speed_q3_p0": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.8_dt0.01_direct_speed_q3_p0.npz",
+    "sha256": "602a00c1cddff94b3b44107112f0a0d91814b54b4685cebbf8abcce8477870d0"
+  },
+  "t1.8_dt0.01_direct_speed_q3_p1": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.8_dt0.01_direct_speed_q3_p1.npz",
+    "sha256": "2e493ec905ed58e9aca7a80bb2028f89344281ae243d57c8649292ff20ded67c"
+  },
+  "t1.8_dt0.01_direct_speed_q3_p2": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.8_dt0.01_direct_speed_q3_p2.npz",
+    "sha256": "16c0f9619f8104f44ffc69f09aa976e0cf42c06920edd9d6ae6fcffc07bd68bf"
+  },
+  "t1.8_dt0.01_direct_speed_q3_p3": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.8_dt0.01_direct_speed_q3_p3.npz",
+    "sha256": "efacf75c05a6f7f982ef57581128010f26758b037948af078eaf3981dbee3273"
+  },
+  "t1.8_dt0.01_harmonic_q1_p0": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.8_dt0.01_harmonic_q1_p0.npz",
+    "sha256": "1c04eff66921dee16e3755dab54fa1ec764d61707d1d0a52ef5fd58750a3b0f2"
+  },
+  "t1.8_dt0.01_harmonic_q1_p1": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.8_dt0.01_harmonic_q1_p1.npz",
+    "sha256": "074f5f2f38f27eeb2ce7a95fb2472b1277f73ae4bbf6fcccd80c243fa21ceb34"
+  },
+  "t1.8_dt0.01_harmonic_q1_p2": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.8_dt0.01_harmonic_q1_p2.npz",
+    "sha256": "0d2fb79068d07c3cbd383490ef91b027dec733c3d5a91beed4bdaac16446b9c7"
+  },
+  "t1.8_dt0.01_harmonic_q1_p3": {
+    "path": "data/research_2026/traffic/observation_window_clock_corrected/t1.8_dt0.01_harmonic_q1_p3.npz",
+    "sha256": "298447c4900d116d96c0d20665b463419980b6d25a91211af6b389843eb985ac"
+  }
+}

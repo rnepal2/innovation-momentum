@@ -1,0 +1,42 @@
+[
+  {
+    "tau": 1.0,
+    "dt": 0.025,
+    "collisions": 0,
+    "teleports": 0,
+    "leader_errors": 0,
+    "max_gap_conservation_error": 5.684341886080802e-14,
+    "equilibrium_speed": 12.750001899161798,
+    "actual_ring_length": 479.92
+  },
+  {
+    "tau": 1.0,
+    "dt": 0.0125,
+    "collisions": 0,
+    "teleports": 0,
+    "leader_errors": 0,
+    "max_gap_conservation_error": 5.684341886080802e-14,
+    "equilibrium_speed": 12.750001899161798,
+    "actual_ring_length": 479.92
+  },
+  {
+    "tau": 1.8,
+    "dt": 0.025,
+    "collisions": 0,
+    "teleports": 0,
+    "leader_errors": 0,
+    "max_gap_conservation_error": 5.684341886080802e-14,
+    "equilibrium_speed": 7.206487992489808,
+    "actual_ring_length": 479.92
+  },
+  {
+    "tau": 1.8,
+    "dt": 0.0125,
+    "collisions": 0,
+    "teleports": 0,
+    "leader_errors": 0,
+    "max_gap_conservation_error": 5.684341886080802e-14,
+    "equilibrium_speed": 7.206487992489808,
+    "actual_ring_length": 479.92
+  }
+]

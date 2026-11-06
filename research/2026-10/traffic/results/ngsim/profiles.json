@@ -1,0 +1,187 @@
+{
+  "us-101": {
+    "rows": 212427,
+    "vehicles": 595,
+    "duplicate_keys": 0,
+    "missing": {
+      "vehicle_id": 0,
+      "frame_id": 0,
+      "global_time": 0,
+      "local_x": 0,
+      "local_y": 0,
+      "v_vel": 0,
+      "v_acc": 0,
+      "lane_id": 0,
+      "preceding": 0,
+      "space_headway": 0,
+      "v_length": 0,
+      "location": 0
+    },
+    "negative_speed_rows": 0,
+    "time_range_epoch_ms": [
+      1118847039700,
+      1118847219600
+    ],
+    "positive_dt_seconds": {
+      "0": 0.1,
+      "0.5": 0.1,
+      "0.99": 0.1,
+      "1": 0.1
+    },
+    "speed_position_discrepancy_mps": {
+      "0.5": 0.039623999999959025,
+      "0.95": 0.1920239999998036,
+      "1": 8.238743999999855
+    },
+    "lane_changes": 337,
+    "position_range_m": [
+      0.0,
+      667.1444112
+    ],
+    "units": {
+      "local_y": "feet converted to meters",
+      "speed": "feet/s converted to m/s",
+      "global_time": "epoch milliseconds"
+    },
+    "causal_availability": "Unverified video processing and smoothing; retrospective analysis only",
+    "start_epoch_ms": 1118847039700,
+    "license_id": "CC_30_BY_SA",
+    "spectra": [
+      {
+        "bin_width_m": 50,
+        "eligible": true,
+        "spatial_bins": 13,
+        "spatial_range_m": [
+          0,
+          650
+        ],
+        "missing_full_grid_fraction": 0.031746031746031744,
+        "selection": "Longest contiguous fully observed strip, count-based; earliest strip breaks ties",
+        "max_gft_dct_power_error": 8.395335708673184e-13,
+        "integrated_nonuniform_power_mps2": 11.259535403976145,
+        "direct_taper_power_mps2": 11.259535403976148,
+        "integration_error": 3.552713678800501e-15,
+        "first_two_mode_share": 0.9554089534208523
+      },
+      {
+        "bin_width_m": 25,
+        "eligible": true,
+        "spatial_bins": 26,
+        "spatial_range_m": [
+          0,
+          650
+        ],
+        "missing_full_grid_fraction": 0.01646090534979424,
+        "selection": "Longest contiguous fully observed strip, count-based; earliest strip breaks ties",
+        "max_gft_dct_power_error": 3.4980565452804933e-12,
+        "integrated_nonuniform_power_mps2": 11.393287537455084,
+        "direct_taper_power_mps2": 11.393287537455079,
+        "integration_error": 5.329070518200751e-15,
+        "first_two_mode_share": 0.9483021669913063
+      },
+      {
+        "bin_width_m": 100,
+        "eligible": false,
+        "spatial_bins": 7,
+        "spatial_range_m": [
+          0,
+          700
+        ],
+        "missing_full_grid_fraction": 0.0,
+        "selection": "Longest contiguous fully observed strip, count-based; earliest strip breaks ties"
+      }
+    ],
+    "kinematic_mismatch_over_5mps": 4,
+    "kinematic_comparisons": 211832
+  },
+  "i-80": {
+    "rows": 226638,
+    "vehicles": 480,
+    "duplicate_keys": 0,
+    "missing": {
+      "vehicle_id": 0,
+      "frame_id": 0,
+      "global_time": 0,
+      "local_x": 0,
+      "local_y": 0,
+      "v_vel": 0,
+      "v_acc": 0,
+      "lane_id": 0,
+      "preceding": 0,
+      "space_headway": 0,
+      "v_length": 0,
+      "location": 0
+    },
+    "negative_speed_rows": 0,
+    "time_range_epoch_ms": [
+      1113433195300,
+      1113433375200
+    ],
+    "positive_dt_seconds": {
+      "0": 0.1,
+      "0.5": 0.1,
+      "0.99": 0.1,
+      "1": 0.1
+    },
+    "speed_position_discrepancy_mps": {
+      "0.5": 0.03200399999994907,
+      "0.95": 0.19659600000027186,
+      "1": 40.86148799999999
+    },
+    "lane_changes": 224,
+    "position_range_m": [
+      0.0,
+      519.0737904
+    ],
+    "units": {
+      "local_y": "feet converted to meters",
+      "speed": "feet/s converted to m/s",
+      "global_time": "epoch milliseconds"
+    },
+    "causal_availability": "Unverified video processing and smoothing; retrospective analysis only",
+    "start_epoch_ms": 1113433195300,
+    "license_id": "CC_30_BY_SA",
+    "spectra": [
+      {
+        "bin_width_m": 50,
+        "eligible": false,
+        "spatial_bins": 7,
+        "spatial_range_m": [
+          0,
+          350
+        ],
+        "missing_full_grid_fraction": 0.017676767676767676,
+        "selection": "Longest contiguous fully observed strip, count-based; earliest strip breaks ties"
+      },
+      {
+        "bin_width_m": 25,
+        "eligible": true,
+        "spatial_bins": 13,
+        "spatial_range_m": [
+          0,
+          325
+        ],
+        "missing_full_grid_fraction": 0.017195767195767195,
+        "selection": "Longest contiguous fully observed strip, count-based; earliest strip breaks ties",
+        "max_gft_dct_power_error": 5.24708481792074e-14,
+        "integrated_nonuniform_power_mps2": 1.1515410487321245,
+        "direct_taper_power_mps2": 1.1515410487321251,
+        "integration_error": 6.661338147750939e-16,
+        "first_two_mode_share": 0.6939417271137879
+      },
+      {
+        "bin_width_m": 100,
+        "eligible": false,
+        "spatial_bins": 4,
+        "spatial_range_m": [
+          0,
+          400
+        ],
+        "missing_full_grid_fraction": 0.018518518518518517,
+        "selection": "Longest contiguous fully observed strip, count-based; earliest strip breaks ties"
+      }
+    ],
+    "kinematic_mismatch_over_5mps": 71,
+    "kinematic_comparisons": 226158
+  }
+}

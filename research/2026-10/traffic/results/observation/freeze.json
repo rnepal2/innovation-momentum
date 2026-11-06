@@ -1,0 +1,141 @@
+{
+  "sources": {
+    "analyze_harmonic_forcing.py": "a0427ac45c3dfbd32e6f10fd4677e608c1c337a2cd870fbd983004a368aeca97",
+    "analyze_ngsim_followup.py": "3740917d7057ad7ff929d20f7f2540ec983adb7eb7b8445417f35492b86a22f9",
+    "audit_data.py": "1317a270ff6677ccea859064301986fbf601daac8e50131468853d5fd85dd238",
+    "collect_ngsim.py": "09bca1cada3d13448d75dad09becd58bc660f818997899d54de43f4911f894df",
+    "empirical_resolution.py": "e2385088c57aa03c9fb16af94a87727ab06918ad9e9786421d07a9ff71bd7323",
+    "mechanism_core.py": "6988ab53f21e967552e8849d94f4ce7e7a6ecdd2b44b0c257d0f1a1733279fd3",
+    "mode_consistency.py": "ae789adc5d4a419b97a6628d051cfff119e254f135311dadc2bd2bd1ead6ee71",
+    "provenance.py": "6450d3f2c4dba00482f8ffaafe66e16acb8312f97f5354938c2ddc5d88ab1377",
+    "run_experiments.py": "38d50be033678f7e7680dbe8cf2302285faf2efb2fd78f77e7ee9d6477db33a3",
+    "run_forcing_spectra.py": "7c6e7b9499502a8e7ccaccb0eb042ddc240929adaa3e749d19b5fb8643f74fb2",
+    "run_heterogeneity.py": "384f9ff131212187ee96d108fd9e37689d9cbb90fc32875b6386f736d1f40ea2",
+    "run_mechanism.py": "0644d858d67003ae19089766933c9dd686dc08512ac790c68a4bd41ec6ff9ffe",
+    "run_observation.py": "e3b18a97e3694d22e830b16ec6f0b22d181fb56560e8cc2a965a96e8d0895486",
+    "run_spectral_diagnostics.py": "ae81fb356e217a9b646115a703f535717afd3adf6da7058be403b2b476ac2b42",
+    "spectral_diagnostics.py": "fe724778546889fe7fc8ab33598313dde505682dbe8d75744cc43e312f925b2c",
+    "summarize_extensions.py": "36bfbeae0dde7adfd66ebf863db25805787cd57b1d88320b51fd8d9abd8a490a",
+    "summarize_physical.py": "883726e442d84fafa3da441165292adec438c0be28f8bb6f07d66d72b22eca9a",
+    "summarize_spectra.py": "b0b1cab8aebde1080f00b97b522631e057c6e9780e64a9330cff19c86fe7b9e0",
+    "sumo_phase.py": "adfc7e88774dbe3e2353ffef979814c5ba44f2a5564f22e61c23441f70b22c09",
+    "sumo_pilot.py": "5d4c1036915a511768f86baf246029ce6a19878bb84d8038d032d5164c72f3c5",
+    "traffic_core.py": "65a53f6a3c9a6eb808c482c986cda0b3af10174928ea6b4a360753740b6681c8",
+    "validate_extensions.py": "7f9510b2f65a61dc51c98968a44b402079a92218d43630155d0dcc4510ff8f6a",
+    "validate_mechanism.py": "b47715fd85c66690baf58d57200fe13b8ec393362b95e5db29a967bde573e13c",
+    "validate_results.py": "774d6b9c8a256276910c32377bd16531197fc90f923ed55b9e7f0a4cdb7a0463",
+    "validate_spectra.py": "bc7a992f1f033d61bb53ff82f753e6d6fc50a3f03024bb8bc6ab495ee8efeeba",
+    "verify_spectral_reproduction.py": "57b33de7dc635e69f105642022155096121d99a0a2c92923572e62914103866f",
+    "mechanism-protocol.md": "579bd559337e2a422b7d96ba763b8cdef405e65c1d68d88fcc91b48006344415",
+    "observation-protocol.md": "9d78c1a9f9640a93886f7948367efad14f4efb12afb1f5db3c15030f6e09dcc5",
+    "protocol.md": "e6e11c6e64083831cf4f8255d836d8b63504fa2cb2040642d53eb2ef3efb5e17",
+    "spectral-diagnostics-protocol.md": "56cb529c2bbf8de1ff3e61ebd0b593f054ea2a98f267b410324aaea74717d74c",
+    "sumo-protocol.md": "a820719488711d077bd99362bd6cb851f3b4aededc749dd998a41988ea2059b1",
+    "empirical-sensitivity-followup.md": "cb030bd64a00059bfc5c25079a8ff0a5a43b7f70559de2b75e8954dae5ccb298",
+    "forcing-followup.md": "52e88bd5b6526e99a9f1667474fac1574d1e664dd1fed69a0044e08aa0c0e5bf",
+    "heterogeneity-followup.md": "6519edf1212d616648331aad4197f5e2c2f82e72c0f8dd3a1c45b2f650a6accb",
+    "ngsim-collection-followup.md": "fb8997ecd43c0931d0ac528ad2a2cd557abe5faf87a876b2d308c968f50fdcb7",
+    "phase-followup.md": "81ef6339acc281a0c98afd98b0cbcb2c1d36ec6762d4c1a4f154218a06c6ec0f",
+    "small-pulse-followup.md": "43a1a6eb63e3c08026738151ef5e182b49da5d87f535631824c511eafafaa4c3",
+    "window-consistency-followup.md": "524080d30bce0183dbcc1a402be0a9d9155c0c115f4507170311f949c2b448aa"
+  },
+  "simulator": [
+    22,
+    "SUMO 1.28.0"
+  ],
+  "protocol": "observation-protocol.md",
+  "phases": [
+    0.0,
+    0.7853981633974483,
+    1.5707963267948966,
+    2.356194490192345
+  ],
+  "noise": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.01,
+      0.001
+    ],
+    [
+      0.05,
+      0.005
+    ],
+    [
+      0.2,
+      0.02
+    ]
+  ],
+  "evaluation_draws": 100,
+  "calibration_draws": 2000,
+  "evaluation_seed_base": 70000,
+  "calibration_seed_base": 80000,
+  "masks": {
+    "all24": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "uniform12": [
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22
+    ],
+    "uniform8": [
+      0,
+      3,
+      6,
+      9,
+      12,
+      15,
+      18,
+      21
+    ],
+    "irregular12": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      10,
+      15,
+      17,
+      18,
+      19,
+      20
+    ]
+  }
+}

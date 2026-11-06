@@ -1,0 +1,29 @@
+[
+  {
+    "requested_dt": 0.0125,
+    "effective_dt": 0.013,
+    "first_step_time": 0.013,
+    "simulator": [
+      22,
+      "SUMO 1.28.0"
+    ]
+  },
+  {
+    "requested_dt": 0.025,
+    "effective_dt": 0.025,
+    "first_step_time": 0.025,
+    "simulator": [
+      22,
+      "SUMO 1.28.0"
+    ]
+  },
+  {
+    "requested_dt": 0.01,
+    "effective_dt": 0.01,
+    "first_step_time": 0.01,
+    "simulator": [
+      22,
+      "SUMO 1.28.0"
+    ]
+  }
+]

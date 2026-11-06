@@ -1,0 +1,44 @@
+{
+  "8ect-6jqj_metadata.json": {
+    "url": "https://data.transportation.gov/api/views/8ect-6jqj.json",
+    "bytes": 56656,
+    "sha256": "b607f07145fb9fca46508f7468e6af9587a5eae5bbeaf8787aa51eb416ee76db",
+    "retrieved_utc": "2026-10-15T22:31:15.035339+00:00"
+  },
+  "6a6e-vfvi_metadata.json": {
+    "url": "https://data.transportation.gov/api/views/6a6e-vfvi.json",
+    "bytes": 30086,
+    "sha256": "232d9538a5415b70f3845029cba310b9182a81fbefdffa802e2adb1271c358d7",
+    "retrieved_utc": "2026-10-15T22:31:15.402772+00:00"
+  },
+  "locations.json": {
+    "url": "https://data.transportation.gov/resource/8ect-6jqj.json?%24select=location%2Cmin%28global_time%29+as+first_time%2Cmax%28global_time%29+as+last_time%2Ccount%28%2A%29+as+rows&%24group=location",
+    "bytes": 387,
+    "sha256": "5390968bda84f5904a20f3242a4124245240d8c1878d9820077d32753f75c4df",
+    "retrieved_utc": "2026-10-15T22:31:16.482036+00:00"
+  },
+  "us-101_count.json": {
+    "url": "https://data.transportation.gov/resource/8ect-6jqj.json?%24select=count%28%2A%29+as+rows&%24where=location%3D%27us-101%27+AND+global_time+%3E%3D+1118847039700+AND+global_time+%3C+1118847219700",
+    "bytes": 20,
+    "sha256": "3e55e3132f3a3d2facca56e4201b69f2418ec430a194e2e26a9b678385b0b6a5",
+    "retrieved_utc": "2026-10-15T22:31:17.255710+00:00"
+  },
+  "us-101.csv": {
+    "url": "https://data.transportation.gov/resource/8ect-6jqj.csv?%24select=vehicle_id%2Cframe_id%2Cglobal_time%2Clocal_x%2Clocal_y%2Cv_vel%2Cv_acc%2Clane_id%2Cpreceding%2Cspace_headway%2Cv_length%2Clocation&%24where=location%3D%27us-101%27+AND+global_time+%3E%3D+1118847039700+AND+global_time+%3C+1118847219700&%24order=global_time%2Cvehicle_id%2Cframe_id&%24limit=500000",
+    "bytes": 20140761,
+    "sha256": "df5136deda900d7a8f34bee24967d138de8516e1e03906fb9ae053096501f432",
+    "retrieved_utc": "2026-10-15T22:31:31.810691+00:00"
+  },
+  "i-80_count.json": {
+    "url": "https://data.transportation.gov/resource/8ect-6jqj.json?%24select=count%28%2A%29+as+rows&%24where=location%3D%27i-80%27+AND+global_time+%3E%3D+1113433195300+AND+global_time+%3C+1113433375300",
+    "bytes": 20,
+    "sha256": "2416111d4d0d06388a97be9df6d7e92a2eed9cd2e562d670bed10ab2b0651951",
+    "retrieved_utc": "2026-10-15T22:31:33.534145+00:00"
+  },
+  "i-80.csv": {
+    "url": "https://data.transportation.gov/resource/8ect-6jqj.csv?%24select=vehicle_id%2Cframe_id%2Cglobal_time%2Clocal_x%2Clocal_y%2Cv_vel%2Cv_acc%2Clane_id%2Cpreceding%2Cspace_headway%2Cv_length%2Clocation&%24where=location%3D%27i-80%27+AND+global_time+%3E%3D+1113433195300+AND+global_time+%3C+1113433375300&%24order=global_time%2Cvehicle_id%2Cframe_id&%24limit=500000",
+    "bytes": 21251248,
+    "sha256": "a8c3b4426a64679d1aeaf3c64fd72303018ca2cb646bebf3cf5e2a2cb31c8162",
+    "retrieved_utc": "2026-10-15T22:32:01.666389+00:00"
+  }
+}

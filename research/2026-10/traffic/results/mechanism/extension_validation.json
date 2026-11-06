@@ -1,0 +1,34 @@
+{
+  "responses": {
+    "mechanism": 192,
+    "heterogeneity": 48,
+    "harmonics": 24
+  },
+  "independent_comparisons": 748,
+  "max_absolute_discrepancy": 6.388223283693151e-13,
+  "full_production_runs": 284,
+  "full_rerun_byte_identical": {
+    "mechanism": {
+      "scenarios.csv": "0e69e1752f778920ee9280c2a719d88aa4585115f2789fbdb8ca17e315fb4a6b",
+      "responses.csv": "0826c846a1bb92e3845893fe538aae34ea491347ba93a7f82e1688a35df5585b",
+      "operators.csv": "04c33297d3f91b232d951008f264ebeb284f39cfc96f248ff113227716a7f3ac"
+    },
+    "heterogeneity": {
+      "responses.csv": "75ce80d8ba3ff07efc146e3be997e7faee7f2407cb48b03d5dcc6f75ca347938",
+      "coupling.csv": "17755c47235521252f625ae9e50931fadb67c323ff459b5282b1f648d8115697"
+    },
+    "harmonics": {
+      "responses.csv": "5e4e8eb450a8a74cb64315debacc6bea488647a338bcf0d7b51c8eeac7b73300",
+      "exponents.csv": "6598c1bfc0d1239699d0047c97ee627bc9aa2fe4ea33c5467965d0fd241280db"
+    }
+  },
+  "python": "3.14.4",
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.18.1",
+    "pandas": "3.0.3",
+    "libsumo": "1.28.0",
+    "eclipse-sumo": "1.28.0"
+  },
+  "harmonic_below_floor_growth_rows": 2
+}

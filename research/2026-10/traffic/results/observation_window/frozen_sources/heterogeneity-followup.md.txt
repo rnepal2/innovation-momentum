@@ -1,0 +1,23 @@
+# Heterogeneity and harmonic follow-ups
+
+Recorded after the homogeneous mechanism check. All 72 finer-step, amplitude-0.01 primary cases pass the registered full-speed-response 5% criterion over 20 s; maximum error is about 1.62%. The original summary retained selected-mode errors; an additional full-field validation implements the registered physical-response criterion. Both tables remain available.
+
+## H1: graph bands under heterogeneous drivers
+
+Set nominal length 480 m, N=24, acceleration 0.8 m/s^2, and mean headway 1 s. Four patterns: common headway; alternating 0.7/1.3 s; contiguous blocks of 12 at 0.7 and 1.3 s; and a fixed random pattern generated with seed 26015, centered and scaled to maximum absolute deviation 0.3 s. Construct the exact heterogeneous equilibrium with common speed and individual gaps. The sum of headways is fixed, so the common equilibrium speed stays fixed.
+
+Six broadband initial speed disturbances use seeds 201-206, each zero mean and RMS 0.01 m/s. Use integration steps 0.05 and 0.025 s, observe through 40 s, and collect gaps/speeds every 0.1 s. This gives 48 interventions plus eight shared controls. No ongoing forcing is added.
+
+Compare the full known linear evolution with three band-diagonal approximations: uniform cycle Fourier/GFT; a symmetric weighted cycle with edge weight sqrt(F_s,i F_s,i+1), normalized to mean one; and one fixed random orthonormal basis with its first vector uniform. These weights use equilibrium gap sensitivity and are fixed before outcomes. Use matched spatial subspace dimensions 1,4,8,11, keeping complete homogeneous eigenspaces. Include both gap and speed coordinates within each band, with the unreachable uniform-gap coordinate removed.
+
+For the descriptive cross-band operator norm, nondimensionalize gaps by mean equilibrium gap and speeds by equilibrium speed. Define coupling as squared off-band Frobenius norm divided by squared total norm. Evaluate the same 20 random-basis seeds 2000-2019 for reference. Use seed 2000 only for the physical response approximation; select no random basis by outcomes. Predict the full speed response from the same observed first state with known coefficients, without fitted parameters. Report per-pattern/seed/step relative L2 speed error over 0-20 s and 0-40 s. This tests the stated band approximation and graph weights, without an unrestricted learned-model or forecast-superiority claim.
+
+## H2: nonlinear harmonic generation
+
+The existing large-pulse response has growing q=3 power at acceleration 0.3 although its equilibrium linear q=3 branch decays. Test a cleaner initial sinusoidal speed disturbance at q=1 with amplitudes 0.05,0.1,0.2,0.4 m/s, accelerations 0.3/0.8/1.5, and steps 0.025/0.0125 s. No external speed command, fixed equilibrium, and 40 s observation. This is 24 interventions plus six controls.
+
+Summarize absolute q=1,2,3 powers in 10-20 s and 20-30 s intervals using unweighted averages, with zero/power floor 1e-14 retained as a numerical threshold. Fit descriptive log-power versus log-initial-amplitude slopes. Weak-amplitude harmonic generation suggests power exponents near 2,4,6 for q=1,2,3. This is a diagnostic expectation, with no claimed universal scaling law. Report every mode/amplitude/step, threshold exclusions, and numerical sensitivity. Compare observed q=3 finite-window growth with the independently derived linear growth. Growth of a forced harmonic alone cannot establish instability of that linear mode.
+
+### Post-sweep interpretation check
+
+After inspecting the near-2/4/6 exponents and positive q=3 response growth in two acceleration settings, compare each q=3 response with its autonomous linear prediction initialized from the actual first recorded q=3 gap/speed state. This distinguishes subsequent nonlinear excitation from an initially seeded harmonic followed solely by a linear two-branch transient. Save all comparisons. Illustrate acceleration 0.3, amplitude 0.2, and the finer step, fixed here before this comparison. This is an explanatory follow-up on the same outcomes, without a reserved evaluation claim.

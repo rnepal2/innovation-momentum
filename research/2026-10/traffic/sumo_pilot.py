@@ -97,7 +97,7 @@ def real_fourier_basis(n):
     return np.column_stack(columns)
 
 
-def simulation(network, lengths, tau, accel, seed, dt, pulse):
+def simulation(network, lengths, tau, accel, seed, dt, pulse, pulse_drop=2.0, record_seconds=90):
     import libsumo as sim
 
     n = 24
@@ -168,10 +168,10 @@ def simulation(network, lengths, tau, accel, seed, dt, pulse):
                 departSpeed=str(equilibrium),
             )
             sim.vehicle.moveTo(f"v{i}", f"e{edge}_0", float(pos - bounds[edge]))
-        for step in range(round(151 / dt)):
+        for step in range(round((61 + record_seconds) / dt)):
             time = step * dt
             if abs(time - 60) < dt / 2 and pulse:
-                sim.vehicle.slowDown("v0", max(0, sim.vehicle.getSpeed("v0") - 2), 1.0)
+                sim.vehicle.slowDown("v0", max(0, sim.vehicle.getSpeed("v0") - pulse_drop), 1.0)
             if abs(time - 61) < dt / 2 and pulse:
                 sim.vehicle.setSpeed("v0", -1.0)
             sim.simulationStep()
@@ -182,8 +182,8 @@ def simulation(network, lengths, tau, accel, seed, dt, pulse):
                 if sim.vehicle.getIDCount() != n:
                     raise ValueError(f"Vehicle retention failed: {sim.vehicle.getIDCount()} of {n}")
                 speeds.append([sim.vehicle.getSpeed(f"v{i}") for i in range(n)])
-        speed = np.asarray(speeds)[:91]
-        if speed.shape != (91, n) or not np.isfinite(speed).all():
+        speed = np.asarray(speeds)[: record_seconds + 1]
+        if speed.shape != (record_seconds + 1, n) or not np.isfinite(speed).all():
             raise ValueError("Incomplete physical time series")
         return speed, {
             "collisions": collisions,

@@ -1,0 +1,367 @@
+"""Independent physical-coordinate, GLS, clock, and fixed-field validation."""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+from mechanism_core import equilibrium, full_operator
+from mode_consistency import covariance, recovery
+from run_observation import masks
+from scipy.stats import chi2
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[2]
+
+
+def digest(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def sample(cov, draws, seed):
+    values, vectors = np.linalg.eigh(cov)
+    return (
+        np.random.default_rng(seed).normal(size=(draws, 41, 4))
+        @ (vectors @ np.diag(np.sqrt(np.maximum(values, 0)))).T
+    )
+
+
+def independent_scores(histories, op, cov, method):
+    if method == "adjacent_innovation":
+        residual = histories[:, 1:] - histories[:, :-1] @ op.T
+        c = cov + op @ cov @ op.T
+        return (
+            np.sum(
+                residual * np.linalg.solve(c, residual.reshape(-1, 4).T).T.reshape(residual.shape),
+                axis=(1, 2),
+            )
+            / 40
+        )
+    inverse_root = np.linalg.inv(np.linalg.cholesky(cov))
+    design = np.concatenate([inverse_root @ np.linalg.matrix_power(op, t) for t in range(41)])
+    y = (histories @ inverse_root.T).reshape(len(histories), -1)
+    fit = np.linalg.lstsq(design, y.T, rcond=None)[0]
+    residual = y.T - design @ fit
+    return np.sum(residual**2, axis=0) / 41
+
+
+def physical_mode_operator(circumference, tau, dt):
+    speed, gaps = equilibrium(circumference, tau)
+    angle = 2 * np.pi * 3 * np.arange(24) / 24
+    reduce = np.zeros((4, 48))
+    reduce[0, :24] = np.cos(angle) / 24
+    reduce[1, 24:] = np.cos(angle) / 24
+    reduce[2, :24] = -np.sin(angle) / 24
+    reduce[3, 24:] = -np.sin(angle) / 24
+    lift = 48 * reduce.T
+    # Each cosine/sine Fourier coefficient has squared row norm 1/48.
+    operator = (
+        reduce
+        @ np.linalg.matrix_power(full_operator(gaps, speed, 0.3, tau, dt), round(0.5 / dt))
+        @ lift
+    )
+    scales = np.diag([1 / gaps[0], 1 / speed, 1 / gaps[0], 1 / speed])
+    return scales @ operator @ np.linalg.inv(scales), scales
+
+
+def coefficients(indices, aware):
+    angle = 2 * np.pi * np.arange(24) / 24
+    modes = [1, 2, 3, 11] if aware else [3]
+    design = np.column_stack(
+        [np.ones(24)] + [part for q in modes for part in [np.cos(q * angle), np.sin(q * angle)]]
+    )[indices]
+    inverse = np.linalg.lstsq(design, np.eye(len(indices)), rcond=1e-10)[0]
+    start = 1 + 2 * modes.index(3)
+    return np.vstack([inverse[start] / 2, -inverse[start + 1] / 2])
+
+
+def validate_simulation(study):
+    out = HERE / "results" / study
+    freeze = json.loads((out / "freeze.json").read_text())
+    for name, expected in freeze["sources"].items():
+        assert digest(out / "frozen_sources" / (name + ".txt")) == expected
+    revision = json.loads((out / "analysis_revision/freeze.json").read_text())
+    for name, expected in revision["sources"].items():
+        assert digest(out / "analysis_revision/frozen_sources" / (name + ".txt")) == expected
+    manifest = json.loads((out / "manifest.json").read_text())
+    meta = pd.read_csv(out / "scenarios.csv")
+    table = pd.read_csv(out / "diagnostics.csv")
+    controls = json.loads((out / "control_checks.json").read_text())
+    assert len(manifest) == len(meta) == 56 and len(controls) == 4
+    assert meta[["collisions", "teleports", "leader_errors"]].to_numpy().max() == 0
+    for row in [*meta.to_dict("records"), *controls]:
+        assert row["effective_dt"] == row["dt"]
+        assert row["recording_clock_error"] < 1e-9
+        assert abs(row["last_record_time"] - row["first_record_time"] - 40) < 1e-9
+    results, calibration, nulls = [], {}, []
+    for counter, row in enumerate(meta.to_dict("records")):
+        entry = manifest[row["id"]]
+        path = ROOT / entry["path"]
+        assert digest(path) == entry["sha256"]
+        with np.load(path, allow_pickle=False) as arrays:
+            c, p = arrays["control"], arrays["perturbed"]
+        assert c.shape == p.shape == (401, 2, 24) and np.isfinite(p).all()
+        assert (p[:, 0] > 0).all() and (p[:, 1] >= 0).all()
+        x = p - c
+        op, scales = physical_mode_operator(row["actual_ring_length"], row["tau"], row["dt"])
+        truth = np.fft.rfft(x[:, 1], axis=1)[:, 3] / 24
+        true_power = 2 * np.mean(abs(truth[100:301]) ** 2)
+        for mask_index, (mask_name, indices) in enumerate(masks().items()):
+            for aware in [False, True]:
+                coef = coefficients(indices, aware)
+                h = x[::5, 0][:, indices] @ coef.T
+                v = x[::5, 1][:, indices] @ coef.T
+                observed = np.column_stack([h[:, 0], v[:, 0], h[:, 1], v[:, 1]])[20:61]
+                history = observed @ scales.T
+                selected = table[
+                    (table.id == row["id"]) & (table["mask"] == mask_name) & (table.aware == aware)
+                ]
+                for value in selected.to_dict("records"):
+                    results.append(abs(value["true_q3_power"] - true_power))
+                    results.append(
+                        abs(
+                            value["observed_q3_power_noisefree"]
+                            - 2 * np.mean(observed[:, 1] ** 2 + observed[:, 3] ** 2)
+                        )
+                    )
+                    if value["status"] != "eligible":
+                        continue
+                    method = value["method"]
+                    if value["noise_index"] == 0:
+                        if method == "adjacent_innovation":
+                            expected = np.linalg.norm(
+                                history[1:] - history[:-1] @ op.T
+                            ) / np.linalg.norm(history[1:])
+                        else:
+                            design = np.concatenate(
+                                [np.linalg.matrix_power(op, t) for t in range(41)]
+                            )
+                            flat = history.ravel()
+                            expected = np.linalg.norm(
+                                flat - design @ np.linalg.lstsq(design, flat, rcond=None)[0]
+                            ) / np.linalg.norm(flat)
+                        results.append(abs(expected - value["mean_statistic"]))
+                        assert float(expected > 0.01) == value["rejection_fraction"]
+                        continue
+                    sensor = np.zeros((4, 2 * len(indices)))
+                    sensor[0, : len(indices)] = coef[0] * value["gap_sigma"]
+                    sensor[2, : len(indices)] = coef[1] * value["gap_sigma"]
+                    sensor[1, len(indices) :] = coef[0] * value["speed_sigma"]
+                    sensor[3, len(indices) :] = coef[1] * value["speed_sigma"]
+                    independent_cov = scales @ sensor @ sensor.T @ scales.T
+                    production_coef = recovery(indices, aware)[0]
+                    cov = (
+                        scales
+                        @ covariance(production_coef, value["gap_sigma"], value["speed_sigma"])
+                        @ scales.T
+                    )
+                    assert np.linalg.norm(cov - independent_cov) / np.linalg.norm(cov) < 1e-12
+                    key = (row["tau"], row["dt"], mask_name, aware, value["noise_index"], method)
+                    if key not in calibration:
+                        seed = (
+                            freeze["calibration_seed_base"]
+                            + value["noise_index"] * 100
+                            + mask_index * 10
+                            + int(aware)
+                        )
+                        pure = sample(cov, 2000, int(seed))
+                        cutoff = np.quantile(independent_scores(pure, op, cov, method), 0.95)
+                        calibration[key] = cutoff
+                        results.append(abs(cutoff - value["cutoff"]))
+                        if method == "whole_window" and value["noise_index"] == 1:
+                            theoretical = chi2.ppf(0.95, 160) / 41
+                            assert abs(cutoff - theoretical) < 0.1
+                            independent = independent_scores(
+                                sample(cov, 5000, 290000 + len(nulls)), op, cov, method
+                            )
+                            rate = float(np.mean(independent > cutoff))
+                            assert 0.025 < rate < 0.08
+                            nulls.append(
+                                {
+                                    "tau": row["tau"],
+                                    "dt": row["dt"],
+                                    "mask": mask_name,
+                                    "aware": aware,
+                                    "cutoff": cutoff,
+                                    "chi_square_cutoff": theoretical,
+                                    "fresh_null_rejection": rate,
+                                }
+                            )
+                    seed = (
+                        freeze["evaluation_seed_base"]
+                        + counter * 100
+                        + mask_index * 10
+                        + int(aware)
+                    )
+                    values = independent_scores(
+                        history[None] + sample(cov, 100, seed), op, cov, method
+                    )
+                    results.append(abs(values.mean() - value["mean_statistic"]))
+                    assert (
+                        abs(np.mean(values > calibration[key]) - value["rejection_fraction"])
+                        < 1e-12
+                    )
+    assert max(results) < 1e-7, max(results)
+    return {
+        "physical_pairs": len(meta),
+        "controls": len(controls),
+        "numerical_checks": len(results),
+        "max_absolute_error": max(results),
+        "whole_window_nulls": nulls,
+    }
+
+
+def validate_empirical():
+    out = HERE / "results/ngsim_resolution"
+    eligibility = pd.read_csv(out / "eligibility.csv")
+    table = pd.read_csv(out / "spectra.csv")
+    exclusions = json.loads((out / "quality_exclusions.json").read_text())
+    profiles = json.loads((HERE / "results/ngsim/profiles.json").read_text())
+    errors = []
+    for item in exclusions:
+        location = item["location"]
+        raw = pd.read_csv(ROOT / "data/research_2026/traffic/ngsim" / (location + ".csv"))
+        bad = []
+        for vehicle, group in raw.groupby("vehicle_id"):
+            group = group.sort_values("global_time")
+            t, y, v = [group[col].to_numpy() for col in ["global_time", "local_y", "v_vel"]]
+            discrepancy = abs(
+                np.diff(y) * 0.3048 / (np.diff(t) / 1000) - (v[1:] + v[:-1]) * 0.3048 / 2
+            )
+            if (discrepancy > 5).any():
+                bad.append(int(vehicle))
+        assert bad == item["flagged_vehicle_ids"]
+        for rule in eligibility[eligibility.location == location].to_dict("records"):
+            if rule["reason"] == "support_not_divisible":
+                assert rule["support_m"] % rule["width_m"] != 0
+                continue
+            f = raw if rule["quality"] == "unfiltered" else raw[~raw.vehicle_id.isin(bad)]
+            t = (
+                (f.global_time.to_numpy() - profiles[location]["start_epoch_ms"])
+                // (1000 * rule["time_bin_s"])
+            ).astype(int)
+            x = np.floor(f.local_y.to_numpy() * 0.3048 / rule["width_m"]).astype(int)
+            nt, nx = int(rule["time_bins"]), int(rule["spatial_bins"])
+            valid = (t >= 0) & (t < nt) & (x >= 0) & (x < nx)
+            cell = t[valid] * nx + x[valid]
+            counts = np.bincount(cell, minlength=nt * nx)
+            assert int((counts == 0).sum()) == rule["missing_cells"]
+            assert bool((counts > 0).all()) == rule["eligible"]
+            if not rule["eligible"]:
+                continue
+            field = (
+                np.bincount(cell, weights=f.v_vel.to_numpy()[valid] * 0.3048, minlength=nt * nx)
+                / counts
+            ).reshape(nt, nx)
+            field -= field.mean(axis=1, keepdims=True)
+            spatial = np.sqrt(2 / nx) * np.cos(
+                np.pi * np.outer(np.arange(nx) + 0.5, np.arange(nx)) / nx
+            )
+            spatial[:, 0] /= np.sqrt(2)
+            coefficients_ = field @ spatial
+            w = 0.5 - 0.5 * np.cos(2 * np.pi * np.arange(nt) / nt)
+            selected = table[
+                (table.location == location)
+                & (table.quality == rule["quality"])
+                & (table.width_m == rule["width_m"])
+                & (table.time_bin_s == rule["time_bin_s"])
+            ]
+            for row in selected.to_dict("records"):
+                centered = (
+                    coefficients_ - coefficients_.mean(axis=0) if row["centered"] else coefficients_
+                )
+                fft = np.fft.rfft(w[:, None] * centered, axis=0)
+                density = abs(fft) ** 2
+                density[1:-1] *= 2
+                power = density.sum(axis=0) / (nt * (w * w).sum() * nx)
+                errors.extend(
+                    [
+                        abs(power[1:].sum() - row["power_mps2"]),
+                        abs(power[1:3].sum() / power[1:].sum() - row["first_two_share"]),
+                    ]
+                )
+    assert max(errors) < 1e-9
+    return {
+        "configurations": len(eligibility),
+        "eligible": int(eligibility.eligible.sum()),
+        "spectra": len(table),
+        "independent_max_absolute_error": max(errors),
+    }
+
+
+def run(repeats=False):
+    report = {study: validate_simulation(study) for study in ["observation", "observation_window"]}
+    report["empirical"] = validate_empirical()
+    report["timing_correction_sha256"] = digest(HERE / "timing-correction.md")
+    report["sampling_correction_sha256"] = digest(HERE / "sampling-correction.md")
+    if repeats:
+        report["repeat_tables"] = {}
+        for study in ["observation", "observation_window"]:
+            original = HERE / "results" / study
+            repeat = ROOT / "data/research_2026/traffic" / ("repeat_" + study + "_clock_corrected")
+            report["repeat_tables"][study] = {}
+            for name in [
+                "scenarios.csv",
+                "diagnostics.csv",
+                "rejection_summary.csv",
+                "sampling_diagnostics.json",
+            ]:
+                assert (original / name).read_bytes() == (repeat / name).read_bytes(), (study, name)
+                report["repeat_tables"][study][name] = digest(original / name)
+    (HERE / "results/observation_window/independent_validation.json").write_text(
+        json.dumps(report, indent=2) + "\n"
+    )
+    print(json.dumps(report, indent=2))
+
+
+def probe_clock():
+    import libsumo as sim
+
+    network = ROOT / "data/research_2026/traffic/observation_clock_corrected/network/ring.net.xml"
+    rows = []
+    for dt in [0.0125, 0.025, 0.01]:
+        try:
+            sim.start(
+                [
+                    "sumo",
+                    "-n",
+                    str(network),
+                    "--step-length",
+                    str(dt),
+                    "--no-step-log",
+                    "true",
+                    "--duration-log.disable",
+                    "true",
+                ]
+            )
+            effective = sim.simulation.getDeltaT()
+            sim.simulationStep()
+            rows.append(
+                {
+                    "requested_dt": dt,
+                    "effective_dt": effective,
+                    "first_step_time": sim.simulation.getTime(),
+                    "simulator": sim.getVersion(),
+                }
+            )
+        finally:
+            sim.close()
+    assert rows[0]["effective_dt"] == 0.013
+    assert all(r["effective_dt"] == r["requested_dt"] for r in rows[1:])
+    (HERE / "results/observation_window/clock_validation.json").write_text(
+        json.dumps(rows, indent=2) + "\n"
+    )
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--repeats", action="store_true")
+    parser.add_argument("--probe-clock", action="store_true")
+    args = parser.parse_args()
+    if args.probe_clock:
+        probe_clock()
+    run(args.repeats)

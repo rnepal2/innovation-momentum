@@ -1,0 +1,133 @@
+"""Machine-readable support and phase comparisons for the manuscript extension."""
+
+import json
+from pathlib import Path
+
+import matplotlib
+
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from mechanism_core import equilibrium, mode_operator
+
+HERE = Path(__file__).resolve().parent
+
+
+def summarize():
+    result = {}
+    operators = pd.read_csv(HERE / "results/mechanism/operators.csv")
+    v, s = equilibrium(479.92)
+    theoretical = []
+    for row in operators.to_dict("records"):
+        values = np.linalg.eigvals(mode_operator(row["q"], s[0], v, row["accel"], dt=row["dt"]))
+        dominant = values[np.argmax(abs(values))]
+        theoretical.append(
+            {
+                **row,
+                "predicted_growth": float(np.log(abs(dominant)) / row["dt"]),
+                "predicted_frequency_magnitude": float(
+                    abs(np.angle(dominant) / (2 * np.pi * row["dt"]))
+                ),
+                "frequency_magnitude_error": float(
+                    abs(
+                        abs(row["empirical_frequency_hz"])
+                        - abs(np.angle(dominant) / (2 * np.pi * row["dt"]))
+                    )
+                ),
+            }
+        )
+    theory = pd.DataFrame(theoretical)
+    theory.to_csv(HERE / "results/mechanism/phase_comparison.csv", index=False)
+    result["mechanism"] = json.loads(
+        (HERE / "results/mechanism/independent_validation.json").read_text()
+    )
+    result["mechanism"].update(
+        {
+            "max_empirical_growth_error_per_second": float(
+                abs(theory.empirical_growth - theory.predicted_growth).max()
+            ),
+            "max_empirical_frequency_magnitude_error_hz": float(
+                theory.frequency_magnitude_error.max()
+            ),
+        }
+    )
+    fig, axes = plt.subplots(1, 3, figsize=(12, 3.7), sharey=True, layout="constrained")
+    for ax, accel in zip(axes, [0.3, 0.8, 1.5]):
+        data = theory[(theory.accel == accel) & (theory["dt"] == 0.025)].sort_values("q")
+        ax.plot(data.q, data.predicted_frequency_magnitude, color="#346d95", label="Discrete IDM")
+        ax.scatter(
+            data.q,
+            abs(data.empirical_frequency_hz),
+            color="#a26b18",
+            s=20,
+            label="SUMO initial responses",
+        )
+        ax.set(
+            xlabel="Ring wavenumber q",
+            ylabel="Dominant-branch frequency magnitude (Hz)",
+            title=f"a = {accel} m/s^2",
+        )
+    axes[0].legend(frameon=False, fontsize=8)
+    fig.savefig(HERE / "results/mechanism/dispersion_frequency.png", dpi=180)
+    plt.close(fig)
+    table = pd.read_csv(HERE / "results/heterogeneity/responses.csv")
+    summary = (
+        table[table["dt"] == 0.025]
+        .groupby(["pattern", "basis"])
+        .speed_error_20.agg(["mean", "min", "max"])
+        .reset_index()
+    )
+    result["heterogeneity"] = summary.to_dict("records")
+    summary.to_csv(HERE / "results/heterogeneity/error_summary.csv", index=False)
+    harmonics = pd.read_csv(HERE / "results/harmonics/exponents.csv")
+    result["harmonic_exponents"] = harmonics[harmonics["dt"] == 0.0125].to_dict("records")
+    growth = pd.read_csv(HERE / "results/harmonics/growth.csv")
+    g = (
+        growth[(growth["dt"] == 0.0125) & (growth.q == 3) & growth.eligible]
+        .groupby("accel")
+        .finite_window_growth.agg(["min", "max"])
+        .reset_index()
+    )
+    for row in g.to_dict("records"):
+        row["linear_q3_growth"] = float(
+            np.linalg.eigvals(mode_operator(3, s[0], v, row["accel"])).real.max()
+        )
+        result.setdefault("q3_growth", []).append(row)
+    data = pd.read_csv(HERE / "results/ngsim/temporal_centering.csv")
+    profiles = json.loads((HERE / "results/ngsim/profiles.json").read_text())
+    result["ngsim"] = {
+        "total_rows": sum(r["rows"] for r in profiles.values()),
+        "location_profiles": profiles,
+        "centering": [
+            {
+                k: (None if isinstance(v, float) and not np.isfinite(v) else v)
+                for k, v in row.items()
+            }
+            for row in data.to_dict("records")
+        ],
+    }
+    for row in result["ngsim"]["centering"]:
+        if row.get("temporal_detrend") == "constant":
+            original = data[
+                (data.location == row["location"])
+                & (data.width_m == row["width_m"])
+                & (data.temporal_detrend == "False")
+            ].iloc[0]
+            row["power_remaining_fraction"] = row["power_mps2"] / original.power_mps2
+    path = HERE / "results/mechanism/manuscript_support.json"
+    path.write_text(json.dumps(result, indent=2, allow_nan=False) + "\n")
+    print(
+        json.dumps(
+            {
+                "mechanism": result["mechanism"],
+                "q3_growth": result["q3_growth"],
+                "empirical_rows": result["ngsim"]["total_rows"],
+            },
+            indent=2,
+        )
+    )
+
+
+if __name__ == "__main__":
+    summarize()

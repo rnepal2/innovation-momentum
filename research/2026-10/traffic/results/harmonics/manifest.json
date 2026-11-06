@@ -1,0 +1,98 @@
+{
+  "a0.3_dt0.025_eps0.05": {
+    "path": "data/research_2026/traffic/harmonics_clock_corrected/a0.3_dt0.025_eps0.05.npz",
+    "sha256": "aee22551c04a2638fad97de7938f14afdf3b2d1b5f6e218bac2ef4b58358cec3"
+  },
+  "a0.3_dt0.025_eps0.1": {
+    "path": "data/research_2026/traffic/harmonics_clock_corrected/a0.3_dt0.025_eps0.1.npz",
+    "sha256": "8143963220e11758d52b11281df78813ac59727e9a59e253c600c70c721ec888"
+  },
+  "a0.3_dt0.025_eps0.2": {
+    "path": "data/research_2026/traffic/harmonics_clock_corrected/a0.3_dt0.025_eps0.2.npz",
+    "sha256": "a80014be5fb9d35c018b2705a28aaeee41fcd374da4063f6a450b42fe1fa2de5"
+  },
+  "a0.3_dt0.025_eps0.4": {
+    "path": "data/research_2026/traffic/harmonics_clock_corrected/a0.3_dt0.025_eps0.4.npz",
+    "sha256": "5b5c66b6c0dd6018b595ec9bb0ee4850c1dd077b61a79c3bbdbb2e90e5cfa9b6"
+  },
+  "a0.3_dt0.01_eps0.05": {
+    "path": "data/research_2026/traffic/harmonics_clock_corrected/a0.3_dt0.01_eps0.05.npz",
+    "sha256": "e03c89280475f9e563a6cc632609a608791375557757aeb9cd9dfeb6ef785da6"
+  },
+  "a0.3_dt0.01_eps0.1": {
+    "path": "data/research_2026/traffic/harmonics_clock_corrected/a0.3_dt0.01_eps0.1.npz",
+    "sha256": "e4d80c2854e1994e0ed0ae6f01a1e8925ed22a31117ac3ed85d951033a527ec9"
+  },
+  "a0.3_dt0.01_eps0.2": {
+    "path": "data/research_2026/traffic/harmonics_clock_corrected/a0.3_dt0.01_eps0.2.npz",
+    "sha256": "dd81919b5da9a3bc374f391db0cf9887f005ec6fcd99ed1de8f6bc3b486433f7"
+  },
+  "a0.3_dt0.01_eps0.4": {
+    "path": "data/research_2026/traffic/harmonics_clock_corrected/a0.3_dt0.01_eps0.4.npz",
+    "sha256": "de30d3190da3516f399fcd2bce21755e3bc9ff955451d639e50e5655be68ce7c"
+  },
+  "a0.8_dt0.025_eps0.05": {
+    "path": "data/research_2026/traffic/harmonics_clock_corrected/a0.8_dt0.025_eps0.05.npz",
+    "sha256": "e25fc97a7cfde28205ff9907cf173d79d91213f5660755276d4f2737a6ae4bc9"
+  },
+  "a0.8_dt0.025_eps0.1": {
+    "path": "data/research_2026/traffic/harmonics_clock_corrected/a0.8_dt0.025_eps0.1.npz",
+    "sha256": "3c167eb0a4813465e78162de1ab1e7bcde2dca2d93887e3f2bf08fe4194977c7"
+  },
+  "a0.8_dt0.025_eps0.2": {
+    "path": "data/research_2026/traffic/harmonics_clock_corrected/a0.8_dt0.025_eps0.2.npz",
+    "sha256": "a51c4e1163319b1820b38c265ce3aff60ecb9fefcd0262b7e1ebc5a0d9407036"
+  },
+  "a0.8_dt0.025_eps0.4": {
+    "path": "data/research_2026/traffic/harmonics_clock_corrected/a0.8_dt0.025_eps0.4.npz",
+    "sha256": "1385068946b98ca3b71869479899c8faea2ce16e7975a583f8bf043e01dda58a"
+  },
+  "a0.8_dt0.01_eps0.05": {
+    "path": "data/research_2026/traffic/harmonics_clock_corrected/a0.8_dt0.01_eps0.05.npz",
+    "sha256": "440190575f1acb920b6417e5fba00b394c252571d8cb502c80d733c4ed6663c8"
+  },
+  "a0.8_dt0.01_eps0.1": {
+    "path": "data/research_2026/traffic/harmonics_clock_corrected/a0.8_dt0.01_eps0.1.npz",
+    "sha256": "b63d663a935eecd2eb5df8051ff2f066b065fe8817794b7a157fb8e03f1ba7c2"
+  },
+  "a0.8_dt0.01_eps0.2": {
+    "path": "data/research_2026/traffic/harmonics_clock_corrected/a0.8_dt0.01_eps0.2.npz",
+    "sha256": "f9758be4440d6de40f86fc55d47b364fd2229f6101cd6c513c7be3c1157d33e7"
+  },
+  "a0.8_dt0.01_eps0.4": {
+    "path": "data/research_2026/traffic/harmonics_clock_corrected/a0.8_dt0.01_eps0.4.npz",
+    "sha256": "34b92e439af9076861fa6dc8730fce9f3e58cecdf784459909133bd40a038839"
+  },
+  "a1.5_dt0.025_eps0.05": {
+    "path": "data/research_2026/traffic/harmonics_clock_corrected/a1.5_dt0.025_eps0.05.npz",
+    "sha256": "a9014ee1fcac054aec33dff407c3f23987f6fd19675b66adb078bce6812ae858"
+  },
+  "a1.5_dt0.025_eps0.1": {
+    "path": "data/research_2026/traffic/harmonics_clock_corrected/a1.5_dt0.025_eps0.1.npz",
+    "sha256": "68bfa2ba3efa43d03e9761e68e79d86387bdb7f3aad47de200bebe7c637725b5"
+  },
+  "a1.5_dt0.025_eps0.2": {
+    "path": "data/research_2026/traffic/harmonics_clock_corrected/a1.5_dt0.025_eps0.2.npz",
+    "sha256": "0004affa655e6d584c8d2cfb989052cea1f302b5932c85c06d7e7fb9fd15be5e"
+  },
+  "a1.5_dt0.025_eps0.4": {
+    "path": "data/research_2026/traffic/harmonics_clock_corrected/a1.5_dt0.025_eps0.4.npz",
+    "sha256": "d86d3570e8f1432342fdd77ce766f0f5efebeb4bfb59f69d4ed76e6153d25ef2"
+  },
+  "a1.5_dt0.01_eps0.05": {
+    "path": "data/research_2026/traffic/harmonics_clock_corrected/a1.5_dt0.01_eps0.05.npz",
+    "sha256": "bf8410d0474e181a8ca7f2191428be225f1b4b617214e1c9a6eac4f97bdb106c"
+  },
+  "a1.5_dt0.01_eps0.1": {
+    "path": "data/research_2026/traffic/harmonics_clock_corrected/a1.5_dt0.01_eps0.1.npz",
+    "sha256": "cee377e993a5a79ea5499b6f5a876779fa5edbc35d11f309d67ecbcee29718d3"
+  },
+  "a1.5_dt0.01_eps0.2": {
+    "path": "data/research_2026/traffic/harmonics_clock_corrected/a1.5_dt0.01_eps0.2.npz",
+    "sha256": "4c5db99bd76c16fb6be240acccbb7af2aeb4a0708fb9e4f912aeeafaedc44b79"
+  },
+  "a1.5_dt0.01_eps0.4": {
+    "path": "data/research_2026/traffic/harmonics_clock_corrected/a1.5_dt0.01_eps0.4.npz",
+    "sha256": "e491e560e78ee62f41168f894f079f37441ddeb001ca98e28b0472f005d530e8"
+  }
+}

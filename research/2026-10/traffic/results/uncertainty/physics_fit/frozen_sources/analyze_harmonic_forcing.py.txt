@@ -1,0 +1,86 @@
+"""Test whether initial harmonic seeding and linear transients explain q=3 growth."""
+
+import json
+from pathlib import Path
+
+import matplotlib
+
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from mechanism_core import equilibrium, mode_operator, mode_response, predict_mode
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[2]
+
+
+def analyze():
+    out = HERE / "results/harmonics"
+    table = pd.read_csv(out / "responses.csv").drop_duplicates("id")
+    manifest = json.loads((out / "manifest.json").read_text())
+    rows = []
+    for row in table.to_dict("records"):
+        with np.load(ROOT / manifest[row["id"]]["path"], allow_pickle=False) as raw:
+            x = raw["perturbed"] - raw["control"]
+        v, gaps = equilibrium(row["actual_ring_length"])
+        actual = mode_response(x[:, 0], x[:, 1], 3)
+        prediction = predict_mode(
+            actual[0],
+            mode_operator(3, gaps[0], v, row["accel"], dt=row["dt"]),
+            len(actual),
+            round(0.1 / row["dt"]),
+        )
+        actual_power = 2 * abs(actual[:, 1]) ** 2
+        predicted_power = 2 * abs(prediction[:, 1]) ** 2
+        for window, start in [("early", 100), ("late", 200)]:
+            observed = float(actual_power[start : start + 100].mean())
+            predicted = float(predicted_power[start : start + 100].mean())
+            rows.append(
+                {
+                    "id": row["id"],
+                    "accel": row["accel"],
+                    "dt": row["dt"],
+                    "amplitude": row["amplitude"],
+                    "window": window,
+                    "observed_power": observed,
+                    "autonomous_linear_power": predicted,
+                    "predicted_fraction_of_observed": predicted / observed,
+                }
+            )
+        if row["accel"] == 0.3 and row["amplitude"] == 0.2 and row["dt"] == 0.01:
+            fig, ax = plt.subplots(figsize=(8, 4), layout="constrained")
+            ax.plot(
+                np.arange(len(actual)) * 0.1,
+                actual_power,
+                color="#346d95",
+                label="SUMO q=3 response",
+            )
+            ax.plot(
+                np.arange(len(actual)) * 0.1,
+                predicted_power,
+                color="#a26b18",
+                ls="--",
+                label="Autonomous linear q=3; same initial state",
+            )
+            ax.axhline(1e-14, color="#777777", ls=":", label="Reporting floor")
+            ax.set(
+                xlabel="Seconds after first recorded state",
+                ylabel="q=3 speed-response power ((m/s)^2)",
+                yscale="log",
+            )
+            ax.legend(frameon=False, fontsize=9)
+            fig.savefig(out / "harmonic_autonomous_comparison.png", dpi=180)
+            plt.close(fig)
+    result = pd.DataFrame(rows)
+    result.to_csv(out / "autonomous_comparison.csv", index=False)
+    print(
+        result[(result["dt"] == 0.01) & (result.window == "late")]
+        .groupby("accel")
+        .predicted_fraction_of_observed.agg(["min", "max"])
+        .to_string()
+    )
+
+
+if __name__ == "__main__":
+    analyze()

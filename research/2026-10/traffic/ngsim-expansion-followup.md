@@ -1,0 +1,9 @@
+# Nonoverlapping NGSIM block expansion
+
+Recorded before acquiring additional observations. The original two 180 s blocks show temporal-baseline sensitivity, resolution failures at I-80, and trace-exclusion sensitivity. Their speed outcomes have been inspected. No new cohort outcome has been accessed.
+
+For each existing location, acquire two further 180 s half-open blocks beginning 240 and 420 s after its earliest dataset timestamp. The first study used [60,240) s, so all three blocks per location are disjoint in time. They belong to the same recording context and supply no independent-day replication. Use the same selected API columns, ordering, exact server-side count checks, per-query 500,000 row cap, per-file 64 MiB cap, and total new acquisition cap 150 MiB. Store fresh snapshots and persist receipts after each acquisition. Source schema and use metadata are inherited from the accepted official metadata, with its hash retained. Preserve rejected or failed acquisitions.
+
+Keep spatial supports fixed at US-101 [0,650) m and I-80 [0,325) m. Evaluate 5 s/25 m fields, with every cell observed and at least eight spatial bins. Report failures without interpolation or support reselection. Compare temporal means retained/removed, then apply the existing whole-trace position/speed discrepancy >5 m/s exclusion as secondary sensitivity. Record every block's selected rows, quality flags, excluded traces, coverage, power, and first-two-mode share. These remain binned mean observation speeds and retrospective processed trajectories.
+
+Use the outcomes to assess whether baseline and exclusion sensitivity persist across the specified nonoverlapping blocks. No instability labels, hypothesis-driven event selection, forecasting scores, or claim of open-ended empirical generalization is permitted. Future independent days and preprocessing/label contracts remain necessary.

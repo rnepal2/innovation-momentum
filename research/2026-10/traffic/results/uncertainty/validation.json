@@ -1,0 +1,73 @@
+{
+  "physical": {
+    "uncertainty_physical": {
+      "paired_responses": 64,
+      "controls": 4,
+      "scenarios_repeat_sha256": "2e18ca97efe1247c9f877ad2659b830be4d7e34e77f0d6ea79871fdcb9b919fd"
+    },
+    "physics_fit_physical": {
+      "paired_responses": 32,
+      "controls": 2,
+      "scenarios_repeat_sha256": "586da08db67fad801412ff6581f254f60726a4128352c7cc72b936ea5c45ace8"
+    }
+  },
+  "reproduction": {
+    "operator_error": {
+      "diagnostics.csv": "b4c9c14449bcd6ecb024743418a9f2198a954d8eba11d31f4a7c6c6905a799d0",
+      "summary.csv": "f7ea2e89f55ffb9eb7b78751856b2d6a7502d23dd5772382df79afd9d4ce0d6b"
+    },
+    "learned_operator": {
+      "operators.csv": "1db58bc3f9e1b0cbb87cc08df6513ac51c4a0964fcae71c6a8a7e015c551d0d2",
+      "diagnostics.csv": "929d8a027a5e527466e77378d5118e987a97ec51621cf855a7e0a7f57c077323",
+      "summary.csv": "1ef9aadbaaac424980751e1717dfb54b148bcc987cb929ea57d15c4b4a7f8053"
+    },
+    "reference_noise": {
+      "diagnostics.csv": "580509e5be7596bf40aee11d1f881e3c9cb7bccd5aa51a9f295185f621f1db68",
+      "summary.csv": "9f7d3d1bcff595507caab34ef7af0a758521558bead10bb652fd85fc9754259b",
+      "exact_linear_nulls.csv": "edbff3e760bb58cc48117baca2c781c1febeb49e5fc188e0b30588cd54bd8c11"
+    },
+    "physics_fit": {
+      "operators.csv": "eccb1983817035b2a1f0af3246401d937a9583682aed8c6f16fb2fe6fda33ef6",
+      "diagnostics.csv": "f724a5a023983b0220872e9da689d8d1aef691b0354113d9775f1e4584d2fcf6",
+      "summary.csv": "f5f6ccad6c1854cb069fb35018d621086562ed5d22a4fc19a1951540641ca284"
+    },
+    "forcing": {
+      "responses.csv": "3ebc2516d26eb5be9a0833b25fc4aa59ff064f6b86e045cf16e1bc4f18085d5e",
+      "diagnostics.csv": "f7da9efa67bd194891989211c82f1461b9f5186d3f3971ffabd7743e7c39f71e",
+      "sumo_comparison.csv": "91ad994e2233c8bfccc2f1214ed385ff2ac7dcf9fe600305c8883ad80b8e3413"
+    }
+  },
+  "ngsim_expansion": {
+    "new_rows": 906559,
+    "bytes": 87104551,
+    "blocks": 4,
+    "independent_days": false,
+    "raw_directory": "data/research_2026/traffic/ngsim_expansion",
+    "license_id_from_accepted_metadata": "CC_30_BY_SA"
+  },
+  "forcing": {
+    "ode_responses": 32,
+    "maximum_refinement_relative_speed_error": 8.910350131975639e-13,
+    "maximum_sumo_ode_relative_speed_error_20": 0.0064130138698488
+  },
+  "independent_comparisons": 7187,
+  "maximum_error_scaled_by_max_1_expected": 8.423662797415608e-13,
+  "score_scope": "All first-phase parameter/reference rows; first/last training-noise fits for diagnostic replay; all unstructured fitted matrices checked independently",
+  "exact_linear_calibrated_null_rate_range": [
+    0.0416,
+    0.059
+  ],
+  "environment": {
+    "python": "3.14.4",
+    "packages": {
+      "numpy": "2.4.6",
+      "scipy": "1.18.1",
+      "pandas": "3.0.3",
+      "matplotlib": "3.11.2"
+    },
+    "simulator": [
+      22,
+      "SUMO 1.28.0"
+    ]
+  }
+}

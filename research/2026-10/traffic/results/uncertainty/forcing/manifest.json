@@ -1,0 +1,130 @@
+{
+  "t1.0_direct_speed_p0": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.0_direct_speed_p0.npz",
+    "sha256": "ac9942ee3a0e0f15d8b3f38b90d25114aa15c81f768eb5841faf819a0b3ae10f"
+  },
+  "t1.0_direct_speed_p1": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.0_direct_speed_p1.npz",
+    "sha256": "82f1d286aefa36552f5b0d9d47b0e03b0ab28442ab7e36d31a7eb1420df1eed3"
+  },
+  "t1.0_direct_speed_p2": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.0_direct_speed_p2.npz",
+    "sha256": "a9eb7517a86fa8a5445c9862ece159261344735e4c56739e486c1c22238b7234"
+  },
+  "t1.0_direct_speed_p3": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.0_direct_speed_p3.npz",
+    "sha256": "d2c2b6101b7e92de46d3dee7e81a13ba21c517c910818e32c9df6b583af3aac2"
+  },
+  "t1.0_harmonic_02_p0": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.0_harmonic_02_p0.npz",
+    "sha256": "c084d4c5dbc8e84bd17f81b48918cb594b7350b14ebfb1417e79b1582825be71"
+  },
+  "t1.0_harmonic_02_p1": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.0_harmonic_02_p1.npz",
+    "sha256": "9340a70d52de22d8afe11a2b4f0bf487b01cbc85f7a576189dfeab6e0cd43498"
+  },
+  "t1.0_harmonic_02_p2": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.0_harmonic_02_p2.npz",
+    "sha256": "02df81b08daab7da122519a33529e19eed403d337867390bce5ac510c18ac7ad"
+  },
+  "t1.0_harmonic_02_p3": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.0_harmonic_02_p3.npz",
+    "sha256": "c8e4cf115dcefe0322744136bf469131c91ebf6e4f979f3387f89d7cd73ccd3f"
+  },
+  "t1.0_forcing_q3_p0": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.0_forcing_q3_p0.npz",
+    "sha256": "a921f93817ff7d9c84856a65af747ace6a1dd53369eacc7834dc34ffc1830f87"
+  },
+  "t1.0_forcing_q3_p1": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.0_forcing_q3_p1.npz",
+    "sha256": "9abda0f4ffa8eb1d7ac57ad0d7b2c3ba69b0be12792ab99e78553e495526d00d"
+  },
+  "t1.0_forcing_q3_p2": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.0_forcing_q3_p2.npz",
+    "sha256": "ad9d1b0a935d8c9009a8d17e97a6fda0c7a347cd985c39c99af08ebb0f53c3c8"
+  },
+  "t1.0_forcing_q3_p3": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.0_forcing_q3_p3.npz",
+    "sha256": "51adb3e9cd20d3ecf3594566d68a6f450f417226cd24d5d520054bc7ee4a683b"
+  },
+  "t1.0_forcing_q1_p0": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.0_forcing_q1_p0.npz",
+    "sha256": "2f489856a4fcc3a7d0db9a4ece72fc7a474aa59b75f9433e26d0d8aa73a774a5"
+  },
+  "t1.0_forcing_q1_p1": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.0_forcing_q1_p1.npz",
+    "sha256": "32be2c3f54deb290f9fb48486aa02c4a1b40c61dd07616a046aa63276b1b7647"
+  },
+  "t1.0_forcing_q1_p2": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.0_forcing_q1_p2.npz",
+    "sha256": "1d85ee81b670f0642295d739cde304d703df7d0786b6b91bafa1f082ca8202b1"
+  },
+  "t1.0_forcing_q1_p3": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.0_forcing_q1_p3.npz",
+    "sha256": "2d29ff4c89daf63381aac1b7893f70e87176d336eaee81449d927f60fefb69a8"
+  },
+  "t1.8_direct_speed_p0": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.8_direct_speed_p0.npz",
+    "sha256": "be131dc92a7fedc2aede3495c5a62b3fd384450d85893a53d505c4a46e1ce3c7"
+  },
+  "t1.8_direct_speed_p1": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.8_direct_speed_p1.npz",
+    "sha256": "4d7c7e972ae0be1f30f49ce9e4abb2cf60af6fb08581635f54e76c76b70bc85d"
+  },
+  "t1.8_direct_speed_p2": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.8_direct_speed_p2.npz",
+    "sha256": "dbe4d6d886888c131fa709cedfb212b1fa2c86fc633fbe7d60aa5939ddf0e203"
+  },
+  "t1.8_direct_speed_p3": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.8_direct_speed_p3.npz",
+    "sha256": "d4289a47a1c3d91ef65d529bd03fd3dd17e95a1aea19a53d27d8de59df629587"
+  },
+  "t1.8_harmonic_02_p0": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.8_harmonic_02_p0.npz",
+    "sha256": "66c1a31e34b218db31e12c403f55001f4bc7fbeb892e4f509bc4755274399a0f"
+  },
+  "t1.8_harmonic_02_p1": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.8_harmonic_02_p1.npz",
+    "sha256": "6942adb15f6a090e0214c8b65ef77884a8014972b1081effb37c80a6acd034be"
+  },
+  "t1.8_harmonic_02_p2": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.8_harmonic_02_p2.npz",
+    "sha256": "b6d542137e32c2c5b11c5c569f63075613dbd9bac597e3badaa1a448587d7785"
+  },
+  "t1.8_harmonic_02_p3": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.8_harmonic_02_p3.npz",
+    "sha256": "59d5006e782b58152b09d55135afe2625a5800aeabce99eb58bf33afada89e4c"
+  },
+  "t1.8_forcing_q3_p0": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.8_forcing_q3_p0.npz",
+    "sha256": "0324c47c184f5d8afe01b1d12bca913cb36adc97ef908029d534178082f0070f"
+  },
+  "t1.8_forcing_q3_p1": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.8_forcing_q3_p1.npz",
+    "sha256": "79431ec94a2a4fff471af82e22e7ab60fbc975d5cec1d7311aacb78114799985"
+  },
+  "t1.8_forcing_q3_p2": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.8_forcing_q3_p2.npz",
+    "sha256": "3fa3e3c23dbd93ccc0e4537bc47a624594e05d4a38c56d1245ad98592e1974dc"
+  },
+  "t1.8_forcing_q3_p3": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.8_forcing_q3_p3.npz",
+    "sha256": "3e1d160d0146533733edf63648d228a2b4a366593506020b59b195ff8a07786f"
+  },
+  "t1.8_forcing_q1_p0": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.8_forcing_q1_p0.npz",
+    "sha256": "ad047f3d4e787fd5cfaf643e94806e23d99b2252a0aa88f8a1a83dfc3d7b4d4a"
+  },
+  "t1.8_forcing_q1_p1": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.8_forcing_q1_p1.npz",
+    "sha256": "5feeb9ce342ea6f0cd369d65cd3bcb6a666e5f510927344ed155dd1e39d2d6ba"
+  },
+  "t1.8_forcing_q1_p2": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.8_forcing_q1_p2.npz",
+    "sha256": "6717d7b2a37e9f3304c2df8d6287da7e1f3415f06e639f289519a09a36e1b42f"
+  },
+  "t1.8_forcing_q1_p3": {
+    "path": "data/research_2026/traffic/forcing_controls/t1.8_forcing_q1_p3.npz",
+    "sha256": "8a671706f1342bd8c58d2ef3db5156d2fef57ecc7e69062deb6c7f4e7295540c"
+  }
+}

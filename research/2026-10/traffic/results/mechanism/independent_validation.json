@@ -1,0 +1,9 @@
+{
+  "responses": 192,
+  "primary_responses": 72,
+  "primary_max_full_speed_error_20": 0.01617382407366471,
+  "primary_median_full_speed_error_20": 0.0008988722935756753,
+  "primary_criterion_failures": 0,
+  "max_jacobian_finite_difference_error": 6.440892263981368e-11,
+  "max_numeric_analytic_prediction_difference": 8.932143727581627e-08
+}

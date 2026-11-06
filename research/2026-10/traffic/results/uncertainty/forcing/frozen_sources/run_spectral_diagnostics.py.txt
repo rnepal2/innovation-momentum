@@ -1,0 +1,313 @@
+"""Describe all saved traffic pulse responses without fitting a forecast."""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+from pathlib import Path
+
+import matplotlib
+
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from matplotlib.colors import LogNorm
+from provenance import archive_sources
+from spectral_diagnostics import (
+    BANDS,
+    FLOOR,
+    fft_power,
+    joint_density,
+    signed_density,
+    spatial_power,
+    weighted_spatial_power,
+    window_summary,
+)
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[2]
+RAW = ROOT / "data/research_2026/traffic/sumo"
+COLORS = {"long": "#346d95", "intermediate": "#a26b18", "short": "#3b806c"}
+
+
+def save_json(path, value):
+    Path(path).write_text(json.dumps(value, indent=2, allow_nan=False) + "\n")
+
+
+def load_records():
+    for study in ["sumo_placement", "phase"]:
+        table = pd.read_csv(HERE / "results" / study / "scenarios.csv")
+        for record in table.to_dict("records"):
+            identity = (
+                record["id"]
+                if study == "sumo_placement"
+                else f"phase_s{record['seed']}_dt{record['dt']}"
+            )
+            path = RAW / f"{identity}.npz"
+            with np.load(path, allow_pickle=False) as arrays:
+                x = arrays["pulse"] - arrays["control"]
+            yield {"study": study, "id": identity, **record}, path, x
+
+
+def analyze(out):
+    modes, cases, sensitivities, manifest, examples = [], [], [], [], {}
+    max_fft_error = max_decomposition_error = max_integration_error = 0.0
+    for record, path, x in load_records():
+        info = {k: record[k] for k in ["study", "id", "length", "tau", "accel", "seed", "dt"]}
+        manifest.append(
+            {
+                "path": str(path.relative_to(ROOT)),
+                "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+            }
+        )
+        power = spatial_power(x)
+        max_fft_error = max(max_fft_error, float(np.max(np.abs(power["energy"] - fft_power(x)))))
+        max_decomposition_error = max(
+            max_decomposition_error,
+            float(np.max(np.abs(power["raw_power"] - power["mean"] ** 2 - power["total"]))),
+        )
+        early, late, growth = window_summary(x)
+        reference = weighted_spatial_power(x, 4)
+        max_integration_error = max(max_integration_error, float(np.max(np.abs(early - reference))))
+        for q in range(1, 13):
+            modes.append(
+                {
+                    **info,
+                    "q": q,
+                    "dimensions": 2 if q < 12 else 1,
+                    "wavelength_vehicles": 24 / q,
+                    "early_power": early[q],
+                    "late_power": late[q],
+                    "early_share": early[q] / early[1:].sum(),
+                    "late_share": late[q] / late[1:].sum(),
+                    "growth_per_second": growth[q],
+                }
+            )
+        case = {
+            **info,
+            "early_nonuniform_power": early[1:].sum(),
+            "late_nonuniform_power": late[1:].sum(),
+        }
+        for band, (lo, hi) in BANDS.items():
+            e, l = early[lo : hi + 1].sum(), late[lo : hi + 1].sum()
+            case.update(
+                {
+                    f"{band}_early_share": e / early[1:].sum(),
+                    f"{band}_late_share": l / late[1:].sum(),
+                    f"{band}_early_power": e,
+                    f"{band}_late_power": l,
+                    f"{band}_growth": np.log(l / e) / 96 if min(e, l) > FLOOR else np.nan,
+                }
+            )
+        cases.append(case)
+        for length, detrend in [(24, False), (40, False), (32, "constant")]:
+            e, l, _ = window_summary(x, length, detrend)
+            sensitivities.append(
+                {
+                    **info,
+                    "window": length,
+                    "detrend": str(detrend),
+                    "long_early_share": e[1:3].sum() / e[1:].sum(),
+                    "long_late_share": l[1:3].sum() / l[1:].sum(),
+                    "growth": np.log(l[1:].sum() / e[1:].sum()) / 96,
+                }
+            )
+        if (
+            record["study"] == "sumo_placement"
+            and record["length"] == 480
+            and record["tau"] == 1
+            and record["seed"] == 31
+            and record["dt"] == 0.1
+            and record["accel"] in [0.3, 1.5]
+        ):
+            examples[record["accel"]] = x
+    pd.DataFrame(modes).to_csv(out / "mode_summary.csv", index=False)
+    pd.DataFrame(cases).to_csv(out / "case_summary.csv", index=False)
+    pd.DataFrame(sensitivities).to_csv(out / "sensitivity.csv", index=False)
+    save_json(out / "input_manifest.json", manifest)
+    checks = {
+        "responses": len(cases),
+        "max_gft_fft_error": max_fft_error,
+        "max_mean_decomposition_error": max_decomposition_error,
+        "max_psd_integration_error": max_integration_error,
+    }
+    assert max(max_fft_error, max_decomposition_error, max_integration_error) < 1e-10
+    save_json(out / "validation.json", checks)
+    figures(out, examples, pd.DataFrame(cases))
+    print(json.dumps(checks, indent=2))
+
+
+def figures(out, examples, cases):
+    plt.rcParams.update({"font.size": 10, "axes.spines.top": False, "axes.spines.right": False})
+    energies = [spatial_power(x) for x in examples.values()]
+    norm = LogNorm(vmin=1e-8, vmax=max(float(p["energy"].max()) for p in energies))
+    fig, axes = plt.subplots(2, 2, figsize=(11, 7), layout="constrained")
+    for row, (accel, x) in enumerate(sorted(examples.items())):
+        p = spatial_power(x)
+        im = axes[row, 0].imshow(
+            p["energy"][:, 1:].T,
+            origin="lower",
+            aspect="auto",
+            extent=[-0.5, 90.5, 0.5, 12.5],
+            cmap="cividis",
+            norm=norm,
+        )
+        frac = axes[row, 1].imshow(
+            p["shares"][:, 1:].T,
+            origin="lower",
+            aspect="auto",
+            extent=[-0.5, 90.5, 0.5, 12.5],
+            cmap="cividis",
+            vmin=0,
+            vmax=1,
+        )
+        for col in range(2):
+            axes[row, col].set(
+                xlabel="Seconds after pulse initiation",
+                ylabel="Ring wavenumber q",
+                title=f"a = {accel} m/s^2; " + ("absolute power" if col == 0 else "power fraction"),
+            )
+            axes[row, col].set_yticks([1, 2, 4, 6, 8, 10, 12])
+    fig.colorbar(im, ax=axes[:, 0], label="Mean-square speed response ((m/s)^2)", extend="min")
+    fig.colorbar(frac, ax=axes[:, 1], label="Fraction of nonuniform power")
+    fig.savefig(out / "mode_evolution.png", dpi=180)
+    plt.close(fig)
+
+    panels = [joint_density(x, start) for _, x in sorted(examples.items()) for start in [4, 52]]
+    norm = LogNorm(vmin=1e-9, vmax=max(float(d[:, 1:].max()) for _, d, _ in panels))
+    fig, axes = plt.subplots(2, 2, figsize=(11, 7), layout="constrained")
+    for j, (f, d, _) in enumerate(panels):
+        ax = axes.flat[j]
+        im = ax.imshow(
+            d[:, 1:],
+            origin="lower",
+            aspect="auto",
+            cmap="cividis",
+            norm=norm,
+            extent=[0.5, 12.5, f[0] - (f[1] - f[0]) / 2, f[-1] + (f[1] - f[0]) / 2],
+        )
+        ax.set(
+            xlabel="Ring wavenumber q",
+            ylabel="Temporal frequency (Hz)",
+            title=f"a = {sorted(examples)[j // 2]} m/s^2; "
+            + ("4-35 s" if j % 2 == 0 else "52-83 s"),
+        )
+        ax.set_xticks([1, 2, 4, 6, 8, 10, 12])
+    fig.colorbar(im, ax=axes, label="Speed-response power density ((m/s)^2/Hz)", extend="min")
+    fig.savefig(out / "joint_density.png", dpi=180)
+    plt.close(fig)
+
+    fig, axes = plt.subplots(1, 2, figsize=(10, 4), layout="constrained")
+    for ax, (accel, x) in zip(axes, sorted(examples.items())):
+        early, late, _ = window_summary(x)
+        q = np.arange(13)
+        for power, label, style, color in [
+            (early, "4-35 s", "--", "#346d95"),
+            (late, "52-83 s", "-", "#a26b18"),
+        ]:
+            ax.step(
+                q,
+                np.r_[0, np.cumsum(power[1:]) / power[1:].sum()],
+                where="post",
+                label=label,
+                ls=style,
+                color=color,
+            )
+        ax.step(
+            q,
+            np.r_[0, np.cumsum(np.r_[np.full(11, 2), 1]) / 23],
+            where="post",
+            color="#777777",
+            ls=":",
+            label="Isotropic dimension reference",
+        )
+        ax.set(
+            xlabel="Maximum included wavenumber q",
+            ylabel="Cumulative nonuniform power fraction",
+            title=f"a = {accel} m/s^2",
+            ylim=(0, 1.03),
+            xlim=(0, 12.2),
+        )
+        ax.legend(frameon=False, fontsize=9)
+    fig.savefig(out / "cumulative_power.png", dpi=180)
+    plt.close(fig)
+
+    data = cases[(cases.study == "sumo_placement") & (cases.dt == 0.1)]
+    limit = max(float(data[f"{band}_growth"].abs().max()) for band in BANDS)
+    fig, axes = plt.subplots(2, 3, figsize=(12, 6.3), layout="constrained")
+    for row, length in enumerate([480, 720]):
+        for col, band in enumerate(BANDS):
+            table = data[data.length == length].pivot_table(
+                index="tau", columns="accel", values=f"{band}_growth"
+            )
+            table = table.reindex(index=[0.6, 1.0, 1.8], columns=[0.3, 0.8, 1.5])
+            ax = axes[row, col]
+            im = ax.imshow(table, aspect="auto", cmap="RdBu_r", vmin=-limit, vmax=limit)
+            ax.set_xticks(range(3), [str(v) for v in table.columns])
+            ax.set_yticks(range(3), [str(v) for v in table.index])
+            ax.set(
+                xlabel="Acceleration (m/s^2)",
+                ylabel="Desired headway (s)",
+                title=f"{length} m; {band} band",
+            )
+            for i in range(3):
+                for j in range(3):
+                    value = table.iloc[i, j]
+                    ax.text(
+                        j,
+                        i,
+                        f"{value:+.3f}" if np.isfinite(value) else "--",
+                        ha="center",
+                        va="center",
+                        color="white" if abs(value) > 0.65 * limit else "#222222",
+                    )
+    fig.colorbar(im, ax=axes, label="Finite-window amplitude growth (1/s)")
+    fig.savefig(out / "band_growth_map.png", dpi=180)
+    plt.close(fig)
+
+    fig, axes = plt.subplots(1, 2, figsize=(11, 4), layout="constrained")
+    densities = [signed_density(x) for _, x in sorted(examples.items())]
+    norm = LogNorm(vmin=1e-8, vmax=max(float(p.max()) for _, _, p in densities))
+    for ax, (accel, _), (q, f, p) in zip(axes, sorted(examples.items()), densities):
+        im = ax.imshow(
+            p,
+            origin="lower",
+            aspect="auto",
+            cmap="cividis",
+            norm=norm,
+            extent=[q[0] - 0.5 / 24, q[-1] + 0.5 / 24, f[0] - 0.5 / 64, f[-1] + 0.5 / 64],
+        )
+        ax.set(
+            xlabel="Signed spatial frequency (cycles/vehicle)",
+            ylabel="Signed temporal frequency (Hz)",
+            title=f"a = {accel} m/s^2; 4-67 s",
+        )
+    fig.colorbar(im, ax=axes, label="Two-sided power density ((m/s)^2/Hz)", extend="min")
+    fig.savefig(out / "signed_density.png", dpi=180)
+    plt.close(fig)
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--out", type=Path, default=HERE / "results/spectral")
+    args = parser.parse_args()
+    args.out.mkdir(parents=True, exist_ok=True)
+    if (args.out / "freeze.json").exists():
+        raise FileExistsError("Preserve existing run; choose a new --out")
+    save_json(
+        args.out / "freeze.json",
+        {
+            "sources": archive_sources(args.out, HERE),
+            "scope": "Descriptive follow-up; existing aggregate outcomes already inspected",
+            "windows": [[4, 36], [52, 84]],
+            "bands": BANDS,
+            "sampling_seconds": 1,
+        },
+    )
+    analyze(args.out)
+
+
+if __name__ == "__main__":
+    main()

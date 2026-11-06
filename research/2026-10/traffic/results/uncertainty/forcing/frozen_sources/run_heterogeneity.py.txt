@@ -1,0 +1,336 @@
+"""Matched graph-band approximation and nonlinear harmonic experiments."""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+from pathlib import Path
+
+import matplotlib
+
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from mechanism_core import derivatives, equilibrium, full_operator, mode_operator, relative_error
+from provenance import archive_sources
+from run_mechanism import collect
+from scipy.linalg import block_diag
+from sumo_pilot import circle_network
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[2]
+
+
+def save_json(path, value):
+    Path(path).write_text(json.dumps(value, indent=2, allow_nan=False) + "\n")
+
+
+def patterns():
+    rng = np.random.default_rng(26015)
+    random = rng.uniform(-1, 1, 24)
+    random -= random.mean()
+    random *= 0.3 / abs(random).max()
+    return {
+        "homogeneous": np.ones(24),
+        "alternating": np.tile([0.7, 1.3], 12),
+        "clustered": np.r_[np.full(12, 0.7), np.full(12, 1.3)],
+        "random": 1 + random,
+    }
+
+
+def basis_for(weights=None, seed=None):
+    adjacency = np.zeros((24, 24))
+    for i, w in enumerate(np.ones(24) if weights is None else weights):
+        adjacency[i, (i + 1) % 24] = adjacency[(i + 1) % 24, i] = w
+    _, u = np.linalg.eigh(np.diag(adjacency.sum(axis=1)) - adjacency)
+    if seed is not None:
+        q, _ = np.linalg.qr(np.random.default_rng(seed).normal(size=(23, 23)))
+        u[:, 1:] = u[:, 1:] @ q
+    return u
+
+
+def band_mask():
+    labels = np.r_[0, np.repeat(1, 4), np.repeat(2, 8), np.repeat(3, 11)]
+    labels = np.r_[labels, labels][1:]
+    return labels[:, None] == labels[None, :]
+
+
+def projected(operator, basis):
+    transform = block_diag(basis, basis)
+    transformed = (transform.T @ operator @ transform)[1:, 1:]
+    return transform, transformed * band_mask()
+
+
+def coupling(operator, basis, gaps, speed):
+    scales = np.r_[np.full(24, np.mean(gaps)), np.full(24, speed)]
+    normalized = operator * scales[None, :] / scales[:, None]
+    transform = block_diag(basis, basis)
+    z = (transform.T @ normalized @ transform)[1:, 1:]
+    return float(np.sum(abs(z[~band_mask()]) ** 2) / np.sum(abs(z) ** 2))
+
+
+def trajectory(initial, step, observations):
+    states = [initial]
+    for _ in range(observations - 1):
+        states.append(step @ states[-1])
+    return np.asarray(states)
+
+
+def graph_figure(out, table, couplings):
+    fig, axes = plt.subplots(1, 2, figsize=(12, 4), layout="constrained")
+    primary = table[table["dt"] == 0.025]
+    colors = {
+        "full_operator": "#777777",
+        "uniform_gft": "#346d95",
+        "weighted_gft": "#a26b18",
+        "random_basis": "#3b806c",
+    }
+    labels = {
+        "full_operator": "Full dynamics",
+        "uniform_gft": "Uniform GFT bands",
+        "weighted_gft": "Weighted GFT bands",
+        "random_basis": "Fixed random bands",
+    }
+    coupling_table = pd.DataFrame(couplings)
+    for j, (name, color) in enumerate(colors.items()):
+        x = np.arange(4) + (j - 1.5) * 0.11
+        part = (
+            primary[primary.basis == name]
+            .groupby("pattern")
+            .speed_error_20.agg(["mean", "min", "max"])
+            .reindex(patterns())
+        )
+        axes[0].errorbar(
+            x,
+            part["mean"],
+            yerr=[part["mean"] - part["min"], part["max"] - part["mean"]],
+            fmt="o",
+            color=color,
+            label=labels[name],
+            capsize=2,
+            ms=5,
+        )
+        if name != "full_operator":
+            part = (
+                coupling_table[
+                    (coupling_table.basis == name) & (coupling_table.seed.isin([-1, 2000]))
+                ]
+                .set_index("pattern")
+                .reindex(patterns())
+            )
+            axes[1].scatter(x, part.coupling_fraction, color=color, s=26)
+    for ax in axes:
+        ax.set_xticks(range(4), list(patterns()))
+    axes[0].set(ylabel="Relative speed error (0-20 s)", yscale="log")
+    axes[1].set(ylabel="Dimensionless cross-band coupling fraction", ylim=(-0.008, 0.35))
+    axes[0].legend(frameon=False, fontsize=8, loc="center right")
+    fig.savefig(out / "graph_comparison.png", dpi=180)
+    plt.close(fig)
+
+
+def run(stage, out, raw):
+    import libsumo
+
+    out.mkdir(parents=True, exist_ok=True)
+    if (out / "freeze.json").exists():
+        raise FileExistsError("Choose a new output")
+    save_json(
+        out / "freeze.json",
+        {
+            "sources": archive_sources(out, HERE),
+            "stage": stage,
+            "simulator": libsumo.getVersion(),
+            "headway_patterns": {k: v.tolist() for k, v in patterns().items()},
+            "random_basis_seeds": list(range(2000, 2020)),
+            "protocol": "heterogeneity-followup.md",
+        },
+    )
+    network, lengths = circle_network(480, raw / "network")
+    records, manifest, diagnostics = [], {}, []
+    if stage == "heterogeneity":
+        couplings = []
+        for pattern, taus in patterns().items():
+            speed, gaps = equilibrium(lengths.sum(), taus)
+            fs, _, _ = derivatives(gaps, speed, 0.8, taus)
+            weights = np.sqrt(fs * np.roll(fs, -1))
+            weights /= weights.mean()
+            bases = {
+                "uniform_gft": basis_for(),
+                "weighted_gft": basis_for(weights),
+                "random_basis": basis_for(seed=2000),
+            }
+            continuous = full_operator(gaps, speed, 0.8, taus)
+            for name, u in bases.items():
+                couplings.append(
+                    {
+                        "pattern": pattern,
+                        "basis": name,
+                        "seed": 2000 if name == "random_basis" else -1,
+                        "coupling_fraction": coupling(continuous, u, gaps, speed),
+                    }
+                )
+            for seed in range(2001, 2020):
+                couplings.append(
+                    {
+                        "pattern": pattern,
+                        "basis": "random_basis",
+                        "seed": seed,
+                        "coupling_fraction": coupling(
+                            continuous, basis_for(seed=seed), gaps, speed
+                        ),
+                    }
+                )
+            for dt in [0.05, 0.025]:
+                control, meta = collect(network, lengths, 0.8, dt, taus=taus)
+                diagnostics.append(
+                    {
+                        "pattern": pattern,
+                        "dt": dt,
+                        **meta,
+                        "max_control_gap_departure": float(abs(control[:, 0] - gaps).max()),
+                        "max_control_speed_departure": float(abs(control[:, 1] - speed).max()),
+                    }
+                )
+                linear = full_operator(gaps, speed, 0.8, taus, dt)
+                for seed in range(201, 207):
+                    impulse = np.random.default_rng(seed).normal(size=24)
+                    impulse -= impulse.mean()
+                    impulse *= 0.01 / np.sqrt(np.mean(impulse**2))
+                    states, meta = collect(
+                        network, lengths, 0.8, dt, taus=taus, initial_vector=impulse
+                    )
+                    identity = f"{pattern}_dt{dt}_s{seed}"
+                    path = raw / (identity + ".npz")
+                    np.savez_compressed(path, control=control, perturbed=states, taus=taus)
+                    manifest[identity] = {
+                        "path": str(path.relative_to(ROOT)),
+                        "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+                    }
+                    x = states - control
+                    initial = np.r_[x[0, 0], x[0, 1]]
+                    full = trajectory(
+                        initial, np.linalg.matrix_power(linear, round(0.1 / dt)), len(x)
+                    )
+                    for name, u in {"full_operator": np.eye(24), **bases}.items():
+                        if name == "full_operator":
+                            predicted = full[:, 24:]
+                        else:
+                            transform, masked = projected(linear, u)
+                            start = (transform.T @ initial)[1:]
+                            transformed = trajectory(
+                                start, np.linalg.matrix_power(masked, round(0.1 / dt)), len(x)
+                            )
+                            predicted = (np.c_[np.zeros(len(x)), transformed] @ transform.T)[:, 24:]
+                        records.append(
+                            {
+                                "id": identity,
+                                "pattern": pattern,
+                                "dt": dt,
+                                "seed": seed,
+                                "basis": name,
+                                **meta,
+                                "speed_error_20": relative_error(x[:201, 1], predicted[:201]),
+                                "speed_error_40": relative_error(x[:, 1], predicted),
+                            }
+                        )
+            print("Completed pattern", pattern, flush=True)
+        pd.DataFrame(couplings).to_csv(out / "coupling.csv", index=False)
+        table = pd.DataFrame(records)
+        graph_figure(out, table, couplings)
+    else:
+        for accel in [0.3, 0.8, 1.5]:
+            speed, gaps = equilibrium(lengths.sum())
+            for dt in [0.025, 0.01]:
+                control, meta = collect(network, lengths, accel, dt)
+                diagnostics.append({"accel": accel, "dt": dt, **meta})
+                for amplitude in [0.05, 0.1, 0.2, 0.4]:
+                    state, meta = collect(network, lengths, accel, dt, 1, amplitude, "speed")
+                    identity = f"a{accel}_dt{dt}_eps{amplitude}"
+                    path = raw / (identity + ".npz")
+                    np.savez_compressed(path, control=control, perturbed=state)
+                    manifest[identity] = {
+                        "path": str(path.relative_to(ROOT)),
+                        "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+                    }
+                    x = state[:, 1] - control[:, 1]
+                    power = 2 * abs(np.fft.fft(x, axis=1) / 24) ** 2
+                    for q in [1, 2, 3]:
+                        linear_growth = float(
+                            np.linalg.eigvals(mode_operator(q, gaps[0], speed, accel)).real.max()
+                        )
+                        for window, start in [("early", 100), ("late", 200)]:
+                            value = float(power[start : start + 100, q].mean())
+                            records.append(
+                                {
+                                    "id": identity,
+                                    "accel": accel,
+                                    "dt": dt,
+                                    "amplitude": amplitude,
+                                    "q": q,
+                                    "window": window,
+                                    "power": value,
+                                    "above_floor": value > 1e-14,
+                                    "continuous_growth": linear_growth,
+                                    **meta,
+                                }
+                            )
+            print("Completed harmonic acceleration", accel, flush=True)
+        table = pd.DataFrame(records)
+        slopes = []
+        for key, part in table.groupby(["accel", "dt", "q", "window"]):
+            valid = part[part.above_floor]
+            slope = (
+                float(np.polyfit(np.log(valid.amplitude), np.log(valid.power), 1)[0])
+                if len(valid) >= 3
+                else None
+            )
+            slopes.append(
+                {
+                    **dict(zip(["accel", "dt", "q", "window"], key)),
+                    "power_exponent": slope,
+                    "eligible_amplitudes": len(valid),
+                }
+            )
+        pd.DataFrame(slopes).to_csv(out / "exponents.csv", index=False)
+        growth = table.pivot(
+            index=["accel", "dt", "amplitude", "q"], columns="window", values="power"
+        )
+        growth["eligible"] = (growth.early > 1e-14) & (growth.late > 1e-14)
+        growth["finite_window_growth"] = np.where(
+            growth.eligible, np.log(growth.late / growth.early) / 20, np.nan
+        )
+        growth.to_csv(out / "growth.csv")
+        fig, axes = plt.subplots(1, 3, figsize=(11, 3.8), sharey=True, layout="constrained")
+        for ax, accel in zip(axes, [0.3, 0.8, 1.5]):
+            for window, color in [("early", "#346d95"), ("late", "#a26b18")]:
+                part = pd.DataFrame(slopes)
+                part = part[(part.accel == accel) & (part["dt"] == 0.01) & (part.window == window)]
+                ax.plot(part.q, part.power_exponent, "o-", color=color, label=window)
+            ax.plot([1, 2, 3], [2, 4, 6], "k:", label="Harmonic-order reference")
+            ax.set(
+                xlabel="Wavenumber q",
+                ylabel="Power exponent versus initial amplitude",
+                title=f"a = {accel}",
+            )
+            ax.set_xticks([1, 2, 3])
+        axes[0].legend(frameon=False, fontsize=8)
+        fig.savefig(out / "harmonic_scaling.png", dpi=180)
+        plt.close(fig)
+    table.to_csv(out / "responses.csv", index=False)
+    save_json(out / "manifest.json", manifest)
+    save_json(out / "control_checks.json", diagnostics)
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--stage", choices=["heterogeneity", "harmonics"], default="heterogeneity")
+    parser.add_argument("--out", type=Path)
+    parser.add_argument("--raw", type=Path)
+    args = parser.parse_args()
+    run(
+        args.stage,
+        args.out or HERE / "results" / args.stage,
+        (args.raw or ROOT / "data/research_2026/traffic" / args.stage).resolve(),
+    )

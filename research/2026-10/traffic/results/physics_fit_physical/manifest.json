@@ -1,0 +1,130 @@
+{
+  "t1.0_dt0.01_direct_gap_p0": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.0_dt0.01_direct_gap_p0.npz",
+    "sha256": "2d92acf8d92868389d93d45daf6f1a2fb17012bc750f5a672a5a0b18a6d6780d"
+  },
+  "t1.0_dt0.01_direct_gap_p1": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.0_dt0.01_direct_gap_p1.npz",
+    "sha256": "183eddb242126aebdd17fdc88d9b7e376b5b1d0987fa6af1b75e1de8037535c4"
+  },
+  "t1.0_dt0.01_direct_gap_p2": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.0_dt0.01_direct_gap_p2.npz",
+    "sha256": "2d04cccf09d825be9cafcadc98d58591206e5656539949fb0857680e92a9c0c7"
+  },
+  "t1.0_dt0.01_direct_gap_p3": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.0_dt0.01_direct_gap_p3.npz",
+    "sha256": "ce710a0dcc610a2f162abef72be9165716d0de9f6bd27b4adaf43b4bdcbcbbc6"
+  },
+  "t1.0_dt0.01_direct_speed_p0": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.0_dt0.01_direct_speed_p0.npz",
+    "sha256": "fb6bb2daa080f9973c035cb1d9ddb432e10a9787d45346f743352e4069706395"
+  },
+  "t1.0_dt0.01_direct_speed_p1": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.0_dt0.01_direct_speed_p1.npz",
+    "sha256": "d4759a8e86148a5d02b1069228eca897443cecc4d050abb657143e7ce7301985"
+  },
+  "t1.0_dt0.01_direct_speed_p2": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.0_dt0.01_direct_speed_p2.npz",
+    "sha256": "41bd8ef2aae43a04030068aaa3f833da20f1a9df2d4a5eb279dc4a263fac1762"
+  },
+  "t1.0_dt0.01_direct_speed_p3": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.0_dt0.01_direct_speed_p3.npz",
+    "sha256": "44c9ec809c4a2e6cd332a4db47e0fc4b81a950cd5cd9ccd4541aa54e84dc328d"
+  },
+  "t1.0_dt0.01_harmonic_02_p0": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.0_dt0.01_harmonic_02_p0.npz",
+    "sha256": "eb0b198fb10ec46c20c40667d502cca06d7c588a1cfd658fe77224fad17b1230"
+  },
+  "t1.0_dt0.01_harmonic_02_p1": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.0_dt0.01_harmonic_02_p1.npz",
+    "sha256": "f88b4ee1f59d5a198d8560ada6984527d339666cd23462cf3d26012334ea811c"
+  },
+  "t1.0_dt0.01_harmonic_02_p2": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.0_dt0.01_harmonic_02_p2.npz",
+    "sha256": "6bd3d7df76ffc796ce15b1a208bbde5692d962771010b0ff3f87849e6c8aef65"
+  },
+  "t1.0_dt0.01_harmonic_02_p3": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.0_dt0.01_harmonic_02_p3.npz",
+    "sha256": "c7c050073e8f326e63161436e268db66142bc0dfb5cff17738f415aec52c5ee1"
+  },
+  "t1.0_dt0.01_harmonic_04_p0": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.0_dt0.01_harmonic_04_p0.npz",
+    "sha256": "ea0e00b71df8adb08e77f563590c43d1153128c166b81db8d4a3804ea0f3b27a"
+  },
+  "t1.0_dt0.01_harmonic_04_p1": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.0_dt0.01_harmonic_04_p1.npz",
+    "sha256": "768bfdc0f426f586e73b15c0fd970aadff232610b15ef29374aa4a7f6cbe8da1"
+  },
+  "t1.0_dt0.01_harmonic_04_p2": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.0_dt0.01_harmonic_04_p2.npz",
+    "sha256": "628310613c00b963e1496e94fea48c1c83ca1c07f661e3ff28214b3bea9a9f9e"
+  },
+  "t1.0_dt0.01_harmonic_04_p3": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.0_dt0.01_harmonic_04_p3.npz",
+    "sha256": "cf87b373def389aa07370dc494b8075155d4bb0774f6f837ce8623bef098c7c9"
+  },
+  "t1.8_dt0.01_direct_gap_p0": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.8_dt0.01_direct_gap_p0.npz",
+    "sha256": "45ecaf7f05df0666d4d63ab3840e40f54caef956152f48c153f8b6b4e87abc6b"
+  },
+  "t1.8_dt0.01_direct_gap_p1": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.8_dt0.01_direct_gap_p1.npz",
+    "sha256": "133f002c4d4856ad1743b1092585490e034935535703f893c1f6bd4ac258cf68"
+  },
+  "t1.8_dt0.01_direct_gap_p2": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.8_dt0.01_direct_gap_p2.npz",
+    "sha256": "2d47f069d6c03c4db920a37533a8a246ef84a33a1f961812ef7be72deba298f8"
+  },
+  "t1.8_dt0.01_direct_gap_p3": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.8_dt0.01_direct_gap_p3.npz",
+    "sha256": "2ba48087893c13812f7be28e2ac0be9800db9902b65301f9512ef6cb62d4d5e8"
+  },
+  "t1.8_dt0.01_direct_speed_p0": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.8_dt0.01_direct_speed_p0.npz",
+    "sha256": "a8160baeec79c20dbd11e2eca40efbccf401b28abdc86c7687918ff2ecec5716"
+  },
+  "t1.8_dt0.01_direct_speed_p1": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.8_dt0.01_direct_speed_p1.npz",
+    "sha256": "bef92afc345b6a3cc2c2ebec6d1eb407f5f44baaac67bff68db252d98802fccb"
+  },
+  "t1.8_dt0.01_direct_speed_p2": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.8_dt0.01_direct_speed_p2.npz",
+    "sha256": "0adb519c742c5d020a9346cb9436db4e2c630f4908f7edcf20d30e456113d39e"
+  },
+  "t1.8_dt0.01_direct_speed_p3": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.8_dt0.01_direct_speed_p3.npz",
+    "sha256": "1227dce4fd156d5aec0f9ff44ca7af5c3081e47df2103dc9f31d7e505c7706a8"
+  },
+  "t1.8_dt0.01_harmonic_02_p0": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.8_dt0.01_harmonic_02_p0.npz",
+    "sha256": "747aeaf6aa1b3700aa04808f5e263ca73c01bab04857741723f4230607be5ace"
+  },
+  "t1.8_dt0.01_harmonic_02_p1": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.8_dt0.01_harmonic_02_p1.npz",
+    "sha256": "3224ee7051898f2d88160dcfad81bf52df2e7ad768b116cbb81d791d435616ae"
+  },
+  "t1.8_dt0.01_harmonic_02_p2": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.8_dt0.01_harmonic_02_p2.npz",
+    "sha256": "e077dc55fe9665bcf086022dd472f45d901e4f2ebc2ade1145372c669eeade16"
+  },
+  "t1.8_dt0.01_harmonic_02_p3": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.8_dt0.01_harmonic_02_p3.npz",
+    "sha256": "232a501cb93d11cc0bb723f6eaf74707e477b162741546b1c8a458af5c483bea"
+  },
+  "t1.8_dt0.01_harmonic_04_p0": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.8_dt0.01_harmonic_04_p0.npz",
+    "sha256": "fa5fdcc4809af161d4dbd2bfaec8c7aaa19d112e252b0c876cdcf5aebf57b1ec"
+  },
+  "t1.8_dt0.01_harmonic_04_p1": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.8_dt0.01_harmonic_04_p1.npz",
+    "sha256": "6779b216a8becc85457a84bd4568d141697baa3ca8286dfe818695c28a41341a"
+  },
+  "t1.8_dt0.01_harmonic_04_p2": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.8_dt0.01_harmonic_04_p2.npz",
+    "sha256": "8d0add445e866f6d4f328b4336aa443c8008cc0850e3d213295f4c5734ba1282"
+  },
+  "t1.8_dt0.01_harmonic_04_p3": {
+    "path": "data/research_2026/traffic/physics_fit_physical/t1.8_dt0.01_harmonic_04_p3.npz",
+    "sha256": "cdff3832a1733e845c9fbae897b8bbf2b51ba2b3743c24c9ba611401cea66c72"
+  }
+}

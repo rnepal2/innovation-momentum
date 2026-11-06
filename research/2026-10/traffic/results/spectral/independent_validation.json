@@ -1,0 +1,9 @@
+{
+  "descriptive_responses": 172,
+  "spectral_forcing": 54,
+  "spectral_small_pulse": 54,
+  "comparisons": 6878,
+  "max_absolute_error": 1.3642420526593924e-12,
+  "method": "Raw full spatial FFT and explicit periodic-Hann weights; no spectral analysis helpers",
+  "source_archives_and_raw_hashes": "verified"
+}

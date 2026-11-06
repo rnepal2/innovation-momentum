@@ -1,0 +1,52 @@
+{
+  "simulator": [
+    22,
+    "SUMO 1.28.0"
+  ],
+  "sources": {
+    "audit_data.py": "1317a270ff6677ccea859064301986fbf601daac8e50131468853d5fd85dd238",
+    "provenance.py": "6450d3f2c4dba00482f8ffaafe66e16acb8312f97f5354938c2ddc5d88ab1377",
+    "run_experiments.py": "38d50be033678f7e7680dbe8cf2302285faf2efb2fd78f77e7ee9d6477db33a3",
+    "run_forcing_spectra.py": "6ea12e019b6af1d89ce00edd1f1f4dc159b06324a54e63cde5a527975236fc5f",
+    "run_spectral_diagnostics.py": "2b0271cdcaaf98d452e512326a4dcf7ab989f70bcf48ce6c56e3ce9fd8d034b1",
+    "spectral_diagnostics.py": "3928eb8474b7f0ee0a3159a6e7c687061101a9cd5c56d379c6a06b5767dd43ba",
+    "summarize_physical.py": "883726e442d84fafa3da441165292adec438c0be28f8bb6f07d66d72b22eca9a",
+    "sumo_phase.py": "adfc7e88774dbe3e2353ffef979814c5ba44f2a5564f22e61c23441f70b22c09",
+    "sumo_pilot.py": "5d4c1036915a511768f86baf246029ce6a19878bb84d8038d032d5164c72f3c5",
+    "traffic_core.py": "65a53f6a3c9a6eb808c482c986cda0b3af10174928ea6b4a360753740b6681c8",
+    "validate_results.py": "774d6b9c8a256276910c32377bd16531197fc90f923ed55b9e7f0a4cdb7a0463",
+    "protocol.md": "e6e11c6e64083831cf4f8255d836d8b63504fa2cb2040642d53eb2ef3efb5e17",
+    "spectral-diagnostics-protocol.md": "56cb529c2bbf8de1ff3e61ebd0b593f054ea2a98f267b410324aaea74717d74c",
+    "sumo-protocol.md": "a820719488711d077bd99362bd6cb851f3b4aededc749dd998a41988ea2059b1",
+    "forcing-followup.md": "52e88bd5b6526e99a9f1667474fac1574d1e664dd1fed69a0044e08aa0c0e5bf",
+    "phase-followup.md": "81ef6339acc281a0c98afd98b0cbcb2c1d36ec6762d4c1a4f154218a06c6ec0f"
+  },
+  "length": 480,
+  "tau": 1.0,
+  "accel": [
+    0.3,
+    0.8,
+    1.5
+  ],
+  "drops": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "seeds": [
+    31,
+    47,
+    83
+  ],
+  "steps": [
+    0.1,
+    0.05
+  ],
+  "record_seconds": 240,
+  "windows": {
+    "early": 4,
+    "late": 52,
+    "final": 208
+  },
+  "scope": "Exploratory mechanism comparison; prior aggregate outcomes inspected"
+}

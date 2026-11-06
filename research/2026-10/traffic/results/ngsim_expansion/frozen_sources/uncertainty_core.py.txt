@@ -1,0 +1,111 @@
+"""Separable observation covariance and established two-state DMD estimators."""
+
+from __future__ import annotations
+
+import numpy as np
+from mode_consistency import real_operator
+from scipy.linalg import solve_triangular, toeplitz
+from scipy.stats import chi2
+
+
+def temporal_covariance(rho=0.0, references=None, drift=False, times=41):
+    if not 0 <= rho < 1 or (references is not None and references <= 0):
+        raise ValueError("Invalid temporal covariance parameters")
+    result = toeplitz(rho ** np.arange(times))
+    if references is not None:
+        result += np.ones((times, times)) / references
+        if drift:
+            t = np.linspace(-1, 1, times)
+            result += np.outer(t, t) / references
+    elif drift:
+        raise ValueError("Drift requires a reference variance")
+    return result
+
+
+def joint_noise(state_cov, time_cov, draws, seed):
+    z = np.random.default_rng(seed).normal(size=(draws, len(time_cov), 4))
+    return np.einsum(
+        "tu,nuv,kv->ntk",
+        np.linalg.cholesky(time_cov),
+        z,
+        np.linalg.cholesky(state_cov),
+        optimize=True,
+    )
+
+
+def full_history_design(operator, times=41, nuisance=0):
+    design = np.concatenate([np.linalg.matrix_power(operator, t) for t in range(times)])
+    columns = [design]
+    if nuisance >= 1:
+        columns.append(np.tile(np.eye(4), (times, 1)))
+    if nuisance >= 2:
+        columns.append(np.kron(np.linspace(-1, 1, times)[:, None], np.eye(4)))
+    return np.column_stack(columns)
+
+
+class JointGLS:
+    def __init__(self, operator, state_cov, time_cov=None, nuisance=0):
+        self.times = 41 if time_cov is None else len(time_cov)
+        if time_cov is None:
+            time_cov = np.eye(self.times)
+        self.time_white = solve_triangular(
+            np.linalg.cholesky(time_cov), np.eye(self.times), lower=True
+        )
+        self.state_white = solve_triangular(np.linalg.cholesky(state_cov), np.eye(4), lower=True)
+        design = full_history_design(operator, self.times, nuisance)
+        whitened = np.kron(self.time_white, self.state_white) @ design
+        u, singular, _ = np.linalg.svd(whitened, full_matrices=False)
+        self.rank = int(np.sum(singular > singular[0] * 1e-10))
+        if self.rank != design.shape[1]:
+            raise ValueError("Autonomous/nuisance design is numerically unidentified")
+        self.basis = u[:, : self.rank]
+        self.dof = self.times * 4 - self.rank
+        self.cutoff = float(chi2.ppf(0.95, self.dof) / self.times)
+
+    def whiten(self, histories):
+        return np.einsum(
+            "tu,...uv,kv->...tk", self.time_white, histories, self.state_white, optimize=True
+        )
+
+    def score(self, histories):
+        white = self.whiten(np.asarray(histories))
+        flat = white.reshape(*white.shape[:-2], -1)
+        projected = flat @ self.basis
+        return np.maximum(0, np.sum(flat**2, axis=-1) - np.sum(projected**2, axis=-1)) / self.times
+
+
+def fit_transition(histories, state_cov, method):
+    """Fit a complex two-state transition after circular-noise whitening."""
+    histories = np.asarray(histories)
+    z = histories[..., :2] + 1j * histories[..., 2:]
+    sd = np.sqrt(2 * np.diag(state_cov)[:2])
+    z = z / sd
+    x = z[:, :-1].reshape(-1, 2).T
+    y = z[:, 1:].reshape(-1, 2).T
+    gram = x @ x.conj().T
+    if method == "tls":
+        u = np.linalg.svd(np.vstack([x, y]), full_matrices=False)[0][:, :2]
+        condition = float(np.linalg.cond(u[:2]))
+        if condition > 1e8:
+            return None, condition, "ill_conditioned"
+        estimate = np.linalg.solve(u[:2].T, u[2:].T).T
+    else:
+        if method == "noise_corrected":
+            gram -= x.shape[1] * np.eye(2)
+            if np.linalg.eigvalsh(gram).min() <= 0:
+                return None, float(np.linalg.cond(gram)), "nonpositive_corrected_gram"
+        elif method != "ols":
+            raise ValueError(method)
+        condition = float(np.linalg.cond(gram))
+        if condition > 1e8:
+            return None, condition, "ill_conditioned"
+        estimate = np.linalg.solve(gram.T, (y @ x.conj().T).T).T
+    estimate = sd[:, None] * estimate / sd[None, :]
+    if not np.isfinite(estimate).all():
+        return None, condition, "nonfinite"
+    return real_operator(estimate), condition, "eligible"
+
+
+def mode_state(response, q=3):
+    z = np.stack([np.fft.fft(response[:, i], axis=1)[:, q] / 24 for i in [0, 1]], axis=1)
+    return np.column_stack([z.real, z.imag])

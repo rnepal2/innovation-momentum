@@ -1,0 +1,365 @@
+"""Single-mode SUMO initial-condition experiments with gap-speed state."""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import xml.etree.ElementTree as ET
+from pathlib import Path
+
+import matplotlib
+
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from mechanism_core import (
+    equilibrium,
+    initialize,
+    mode_operator,
+    mode_response,
+    predict_mode,
+    relative_error,
+)
+from provenance import archive_sources
+from sumo_pilot import circle_network
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parent
+RAW = ROOT / "traffic/data/mechanism"
+
+
+def save_json(path, value):
+    Path(path).write_text(json.dumps(value, indent=2, allow_nan=False) + "\n")
+
+
+def recording_stride(dt):
+    if not np.isfinite(dt) or dt <= 0 or abs(dt * 1000 - round(dt * 1000)) > 1e-9:
+        raise ValueError("SUMO step must be a positive integer number of milliseconds")
+    stride = round(0.1 / dt)
+    if stride < 1 or not np.isclose(stride * dt, 0.1, rtol=0, atol=1e-12):
+        raise ValueError("Simulation step must divide the 0.1 s recording interval")
+    return stride
+
+
+def collect(
+    network,
+    lengths,
+    accel,
+    dt,
+    q=0,
+    amplitude=0.0,
+    kind="speed",
+    taus=1.0,
+    seconds=40,
+    initial_vector=None,
+    phase=0.0,
+):
+    stride = recording_stride(dt)
+    import libsumo as sim
+
+    speed, gaps = equilibrium(lengths.sum(), taus)
+    positions, initial_speeds = initialize(gaps, speed, q, amplitude, kind, phase=phase)
+    if initial_vector is not None:
+        initial_speeds = np.full(24, speed) + np.asarray(initial_vector)
+    positions %= lengths.sum()
+    taus = np.broadcast_to(taus, 24)
+    routes = ET.Element("routes")
+    for i in range(24):
+        ET.SubElement(
+            routes,
+            "vType",
+            id=f"idm{i}",
+            carFollowModel="IDM",
+            tau=str(taus[i]),
+            accel=str(accel),
+            decel="2",
+            emergencyDecel="9",
+            length="5",
+            minGap="2",
+            maxSpeed="30",
+            speedFactor="1",
+            speedDev="0",
+            delta="4",
+        )
+    routefile = network.parent / "mechanism_types.rou.xml"
+    ET.ElementTree(routes).write(routefile, encoding="utf-8", xml_declaration=True)
+    states, timestamps, collisions, teleports, leader_errors = [], [], 0, 0, 0
+    try:
+        sim.start(
+            [
+                "sumo",
+                "-n",
+                str(network),
+                "-r",
+                str(routefile),
+                "--step-length",
+                str(dt),
+                "--no-step-log",
+                "true",
+                "--duration-log.disable",
+                "true",
+                "--time-to-teleport",
+                "-1",
+                "--collision.action",
+                "warn",
+                "--no-warnings",
+                "true",
+            ]
+        )
+        effective_dt = sim.simulation.getDeltaT()
+        if not np.isclose(effective_dt, dt, rtol=0, atol=1e-12):
+            raise ValueError(f"Simulator changed requested step: {dt} -> {effective_dt}")
+        bounds = np.r_[0, np.cumsum(lengths)]
+        for i, pos in enumerate(positions):
+            edge = min(int(np.searchsorted(bounds, pos, side="right") - 1), 3)
+            sim.route.add(f"r{i}", [f"e{(edge + j) % 4}" for j in range(400)])
+            sim.vehicle.add(
+                f"v{i}",
+                f"r{i}",
+                typeID=f"idm{i}",
+                departPos=str(pos - bounds[edge]),
+                departSpeed=str(initial_speeds[i]),
+            )
+            sim.vehicle.moveTo(f"v{i}", f"e{edge}_0", float(pos - bounds[edge]))
+        for step in range(round(seconds / dt) + 1):
+            sim.simulationStep()
+            collisions += sim.simulation.getCollidingVehiclesNumber()
+            teleports += sim.simulation.getStartingTeleportNumber()
+            if sim.vehicle.getIDCount() != 24:
+                raise ValueError("Vehicle retention failed")
+            if step % stride == 0:
+                timestamps.append(sim.simulation.getTime())
+                speeds = np.array([sim.vehicle.getSpeed(f"v{i}") for i in range(24)])
+                coords = np.array(
+                    [
+                        bounds[int(sim.vehicle.getRoadID(f"v{i}")[1:])]
+                        + sim.vehicle.getLanePosition(f"v{i}")
+                        for i in range(24)
+                    ]
+                )
+                observed_gaps = (np.roll(coords, -1) - coords) % lengths.sum() - 5
+                for i in range(24):
+                    leader = sim.vehicle.getLeader(f"v{i}", 1000)
+                    leader_errors += int(leader is None or leader[0] != f"v{(i + 1) % 24}")
+                states.append(np.stack([observed_gaps, speeds]))
+        states = np.asarray(states)
+        clock_error = float(
+            abs(np.array(timestamps) - (timestamps[0] + 0.1 * np.arange(len(states)))).max()
+        )
+        if clock_error > 1e-9:
+            raise ValueError(f"Recording clock mismatch: {clock_error}")
+        if not np.isfinite(states).all() or collisions or teleports or leader_errors:
+            raise ValueError(f"Invalid response: {collisions=}, {teleports=}, {leader_errors=}")
+        return states, {
+            "collisions": collisions,
+            "teleports": teleports,
+            "leader_errors": leader_errors,
+            "max_gap_conservation_error": float(
+                abs(states[:, 0].sum(axis=1) - (lengths.sum() - 120)).max()
+            ),
+            "equilibrium_speed": speed,
+            "actual_ring_length": float(lengths.sum()),
+            "effective_dt": effective_dt,
+            "first_record_time": timestamps[0],
+            "last_record_time": timestamps[-1],
+            "recording_clock_error": clock_error,
+        }
+    finally:
+        sim.close()
+
+
+def summarize(out, records, pairs, controls, lengths):
+    results, operators = [], []
+    for info in records:
+        accel, dt, q = info["accel"], info["dt"], info["q"]
+        x = pairs[info["id"]]
+        speed, gaps = equilibrium(lengths.sum())
+        actual = mode_response(x[:, 0], x[:, 1], q)
+        operator = mode_operator(q, gaps[0], speed, accel, dt=dt)
+        predicted = predict_mode(actual[0], operator, len(actual), round(0.1 / dt))
+        continuous = mode_operator(q, gaps[0], speed, accel)
+        spatial = np.abs(np.fft.fft(x[:, 1], axis=1)) ** 2
+        selected = spatial[:, q] + (spatial[:, -q] if q < 12 else 0)
+        total = spatial[:, 1:].sum(axis=1)
+        valid = total > 1e-12
+        results.append(
+            {
+                **info,
+                "speed_error_20": relative_error(actual[:201, 1], predicted[:201, 1]),
+                "speed_error_40": relative_error(actual[:, 1], predicted[:, 1]),
+                "gap_error_20": relative_error(actual[:201, 0], predicted[:201, 0]),
+                "max_speed_mode_leakage": float(np.max(1 - selected[valid] / total[valid]))
+                if valid.any()
+                else None,
+                "continuous_growth": float(np.linalg.eigvals(continuous).real.max()),
+                "discrete_growth": float(np.log(abs(np.linalg.eigvals(operator))).max() / dt),
+            }
+        )
+    for accel in [0.3, 0.8, 1.5]:
+        for dt in [0.05, 0.025]:
+            for q in range(1, 13):
+                subset = [
+                    r
+                    for r in records
+                    if r["accel"] == accel
+                    and r["dt"] == dt
+                    and r["q"] == q
+                    and r["amplitude"] == 0.01
+                ]
+                histories = [
+                    mode_response(pairs[r["id"]][:, 0], pairs[r["id"]][:, 1], q)[:11]
+                    for r in subset
+                ]
+                a = np.vstack([x[:-1] for x in histories])
+                b = np.vstack([x[1:] for x in histories])
+                fitted = np.linalg.lstsq(a, b, rcond=None)[0].T
+                growth = np.log(abs(np.linalg.eigvals(fitted))).max() / 0.1
+                speed, gaps = equilibrium(lengths.sum())
+                reference = np.linalg.matrix_power(
+                    mode_operator(q, gaps[0], speed, accel, dt=dt), round(0.1 / dt)
+                )
+                eig = np.linalg.eigvals(fitted)
+                dominant = eig[np.argmax(abs(eig))]
+                operators.append(
+                    {
+                        "accel": accel,
+                        "dt": dt,
+                        "q": q,
+                        "condition": np.linalg.cond(a),
+                        "empirical_growth": growth,
+                        "empirical_frequency_hz": np.angle(dominant) / (2 * np.pi * 0.1),
+                        "operator_relative_error": relative_error(reference, fitted),
+                    }
+                )
+    frame = pd.DataFrame(results)
+    frame.to_csv(out / "responses.csv", index=False)
+    pd.DataFrame(operators).to_csv(out / "operators.csv", index=False)
+    save_json(out / "control_checks.json", controls)
+    figures(out, frame, pd.DataFrame(operators))
+    print(
+        frame.groupby(["amplitude", "dt"])[
+            ["speed_error_20", "speed_error_40", "max_speed_mode_leakage"]
+        ]
+        .agg(["median", "max"])
+        .to_string()
+    )
+
+
+def figures(out, frame, operators):
+    fig, axes = plt.subplots(1, 3, figsize=(12, 4), sharey=True, layout="constrained")
+    for ax, accel in zip(axes, [0.3, 0.8, 1.5]):
+        data = (
+            frame[(frame.accel == accel) & (frame["dt"] == 0.025) & (frame.amplitude == 0.01)]
+            .drop_duplicates("q")
+            .sort_values("q")
+        )
+        empirical = operators[(operators.accel == accel) & (operators["dt"] == 0.025)].sort_values(
+            "q"
+        )
+        ax.plot(data.q, data.continuous_growth, label="Continuous IDM", color="#777777", ls="--")
+        ax.plot(data.q, data.discrete_growth, label="Discrete update", color="#346d95")
+        ax.scatter(
+            empirical.q,
+            empirical.empirical_growth,
+            label="SUMO initial responses",
+            color="#a26b18",
+            s=20,
+        )
+        ax.axhline(0, color="#777777", lw=0.7)
+        ax.set(
+            xlabel="Ring wavenumber q",
+            ylabel="Dominant growth rate (1/s)",
+            title=f"a = {accel} m/s^2",
+        )
+    axes[0].legend(frameon=False, fontsize=8)
+    fig.savefig(out / "dispersion_growth.png", dpi=180)
+    plt.close(fig)
+    fig, ax = plt.subplots(figsize=(7, 4), layout="constrained")
+    for accel, color in zip([0.3, 0.8, 1.5], ["#346d95", "#a26b18", "#3b806c"]):
+        part = frame[(frame.accel == accel) & (frame["dt"] == 0.025) & (frame.amplitude == 0.01)]
+        ax.scatter(part.q, part.speed_error_20, label=f"a = {accel}", color=color, s=22)
+    ax.axhline(0.05, color="#777777", ls="--", label="Registered 5% agreement criterion")
+    ax.set(
+        xlabel="Ring wavenumber q", ylabel="Relative L2 speed-response error (0-20 s)", yscale="log"
+    )
+    ax.legend(frameon=False, fontsize=9)
+    fig.savefig(out / "response_errors.png", dpi=180)
+    plt.close(fig)
+
+
+def run(out, raw, smoke=False):
+    import libsumo
+
+    out.mkdir(parents=True, exist_ok=True)
+    if (out / "freeze.json").exists():
+        raise FileExistsError("Choose a fresh output directory")
+    save_json(
+        out / "freeze.json",
+        {
+            "sources": archive_sources(out, HERE),
+            "simulator": libsumo.getVersion(),
+            "q": list(range(1, 13)),
+            "primary_amplitude": 0.01,
+            "sensitivity_amplitude": 0.1,
+            "steps": [0.05, 0.025],
+            "seconds": 40,
+            "smoke": smoke,
+            "protocol": "mechanism-protocol.md",
+        },
+    )
+    network, lengths = circle_network(480, raw / "network")
+    records, pairs, manifest, controls = [], {}, {}, []
+    for accel in [0.8] if smoke else [0.3, 0.8, 1.5]:
+        for dt in [0.025] if smoke else [0.05, 0.025]:
+            control, meta = collect(network, lengths, accel, dt)
+            speed, gaps = equilibrium(lengths.sum())
+            controls.append(
+                {
+                    "accel": accel,
+                    "dt": dt,
+                    **meta,
+                    "max_speed_departure": float(abs(control[:, 1] - speed).max()),
+                    "max_gap_departure": float(abs(control[:, 0] - gaps).max()),
+                }
+            )
+            for q in [1] if smoke else range(1, 13):
+                for amplitude in [0.01, 0.1] if q in [1, 3, 6, 12] else [0.01]:
+                    for kind in ["gap", "speed"]:
+                        state, meta = collect(network, lengths, accel, dt, q, amplitude, kind)
+                        identity = f"a{accel}_dt{dt}_q{q}_eps{amplitude}_{kind}"
+                        path = raw / (identity + ".npz")
+                        np.savez_compressed(path, control=control, perturbed=state)
+                        manifest[identity] = {
+                            "path": str(path.relative_to(ROOT)),
+                            "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+                        }
+                        records.append(
+                            {
+                                "id": identity,
+                                "accel": accel,
+                                "dt": dt,
+                                "q": q,
+                                "amplitude": amplitude,
+                                "kind": kind,
+                                **meta,
+                            }
+                        )
+                        pairs[identity] = state - control
+            print(f"Completed {accel=}, {dt=}", flush=True)
+    save_json(out / "manifest.json", manifest)
+    pd.DataFrame(records).to_csv(out / "scenarios.csv", index=False)
+    if smoke:
+        save_json(out / "control_checks.json", controls)
+    else:
+        summarize(out, records, pairs, controls, lengths)
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--out", type=Path, default=HERE / "results/mechanism")
+    parser.add_argument("--raw", type=Path, default=RAW)
+    parser.add_argument("--smoke", action="store_true")
+    args = parser.parse_args()
+    run(args.out, args.raw.resolve(), args.smoke)

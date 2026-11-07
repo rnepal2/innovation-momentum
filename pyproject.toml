@@ -47,7 +47,7 @@ py-modules = [
 "" = "src"
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
+testpaths = ["tests", "traffic/tests"]
 
 [tool.ruff]
 line-length = 100

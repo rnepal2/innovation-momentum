@@ -27,3 +27,10 @@ uv run innovation-fetch-agentic-terms
 ```
 
 The published article is tracked at `reports/index.html`.
+
+## Research
+
+- [Traffic spectra](traffic/README.md): manuscript, experiments, and reproduction commands.
+- [Research-field follow-ups](research/README.md): OpenAlex/arXiv and method-adoption studies.
+
+The original OpenAlex code, data snapshot, and published article remain in `src/`, `data/`, and `reports/`.

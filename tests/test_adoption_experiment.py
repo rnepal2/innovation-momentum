@@ -17,7 +17,7 @@ import pandas as pd
 from scipy import sparse
 from sklearn.metrics import average_precision_score
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "research/2026-10/adoption"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "research/adoption"))
 import adoption_features
 from adoption_data import METHODS, ONTOLOGY, asserted_concepts, extract
 from adoption_features import author_network, breadth, outcome, propagation, row_transition

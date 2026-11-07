@@ -29,4 +29,8 @@ reports/*
 .DS_Store
 
 # Copyrighted source abstracts stay with the local research inputs.
-research/2026-10/adoption/results/development_review*.json
+research/adoption/results/development_review*.json
+
+# Local traffic inputs, repeat runs, and rendering checks.
+traffic/data/
+traffic/artifacts/

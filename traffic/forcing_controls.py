@@ -1,0 +1,245 @@
+"""Independent continuous IDM integration and an acceleration-input ambiguity control."""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+from analyze_uncertainty import NOISE, load_study
+from collect_uncertainty import PHASES
+from mechanism_core import acceleration, equilibrium, mode_operator
+from mode_consistency import real_operator
+from provenance import archive_sources
+from run_mechanism import save_json
+from scipy.integrate import solve_ivp
+from scipy.linalg import expm
+from uncertainty_core import JointGLS, joint_noise, mode_state
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parent
+TIMES = np.linspace(0, 40, 401)
+OMEGA = 2 * np.pi * 0.05
+
+
+def integrate(tau, excitation, phase, refined=False):
+    v, gaps = equilibrium(479.92, tau)
+    q = 3 if excitation in ["direct_speed", "forcing_q3"] else 1
+    amplitude = 0.02 if excitation == "direct_speed" else 0.2
+    force = 0.002 if excitation == "forcing_q3" else 0.02 if excitation == "forcing_q1" else 0.0
+    wave = np.cos(2 * np.pi * q * np.arange(24) / 24 + phase)
+    initial_speed = np.full(24, v) + (0 if force else amplitude * wave)
+
+    def rhs(t, y):
+        h, speed = y[:24], y[24:]
+        dv = acceleration(h, speed, np.roll(speed, -1), 0.3, tau) + force * wave * np.cos(OMEGA * t)
+        return np.r_[np.roll(speed, -1) - speed, dv]
+
+    solution = solve_ivp(
+        rhs,
+        (0, 40),
+        np.r_[gaps, initial_speed],
+        method="DOP853",
+        rtol=1e-10 if refined else 1e-8,
+        atol=1e-12 if refined else 1e-10,
+        max_step=0.05 if refined else 0.1,
+        dense_output=True,
+    )
+    if not solution.success:
+        raise ValueError(solution.message)
+    state = solution.sol(TIMES).T.reshape(401, 2, 24)
+    if not np.isfinite(state).all() or (state[:, 0] <= 0).any() or (state[:, 1] < 0).any():
+        raise ValueError("Nonphysical ODE response")
+    baseline = np.stack([gaps, np.full(24, v)])
+    return state - baseline, state, solution
+
+
+def particular(tau, phase):
+    v, gaps = equilibrium(479.92, tau)
+    b = mode_operator(3, gaps[0], v, 0.3, tau)
+    augmented = np.zeros((4, 4), dtype=complex)
+    augmented[:2, :2] = b
+    augmented[1, 2] = 0.002 / 2 * np.exp(1j * phase)
+    augmented[2:, 2:] = [[0, -OMEGA], [OMEGA, 0]]
+    return np.asarray([(expm(augmented * t) @ np.array([0, 0, 1, 0]))[:2] for t in TIMES])
+
+
+def ambiguity(out, raw):
+    v, gaps = equilibrium(479.92, 1.8)
+    growing = mode_operator(3, gaps[0], v, 0.3, 1.8)
+    decaying = mode_operator(3, gaps[0], v, 1.5, 1.8)
+    rates = [float(np.linalg.eigvals(b).real.max()) for b in [growing, decaying]]
+    assert rates[0] > 0 and rates[1] < 0
+    assert abs((growing - decaying)[0]).max() == 0
+    rows = []
+    for i, phase in enumerate(PHASES):
+        initial = np.array([0, 0.01 * np.exp(1j * phase)])
+
+        def truth(t, initial=initial):
+            return expm(growing * t) @ initial
+
+        def rhs(t, z):
+            return decaying @ z + (growing - decaying) @ truth(t)
+
+        solved = solve_ivp(
+            rhs,
+            (0, 40),
+            initial,
+            method="DOP853",
+            rtol=1e-11,
+            atol=1e-13,
+            t_eval=TIMES,
+            max_step=0.1,
+        )
+        assert solved.success
+        a = np.array([truth(t) for t in TIMES])
+        b = solved.y.T
+        force = np.array([(growing - decaying) @ z for z in a])
+        stable = np.array([expm(decaying * t) @ initial for t in TIMES])
+        error = float(np.linalg.norm(a - b) / np.linalg.norm(a))
+        assert error < 1e-8
+        path = raw / f"ambiguity_p{i}.npz"
+        np.savez_compressed(
+            path, growing=a, decaying_forced=b, decaying_unforced=stable, force=force, times=TIMES
+        )
+        rows.append(
+            {
+                "phase": float(phase),
+                "growing_rate": rates[0],
+                "decaying_rate": rates[1],
+                "relative_state_error": error,
+                "maximum_acceleration_input_mps2": float(2 * abs(force[:, 1]).max()),
+                "maximum_gap_input": float(abs(force[:, 0]).max()),
+                "path": str(path.relative_to(ROOT)),
+                "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+            }
+        )
+    pd.DataFrame(rows).to_csv(out / "ambiguity.csv", index=False)
+
+
+def run(out, raw, physical=None):
+    if (out.exists() and any(out.iterdir())) or (raw.exists() and any(raw.iterdir())):
+        raise FileExistsError("Choose fresh output and raw directories")
+    out.mkdir(parents=True, exist_ok=True)
+    raw.mkdir(parents=True, exist_ok=True)
+    meta, pairs, receipt = load_study("uncertainty_physical", physical)
+    save_json(
+        out / "freeze.json",
+        {
+            "sources": archive_sources(out, HERE),
+            "protocol": "uncertainty-protocol.md",
+            "physical_inputs": receipt,
+            "integrator": "DOP853",
+            "primary_tolerances": [1e-8, 1e-10, 0.1],
+            "refined_tolerances": [1e-10, 1e-12, 0.05],
+        },
+    )
+    rows, diagnostics, comparison, manifest = [], [], [], {}
+    for tau in [1.0, 1.8]:
+        v, gaps = equilibrium(479.92, tau)
+        scales = np.diag([1 / gaps[0], 1 / v, 1 / gaps[0], 1 / v])
+        op = (
+            scales
+            @ real_operator(expm(mode_operator(3, gaps[0], v, 0.3, tau) * 0.5))
+            @ np.linalg.inv(scales)
+        )
+        for excitation in ["direct_speed", "harmonic_02", "forcing_q3", "forcing_q1"]:
+            for phase_index, phase in enumerate(PHASES):
+                response, full, solution = integrate(tau, excitation, phase)
+                refined, _, _ = integrate(tau, excitation, phase, True)
+                identity = f"t{tau}_{excitation}_p{phase_index}"
+                path = raw / (identity + ".npz")
+                np.savez_compressed(path, response=response, refined=refined, times=TIMES)
+                manifest[identity] = {
+                    "path": str(path.relative_to(ROOT)),
+                    "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+                }
+                rows.append(
+                    {
+                        "id": identity,
+                        "tau": tau,
+                        "excitation": excitation,
+                        "phase": float(phase),
+                        "refinement_relative_speed_error": np.linalg.norm(
+                            response[:, 1] - refined[:, 1]
+                        )
+                        / np.linalg.norm(refined[:, 1]),
+                        "gap_conservation_error": float(
+                            abs(full[:, 0].sum(axis=1) - gaps.sum()).max()
+                        ),
+                        "minimum_gap": full[:, 0].min(),
+                        "minimum_speed": full[:, 1].min(),
+                        "rhs_evaluations": solution.nfev,
+                    }
+                )
+                if excitation in ["direct_speed", "harmonic_02"]:
+                    matched = meta[
+                        (meta.tau == tau)
+                        & (meta.excitation == excitation)
+                        & np.isclose(meta.phase, phase)
+                    ]
+                    for row in matched.to_dict("records"):
+                        ode = solution.sol(row["first_record_time"] + TIMES[:201]).T[:, 24:] - v
+                        actual = pairs[row["id"]][:201, 1]
+                        comparison.append(
+                            {
+                                "ode_id": identity,
+                                "sumo_id": row["id"],
+                                "tau": tau,
+                                "dt": row["dt"],
+                                "excitation": excitation,
+                                "phase": float(phase),
+                                "relative_speed_error_20": np.linalg.norm(ode - actual)
+                                / np.linalg.norm(actual),
+                                "alignment": "ODE sampled at actual SUMO timestamps; insertion/update differences retained",
+                            }
+                        )
+                history = mode_state(response)[::5][20:61] @ scales.T
+                forced = np.zeros_like(history)
+                if excitation == "forcing_q3":
+                    z = particular(tau, phase)[::5][20:61]
+                    forced = np.c_[z.real, z.imag] @ scales.T
+                for noise_index, (g, s) in enumerate(NOISE):
+                    cov = (
+                        scales
+                        @ np.diag([g * g / 48, s * s / 48, g * g / 48, s * s / 48])
+                        @ scales.T
+                    )
+                    gls = JointGLS(op, cov)
+                    noise = joint_noise(
+                        cov, np.eye(41), 100, 910000 + (len(rows) - 1) * 100 + noise_index
+                    )
+                    for method, adjustment in [("autonomous", 0), ("known_q3_input", forced)]:
+                        values = gls.score(history[None] - adjustment + noise)
+                        diagnostics.append(
+                            {
+                                "id": identity,
+                                "tau": tau,
+                                "excitation": excitation,
+                                "phase": float(phase),
+                                "noise_index": noise_index,
+                                "method": method,
+                                "cutoff": gls.cutoff,
+                                "mean_score": values.mean(),
+                                "rejection_fraction": np.mean(values > gls.cutoff),
+                            }
+                        )
+        print("Continuous controls", tau, flush=True)
+    pd.DataFrame(rows).to_csv(out / "responses.csv", index=False)
+    pd.DataFrame(diagnostics).to_csv(out / "diagnostics.csv", index=False)
+    pd.DataFrame(comparison).to_csv(out / "sumo_comparison.csv", index=False)
+    save_json(out / "manifest.json", manifest)
+    ambiguity(out, raw)
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--out", type=Path, default=HERE / "results/uncertainty/forcing")
+    parser.add_argument(
+        "--raw", type=Path, default=ROOT / "traffic/data/forcing_controls"
+    )
+    parser.add_argument("--physical", type=Path)
+    args = parser.parse_args()
+    run(args.out, args.raw.resolve(), args.physical)

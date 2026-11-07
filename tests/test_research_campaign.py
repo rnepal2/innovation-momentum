@@ -16,7 +16,7 @@ import numpy as np
 if any(importlib.util.find_spec(name) is None for name in ["matplotlib", "scipy", "sklearn"]):
     raise unittest.SkipTest("Research tests require uv sync --extra research")
 
-CAMPAIGN = Path(__file__).resolve().parents[1] / "research/2026-10/campaign"
+CAMPAIGN = Path(__file__).resolve().parents[1] / "research/campaign"
 sys.path.insert(0, str(CAMPAIGN))
 import common
 import fetch_corpus

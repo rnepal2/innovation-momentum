@@ -14,7 +14,9 @@ research = [
   "scikit-learn>=1.6",
   "matplotlib>=3.9",
   "networkx>=3.4",
-  "pypdf>=5.0"
+  "pypdf>=5.0",
+  "markdown-it-py>=3.0",
+  "latex2mathml>=3.77"
 ]
 
 [project.scripts]

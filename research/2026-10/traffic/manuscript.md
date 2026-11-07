@@ -1,388 +1,161 @@
-# Spectral concentration and nonlinear mode growth in traffic disturbances
-
-Working manuscript, 15 October 2026. Controlled simulations and retrospective measurement examples; empirical forecasting validity and publication priority remain open.
+# Spectral growth and stability in simulated traffic
 
 ## Abstract
 
-Spectral representations separate traffic disturbances by spatial scale. Their relation to instability requires controls for absolute amplitude, nonlinear response, and measurement baseline. We analyze paired Intelligent Driver Model simulations and finite-window graph-temporal spectra. Long-wavelength power share increased in all 54 primary grid responses, although absolute nonuniform power increased in 27 and decreased in 27. Coupled gap-speed dynamics predict small-amplitude responses, while fundamental-mode disturbances generate harmonics whose powers scale approximately as the fourth and sixth powers of initial amplitude. Third-harmonic power can grow while its equilibrium linear mode decays. Whole-window autonomous-model checks detect some harmonic excitation under specified low noise. Operator error and uncertain references can inflate rejection. With the correct IDM form and exact equilibrium, a restricted fit keeps direct-control rejection near the nominal level. Reference fitting reduces false rejections and weak-signal sensitivity. An acceleration-only input also makes a decaying linearized system reproduce a growing autonomous trajectory, establishing an unknown-input ambiguity. Six official NGSIM blocks provide 1,345,624 observations for retrospective measurement checks. Temporal baseline, binning, and trace exclusions alter measured powers and modal shares. These findings distinguish spectral concentration, observed power growth, and equilibrium modal stability. Graph-specific forecasting benefit, real-road instability identification, and publication novelty remain unestablished.
+We examine whether the spatial spectrum of a traffic disturbance identifies its amplification or equilibrium stability. In paired Intelligent Driver Model simulations, long-wavelength power share increases in all 54 primary pulse responses, including 27 whose total nonuniform power decreases. Fundamental-mode initial conditions generate higher harmonics. Third-harmonic power grows in two settings where the corresponding equilibrium linear mode decays; amplitude scaling and a matched-state linear control support nonlinear harmonic excitation. A whole-window dynamical check distinguishes some of these responses under specified low noise. Its rejection rate depends strongly on operator estimation and reference treatment. A constructed acceleration input also makes a decaying linear modal subsystem reproduce a growing autonomous trajectory. Six NGSIM recording blocks illustrate baseline and coverage sensitivity, without empirical instability labels. The results provide controlled examples of ambiguity in spectral-growth interpretation. They establish no graph-specific forecasting advantage or operational warning method.
 
-## 1. Introduction
+## 1. Research question
 
-A localized traffic slowdown excites disturbances across several spatial scales. A spectral representation can follow how those scales evolve even when individual vehicle traces contain overlapping responses. The useful question is whether a spectral change identifies a physical property that survives controls for disturbance size, temporal evolution, and the chosen spatial representation.
+A spectral representation separates a spatial disturbance into wavelengths. We ask what an increase in one of those components identifies about the underlying dynamics. The distinction matters when a large or growing spectral coefficient is used as evidence of emerging congestion.
 
-Traffic oscillations already have an extensive spectral literature. Zhao, Nie, and Zhang [1] use spectral envelopes and cross-spectral information to characterize oscillation frequencies and their spatial contributions. Avila and Mezic [2] identify growing and decaying traffic modes with data-driven dynamical analysis. Takada, Azuma, and Banno [3] study congestion warnings based directly on graph Fourier coefficients. Joint graph-temporal spectral analysis also has an established mathematical formulation [4]. These precedents motivate a controlled study of what spectral measurements can identify under a specified disturbance experiment. A transform followed by spectral integration supplies no independent claim of methodological novelty.
+Traffic spectral envelopes, dynamical-mode analysis, and non-neural GFT congestion indicators already have published precedents [1-4]. Our experiments examine interpretation under controlled initial conditions, forcing, and observation errors. The study introduces no new spectral transform or estimator.
 
-We examine three questions. Does increasing long-wavelength concentration distinguish an amplifying disturbance from an attenuating one? Which modes carry absolute growth or decay? How does the response change when pulse strength varies at fixed traffic parameters? Forecast accuracy is a secondary consideration. A useful result can describe a physical response or identify a limitation of a proposed spectral indicator.
-
-The core thesis is that wavelength selection, observed amplitude evolution, and equilibrium modal stability require separate measurements. We test those distinctions in paired simulations with a known intervention and an observable unperturbed control. The regular vehicle cycle provides a representation control: its graph Fourier eigenspaces coincide with ordinary Fourier subspaces. Subsequent initial-condition experiments identify the linear response and test nonlinear harmonic generation. Retrospective trajectory fields examine how baseline and coverage choices affect the measured spectrum.
+The forecasting experiments have not established improvement over the strongest tested baseline. In an earlier comparison on 32 additional SUMO parameter settings, a phase-aware Fourier AR(2) model has mean squared error 0.0321 for a future log-amplitude ratio; recent amplitude trend gives 0.0149. The regular vehicle cycle also has the same complete spectral subspaces as the ordinary discrete Fourier transform. These experiments supply no GFT-specific predictive gain. The present study therefore concentrates on physical interpretation and measurement limits.
 
 ## 2. Methods
 
-### 2.1 Paired traffic simulations
+### 2.1 Paired responses and spectral power
 
-We use SUMO/libsumo 1.28.0 with its implementation of the Intelligent Driver Model (IDM), whose original formulation is described by Treiber, Hennecke, and Helbing [5]. Each simulation contains 24 identical vehicles on a single-lane ring. Vehicle length is 5 m, minimum gap is 2 m, desired speed is 30 m/s, comfortable deceleration is 2 m/s^2, and emergency deceleration is 9 m/s^2. Within a parameter setting, vehicle parameters are shared. Initial positions have a seeded common cyclic offset and independent perturbations of at most 0.02 m. The seeds therefore represent small placement differences; they do not sample driver heterogeneity or independent roads.
-
-After a 60 s warmup, vehicle 0 receives a one-second slowdown command. External speed control is then released. Each intervention is paired with a control simulation having identical initialization and parameters. We record same-ID speeds at one-second intervals and define
+We use SUMO/libsumo 1.28.0 with its Intelligent Driver Model (IDM) implementation [5,7]. Each ring contains 24 vehicles. Desired speed is 30 m/s, vehicle length 5 m, minimum gap 2 m, and comfortable deceleration 2 m/s^2. Acceleration and desired headway vary by experiment. A pulse run is paired with an otherwise identical unperturbed control, giving the speed response
 
 \[
 x_i(t)=v_i^{\mathrm{pulse}}(t)-v_i^{\mathrm{control}}(t).
 \]
 
-The paired difference isolates the consequence of the imposed intervention within the simulator. Such a counterfactual is available directly in simulation. Observational traffic measurements require a separate baseline definition.
+This exact counterfactual is available in the simulator. Empirical measurements require a separately estimated reference.
 
-The existing grid contains nominal ring lengths of 480 and 720 m, desired headways of 0.6, 1.0, and 1.8 s, and acceleration parameters of 0.3, 0.8, and 1.5 m/s^2. Three placement seeds and two integration steps, 0.2 and 0.1 s, produce 108 paired responses. Primary descriptive comparisons use the 54 responses at 0.1 s. Netconvert reports an actual length of 479.92 m for the nominal 480 m ring. Exact generated lengths are retained in the scenario tables.
-
-A separate follow-up contains 32 previously generated continuous parameter settings, each at integration steps of 0.1 and 0.05 s. We analyze all 64 responses and use the 32 finer-step responses for primary summaries. These settings were created for an earlier forecasting comparison. Their aggregate outcomes were known before the present descriptive protocol was recorded.
-
-### 2.2 Spatial mean and grouped mode power
-
-The graph connects neighboring vehicle indices on an undirected, equally weighted cycle. Its combinatorial Laplacian is a spatial analysis operator; it does not encode the directed car-following evolution law. At each time, we separate the uniform response,
+After subtracting the spatial mean, we project onto complete eigenspaces of the equally weighted undirected cycle. For wavenumber q,
 
 \[
-m(t)=\frac{1}{N}\sum_i x_i(t),\qquad
-r_i(t)=x_i(t)-m(t),\qquad N=24.
+E_q(t)=\frac{\|P_q[x(t)-\overline{x}(t)]\|^2}{24},\qquad
+V(t)=\sum_{q=1}^{12}E_q(t),\qquad
+S_{\mathrm{long}}(t)=\frac{E_1(t)+E_2(t)}{V(t)}.
 \]
 
-For ring wavenumber \(q\), let \(P_q\) project onto the complete Laplacian eigenspace. Define
+Power has units (m/s)^2 and describes a quadratic speed deviation. The Laplacian specifies spatial scale; it does not specify the directed car-following law. Grouping complete eigenspaces avoids dependence on arbitrary eigenvector orientations.
+
+The primary pulse grid crosses nominal ring lengths 480/720 m, headways 0.6/1/1.8 s, and accelerations 0.3/0.8/1.5 m/s^2, with three small placement perturbations per setting. The primary integration step is 0.1 s. Earlier and later windows are 4-35 s and 52-83 s after a one-second slowdown command. Hann-weighted modal power is obtained by integrating one-sided temporal periodograms [6]. Integration equals the corresponding taper-weighted time-domain mean square; it adds a frequency allocation without adding independent total-power information. These transient spectra have no assumed stationary-process interpretation.
+
+The 32 additional parameter settings use their finer 0.05 s step. Numerical-step replicas and placement perturbations are dependent observations. Full configurations, pulse-strength sensitivities, and reporting floors are in the [supplement](supplement.md).
+
+### 2.2 Equilibrium dynamics and harmonic controls
+
+For homogeneous equilibrium, let s be gap, v speed, and let vehicle i+1 lead vehicle i. With IDM acceleration derivatives F_s, F_v, and F_l, the gap-speed evolution of spatial mode q is
 
 \[
-E_q(t)=\frac{\|P_q r(t)\|^2}{N},\qquad
-V(t)=\sum_{q=1}^{12} E_q(t),\qquad
-s_q(t)=\frac{E_q(t)}{V(t)}.
+B_q=\begin{pmatrix}0&e^{ik}-1\\F_s&F_v+F_l e^{ik}\end{pmatrix},\qquad k=2\pi q/24.
 \]
 
-The exact decomposition is
+Both temporal branches contribute to the speed response. We derive the corresponding discrete SUMO update and check it against a full physical-coordinate Jacobian and finite differences. Seventy-two primary small-amplitude cases excite individual wavelengths through gap or speed perturbations. Predictions start at the first recorded state and retain the complete two-state dynamics.
 
-\[
-\frac{1}{N}\sum_i x_i(t)^2=m(t)^2+V(t).
-\]
+The harmonic study fixes nominal ring length 480 m and headway 1 s. Initial speed perturbations contain q=1 only, with amplitudes 0.05/0.1/0.2/0.4 m/s. Acceleration is 0.3/0.8/1.5 m/s^2. Steps 0.025/0.01 s give 24 responses, recorded every 0.1 s through 40 s. We measure q=1,2,3 power in half-open 10-20 s and 20-30 s windows. Descriptive log-power slopes test amplitude orders two, four, and six. A matched autonomous q=3 prediction starts with the actual first recorded q=3 gap and speed. It tests whether initial harmonic seeding followed by linear evolution explains the later response.
 
-Here, power denotes a quadratic speed-response measure in (m/s)^2. It is distinct from physical kinetic energy. The mean response remains separate throughout the spatial analysis. Shares are undefined when nonuniform power is at or below the numerical reporting floor of 10^-12 (m/s)^2.
+### 2.3 Observation and model checks
 
-Wavenumbers 1-11 each have two real dimensions; wavenumber 12 has one. Grouping complete eigenspaces makes power invariant to the arbitrary eigenvector orientation within repeated eigenvalues. On this cycle, grouped GFT power equals grouped ordinary spatial FFT power. The wavelength associated with q is 24/q vehicles. Changing intervehicle distances prevent a fixed conversion into a road-distance wavelength during the response.
+For q=3, a whole-window check fits an unknown initial four-dimensional real gap-speed state to 41 observations over 10-30 s at 0.5 s spacing. Given transition M and observation covariance, generalized least squares projects onto the trajectory design I,M,...,M^40. With the exact linear Gaussian model, the residual sum of squares has 160 degrees of freedom. A 95th-percentile cutoff tests that specified model. Rejection can arise through forcing, nonlinear response, or model and observation errors.
 
-We fix three bands before spectral inspection: long, q=1-2; intermediate, q=3-6; and short, q=7-12. Their wavelengths are respectively 12-24, 4-8, and approximately 2-3.43 vehicles. A uniformly oriented nonuniform signal has expected band fractions of 4/23, 8/23, and 11/23 by subspace dimension. These fractions supply a geometric reference, without a statistical significance test.
+Direct q=3 controls start at gap amplitude 0.02 m or speed amplitude 0.02 m/s. Fundamental-only speed amplitudes are 0.2 or 0.4 m/s. Noise is added to paired responses with gap/speed SDs (0.01 m,0.001 m/s), (0.05 m,0.005 m/s), or (0.2 m,0.02 m/s). These scenarios are uncalibrated to real sensors. An adaptive follow-up evaluates the restricted fit at 11 specified speed-noise SDs between 0.001 and 0.02 m/s, with gap-noise SDs in meters ten times those numbers. The operator and calibration cutoff are estimated anew at each level. Training uses direct q=3 responses over 0-10 s; a separate phase cohort supplies direct-response calibration; further cohorts supply evaluation. Operator fits include total least squares (TLS), known-noise corrected moments [9,10], and a restricted IDM fit. The restricted fit uses exact equilibrium and the correct IDM form to infer headway, then estimates acceleration by whole-history variable projection.
 
-### 2.3 Finite-window temporal density and integration
+This comparison changes prior information, parameter count, and fitting objective together. It does not isolate a causal benefit of physics constraints over an otherwise matched estimator. Phase increments within each homogeneous-ring cohort are vehicle-index translations for the tested modes. They supply symmetry-related trajectories. Twenty training-noise realizations and 100 evaluation-noise draws per trajectory measure conditional noise sensitivity, without creating independent traffic environments.
 
-We compute a one-sided Hann periodogram for each real GFT coordinate, using density scaling [6], then sum coordinates within each eigenspace and divide by N. The primary analysis uses no temporal detrending after spatial demeaning. It therefore retains temporally slow and constant modal contributions. These are finite-window spectra of a transient paired response. We make no joint-stationarity assumption or stationary covariance interpretation [4].
+Reference sensitivities add time-shared errors estimated from K=1 or 5 independent reference measurements, optionally with linear drift, and temporal AR(1) errors. We compare an iid/exact-reference analysis, correct joint covariance, and fitting constant/linear reference terms. The latter retains 152 residual degrees of freedom. The [supplement](supplement.md) reports observation masks, abstentions, and additional operator comparisons.
 
-For a window starting at a, with taper w and frequency spacing \(\Delta f\), the integrated modal power satisfies
+### 2.4 Trajectory measurements
 
-\[
-\overline E_q(a)
-=\Delta f\sum_j S_q(f_j;a)
-=\frac{\sum_{t=a}^{a+31}w(t-a)^2 E_q(t)}{\sum_{u=0}^{31}w(u)^2}.
-\]
+The NGSIM analysis uses three nonoverlapping 180 s blocks at each of US-101 and I-80, beginning 60/240/420 s after the location's earliest dataset timestamp [8]. Cohorts contain 1,345,624 trajectory rows before spatial selection. API counts and hashes verify acquisition. They cover two recording contexts and supply no independent-day replication.
 
-The graph spectrum is discrete. We sum spatial mode masses and integrate temporal frequency bins with their spacing. Summing all nonuniform modes recovers the corresponding taper-weighted time-domain mean-square fluctuation. The additional description is its allocation across spatial scales and temporal frequencies.
-
-Primary early and late windows are 4-35 s and 52-83 s after pulse initiation. For powers above the reporting floor in both windows, define the finite-window amplitude growth statistic
-
-\[
-g_q=\frac{1}{2(48\ \mathrm{s})}
-\log\left[\frac{\overline E_q(52)}{\overline E_q(4)}\right].
-\]
-
-This statistic describes the observed paired response. An intrinsic modal damping rate or an evolution eigenvalue requires further model identification. The 32 s windows give a frequency-bin spacing of 0.03125 Hz; they cannot resolve fine spectral linewidths. Sensitivities use 24- and 40-sample windows centered at the same times and constant temporal detrending. The latter changes the measured quantity to temporally centered fluctuation power.
-
-### 2.4 Pulse-strength experiments
-
-We fix nominal length at 480 m and headway at 1 s, with acceleration parameters 0.3, 0.8, and 1.5 m/s^2. The first sweep requests drops of 0.5, 1, and 2 m/s. It uses three placement seeds and integration steps of 0.1 and 0.05 s. The paired same-vehicle drop at the pulse endpoint defines realized strength D. Responses are observed through 240 s, and power is normalized by D^2.
-
-After inspecting departures from quadratic scaling, we recorded a small-pulse follow-up with requested drops of 0.05, 0.1, and 0.2 m/s and integration steps of 0.05 and 0.025 s. Other parameters and measurements remain fixed. Each sweep uses 18 controls shared across 54 interventions, or 72 simulator runs. Together they supply 108 paired responses. Four additional runs verify that the extended recording code preserves a previously saved default control/intervention pair exactly.
-
-For each acceleration, seed, integration step, and window, we fit a descriptive three-point relation between log integrated nonuniform power and log realized drop. Its slope is the power exponent. Linear response with an amplitude-scaled intervention would give exponent 2 and overlapping D^2-normalized power curves. We report seed means and ranges, without population confidence intervals. A final window, 208-239 s, measures later evolution. This sequential design is exploratory; it has no external preregistration.
-
-### 2.5 Coupled mode dynamics and initial-condition experiments
-
-Let \(s_i\) be the bumper-to-bumper gap and let vehicle \(i+1\) lead vehicle \(i\). At equilibrium, all vehicles have common speed \(v^*\), and individual gaps satisfy
-
-\[
-s_i^*=\frac{2+\tau_i v^*}{\sqrt{1-(v^*/30)^4}},\qquad
-\sum_i(s_i^*+5)=C.
-\]
-
-For homogeneous vehicles, write the derivatives of IDM acceleration with respect to gap, own speed, and leader speed as \(F_s\), \(F_v\), and \(F_l\). For \(k=2\pi q/N\), the continuous gap-speed mode block is
-
-\[
-B_q=\begin{pmatrix}0&e^{ik}-1\\F_s&F_v+F_l e^{ik}\end{pmatrix}.
-\]
-
-Its eigenvalues describe equilibrium linear evolution. The two gap-speed branches can both contribute to a measured speed mode. We also derive the semi-implicit discrete block corresponding to one IDM iteration and SUMO's position update. The pinned source [7] uses one IDM iteration at the integration steps tested here. Analytic derivatives are checked against centered finite differences; block dynamics are checked against a full physical-coordinate Jacobian.
-
-Single-mode initial conditions perturb either gaps or speeds at q=1,...,12, with primary amplitude 0.01 m or m/s. The amplitude-0.1 sensitivity uses q=1,3,6,12. Three acceleration parameters and steps 0.05/0.025 s give 192 interventions and six controls. No external slowdown command is applied. We record gaps and speeds every 0.1 s through 40 s. Prediction starts at the first post-insertion observed state, with complete two-state dynamics. The registered primary agreement criterion is less than 5% relative full-field speed-response error over the first 20 s in the 72 finer-step, amplitude-0.01 cases. This is a conditional response check under known model parameters.
-
-After that check, four headway patterns test heterogeneity: common headway, alternating 0.7/1.3 s, two contiguous 12-vehicle blocks at those headways, and one fixed centered random pattern bounded by the same limits. Mean headway remains 1 s. Individual equilibrium gaps adjust while common equilibrium speed remains fixed. Six zero-mean broadband speed disturbances per pattern, each RMS 0.01 m/s, and two steps give 48 interventions and eight controls.
-
-We compare the full known linear operator with band-diagonal approximations in uniform-cycle GFT, a symmetric weighted-cycle GFT, and a fixed random orthonormal basis. Edge weights are proportional to sqrt(F_s,i F_s,i+1). Spatial band dimensions are fixed at 1,4,8,11 across bases. Both gap and speed coordinates remain within each band; the uniform-gap coordinate is excluded because total ring length is fixed. Cross-band coupling is measured through the off-band squared Frobenius norm after nondimensionalizing gaps by mean equilibrium gap and speeds by equilibrium speed. Twenty fixed random bases supply a descriptive reference. Coupling magnitude depends on this normalization and need not order finite-horizon response errors.
-
-A further 24 initial-condition interventions test harmonics. We impose q=1 speed amplitudes 0.05,0.1,0.2,0.4 m/s at three acceleration settings and steps 0.025/0.01 s. Powers at q=1,2,3 are averaged over the half-open windows 10-20 s and 20-30 s after the first recorded sample. Descriptive log-power slopes test amplitude orders two, four, and six. A 10^-14 (m/s)^2 reporting floor determines eligibility. These experiments contain six additional controls. Simulator-clock checks verify the effective integration step and every 0.1 s recording interval.
-
-### 2.6 Retrospective trajectory collection
-
-We obtain two fixed 180 s blocks from the official NGSIM trajectory API [8], at locations US-101 and I-80. Each block starts 60 s after that location's earliest timestamp. Selection uses metadata and coverage before inspecting its speeds. Separate server-side counts verify complete query retrieval. The combined acquisition, including metadata, is 41.48 MB. Inputs retain query URLs, timestamps, checksums, and the metadata-reported license identifier CC_30_BY_SA. Raw observations remain unchanged.
-
-Mean observed speeds are binned across all lanes at 5 s by 50 m, with 25 and 100 m spatial sensitivities. We select the longest contiguous strip observed in all 36 time bins, requiring at least eight spatial bins. Selection uses occupancy counts and no interpolation. An open-path Laplacian avoids imposing periodic road boundaries; its GFT power is checked against ordinary cosine-transform power. We spatially demean each field and compare periodograms with and without constant temporal detrending on identical spatial support. These are descriptive fields of processed video trajectories. Their bins have no flow or density interpretation, and their processing availability has not been established for causal forecasting.
-
-A subsequent resolution study fixes supports at [0,650) m for US-101 and [0,325) m for I-80. It compares 1,2,5,10 s temporal bins and 25/50 m spatial bins wherever the support divides exactly. Every cell must contain observations, and at least eight spatial bins are required. Support is held fixed after the initial study; missing cells receive no interpolation. A secondary quality sensitivity excludes an entire selected vehicle trace if any within-trace position/speed discrepancy exceeds 5 m/s. This rule follows the inspected acquisition audit and precedes filtered spectra. Unfiltered fields remain primary. Exclusion changes the observed vehicle population and has no established ground-truth cleaning interpretation.
-
-After these outcomes, a recorded expansion acquires two additional nonoverlapping 180 s blocks per location, starting 240 and 420 s after the location's earliest timestamp. The first block starts at 60 s. The expansion keeps the spatial supports, 5 s/25 m bins, trace rule, and complete-cell requirement fixed. Exact server counts, bounded acquisition, and source hashes are retained. These six blocks span the same recording contexts; they supply no independent-day replication.
-
-### 2.7 Autonomous consistency under observation limits
-
-Two further studies test whether a q=3 response follows known autonomous gap-speed dynamics. Both use acceleration 0.3 m/s^2, headways 1.0/1.8 s, and steps 0.025/0.01 s. Direct q=3 gap or speed disturbances have amplitude 0.02 m or m/s; a q=1 speed disturbance of 0.2 m/s supplies harmonic excitation. A q=11 speed disturbance of 0.2 m/s tests spatial aliasing at headway 1 s. The equilibrium q=3 mode decays at headway 1 s and grows at headway 1.8 s. Each study contains 56 interventions and four controls. Initial phases are 0,pi/4,pi/2,3pi/4 in the first study and pi/8,3pi/8,5pi/8,7pi/8 in the adaptive follow-up.
-
-Observation masks retain all 24 vehicles, every second vehicle, every third vehicle, or 12 fixed irregular vehicles. Each sampled vehicle supplies own speed and leader gap, with an exact paired reference. We compare a constant-plus-q=3 reconstruction with a declared dictionary containing the constant and sine/cosine pairs q=1,2,3,11. Target identifiability is checked independently of nuisance-mode rank. Identifiability in this dictionary assumes its spatial support; unmodeled harmonics can still alias. Rank-deficient inversions and nullspace calculations share a fixed relative singular-value cutoff of 10^-10. Nonidentifiable q=3 coefficients receive an abstention.
-
-Independent Gaussian response-level errors have gap/speed standard deviations (0,0), (0.01,0.001), (0.05,0.005), or (0.2,0.02), in m and m/s. These are specified synthetic scenarios without empirical sensor calibration. Spatial least squares propagates their covariance to the four real gap-speed coordinates. Gaps and speeds are nondimensionalized by their equilibrium values.
-
-The first diagnostic compares adjacent states at 0.5 s spacing over 10-30 s with the known transition M. For state covariance Sigma, its residual covariance is Sigma + M Sigma M^T. A 95th-percentile threshold is calibrated with 2,000 pure measurement-noise histories, preserving dependence between adjacent residuals. After inspecting its limited noisy sensitivity, the follow-up fits an entire autonomous trajectory. Its design has block rows I,M,...,M^40; covariance-weighted least squares estimates the unknown initial four-state vector. Under the exact linear Gaussian null, the whitened residual sum of squares has 160 degrees of freedom. We calibrate its threshold with 2,000 histories and independently check the chi-square reference.
-
-The follow-up's phases and noise seeds are fixed before its collection. Evaluation uses 100 noise histories per physical response, disjoint from calibration. These repetitions measure conditional detection frequency, without sampling new traffic environments. Noiseless diagnostics use a fixed 1% relative residual criterion and the numerical power floor. Both studies are retrospective known-operator consistency checks. They estimate no warning lead time and identify no unknown traffic operator. Protocols and subsequent numerical corrections are recorded in the development notes.
-
-### 2.8 Operator and reference uncertainty
-
-A further 64 paired responses use phases pi/16 plus 0,pi/4,pi/2,3pi/4, the same two headways and integration steps, direct q=3 gap/speed disturbances, and q=1 speed amplitudes 0.2/0.4 m/s. Four controls supply the references. Parameter sensitivity changes assumed acceleration or headway by -20,-5,-1,0,+1,+5,+20 percent, one at a time, while evaluating derivatives at the measured equilibrium. The three previously specified nonzero noise levels remain fixed.
-
-Operator estimation uses only the first observation study's direct responses at 0-10 s. Separate direct responses in the second study at 10-30 s calibrate a pooled empirical cutoff. The new phases supply evaluation. We fit complex two-state transitions by ordinary least squares, noise-whitened total least squares, and known-noise corrected moments. These are established noise-aware system-identification comparisons [9,10]. Each configuration has 20 independent training-noise realizations, 40 noise draws per calibration response, and 100 per evaluation response. Non-positive corrected Gram matrices and numerically unidentified history designs receive abstentions. The pooled cutoff describes the specified gap/speed control mixture and provides no conditional-calibration guarantee.
-
-After inspecting those outcomes, an adaptive study adds 32 paired responses and two controls at phases 3pi/32 plus the same four phase increments, using the 0.01 s step. A restricted IDM fit infers headway from the exact equilibrium identity and estimates acceleration within [0.1,2] m/s^2. Covariance-weighted variable projection fits the unknown initial state of each training history. Training and calibration cohorts stay fixed; new noise streams and physical phases supply evaluation. The restriction assumes the correct IDM form, its other parameters, and exact equilibrium information. It is a separate information condition from unrestricted operator learning.
-
-Reference/noise sensitivities use temporal AR(1) correlations 0,0.5,0.9. A reference estimated from K independent measurements introduces a time-shared four-state error with covariance Sigma/K; K is 1 or 5. A further scenario adds a linear reference error whose time coordinate spans [-1,1]. Joint covariance is the temporal covariance tensor the state covariance. We compare an iid/exact-reference analysis, generalized least squares with the correct joint covariance, and fitting four-state constant/linear nuisance terms with the correct AR covariance. Verified residual dimensions are 160 or 152. Exact autonomous linear histories with 5,000 noise draws per scenario check false-rejection calibration independently of nonlinear SUMO controls. Noise properties remain specified, without real-sensor estimation.
-
-### 2.9 Continuous integration and forcing controls
-
-An independent SciPy DOP853 integration of the full 48-state continuous IDM equations supplies 32 responses at the new phases and both headways. Initial conditions are direct q=3 speed amplitude 0.02 m/s or q=1 speed amplitude 0.2 m/s. Two additional conditions start at equilibrium under spatial q=3 or q=1 acceleration inputs, of amplitude 0.002 or 0.02 m/s^2, multiplied by cos(2 pi 0.05 t). Primary tolerances are 10^-8/10^-10 with maximum step 0.1 s; refinement uses 10^-10/10^-12 and 0.05 s. SUMO comparisons sample the continuous solution at actual simulator timestamps over the first 20 s, retaining insertion/update differences. A known-input linear companion subtracts the exact q=3 forced response before the autonomous check.
-
-A separate constructive control uses q=3 linearizations at headway 1.8 s and acceleration 0.3 or 1.5 m/s^2. They share the equilibrium and gap-kinematics row. For a trajectory z of the growing model, the prescribed input u(t)=(B_growing-B_decaying)z(t) acts only in acceleration. Independent integration of the decaying system under that input tests equality of the complete modal trajectories. This construction concerns linearized systems with unknown external input; it supplies no equivalence claim for unrestricted nonlinear traffic.
+We average observed speeds across all lanes in 5 s/25 m cells on fixed supports of 650 m at US-101 and 325 m at I-80. Every cell must contain data. An open-path transform, equivalent to a cosine transform, analyzes the spatially demeaned field. Comparisons retain or remove each spatial coefficient's temporal mean on identical support. A secondary exclusion removes an entire selected trace if any position/speed discrepancy exceeds 5 m/s. That rule changes the population; it is not a certified correction of trajectory errors. Raw observations remain unchanged.
 
 ## 3. Results
 
-### 3.1 Long-wavelength concentration occurs during both growth and decay
+### 3.1 Concentration does not determine absolute growth
 
-Across the 54 primary grid responses, long-band share increased in every response. Late-window shares ranged between 0.9217 and nearly 1. Total nonuniform power increased in 27 responses and decreased in 27. The 32 finer-step follow-up settings showed the same concentration trend: every long-band share increased, while total power increased in 19 and decreased in 13. Their late long-band shares were 0.9376 or higher.
+Long-wavelength share increases in all 54 primary grid responses. Total nonuniform power increases in 27 and decreases in 27. The same distinction occurs in the 32 additional finer-step settings: all shares increase, with 19 growing and 13 decaying responses. A rule that flags any increase in long-wavelength share therefore does not separate those outcomes.
 
-Two prespecified illustrations show the distinction. Both use nominal length 480 m, headway 1 s, seed 31, and integration step 0.1 s. At acceleration 0.3 m/s^2, integrated nonuniform power rises by a factor of about 11.5. At acceleration 1.5 m/s^2, it falls to about 60% of its early value. Both responses become strongly concentrated at long wavelengths.
+For example, at nominal length 480 m, headway 1 s, and placement seed 31, acceleration 0.3 m/s^2 gives an early-to-late power ratio of about 11.5, while acceleration 1.5 gives about 0.60. Their long-wavelength shares rise from 92.96% to 98.50% and from 98.93% to nearly 100%, respectively. Preferential attenuation of shorter modes can leave a concentrated spectrum while absolute power falls.
 
-| Acceleration (m/s^2) | Early power ((m/s)^2) | Late power ((m/s)^2) | Early long share | Late long share |
-| --- | ---: | ---: | ---: | ---: |
-| 0.3 | 0.2598 | 2.9756 | 0.9296 | 0.9850 |
-| 1.5 | 0.03499 | 0.02108 | 0.9893 | 0.999999 |
+### 3.2 A decaying equilibrium mode carries growing harmonic power
 
-![Absolute and fractional mode power](results/spectral/mode_evolution.png)
+The coupled linear model passes the specified 5% full-field speed-error criterion in all 72 primary small-amplitude cases. Median relative error over 20 s is 0.090%, and maximum error is 1.62%. This supports using the equilibrium mode blocks as a local reference for the subsequent harmonic experiment.
 
-Figure 1. Instantaneous grouped power for the two prespecified responses. Absolute-power panels share a logarithmic scale; fractional panels share a linear scale. Uniform response is excluded. A dominant fractional mode can accompany decreasing absolute power.
+Fundamental-only initial disturbances produce higher spatial harmonics (Figure 1). At the finer step, early-window power exponents span 1.996-1.999 for q=1, 3.991-3.999 for q=2, and 5.986-5.998 for q=3 across acceleration settings. These are finite-range response slopes, with four amplitudes per early-window fit.
 
-![Cumulative spatial power](results/spectral/cumulative_power.png)
+At acceleration 0.3 m/s^2, q=3 has equilibrium growth rate -0.02875 s^-1. Its measured finite-window harmonic amplitude-growth statistic is +0.1132 to +0.1150 s^-1. At acceleration 0.8, the corresponding values are -0.08281 s^-1 and +0.0471 to +0.0479 s^-1. Both discrete equilibrium modes also decay. Matched-state autonomous q=3 predictions account for less than 1.1 x 10^-9 of late measured power in these settings.
 
-Figure 2. Cumulative integrated power versus maximum included wavenumber, with the dimension-weighted isotropic reference. The cumulative curves expose wavelength selection in both responses. Early and late powers use the fixed Hann windows.
+Initial harmonic seeding plus a linear transient consequently fails to explain the result. The controlled initial condition and amplitude scaling support nonlinear spatial harmonic excitation. They do not identify a unique coupling path, a conserved-energy transfer, or the mechanism of the original localized-pulse response.
 
-### 3.2 Modal growth adds the distinction that normalized concentration omits
+![Spatial response, modal growth, and harmonic amplitude scaling](figures/harmonic_mechanism.png)
 
-In the illustrated 0.3 m/s^2 response, q=1 has finite-window amplitude growth of +0.0299 s^-1, whereas q=12 has -0.0671 s^-1. The 1.5 m/s^2 response has negative reportable modal growth: q=1 gives -0.00299 s^-1, while q=2 gives -0.0522 s^-1. Higher-wavenumber power attenuates more quickly in that response, leaving a large relative contribution at q=1. Several late high-wavenumber powers fall below the reporting floor; their growth rates remain unreported.
+Figure 1. Nominal 480 m ring, headway 1 s, acceleration 0.3 m/s^2, step 0.01 s. (a) Spatially demeaned paired speed response after q=1 initialization at 0.2 m/s. (b) Absolute q=1,2,3 power in the same response; values below the numerical 10^-14 (m/s)^2 reporting floor are omitted. The shaded interval supplies the early window. (c) Mean power in that window for all four initial amplitudes. Points are simulated values; lines are integer-order references anchored at the smallest amplitude. These deterministic amplitude comparisons provide no population confidence interval.
 
-The full grid shows which bands amplify and which attenuate under the selected headways and acceleration parameters. These finite-window measurements support a description of scale-dependent response. They do not establish an asymptotic stability boundary.
+### 3.3 Model checking has a restricted detectable regime
 
-![Band-specific growth across the grid](results/spectral/band_growth_map.png)
+At headway 1 s and the lowest specified noise, the known-operator whole-window check rejects 52.25% of fundamental-driven q=3 histories, compared with 6.75% for adjacent innovations. Direct q=3 gap/speed controls give 5.5% and 5.75% rejection under the whole-window check. These frequencies concern the particular amplitudes, observation model, and fixed physical trajectories.
 
-Figure 3. Mean finite-window band growth across the three placement seeds, at integration step 0.1 s. Positive values indicate amplification. Blank values marked with a dash fall below the power reporting floor. Ring lengths are nominal. The shared scale supports comparisons across panels.
+Estimation changes the result. Table 1 compares methods on the adaptive evaluation cohort. TLS gives high direct-speed rejection with its plug-in threshold. Calibration against the pooled direct-response mixture lowers that rate and reduces harmonic sensitivity. Its calibrated gap/speed rates, 0.46% and 9.44%, average to 4.95% and conceal a subgroup imbalance. The restricted fit remains closer to the known-model comparison. Its correct IDM law, exact equilibrium information, and whole-history objective are substantial assumptions.
 
-### 3.3 Temporal density resolves the response across spatial and temporal scales
+| Model | Threshold | Direct-gap rejection | Direct-speed rejection | Harmonic rejection, 0.2 m/s |
+| --- | --- | ---: | ---: | ---: |
+| Known dynamics | Plug-in | 5.14% | 5.31% | 52.98% |
+| Known dynamics | Direct calibration | 5.05% | 5.20% | 52.19% |
+| TLS | Plug-in | 5.70% | 72.13% | 51.71% |
+| TLS | Direct calibration | 0.46% | 9.44% | 9.23% |
+| Restricted IDM | Plug-in | 5.13% | 5.68% | 53.00% |
+| Restricted IDM | Direct calibration | 5.00% | 5.60% | 52.14% |
 
-The joint density maps separate the low-wavenumber, low-temporal-frequency response from rapidly attenuating higher-wavenumber contributions. Integrating their frequency bins reproduces direct taper-weighted spatial power, with a maximum discrepancy of 5.56 x 10^-16 (m/s)^2 across the 172 existing responses. This identity validates the normalization. Total integrated power contains the same quadratic information as its time-domain counterpart.
+Table 1. Headway 1 s, step 0.01 s, gap/speed noise SD 0.01 m/0.001 m/s. Each cell averages four symmetry-related phase trajectories and 20 training-noise realizations, with 100 evaluation draws per trajectory. A high rejection rate is undesirable for direct controls. The harmonic column measures rejection under known nonlinear excitation. These are conditional frequencies, without independent-road accuracy or coverage interpretation. Pooled calibration need not calibrate either control subgroup at 5%.
 
-![Finite-window mode-frequency power density](results/spectral/joint_density.png)
+The amplitude/noise comparison in Figure 2 shows the limited operating range. At headway 1 s and fundamental amplitude 0.4 m/s, restricted-fit rejection decreases from 98.2% at speed-noise SD 0.005 m/s to 59.74% at 0.0075 m/s and 28.74% at 0.01 m/s. At headway 1.8 s, the same amplitude gives 58.39% rejection at 0.002 m/s and 9% at 0.005 m/s. At the smaller amplitude, 0.2 m/s, headway 1 s gives only 6.53% rejection at 0.005 m/s. Direct-gap/speed controls span 4.36-6.30% rejection across the 11-level sweep. These conditional rates describe a strong dependence on disturbance amplitude and headway.
 
-Figure 4. Grouped mode-frequency density in the early and late windows. All panels share one absolute logarithmic color scale, including the temporal zero-frequency bin. The broad low-frequency concentration and coarse bin spacing limit inference about individual oscillation frequencies.
+Reference treatment adds a separate tradeoff. In one exact-linear null, ignoring K=1 reference uncertainty gives 81.18% false rejection. Correct joint covariance and fitted reference terms give 4.16-5.90% across the specified null scenarios. In the corresponding exact-reference physical harmonic case, fitting constant and linear terms reduces rejection from 49% to 8.25%. Those nuisance terms can absorb weak finite-window response. Neither exact-noise calibration nor correct-model fitting establishes reliability when noise and equilibrium must themselves be estimated.
 
-The concentration result persists for the 24- and 40-sample windows: every primary grid response still has increasing long-band share. Constant temporal detrending also preserves the direction of this change, while reducing the minimum late share to about 0.754. Thus the exact concentration level depends on whether temporally slow modal response is retained.
+| | |
+| --- | --- |
+| ![Harmonic sensitivity across amplitude and specified noise](figures/observation_limits_preview.png) | **Figure 2.** Restricted-IDM rejection across 11 noise levels. Tau: headway; epsilon: initial speed amplitude. Dotted line: 5% reference. |
 
-### 3.4 Pulse strength changes power scaling, with a clearer linear limit for small pulses
+### 3.4 The empirical fields test measurement choices
 
-Realized endpoint drops differ from their commands by at most 0.000350 m/s across both sweeps. In the larger-pulse sweep, early-window mean power exponents exceed 2 in all three acceleration settings. Smaller pulses move those exponents closer to 2. Normalized power therefore depends on the imposed disturbance over the larger amplitude range, including in the response that attenuates.
+All six unfiltered 5 s/25 m fields pass the fixed-support rule. Temporal centering substantially changes their powers and modal shares (Figure 3). In US-101's block beginning at 240 s, first-two-mode share falls from 89.48% to 58.44%. In I-80's corresponding block, it rises from 57.03% to 63.66%. The direction depends on the retained spatial profile and time variation. Hann weighting means that the power difference is not an orthogonal partition of profile and fluctuation energy.
 
-| Pulse range (m/s) | Acceleration (m/s^2) | Early exponent | Late exponent | Final exponent |
-| --- | ---: | ---: | ---: | ---: |
-| 0.5-2 | 0.3 | 2.903 | 3.093 | 0.289 |
-| 0.5-2 | 0.8 | 2.636 | 2.693 | 1.172 |
-| 0.5-2 | 1.5 | 2.477 | 2.512 | 2.508 |
-| 0.05-0.2 | 0.3 | 2.088 | 2.101 | 1.433 |
-| 0.05-0.2 | 0.8 | 2.059 | 2.062 | 2.026 |
-| 0.05-0.2 | 1.5 | 2.044 | 2.046 | 2.046 |
+Trace exclusion is consequential. In I-80's block beginning at 420 s, it removes 184 of 539 traces and 94,230 of 243,524 acquired rows (38.69%). Inside the analyzed support, it removes 69,874 of 155,366 observations (44.97%), leaving one empty cell. That sensitivity is ineligible and receives no imputed spectrum. The initial primary I-80 50 m grid also failed its eight-bin requirement; the later 25 m sensitivities do not replace that failure.
 
-Exponents are three-seed means at the finer integration step of each sweep. Full seed ranges are retained in the supporting tables. These values measure response scaling over finite amplitude ranges. They do not identify a universal power law.
+These results describe baseline, population, and coverage dependence. Binned observation speeds are not traffic density or flow measurements. The fields have no independent instability labels or established causal availability, and therefore provide no empirical validation of the simulator's stability interpretation.
 
-![Normalized response and wavelength selection across pulse strengths](results/spectral_forcing/forcing_dependence.png)
+![Observed speed field and within-field spectral baseline comparisons](figures/empirical_baseline.png)
 
-Figure 5. Larger-pulse sweep. Lines show the three-seed mean; shaded regions show the seed range. Left panels show D^2-normalized nonuniform power. Right panels show long-band power share. Each row fixes acceleration, headway, and ring length, so pulse strength varies separately. Integration step is 0.05 s.
+Figure 3. (a) The first US-101 block, using 5 s/25 m observation averages. (b) First-two-mode shares before and after temporal centering on the same six fields. Row labels give location and block start after the earliest dataset timestamp. Text at right reports integrated nonuniform power with the mean retained and removed. US-101 and I-80 supports are 650 and 325 m; identical mode indices describe different spatial wavelengths across sites. Comparisons are within each row. No uncertainty across independent days is available.
 
-At acceleration 0.3 m/s^2, final absolute powers for the larger pulses are much closer than their early powers: seed-mean final powers are approximately 12.44, 16.89, and 18.44 (m/s)^2 for requested drops of 0.5, 1, and 2 m/s. This compression produces the subquadratic final exponent. It is consistent with amplitude-dependent later evolution over the observation interval. A stable limiting oscillation or a specific saturation mechanism has not been identified.
+## 4. Interpretation and limits
 
-The small-pulse sweep gives a more nearly amplitude-scaled early response. At acceleration 0.3 m/s^2, early normalized powers are approximately 0.01247, 0.01298, and 0.01408 for requested drops of 0.05, 0.1, and 0.2 m/s. Their final exponent still falls to 1.433. An early near-linear response can evolve into amplitude-sensitive behavior over a longer observation horizon.
+The most substantive controlled finding is growing harmonic power in a mode whose equilibrium linear dynamics decay. Spectral concentration alone also fails to identify amplification in the tested rings. Both results require measuring absolute response and specifying the evolution law. The transform makes scale-specific behavior easier to describe. On the regular cycle it is an ordinary Fourier representation, and the full orthogonal transform preserves the input information.
 
-### 3.5 Numerical validation and relation to forecasting
+Unknown external input creates an additional algebraic ambiguity. For two modal blocks B_g and B_d with the same gap-kinematics row, choose a trajectory satisfying dz/dt=B_g z and prescribe
 
-All 144 production simulator runs in the two pulse-strength sweeps retain all vehicles, produce finite records, and report zero collisions and teleports. Their paired pre-pulse responses are exactly zero. Default-run reproduction is bitwise exact. Refining the larger-pulse step changes integrated all-mode power by at most 0.0525 in absolute log ratio across the three windows; the smaller-pulse refinement gives at most 0.0353. These correspond to multiplicative differences below about 5.4% and 3.6%, respectively. They measure numerical sensitivity within the tested resolutions, without a convergence-order claim.
+\[
+u(t)=(B_g-B_d)z(t).
+\]
 
-Three of the 54 grid step comparisons change growth/decay sign between 0.2 and 0.1 s. All are the nominal 480 m, headway 0.6 s, acceleration 0.8 m/s^2 setting: late/early power ratios are about 1.050 at 0.2 s and 0.934 at 0.1 s. None of the 32 additional parameter settings changes sign between 0.1 and 0.05 s. The primary counts therefore describe the stated numerical resolutions; near-boundary classification requires further refinement.
+Then dz/dt=B_d z+u(t) produces the same trajectory. Our q=3 linearizations at headway 1.8 s have intrinsic rates +0.01146 and -0.08122 s^-1. The constructed acceleration-only input stays below 0.00987 m/s^2 over 40 s, and independent integration reproduces the coefficients to numerical precision. This is a direct consequence of the state equation for one modal subsystem. It supplies no evidence about full-system stability or the occurrence of these inputs in the road recordings.
 
-Grouped GFT and ordinary FFT power agree within 1.81 x 10^-14 (m/s)^2 over the 172 existing responses. Independent calculations using a full spatial FFT and explicit Hann weights verify the saved summaries through 6,878 numerical comparisons, with maximum absolute discrepancy below 1.37 x 10^-12. Hashes verify the recorded input arrays and frozen source archives. Complete repeated runs of both pulse sweeps reproduce all six numerical output tables byte for byte. The reproduction receipt records the software environment.
+The observation studies provide a conditional diagnostic benchmark. Correct-model restriction, noise-aware fitting, and reference treatment are useful comparisons, but their separate contributions have not been isolated. The exact equilibrium used by the restricted fit determines headway under the assumed IDM law. Estimation on unknown driver laws, uncertain equilibria, realistic sensor errors, and constrained or measured forcing remains untested.
 
-Earlier forecasting experiments on the 32 follow-up settings compared fixed complex Fourier AR(2), raw-coordinate VAR(2), dynamical-mode baselines, and recent amplitude trend. Fourier AR(2) had mean squared error 0.03206 for a future log-amplitude ratio, compared with 0.11387 for raw VAR(2) and 0.01486 for recent trend. These earlier outcomes motivated attention to explanation and measurement. The present descriptive study supplies no additional forecast evaluation or graph-specific accuracy claim.
+All physical simulations use one driver model and small rings. Placement perturbations, translated initial waves, and numerical-step replicas provide limited variation. The empirical blocks share two recording contexts. Large row counts, repeated Gaussian draws, and reproducible calculations do not supply independent environments or an event prevalence for operational alerts.
 
-### 3.6 The coupled dynamics predict small-amplitude responses
+Transfer to measured traffic remains an open test. It requires independently labeled disturbance episodes, verified observation availability, and comparisons with local amplitude trends and established traffic spectral methods. The current evidence supports controlled interpretation tests and measurement cautions.
 
-Every primary initial-condition case passes the 5% agreement criterion. The median full-field speed error over 20 s is 0.0899%, and the maximum is 1.617%. Finite-difference and analytic discrete Jacobians agree within 6.45 x 10^-11. Empirically estimated two-state transitions give growth rates within 0.000510 s^-1 and dominant-frequency magnitudes within 0.000091 Hz of the discrete prediction across both steps. These estimates use the first second of the paired gap/speed responses; they supply a local consistency check.
+## Reproducibility
 
-![Mode growth predicted by the coupled dynamics](results/mechanism/dispersion_growth.png)
-
-Figure 6. Continuous IDM, discrete-update prediction, and growth rates estimated from the initial SUMO responses. The complete gap-speed block supplies the growth rate. The GFT Laplacian eigenvalue orders spatial scale and is a separate quantity. Companion frequency and full-response-error figures appear in the development notes.
-
-The result identifies a mechanism for the earlier scale selection. In the homogeneous equilibrium, low wavenumbers can grow or attenuate slowly while higher wavenumbers attenuate more quickly. Finite-time pulse responses still mix temporal branches and nonlinear contributions. Agreement near equilibrium does not make every finite-amplitude spectral growth statistic an intrinsic eigenvalue estimate.
-
-### 3.7 A linearly decaying mode can carry growing harmonic power
-
-Pure fundamental-mode initialization produces higher spatial harmonics. At the finer step, early-window power exponents are approximately 1.996-1.999 at q=1, 3.991-3.999 at q=2, and 5.986-5.998 at q=3 across acceleration settings. Those values are consistent with first-, second-, and third-order amplitude responses over the tested range. They describe a controlled weak-amplitude mechanism with finite windows.
-
-![Amplitude scaling of the generated harmonics](results/harmonics/harmonic_scaling.png)
-
-Figure 7a. Power exponents versus spatial harmonic order for a fundamental-mode initial speed disturbance. Early and late windows use the same four initial amplitudes where above the reporting floor. One late q=3 amplitude at acceleration 1.5 m/s^2 is below the floor at each step and is excluded; that exponent uses three amplitudes. Dotted values are the specified harmonic-order reference.
-
-At acceleration 0.3 m/s^2, the continuous equilibrium q=3 growth rate is -0.02875 s^-1. Its observed harmonic amplitude-growth statistic is +0.1132 to +0.1150 s^-1 across the four initial amplitudes. At acceleration 0.8, the corresponding values are -0.08281 s^-1 and +0.0471 to +0.0479 s^-1. The discrete equilibrium q=3 modes also decay. An autonomous linear q=3 response initialized from the same recorded q=3 gap and speed remains far below the observed power. Initial harmonic seeding followed solely by a linear two-branch transient therefore fails to explain these responses. The amplitude-order and matched-state checks support subsequent nonlinear harmonic excitation. A nonlinear decomposition of the original localized-pulse responses remains to be done.
-
-![Observed harmonic and autonomous linear prediction](results/harmonics/harmonic_autonomous_comparison.png)
-
-Figure 7b. Actual q=3 power and its autonomous linear prediction, initialized with the same observed q=3 gap and speed. The initial fundamental amplitude is 0.2 m/s, acceleration is 0.3 m/s^2, and integration step is 0.01 s. The reporting floor applies to measured response summaries; the deterministic model curve is shown below it for comparison.
-
-### 3.8 Heterogeneity limits independent-band approximation
-
-The full linear model retains small response errors under all four fixed driver patterns. Uniform graph bands remain exact for the homogeneous linear operator. Heterogeneity creates coupling between those bands, and removing that coupling produces much larger response errors.
-
-| Headway pattern | Full operator | Uniform GFT bands | Weighted GFT bands | Fixed random bands |
-| --- | ---: | ---: | ---: | ---: |
-| Homogeneous | 0.453% | 0.453% | 0.453% | 80.47% |
-| Alternating | 0.446% | 24.30% | 24.30% | 82.50% |
-| Clustered | 0.462% | 32.04% | 21.55% | 79.93% |
-| Fixed random | 0.453% | 16.42% | 15.67% | 81.12% |
-
-Values are mean relative full-field speed-response errors over 20 s, across six initial disturbances at integration step 0.025 s. These are known-coefficient approximations with matched band dimensions. They are distinct from fitted predictive models.
-
-![Graph-band approximation and cross-band coupling](results/heterogeneity/graph_comparison.png)
-
-Figure 8. Mean response error and dimensionless coupling for the four headway patterns. Error whiskers span the six initial disturbances; they are not confidence intervals. The random comparison uses fixed seed 2000; the saved table includes all 20 random coupling references. Pattern names are categorical.
-
-The weighted graph improves the clustered-pattern approximation but leaves a 21.55% mean error, compared with 0.462% for full dynamics. It also has a larger cross-band Frobenius coupling fraction than the uniform basis in that case, about 0.00549 versus 0.00359. The metric therefore fails to rank those finite-horizon errors. Alternating headways give constant edge weights under the chosen formula, so their two graph bases have equal response errors. The findings support retaining cross-band dynamics and testing the specific graph construction; they establish no general weighted-GFT advantage.
-
-### 3.9 Empirical spectra depend strongly on baseline and spatial support
-
-The acquired US-101 and I-80 blocks contain 212,427 and 226,638 rows, respectively. Selected keys are unique, selected fields have no missing values, and all positive within-vehicle increments are 0.1 s. Median position/speed discrepancies are about 0.040 and 0.032 m/s; maxima are 8.24 and 40.86 m/s. Four US-101 increments and 71 I-80 increments exceed 5 m/s discrepancy. Those observations are retained and flagged, with no automatic cleaning.
-
-The primary US-101 grid has 13 complete 50 m bins over 650 m. Its integrated nonuniform power is 11.2595 (m/s)^2 with temporal means retained and 1.3671 after constant temporal centering. The first-two-mode share changes from 0.9554 to 0.6933 on the same support. These comparisons show the dependence of spectral concentration on the retained spatial speed profile and temporal baseline. Hann weighting means that the power difference is not an orthogonal partition of stationary-profile and fluctuation energy.
-
-![US-101 baseline sensitivity](results/ngsim/us-101_50m_centering_sensitivity.png)
-
-Figure 9. US-101 finite-window powers and cumulative shares before and after temporal centering, on fixed complete spatial support. Both absolute magnitude and normalized allocation change. The figures describe the selected processed recording, with no physical instability label.
-
-I-80 fails the registered primary coverage rule: its longest complete 50 m strip has seven bins. The prespecified 25 m sensitivity has 13 bins over 325 m, with power 1.1515 before and 0.7357 after temporal centering; first-two-mode shares are 0.6939 and 0.6469. Its shorter spatial support and different recording prevent a direct instability comparison with US-101. The 100 m grids fail the eight-bin minimum at both sites. Every eligibility outcome remains recorded.
-
-All eligible field calculations satisfy spectral integration checks and open-path GFT/cosine equivalence. These two short processed blocks establish measurement feasibility and baseline sensitivity. They provide no prospective forecast score or independent empirical instability classification.
-
-The fixed-support resolution study has 20 eligible configurations among 32 specified combinations of location, quality rule, and bin sizes. I-80's 25 m field fails complete coverage at 1 and 2 s, with five and two missing cells respectively. Its 50 m configuration cannot exactly partition the fixed 325 m support. All US-101 configurations pass. These outcomes are retained separately from the initial primary-grid eligibility.
-
-Across unfiltered US-101 bin choices, temporally centered nonuniform power ranges between 1.228 and 1.770 (m/s)^2; first-two-mode share ranges between 0.575 and 0.732. Excluding flagged traces removes four of 595 US-101 vehicles and 41 of 480 I-80 vehicles. At I-80's eligible 5 s by 25 m grid, that exclusion changes centered power from 0.7357 to 0.6926 (m/s)^2 and first-two-mode share from 0.6469 to 0.5549. These are measurement-population sensitivities within the same short recordings. They supply no independent physical change label.
-
-![Fixed-support resolution and trace-exclusion sensitivity](results/ngsim_resolution/resolution_sensitivity.png)
-
-Figure 10. Retained and removed temporal means across eligible temporal/spatial bins. Solid lines use all observations; dashed lines exclude flagged vehicle traces. Markers distinguish 25 and 50 m bins. Power axes are logarithmic and have independent site ranges. Blank I-80 resolutions fail coverage. Lines connect the tested bin choices without implying results at intermediate widths.
-
-### 3.10 Autonomous consistency depends on noise and observation geometry
-
-With complete noiseless observations, both diagnostics accept every direct q=3 response and reject every fundamental-driven q=3 response across the tested phases, headways, and steps. Direct-mode acceptance includes the linearly growing q=3 control at headway 1.8 s. The distinction concerns agreement with autonomous dynamics, independent of the sign of those dynamics' growth rate.
-
-The adjacent-innovation diagnostic has limited sensitivity once specified measurement noise is added. In the adaptive follow-up at headway 1 s and the lowest nonzero noise, its mean harmonic-response rejection frequency is 6.75%, compared with 52.25% for the whole-window fit. The latter spans 48-57% across the four phases, while its direct-gap and direct-speed controls give 5.5% and 5.75%. These values use the finer 0.01 s step and 100 noise histories per phase. At the next two noise levels, whole-window harmonic rejection falls to 8.25% and 6.5%. At headway 1.8 s it is 5.5% at the lowest nonzero noise. The diagnostic therefore has a limited detectable regime under its stated assumptions.
-
-![Whole-window and adjacent-innovation consistency under noise](results/observation_window/whole_window_comparison.png)
-
-Figure 11. Complete-mask rejection frequency at integration step 0.01 s. Solid lines use whole-window fitting; dotted lines use adjacent innovations. Whiskers span four phase-specific frequencies and have no population-confidence interpretation. The dashed reference is the nominal 5% nonzero-noise null. Zero noise uses a separate 1% relative-residual criterion. Noise standard deviations apply to paired responses; real sensor errors are uncalibrated.
-
-For the declared dictionary, q=3 remains identifiable with uniform-12 sensing despite two aliased nuisance directions. Uniform-8 sensing aliases q=11 with q=3 and requires abstention. Conditional recovery with uniform-12 and irregular-12 sensing reduces the low-noise, headway-1 whole-window harmonic rejection frequency to 23.75% and 10%, respectively. The alias controls also expose contamination by harmonics outside the declared dictionary. Sparse recovery therefore needs both an identifiability check and a justified spatial support model.
-
-Independent physical-coordinate propagation, sensor-covariance calculations, and generalized least squares reproduce the diagnostic tables. Fresh exact-linear noise-null checks give whole-window rejection frequencies between 4.14% and 6.36%. A rejection tests the specified autonomous observation model; operator error, observation misspecification, or additional physical forcing can also cause rejection. The result supports a conditional model check without establishing a general nonlinear-mode classifier.
-
-### 3.11 Correct IDM structure improves conditional calibration
-
-The whole-window statistic is sensitive to modest parameter errors. At headway 1 s and the lowest noise, the finer-step mean rejection over direct gap/speed controls rises from 4.88% under the correct model to 43.13% when assumed acceleration is 5% too low, or 52.75% when assumed headway is 5% too low. These are direct-control model rejections; they establish no new physical instability.
-
-Noise-aware unstructured fits reduce transition error relative to ordinary least squares, while their plug-in tests still over-reject direct-speed controls. Independent direct-response calibration lowers average control rejection and reduces harmonic sensitivity. Its pooled threshold also produces different gap/speed conditional rates. At the highest noise, 29 of the 320 operator cases are ineligible because of a non-positive corrected Gram matrix or an unidentified history design. Those cases remain separate from eligible diagnostic results.
-
-The restricted fit changes this comparison. At headway 1 s and the lowest noise, its mean acceleration estimate is 0.30013 m/s^2, against the generating value 0.3. Mean relative operator error is about 0.023%, compared with 1.38% for TLS on the same training-noise realizations. The restricted plug-in test rejects 5.13% of direct-gap and 5.68% of direct-speed responses; TLS rejects 5.7% and 72.13%. With direct-response calibration, restricted-model harmonic rejection is 52.14%, compared with 9.23% for TLS and 52.19% for known dynamics. These values average the four new phases and 20 training-noise realizations. Restricted-model low-noise direct-control rates span approximately 4.85-6.09% across headways and initializations, leaving modest finite-estimation inflation.
-
-![Known, learned, and restricted dynamics](results/uncertainty/physics_fit_comparison.png)
-
-Figure 12. Adaptive evaluation cohort, headway 1 s, step 0.01 s, and response noise SD 0.01 m/0.001 m/s. Points are means across training-noise realizations; whiskers span their 20 phase-averaged frequencies. They are not population confidence intervals. The left panel measures direct-speed control rejection; the right measures rejection under fundamental-driven harmonic excitation. Restricted IDM uses the correct model and exact equilibrium information.
-
-The larger 0.4 m/s fundamental is easier to distinguish. Under the restricted model at headway 1 s, direct-calibrated harmonic rejection is 100% at the lowest noise and 98.2% at the middle noise, falling to 8.99% at the highest noise. At headway 1.8 s, the corresponding middle-noise value is 9%. Detectability depends jointly on the physical response and observation assumptions. These controlled results establish neither a general learned-operator solution nor a practical warning rule.
-
-Reference errors produce a further calibration limit. For the exact-linear, headway-1, finer-step null with independent measurement errors, ignoring the K=1 reference uncertainty raises false rejection to 81.18%; K=5 gives 30.52%. Correct joint covariance or constant/linear nuisance fitting gives 4.16-5.90% across the specified null scenarios. The correction has a sensitivity cost: in the corresponding exact-reference physical harmonic case, fitting offset and drift reduces rejection from 49% to 8.25%. Part of the weak finite-window signal can be represented by those nuisance terms. The supporting figures retain all correlation/reference configurations.
-
-### 3.12 External input creates a spectral identification ambiguity
-
-Continuous integration agrees with the matched SUMO speed responses within 0.642% at the coarser step and 0.256% at the finer step over 20 s. Refining the continuous solver changes full speed response by at most 8.92 x 10^-13 in relative norm, with gap conservation within 1.71 x 10^-13 m. These comparisons apply to the selected small-disturbance cases and numerical conventions.
-
-Explicit q=3 acceleration forcing makes the autonomous diagnostic reject every low-noise response at both headways. Subtracting the known linear forced response lowers rejection to 9.5% at headway 1 s and 3.75% at 1.8 s. The former remains above the nominal noise-null rate, consistent with finite-amplitude mismatch of the linear companion. Autonomous-model rejection therefore needs an input interpretation as well as an operator interpretation.
-
-The constructive linear control is stronger. Its q=3 growth rates are +0.01146 s^-1 for acceleration 0.3 and -0.08122 s^-1 for acceleration 1.5 at the same headway and equilibrium. An acceleration-only input with spatial amplitude below 0.00987 m/s^2 over the 40 s interval makes the decaying system reproduce the growing autonomous trajectory. Independently integrated states agree in relative norm within 1.18 x 10^-15 across all four phases. Their complex modal coefficients and powers agree to numerical precision. This is an unknown-input identifiability limit even with complete modal observations. Known forcing or additional physical constraints can distinguish the specified mechanisms.
-
-![Matched modal trajectories under autonomous growth and forced decay](results/uncertainty/forcing_ambiguity.png)
-
-Figure 13. Exact linearized control at headway 1.8 s and the first new phase. Growing autonomous and decaying forced powers coincide. The decaying unforced response is shown separately. The right panel gives the prescribed spatial acceleration-input amplitude. The input is constructed in advance from the growing model trajectory; the figure describes a controlled equivalence, with no claim about unobserved inputs in the road recordings.
-
-### 3.13 Measurement sensitivity persists across additional recording blocks
-
-Four additional NGSIM blocks contain 906,559 rows, verified against separate server-side counts. New acquisition is 87.10 MB. Combined with the original two blocks, the six acquired cohorts contain 1,345,624 observations before spatial selection. All new unfiltered 5 s/25 m fields pass fixed-support coverage.
-
-The expanded results retain substantial baseline sensitivity and show different share directions. In US-101's block beginning at 240 s, temporal centering changes power from 10.4338 to 1.7805 (m/s)^2 and first-two-mode share from 0.8948 to 0.5844. At I-80's corresponding block, power changes from 1.3252 to 1.1161, while share increases from 0.5703 to 0.6366. Temporal centering therefore changes modal allocation without a common share direction across these blocks.
-
-The secondary exclusion flags 13 and seven US-101 vehicles, and 43 and 184 I-80 vehicles, in the two additional blocks per site. In I-80's block beginning at 420 s, excluding the 184 flagged traces removes 94,230 of 243,524 rows and leaves one empty field cell. That sensitivity is ineligible; the unfiltered field remains recorded. The rule has a substantial population and coverage effect in this block, without evidence that every excluded observation is erroneous.
-
-![Spectra across fixed nonoverlapping NGSIM blocks](results/ngsim_expansion/nonoverlapping_blocks.png)
-
-Figure 14. Three nonoverlapping blocks per site on unchanged 25 m spatial supports and 5 s temporal bins. Solid lines use all observations; dashed lines use trace exclusion. Power axes are logarithmic with independent site ranges. The final I-80 exclusion field fails coverage and has no plotted spectrum. Each block has its own periodogram and temporal mean. Lines connect the three tested blocks and provide no prospective trend estimate or independent-day uncertainty.
-
-## 4. Discussion
-
-The simulations support a distinction with practical consequences for spectral indicators. Long-wavelength concentration can increase because long modes amplify, because short modes attenuate faster, or through both processes. A rule that flags any increase in long-band share would flag all 54 primary grid responses despite their different absolute amplitude evolution. An operational warning rule would need prospective evaluation of absolute growth, current amplitude, and its own false-alarm rate.
-
-The pulse experiments delimit interpretation of high power. Response magnitude depends on intervention strength and its recovery trajectory. Smaller pulses approach quadratic scaling in the early window, while larger pulses produce greater departures and later amplitude compression. The initial-condition follow-up supplies a separate mechanism check: a growing fundamental can generate increasing power in a linearly decaying harmonic. Assigning instability to a spatial mode therefore requires a dynamical model or a validated distinction between autonomous response and cross-mode excitation. The original pulse's command and recovery contributions have not been decomposed.
-
-The graph representation has a clear scope. A regular cycle supplies the same spatial power decomposition as ordinary Fourier analysis. Its symmetric Laplacian orders spatial variation, while the car-following law has directed interactions and temporal memory. Graph eigenvalues therefore cannot be read as physical growth rates. Undirected eigenspace power also removes propagation direction. A signed ordinary Fourier companion is supplied in the supporting figures; converting its vehicle-index phase motion into road-frame wave speed requires positional data.
-
-Several limitations constrain generalization. All simulations use IDM and a fixed-size ring. The first studies share parameters within each run; the heterogeneity follow-up introduces four specified headway patterns. Perturbations have known timing, are isolated, and have matched counterfactuals. The observation experiments add specified Gaussian noise and fixed masks to these paired responses. They assume exact references, known dynamics, local gap measurements, and known noise covariance. Driver patterns, initialization seeds, and numerical-step replicas supply limited variation. The large number of stored response records does not create an equivalent number of independent traffic environments.
-
-Empirical growth and forecasting validation remain pending. The NGSIM examples demonstrate baseline sensitivity and retain trajectory inconsistencies. A previously audited I-24 virtual-trajectory sample also has unresolved generation parameters and online availability. Its upstream tool supports symmetric temporal smoothing, which can mix future observations into a timestamp. This issue matters for causal prediction and can alter measured spectral content. Documented preprocessing, adequate spatial support, and independent recording days are required before transferring the simulation-based instability interpretation to a real-road claim.
-
-The whole-window test shows why retaining temporal structure can improve a model-consistency diagnostic over short-step innovations. The uncertainty studies identify conditions required for that interpretation. Unstructured transition estimation adds substantial uncertainty; the restricted IDM fit benefits from correct dynamics and exact equilibrium information. Reference corrections can control false rejection while absorbing weak signal. The exact forcing construction further shows that even complete modal observations can be compatible with different intrinsic stability when external input is unrestricted. A practical sensing study needs an input model, estimated baseline/noise treatment, and ordinary spatial or local-statistic controls under the same information budget.
-
-The immediate generalization test is transfer under misspecified dynamics and equilibrium estimation. Correct-model success does not establish transfer to another driver model, a changing road geometry, or empirical trajectories. The longer NGSIM selection still covers only two recording contexts and lacks instability labels. A complete replication of the closest traffic spectral methods and a renewed priority check remain necessary before a publication novelty claim. The estimators and covariance corrections used here are established tools; the contribution under examination is the controlled interpretation and its limits.
-
-## 5. Conclusion
-
-Spectral power measurements describe the distribution and evolution of traffic disturbances across wavelengths. Increasing long-wavelength concentration occurs during both amplification and attenuation in the simulated rings. Positive mode-power growth can result from nonlinear harmonic generation or external input while the corresponding autonomous dynamics decay. Coupled gap-speed models support controlled consistency checks, whose calibration depends on model structure, noise, and reference treatment. Empirical examples retain substantial baseline, coverage, and trace-selection sensitivity across nonoverlapping blocks. Spectral indicators require those distinctions before they can support an instability interpretation. Empirical predictive validity and graph-specific benefit remain open.
-
-## Data and Code Availability
-
-The [experiment README](README.md) links protocols, run tables, and reproduction commands. [Initial spectral support](results/spectral/manuscript_support.json), [mechanism/empirical support](results/mechanism/manuscript_support.json), [observation validation](results/observation_window/independent_validation.json), and [uncertainty support](results/uncertainty/manuscript_support.json) record numerical evidence. Complete repeats reproduce the retained simulation tables byte for byte. Independent physical-coordinate projections, real-FFT calculations, and generalized least squares verify the extension outputs. The [uncertainty validation receipt](results/uncertainty/validation.json) distinguishes complete reproduction from its sampled diagnostic replay and independent fitted-matrix checks. [Clock](timing-correction.md) and [sampling-inverse](sampling-correction.md) corrections preserve superseded outputs and the sequence of analysis changes. Full simulator arrays and acquired trajectory inputs remain in the project's ignored data directory. Acquisition receipts retain source queries and hashes. The [development record](manuscript-notes.md) identifies unfinished work and reference-access limits. The existing public article is outside this manuscript's scope.
+The [supplement](supplement.md) records secondary experiments and numerical checks. The [research review](review-2026-11-06.md) ranks claims and documents figure selection. [Protocols and commands](reproduction.md) link frozen configurations, complete tables, source snapshots, and raw-file hashes. Independent calculations and complete repeat runs are distinguished in the validation receipts. Raw acquired trajectories and full simulation arrays remain local under ignored `data/`; manuscript figure inputs are exported alongside their source hashes. No historical experiment output was changed by this presentation review.
 
 ## References
 
-1. Zhao, Nie, and Zhang (2014). [Extended spectral envelope method for detecting and analyzing traffic oscillations](https://doi.org/10.1016/j.trb.2013.12.007). Transportation Research Part B 61, 1-16.
-2. Avila and Mezic (2020). [Data-driven analysis and forecasting of highway traffic dynamics](https://doi.org/10.1038/s41467-020-15582-5). Nature Communications.
-3. Takada, Azuma, and Banno (2025). [Prediction of Traffic Congestion Using Graph Fourier Transform](https://doi.org/10.11509/sci.SCI25.0_1017). Proceedings of the Annual Conference of the Institute of Systems, Control and Information Engineers.
-4. Loukas and Perraudin (2019). [Stationary time-vertex signal processing](https://arxiv.org/html/1611.00255v3). arXiv:1611.00255v3.
-5. Treiber, Hennecke, and Helbing (2000). [Congested Traffic States in Empirical Observations and Microscopic Simulations](https://arxiv.org/abs/cond-mat/0002177). Physical Review E 62, 1805-1824. [DOI](https://doi.org/10.1103/PhysRevE.62.1805).
-6. SciPy. [scipy.signal.periodogram documentation](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.periodogram.html). Density scaling, windowing, and one-sided spectra.
-7. Eclipse SUMO 1.28.0. [Pinned IDM implementation](https://github.com/eclipse-sumo/sumo/blob/v1_28_0/src/microsim/cfmodels/MSCFModel_IDM.cpp). Simulator source inspected for IDM iteration and update conventions; a local acquisition receipt retains its checksum.
-8. U.S. Department of Transportation, Federal Highway Administration. [Next Generation Simulation Vehicle Trajectories and Supporting Data](https://data.transportation.gov/Automobiles/Next-Generation-Simulation-NGSIM-Vehicle-Trajector/8ect-6jqj). [Official metadata](https://data.transportation.gov/api/views/8ect-6jqj.json). Queried 15 October 2026; exact cohort queries and snapshots are recorded locally.
-9. Dawson, Hemati, Williams, and Rowley (2016). [Characterizing and correcting for the effect of sensor noise in the dynamic mode decomposition](https://arxiv.org/html/1507.02264v3). [Published paper](https://doi.org/10.1007/s00348-016-2127-7). Noise bias, corrected moments, and total least squares.
-10. Hemati, Rowley, Deem, and Cattafesta (2017). [De-biasing the dynamic mode decomposition for applied Koopman spectral analysis](https://arxiv.org/html/1502.03854v2). [Published paper](https://doi.org/10.1007/s00162-017-0432-2). Augmented-snapshot projection and estimator conditioning.
+1. Zhao, Nie, and Zhang (2014). [Extended spectral envelope method for detecting and analyzing traffic oscillations](https://doi.org/10.1016/j.trb.2013.12.007).
+2. Avila and Mezic (2020). [Data-driven analysis and forecasting of highway traffic dynamics](https://doi.org/10.1038/s41467-020-15582-5).
+3. Takada, Azuma, and Banno (2025). [Prediction of Traffic Congestion Using Graph Fourier Transform](https://doi.org/10.11509/sci.SCI25.0_1017).
+4. Loukas and Perraudin (2019 manuscript). [Stationary time-vertex signal processing](https://arxiv.org/html/1611.00255v3).
+5. Treiber, Hennecke, and Helbing (2000). [Congested Traffic States in Empirical Observations and Microscopic Simulations](https://arxiv.org/abs/cond-mat/0002177).
+6. SciPy. [Periodogram normalization and conventions](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.periodogram.html).
+7. Eclipse SUMO 1.28.0. [Pinned IDM implementation](https://github.com/eclipse-sumo/sumo/blob/v1_28_0/src/microsim/cfmodels/MSCFModel_IDM.cpp).
+8. FHWA. [NGSIM trajectories and official metadata](https://data.transportation.gov/api/views/8ect-6jqj.json). Acquisition queries and hashes are retained in the experiment results.
+9. Dawson, Hemati, Williams, and Rowley (2016). [Characterizing and correcting for the effect of sensor noise in DMD](https://arxiv.org/html/1507.02264v3).
+10. Hemati, Rowley, Deem, and Cattafesta (2017). [De-biasing DMD for applied Koopman spectral analysis](https://arxiv.org/html/1502.03854v2).

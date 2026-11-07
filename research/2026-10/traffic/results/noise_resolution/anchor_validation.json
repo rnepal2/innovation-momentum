@@ -1,0 +1,8 @@
+{
+  "rows": 1920,
+  "max_absolute_errors": {
+    "cutoff": 0.0,
+    "mean_score": 7.105427357601002e-15,
+    "rejection_fraction": 0.0
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "id": "a0.3_dt0.01_eps0.2",
+  "path": "data/research_2026/traffic/harmonics_clock_corrected/a0.3_dt0.01_eps0.2.npz",
+  "sha256": "dd81919b5da9a3bc374f391db0cf9887f005ec6fcd99ed1de8f6bc3b486433f7",
+  "operation": "Paired speed response, spatial mean removed; no temporal filtering"
+}

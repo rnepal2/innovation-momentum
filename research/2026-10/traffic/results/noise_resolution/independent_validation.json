@@ -1,0 +1,6 @@
+{
+  "fits_replayed": 22,
+  "scalar_comparisons": 726,
+  "max_absolute_error": 2.518429909059705e-12,
+  "scope": "First training realization at every headway/noise level; explicit least-squares calibration and all evaluation means/rates. All source/raw/scenario hashes verified. Optimizer is not independently rerun here."
+}
